@@ -1,6 +1,11 @@
 class IronBoxExecutor{
-	public static void main(String[] args){
-		boolean ref = IronBox.onOrOff();
-		System.out.println(ref);
-	}
+    public static void main(String[] ironBox){
+
+        boolean ref = IronBox.onOrOff();
+        System.out.println(ref);
+
+        IronBox.increaseHeat();  
+
+        IronBox.decreaseHeat(); 
+    }
 }
