@@ -1,43 +1,12 @@
 class AirConditioner{
-    boolean isConnected;
-    int currentTemperature = 24;
-    int maxTemperature = 30;
-    int minTemperature = 16;
-
-    boolean onOrOff(){
-        if(isConnected == false){
-            isConnected = true;
-            System.out.println("The AC is turned on..");
-        }else{
-            isConnected = false;
-            System.out.println("The AC is turned off..");
-        }
-        return isConnected;
-    }
-
-    void increaseTemperature(){
-        System.out.println("increaseTemperature method is invoked");
-        if(isConnected == true){
-            System.out.println("System is turned on proceed to increase temperature");
-            if(currentTemperature < maxTemperature){
-                currentTemperature += 1;
-                System.out.println("Current Temperature : " + currentTemperature);
-            }else{
-                System.out.println("Temperature reached to max");
-            }
-        }else System.out.println("Switch on first!");
-    }
-
-    void decreaseTemperature(){
-        System.out.println("decreaseTemperature method is invoked");
-        if(isConnected == true){
-            System.out.println("System is turned on proceed to decrease temperature");
-            if(currentTemperature > minTemperature){
-                currentTemperature -= 1;
-                System.out.println("Current Temperature : " + currentTemperature);
-            }else{
-                System.out.println("Temperature reached to min");
-            }
-        }else System.out.println("Switch on first!");
-    }
+public static String getBrand(){System.out.println("Fetching the information!!!!");return "Voltas";}
+public static double getPrice(){System.out.println("Fetching the information!!!!");return 35000;}
+public static double getTon(){System.out.println("Fetching the information!!!!");return 1.5;}
+public static boolean getInverter(){System.out.println("Fetching the information!!!!");return true;}
+public static int getStarRating(){System.out.println("Fetching the information!!!!");return 5;}
+public static String getType(){System.out.println("Fetching the information!!!!");return "Split";}
+public static int getWarranty(){System.out.println("Fetching the information!!!!");return 1;}
+public static String getColor(){System.out.println("Fetching the information!!!!");return "White";}
+public static double getWeight(){System.out.println("Fetching the information!!!!");return 32;}
+public static boolean getTurboMode(){System.out.println("Fetching the information!!!!");return true;}
 }
