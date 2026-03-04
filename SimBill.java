@@ -1,4 +1,4 @@
-class ElectricityBill{
+class SimBill{
 	
 	double billAmount;
 	String billInvoiceNo;
@@ -13,7 +13,7 @@ class ElectricityBill{
 	   System.out.println("Method is invoked");
    }
    
-   ElectricityBill(){
+   SimBill(){
 	   System.out.println("Constructor is invoked");
 	   
  }
