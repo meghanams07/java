@@ -1,928 +1,230 @@
 class LinkedInExecutor {
+    public static void main(String[] args) {
+        System.out.println("=== LINKEDIN APPS & ASSOCIATED PROFILES ===\n");
 
-    public static void main(String[] args){
+        Profile p1 = new Profile(101, "Nilav", "Software Engineering Student", "Student",
+                               "Learner", 1, "Bangalore", "CSE", "Java, SQL",
+                               "nilav@gmail.com", "987654321", "github.com", 500,
+                               "Software", "English", "Java Certification", "Web Traffic Analysis App",
+                               "Open to Work", "Student", "Passionate about Software Development");
 
-        LinkedIn l1 = new LinkedIn();
+        Profile p2 = new Profile(102, "Meghana M", "Final Year CSE Student | Campus Placements 2026", "Student",
+                               "Software Engineering Aspirant", 0, "Tumkūr, Karnataka", "B.E. Computer Science",
+                               "Java, JavaScript, C#, Python, DSA", "meghana@gmail.com", "8881234567",
+                               "github.com/meghanam", 250, "Information Technology",
+                               "English, Kannada, Hindi", "HackerRank Java, SQL", "ProductionHouse Management System",
+                               "Open to Work", "Student", "Final-year CSE student preparing for TCS, Cognizant placements");
 
-        l1.appId = 1;
-        l1.appName = "LinkedIn";
-        l1.company = "Microsoft";
-        l1.founder = "Reid Hoffman";
-        l1.launchYear = 2003;
-        l1.headquarters = "California";
-        l1.users = 900000000;
-        l1.platform = "Web & Mobile";
-        l1.category = "Professional Network";
-        l1.website = "linkedin.com";
-        l1.email = "support@linkedin.com";
-        l1.contact = "123456789";
-        l1.security = "High";
-        l1.paymentType = "Subscription";
-        l1.version = "10.0";
-        l1.colorTheme = "Blue";
-        l1.support = "24/7";
-        l1.status = "Active";
-        l1.country = "USA";
-        l1.language = "Multi-language";
+        Profile p3 = new Profile(103, "Ravi Kumar", "Full Stack Developer | TCS", "Tata Consultancy Services",
+                               "Software Engineer", 3, "Bangalore", "B.Tech CSE", "Java, Spring Boot, React, AWS",
+                               "ravi.tcs@gmail.com", "987654322", "linkedin.com/in/ravikumartcs", 1200,
+                               "IT Services", "English, Hindi", "AWS Certified Developer", "Enterprise Banking Portal",
+                               "Actively Hiring", "Professional", "Building scalable web applications at TCS");
 
-        Profile p1 = new Profile();
+        Profile p4 = new Profile(104, "Priya Sharma", "Technical Recruiter | Cognizant", "Cognizant Technology Solutions",
+                               "Senior Recruiter", 5, "Chennai", "MBA HR", "Technical Recruitment, Campus Hiring",
+                               "priya@cognizant.com", "984567890", "linkedin.com/in/priyasharmarecruiter", 3000,
+                               "IT Services", "English, Tamil", "SHRM Certified", "Campus Placement Drives",
+                               "Hiring Freshers", "Recruiter", "Hiring CSE freshers for Cognizant GenC roles");
 
-        p1.profileId = 101;
-        p1.userName = "Nilav";
-        p1.headline = "Software Engineering Student";
-        p1.company = "Student";
-        p1.jobTitle = "Learner";
-        p1.experienceYears = 1;
-        p1.location = "Bangalore";
-        p1.education = "CSE";
-        p1.skills = "Java, SQL";
-        p1.email = "nilav@gmail.com";
-        p1.phone = "987654321";
-        p1.website = "github.com";
-        p1.connections = 500;
-        p1.industry = "Software";
-        p1.language = "English";
-        p1.certification = "Java Certification";
-        p1.projects = "Web Traffic Analysis App";
-        p1.status = "Open to Work";
-        p1.profileType = "Student";
-        p1.description = "Passionate about Software Development";
+        Profile p5 = new Profile(105, "Arjun Patel", "Account Executive | Toshiba Software", "Toshiba Software India",
+                               "Sales Manager", 7, "Hyderabad", "B.Tech + MBA", "B2B Sales, Enterprise Software",
+                               "arjun@toshiba.com", "995677890", "linkedin.com/in/arjunpatelsales", 2500,
+                               "Enterprise Software", "English, Telugu", "Salesforce Certified", "Enterprise Deal Pipeline",
+                               "Open to Connect", "Sales Professional", "Closing enterprise software deals for Toshiba");
 
-        l1.profile = p1;
+        Profile p6 = new Profile(106, "Sanjay Reddy", "Campus Recruitment Lead | iNube", "iNube Software Solutions",
+                               "Talent Acquisition Head", 4, "Bangalore", "MCA", "Campus Recruitment, Tech Hiring",
+                               "sanjay@inube.com", "9901234567", "linkedin.com/in/sanjayreddyrecruiter", 1800,
+                               "InsurTech", "English, Kannada", "LinkedIn Recruiter Certified", "iNube Campus Hiring Program",
+                               "Hiring Now", "Recruiter", "Leading campus placements for iNube");
+
+        Profile p7 = new Profile(107, "Aishwarya N", "CSE Graduate | Open to Opportunities", "Freelancer",
+                               "Full Stack Developer", 1, "Tumkūr", "B.E. Computer Science", "React, Node.js, MongoDB",
+                               "aishwarya.n@gmail.com", "876543210", "github.com/aishwaryan", 350,
+                               "Software Development", "English, Kannada", "MongoDB Developer", "E-commerce Full Stack App",
+                               "Actively Looking", "Fresh Graduate", "Full stack developer seeking first full-time role");
+
+        Profile p8 = new Profile(108, "Vikram Singh", "Technical Lead | Xworkz Technologies", "Xworkz Technologies",
+                               "Tech Lead", 6, "Bangalore", "M.Tech", "Java, Microservices, Docker",
+                               "vikram@xworkz.com", "934567890", "linkedin.com/in/vikramsinghtl", 2200,
+                               "EdTech", "English, Hindi", "Docker Certified", "Online Coding Platform",
+                               "Open to Mentor", "Tech Lead", "Leading Java development team at Xworkz");
+
+        Profile p9 = new Profile(109, "Deepa Rani", "Data Science Student | Dhee Code Lab", "Dhee Code Lab",
+                               "Data Science Intern", 0, "Hyderabad", "B.Tech CSE", "Python, Pandas, Machine Learning",
+                               "deepa@dheecode.com", "901234567", "linkedin.com/in/deeparanids", 180,
+                               "Data Science", "English, Telugu", "Google Data Analytics", "Healthcare AI Model",
+                               "Learning & Networking", "Student", "Data Science enthusiast exploring ML applications");
+
+        Profile p10 = new Profile(110, "Karthik M", "Tech Content Writer | Medium", "Freelance Writer",
+                                "Technical Blogger", 2, "Chennai", "B.E. IT", "Technical Writing, DSA, System Design",
+                                "karthik@techwriter.in", "944567890", "medium.com/@karthiktech", 800,
+                                "Content Creation", "English, Tamil", "Google Technical Writing", "System Design Articles",
+                                "Open to Collaborate", "Content Creator", "Writing about DSA, System Design & Placements");
+
+        Profile p11 = new Profile(111, "Rahul V", "Data Analyst | TCS Analytics Team", "Tata Consultancy Services",
+                                "Data Analyst", 2, "Bangalore", "M.Sc. Data Science", "Python, Tableau, SQL, Power BI",
+                                "rahul.v@tcs.com", "9988776655", "linkedin.com/in/rahulvdata", 950,
+                                "Analytics", "English, Kannada", "Tableau Desktop Specialist", "Customer Analytics Dashboard",
+                                "Open to Opportunities", "Analyst", "Building data visualizations for enterprise clients");
+
+        Profile p12 = new Profile(112, "Neha Gupta", "Digital Marketing | Cognizant Digital", "Cognizant Digital Business",
+                                "Marketing Manager", 4, "Mumbai", "MBA Marketing", "LinkedIn Ads, Google Ads, SEO",
+                                "neha.gupta@cognizant.com", "9876543321", "linkedin.com/in/nehaguptamarketing", 1500,
+                                "Digital Marketing", "English, Hindi", "Google Analytics Certified", "B2B Lead Generation Campaigns",
+                                "Actively Hiring", "Marketer", "Running LinkedIn ad campaigns for IT services");
+
+        Profile p13 = new Profile(113, "Anand Raj", "Community Manager | Toshiba India", "Toshiba Software India",
+                                "Social Media Manager", 3, "Hyderabad", "BA Journalism", "Content Strategy, Community Building",
+                                "anand.raj@toshiba.com", "9244667788", "linkedin.com/in/anandrajcm", 1100,
+                                "Social Media", "English, Telugu", "Hootsuite Certified", "Toshiba India LinkedIn Presence",
+                                "Open to Connect", "Community Manager", "Managing Toshiba India LinkedIn showcase pages");
+
+        Profile p14 = new Profile(114, "Pooja K", "Alumni Coordinator | VTU Alumni", "Visvesvaraya Technological University",
+                                "Alumni Relations", 2, "Belagavi", "B.E. CSE VTU", "Alumni Networking, Event Management",
+                                "pooja.k@vtu.ac.in", "8333998877", "linkedin.com/in/poojakvtualumni", 600,
+                                "Education", "English, Kannada", "LinkedIn Alumni Tool", "VTU CSE Alumni Network",
+                                "Building Network", "Alumni Coordinator", "Connecting VTU CSE alumni through LinkedIn");
+
+        Profile p15 = new Profile(115, "Suresh M", "Content Strategist | iNube Marketing", "iNube Software Solutions",
+                                "Digital Content Creator", 1, "Bangalore", "B.Com", "LinkedIn Stories, Video Editing",
+                                "suresh@inube.com", "7979797979", "linkedin.com/in/sureshinube", 420,
+                                "Digital Content", "English, Kannada", "Canva Design School", "iNube LinkedIn Stories Series",
+                                "Content Creator", "Content Strategist", "Creating engaging LinkedIn Stories for iNube");
+
+        Profile p16 = new Profile(116, "Lakshmi P", "Tech Evangelist | Xworkz Technologies", "Xworkz Technologies",
+                                "Technical Evangelist", 3, "Bangalore", "M.Tech CSE", "Public Speaking, Live Streaming",
+                                "lakshmi@xworkz.com", "9944556677", "linkedin.com/in/lakshmiptech", 1300,
+                                "EdTech", "English, Kannada", "LinkedIn Live Certified", "Weekly Tech Live Sessions",
+                                "Live Streaming", "Tech Evangelist", "Hosting live coding sessions on LinkedIn Live");
+
+        Profile p17 = new Profile(117, "Manoj Kumar", "DSA Newsletter | 5K+ Subscribers", "Freelance Writer",
+                                "Newsletter Author", 1, "Tumkūr", "B.E. CSE", "Technical Writing, DSA",
+                                "manoj.dsa@gmail.com", "7890123456", "linkedin.com/in/manojdsanews", 750,
+                                "Content Creation", "English", "Newsletter Creator", "Daily DSA Problems Newsletter",
+                                "Writing Weekly", "Newsletter Writer", "Curating daily DSA problems for placements");
+
+        Profile p18 = new Profile(118, "Geetha R", "Clubhouse Host | Dhee Code Lab", "Dhee Code Lab",
+                                "Audio Event Host", 1, "Hyderabad", "MCA", "Audio Hosting, Tech Discussions",
+                                "geetha@dheecode.com", "9123456789", "linkedin.com/in/geethaaudio", 380,
+                                "EdTech", "English, Telugu", "LinkedIn Audio Events", "Weekly Coding Clubhouse",
+                                "Hosting Live", "Audio Host", "Hosting tech discussions on LinkedIn Audio Events");
+
+        Profile p19 = new Profile(119, "Vijayalakshmi S", "Top Voice India | Placement Guru", "Independent Coach",
+                                "Career Coach", 8, "Bangalore", "MBA HR", "Career Coaching, Interview Prep",
+                                "viji.coach@gmail.com", "9444556677", "linkedin.com/in/vijiplacementguru", 5000,
+                                "Career Coaching", "English, Kannada, Hindi", "LinkedIn Top Voice 2025", "Placement Success Stories",
+                                "Top Voice", "Influencer", "LinkedIn Top Voice helping students crack placements");
+
+        Profile p20 = new Profile(120, "Arunesh K", "LinkedIn API Developer | Tap", "Tap",
+                                "API Integration Specialist", 2, "Bangalore", "B.Tech CSE", "LinkedIn API, OAuth, REST APIs",
+                                "arunesh@tap.com", "9998887776", "linkedin.com/in/aruneshapi", 650,
+                                "API Development", "English", "LinkedIn API Certified", "LinkedIn Integration for Tap",
+                                "Open to API Projects", "Developer", "Building LinkedIn API integrations for enterprise apps");
+
+        LinkedIn l1 = new LinkedIn(1, "LinkedIn", "Microsoft", "Reid Hoffman", 2003, "California", 900000000,
+                                 "Web & Mobile", "Professional Network", "linkedin.com", "support@linkedin.com",
+                                 "123456789", "High", "Subscription", "10.0", "Blue", "24/7", "Active", "USA", "Multi-language", p1);
+
+        LinkedIn l2 = new LinkedIn(2, "LinkedIn Premium", "Microsoft", "Reid Hoffman", 2003, "Sunnyvale, California", 900000000,
+                                 "Web & Mobile", "Professional Network", "linkedin.com/premium", "premium@linkedin.com",
+                                 "223456789", "Very High", "Premium Subscription", "10.1", "Royal Blue", "Priority 24/7", "Active", "USA", "Multi-language", p2);
+
+        LinkedIn l3 = new LinkedIn(3, "LinkedIn Learning", "Microsoft", "Reid Hoffman", 2016, "Sunnyvale, California", 900000000,
+                                 "Web & Mobile", "Professional Learning", "linkedin.com/learning", "learning@linkedin.com",
+                                 "323456789", "High", "Subscription", "9.5", "Teal", "24/7", "Active", "USA", "Multi-language", p3);
+
+        LinkedIn l4 = new LinkedIn(4, "LinkedIn Recruiter", "Microsoft", "Reid Hoffman", 2008, "Sunnyvale, California", 900000000,
+                                 "Web", "Talent Acquisition", "linkedin.com/recruiter", "recruiter@linkedin.com",
+                                 "423456789", "Enterprise High", "Enterprise License", "11.0", "Enterprise Blue", "Dedicated Account Manager", "Active", "USA", "Multi-language", p4);
+
+        LinkedIn l5 = new LinkedIn(5, "Sales Navigator", "Microsoft", "Reid Hoffman", 2014, "Sunnyvale, California", 900000000,
+                                 "Web & Mobile", "Sales CRM", "linkedin.com/sales", "sales@linkedin.com",
+                                 "523456789", "High", "Sales Subscription", "8.2", "Gold Blue", "Priority Support", "Active", "USA", "Multi-language", p5);
+
+        LinkedIn l6 = new LinkedIn(6, "LinkedIn Events", "Microsoft", "Reid Hoffman", 2019, "Sunnyvale, California", 900000000,
+                                 "Web & Mobile", "Networking Events", "linkedin.com/events", "events@linkedin.com",
+                                 "623456789", "High", "Event Tickets", "3.1", "Event Purple", "Event Support", "Active", "USA", "Multi-language", p6);
+
+        LinkedIn l7 = new LinkedIn(7, "LinkedIn Jobs", "Microsoft", "Reid Hoffman", 2011, "Sunnyvale, California", 900000000,
+                                 "Web & Mobile", "Job Search", "linkedin.com/jobs", "jobs@linkedin.com",
+                                 "723456789", "High", "Job Postings", "7.8", "Career Green", "24/7", "Active", "USA", "Multi-language", p7);
+
+        LinkedIn l8 = new LinkedIn(8, "LinkedIn Messaging", "Microsoft", "Reid Hoffman", 2006, "Sunnyvale, California", 900000000,
+                                 "Mobile", "Professional Messaging", "linkedin.com/messaging", "messaging@linkedin.com",
+                                 "823456789", "Encrypted", "Premium Features", "5.2", "Chat Blue", "In-app", "Active", "USA", "Multi-language", p8);
+
+        LinkedIn l9 = new LinkedIn(9, "LinkedIn Groups", "Microsoft", "Reid Hoffman", 2007, "Sunnyvale, California", 900000000,
+                                 "Web & Mobile", "Professional Communities", "linkedin.com/groups", "groups@linkedin.com",
+                                 "923456789", "High", "Free", "4.5", "Community Orange", "Community Moderators", "Active", "USA", "Multi-language", p9);
+
+        LinkedIn 10 = new LinkedIn(10, "LinkedIn Pulse", "Microsoft", "Reid Hoffman", 2012, "Sunnyvale, California", 900000000,
+                                  "Web & Mobile", "Content Publishing", "linkedin.com/pulse", "pulse@linkedin.com",
+                                  "102345678", "High", "Free", "6.0", "Content Grey", "Editorial Team", "Active", "USA", "Multi-language", p10);
+
+        LinkedIn 11 = new LinkedIn(11, "LinkedIn Analytics", "Microsoft", "Reid Hoffman", 2015, "Sunnyvale, California", 900000000,
+                                  "Web Dashboard", "Performance Analytics", "linkedin.com/analytics", "analytics@linkedin.com",
+                                  "112345678", "High", "Premium", "4.2", "Data Blue", "Analytics Support", "Active", "USA", "Multi-language", p11);
+
+        LinkedIn l2 = new LinkedIn(12, "LinkedIn Ads", "Microsoft", "Reid Hoffman", 2008, "Sunnyvale, California", 900000000,
+                                  "Web & Mobile", "Advertising Platform", "linkedin.com/ads", "ads@linkedin.com",
+                                  "122345678", "High", "CPC/CPM", "9.8", "Ad Green", "Ad Support", "Active", "USA", "Multi-language", p12);
+
+        LinkedIn 13 = new LinkedIn(13, "LinkedIn Showcase", "Microsoft", "Reid Hoffman", 2013, "Sunnyvale, California", 900000000,
+                                  "Web Pages", "Brand Pages", "linkedin.com/showcase", "showcase@linkedin.com",
+                                  "132345678", "High", "Premium", "3.5", "Brand Colors", "Brand Support", "Active", "USA", "Multi-language", p13);
+
+        LinkedIn 14 = new LinkedIn(14, "LinkedIn Alumni", "Microsoft", "Reid Hoffman", 2014, "Sunnyvale, California", 900000000,
+                                  "Web Tool", "Networking Tool", "linkedin.com/alumni", "alumni@linkedin.com",
+                                  "142345678", "High", "Free", "2.8", "Alumni Gold", "Basic Support", "Active", "USA", "Multi-language", p14);
+
+        LinkedIn l5 = new LinkedIn(15, "LinkedIn Stories", "Microsoft", "Reid Hoffman", 2017, "Sunnyvale, California", 900000000,
+                                  "Mobile", "Short-form Content", "linkedin.com/stories", "stories@linkedin.com",
+                                  "152345678", "High", "Free", "1.9", "Story Gradient", "In-app", "Active", "USA", "Multi-language", p15);
+
+        LinkedIn l6 = new LinkedIn(16, "LinkedIn Live", "Microsoft", "Reid Hoffman", 2019, "Sunnyvale, California", 900000000,
+                                  "Web & Mobile", "Live Streaming", "linkedin.com/live", "live@linkedin.com",
+                                  "162345678", "High", "Event Tickets", "2.3", "Live Red", "Live Support", "Active", "USA", "Multi-language", p16);
+
+        LinkedIn l7 = new LinkedIn(17, "LinkedIn Newsletters", "Microsoft", "Reid Hoffman", 2017, "Sunnyvale, California", 900000000,
+                                  "Web & Mobile", "Email Newsletter", "linkedin.com/newsletters", "newsletters@linkedin.com",
+                                  "172345678", "High", "Free", "3.1", "Newsletter Teal", "Creator Support", "Active", "USA", "Multi-language", p17);
+
+        LinkedIn l8 = new LinkedIn(18, "LinkedIn Audio Events", "Microsoft", "Reid Hoffman", 2021, "Sunnyvale, California", 900000000,
+                                  "Mobile", "Audio Events", "linkedin.com/audio-events", "audio@linkedin.com",
+                                  "182345678", "High", "Free", "1.4", "Audio Purple", "Event Support", "Active", "USA", "Multi-language", p18);
+
+        LinkedIn l9 = new LinkedIn(19, "LinkedIn Top Voices", "Microsoft", "Reid Hoffman", 2015, "Sunnyvale, California", 900000000,
+                                  "Web Recognition", "Influencer Program", "linkedin.com/topvoices", "topvoices@linkedin.com",
+                                  "192345678", "High", "Recognition", "2.0", "VIP Gold", "VIP Support", "Active", "USA", "Multi-language", p19);
+
+        LinkedIn 20 = new LinkedIn(20, "LinkedIn Developer", "Microsoft", "Reid Hoffman", 2015, "Sunnyvale, California", 900000000,
+                                  "API Platform", "Developer Platform", "developer.linkedin.com", "developers@linkedin.com",
+                                  "202345678", "API Security", "API Credits", "5.1", "Dev Black", "Developer Support", "Active", "USA", "Multi-language", p20);
 
         l1.getLinkedInDetails();
-		LinkedIn l2 = new LinkedIn();
-l2.appId = 2;
-l2.appName = "LinkedIn Premium";
-l2.company = "Microsoft";
-l2.founder = "Reid Hoffman";
-l2.launchYear = 2003;
-l2.headquarters = "Sunnyvale, California";
-l2.users = 900000000;
-l2.platform = "Web & Mobile";
-l2.category = "Professional Network";
-l2.website = "linkedin.com/premium";
-l2.email = "premium@linkedin.com";
-l2.contact = "223456789";
-l2.security = "Very High";
-l2.paymentType = "Premium Subscription";
-l2.version = "10.1";
-l2.colorTheme = "Royal Blue";
-l2.support = "Priority 24/7";
-l2.status = "Active";
-l2.country = "USA";
-l2.language = "Multi-language";
+        l2.getLinkedInDetails();
+        l3.getLinkedInDetails();
+        l4.getLinkedInDetails();
+        l5.getLinkedInDetails();
+        l6.getLinkedInDetails();
+        l7.getLinkedInDetails();
+        l8.getLinkedInDetails();
+        l9.getLinkedInDetails();
+        l10.getLinkedInDetails();
+        l11.getLinkedInDetails();
+        l12.getLinkedInDetails();
+        l13.getLinkedInDetails();
+        l14.getLinkedInDetails();
+        l15.getLinkedInDetails();
+        l16.getLinkedInDetails();
+        l17.getLinkedInDetails();
+        l18.getLinkedInDetails();
+        l19.getLinkedInDetails();
+        l20.getLinkedInDetails();
 
-Profile p2 = new Profile();
-p2.profileId = 102;
-p2.userName = "Meghana M";
-p2.headline = "Final Year CSE Student | Campus Placements 2026";
-p2.company = "Student";
-p2.jobTitle = "Software Engineering Aspirant";
-p2.experienceYears = 0;
-p2.location = "Tumkūr, Karnataka";
-p2.education = "B.E. Computer Science";
-p2.skills = "Java, JavaScript, C#, Python, DSA";
-p2.email = "meghana@gmail.com";
-p2.phone = "8881234567";
-p2.website = "github.com/meghanam";
-p2.connections = 250;
-p2.industry = "Information Technology";
-p2.language = "English, Kannada, Hindi";
-p2.certification = "HackerRank Java, SQL";
-p2.projects = "ProductionHouse Management System";
-p2.status = "Open to Work";
-p2.profileType = "Student";
-p2.description = "Final-year CSE student preparing for TCS, Cognizant placements";
-l2.profile = p2;
-l2.getLinkedInDetails();
-
-LinkedIn l3 = new LinkedIn();
-l3.appId = 3;
-l3.appName = "LinkedIn Learning";
-l3.company = "Microsoft";
-l3.founder = "Reid Hoffman";
-l3.launchYear = 2016;
-l3.headquarters = "Sunnyvale, California";
-l3.users = 900000000;
-l3.platform = "Web & Mobile";
-l3.category = "Professional Learning";
-l3.website = "linkedin.com/learning";
-l3.email = "learning@linkedin.com";
-l3.contact = "323456789";
-l3.security = "High";
-l3.paymentType = "Subscription";
-l3.version = "9.5";
-l3.colorTheme = "Teal";
-l3.support = "24/7";
-l3.status = "Active";
-l3.country = "USA";
-l3.language = "Multi-language";
-
-Profile p3 = new Profile();
-p3.profileId = 103;
-p3.userName = "Ravi Kumar";
-p3.headline = "Full Stack Developer | TCS";
-p3.company = "Tata Consultancy Services";
-p3.jobTitle = "Software Engineer";
-p3.experienceYears = 3;
-p3.location = "Bangalore";
-p3.education = "B.Tech CSE";
-p3.skills = "Java, Spring Boot, React, AWS";
-p3.email = "ravi.tcs@gmail.com";
-p3.phone = "987654322";
-p3.website = "linkedin.com/in/ravikumartcs";
-p3.connections = 1200;
-p3.industry = "IT Services";
-p3.language = "English, Hindi";
-p3.certification = "AWS Certified Developer";
-p3.projects = "Enterprise Banking Portal";
-p3.status = "Actively Hiring";
-p3.profileType = "Professional";
-p3.description = "Building scalable web applications at TCS";
-l3.profile = p3;
-l3.getLinkedInDetails();
-
-LinkedIn l4 = new LinkedIn();
-l4.appId = 4;
-l4.appName = "LinkedIn Recruiter";
-l4.company = "Microsoft";
-l4.founder = "Reid Hoffman";
-l4.launchYear = 2008;
-l4.headquarters = "Sunnyvale, California";
-l4.users = 900000000;
-l4.platform = "Web";
-l4.category = "Talent Acquisition";
-l4.website = "linkedin.com/recruiter";
-l4.email = "recruiter@linkedin.com";
-l4.contact = "423456789";
-l4.security = "Enterprise High";
-l4.paymentType = "Enterprise License";
-l4.version = "11.0";
-l4.colorTheme = "Enterprise Blue";
-l4.support = "Dedicated Account Manager";
-l4.status = "Active";
-l4.country = "USA";
-l4.language = "Multi-language";
-
-Profile p4 = new Profile();
-p4.profileId = 104;
-p4.userName = "Priya Sharma";
-p4.headline = "Technical Recruiter | Cognizant";
-p4.company = "Cognizant Technology Solutions";
-p4.jobTitle = "Senior Recruiter";
-p4.experienceYears = 5;
-p4.location = "Chennai";
-p4.education = "MBA HR";
-p4.skills = "Technical Recruitment, Campus Hiring";
-p4.email = "priya@cognizant.com";
-p4.phone = "984567890";
-p4.website = "linkedin.com/in/priyasharmarecruiter";
-p4.connections = 3000;
-p4.industry = "IT Services";
-p4.language = "English, Tamil";
-p4.certification = "SHRM Certified";
-p4.projects = "Campus Placement Drives";
-p4.status = "Hiring Freshers";
-p4.profileType = "Recruiter";
-p4.description = "Hiring CSE freshers for Cognizant GenC roles";
-l4.profile = p4;
-l4.getLinkedInDetails();
-
-LinkedIn l5 = new LinkedIn();
-l5.appId = 5;
-l5.appName = "Sales Navigator";
-l5.company = "Microsoft";
-l5.founder = "Reid Hoffman";
-l5.launchYear = 2014;
-l5.headquarters = "Sunnyvale, California";
-l5.users = 900000000;
-l5.platform = "Web & Mobile";
-l5.category = "Sales CRM";
-l5.website = "linkedin.com/sales";
-l5.email = "sales@linkedin.com";
-l5.contact = "523456789";
-l5.security = "High";
-l5.paymentType = "Sales Subscription";
-l5.version = "8.2";
-l5.colorTheme = "Gold Blue";
-l5.support = "Priority Support";
-l5.status = "Active";
-l5.country = "USA";
-l5.language = "Multi-language";
-
-Profile p5 = new Profile();
-p5.profileId = 105;
-p5.userName = "Arjun Patel";
-p5.headline = "Account Executive | Toshiba Software";
-p5.company = "Toshiba Software India";
-p5.jobTitle = "Sales Manager";
-p5.experienceYears = 7;
-p5.location = "Hyderabad";
-p5.education = "B.Tech + MBA";
-p5.skills = "B2B Sales, Enterprise Software";
-p5.email = "arjun@toshiba.com";
-p5.phone = "995677890";
-p5.website = "linkedin.com/in/arjunpatelsales";
-p5.connections = 2500;
-p5.industry = "Enterprise Software";
-p5.language = "English, Telugu";
-p5.certification = "Salesforce Certified";
-p5.projects = "Enterprise Deal Pipeline";
-p5.status = "Open to Connect";
-p5.profileType = "Sales Professional";
-p5.description = "Closing enterprise software deals for Toshiba";
-l5.profile = p5;
-l5.getLinkedInDetails();
-
-LinkedIn l6 = new LinkedIn();
-l6.appId = 6;
-l6.appName = "LinkedIn Events";
-l6.company = "Microsoft";
-l6.founder = "Reid Hoffman";
-l6.launchYear = 2019;
-l6.headquarters = "Sunnyvale, California";
-l6.users = 900000000;
-l6.platform = "Web & Mobile";
-l6.category = "Networking Events";
-l6.website = "linkedin.com/events";
-l6.email = "events@linkedin.com";
-l6.contact = "623456789";
-l6.security = "High";
-l6.paymentType = "Event Tickets";
-l6.version = "3.1";
-l6.colorTheme = "Event Purple";
-l6.support = "Event Support";
-l6.status = "Active";
-l6.country = "USA";
-l6.language = "Multi-language";
-
-Profile p6 = new Profile();
-p6.profileId = 106;
-p6.userName = "Sanjay Reddy";
-p6.headline = "Campus Recruitment Lead | iNube";
-p6.company = "iNube Software Solutions";
-p6.jobTitle = "Talent Acquisition Head";
-p6.experienceYears = 4;
-p6.location = "Bangalore";
-p6.education = "MCA";
-p6.skills = "Campus Recruitment, Tech Hiring";
-p6.email = "sanjay@inube.com";
-p6.phone = "9901234567";
-p6.website = "linkedin.com/in/sanjayreddyrecruiter";
-p6.connections = 1800;
-p6.industry = "InsurTech";
-p6.language = "English, Kannada";
-p6.certification = "LinkedIn Recruiter Certified";
-p6.projects = "iNube Campus Hiring Program";
-p6.status = "Hiring Now";
-p6.profileType = "Recruiter";
-p6.description = "Leading campus placements for iNube";
-l6.profile = p6;
-l6.getLinkedInDetails();
-
-LinkedIn l7 = new LinkedIn();
-l7.appId = 7;
-l7.appName = "LinkedIn Jobs";
-l7.company = "Microsoft";
-l7.founder = "Reid Hoffman";
-l7.launchYear = 2011;
-l7.headquarters = "Sunnyvale, California";
-l7.users = 900000000;
-l7.platform = "Web & Mobile";
-l7.category = "Job Search";
-l7.website = "linkedin.com/jobs";
-l7.email = "jobs@linkedin.com";
-l7.contact = "723456789";
-l7.security = "High";
-l7.paymentType = "Job Postings";
-l7.version = "7.8";
-l7.colorTheme = "Career Green";
-l7.support = "24/7";
-l7.status = "Active";
-l7.country = "USA";
-l7.language = "Multi-language";
-
-Profile p7 = new Profile();
-p7.profileId = 107;
-p7.userName = "Aishwarya N";
-p7.headline = "CSE Graduate | Open to Opportunities";
-p7.company = "Freelancer";
-p7.jobTitle = "Full Stack Developer";
-p7.experienceYears = 1;
-p7.location = "Tumkūr";
-p7.education = "B.E. Computer Science";
-p7.skills = "React, Node.js, MongoDB";
-p7.email = "aishwarya.n@gmail.com";
-p7.phone = "876543210";
-p7.website = "github.com/aishwaryan";
-p7.connections = 350;
-p7.industry = "Software Development";
-p7.language = "English, Kannada";
-p7.certification = "MongoDB Developer";
-p7.projects = "E-commerce Full Stack App";
-p7.status = "Actively Looking";
-p7.profileType = "Fresh Graduate";
-p7.description = "Full stack developer seeking first full-time role";
-l7.profile = p7;
-l7.getLinkedInDetails();
-
-LinkedIn l8 = new LinkedIn();
-l8.appId = 8;
-l8.appName = "LinkedIn Messaging";
-l8.company = "Microsoft";
-l8.founder = "Reid Hoffman";
-l8.launchYear = 2006;
-l8.headquarters = "Sunnyvale, California";
-l8.users = 900000000;
-l8.platform = "Mobile";
-l8.category = "Professional Messaging";
-l8.website = "linkedin.com/messaging";
-l8.email = "messaging@linkedin.com";
-l8.contact = "823456789";
-l8.security = "Encrypted";
-l8.paymentType = "Premium Features";
-l8.version = "5.2";
-l8.colorTheme = "Chat Blue";
-l8.support = "In-app";
-l8.status = "Active";
-l8.country = "USA";
-l8.language = "Multi-language";
-
-Profile p8 = new Profile();
-p8.profileId = 108;
-p8.userName = "Vikram Singh";
-p8.headline = "Technical Lead | Xworkz Technologies";
-p8.company = "Xworkz Technologies";
-p8.jobTitle = "Tech Lead";
-p8.experienceYears = 6;
-p8.location = "Bangalore";
-p8.education = "M.Tech";
-p8.skills = "Java, Microservices, Docker";
-p8.email = "vikram@xworkz.com";
-p8.phone = "934567890";
-p8.website = "linkedin.com/in/vikramsinghtl";
-p8.connections = 2200;
-p8.industry = "EdTech";
-p8.language = "English, Hindi";
-p8.certification = "Docker Certified";
-p8.projects = "Online Coding Platform";
-p8.status = "Open to Mentor";
-p8.profileType = "Tech Lead";
-p8.description = "Leading Java development team at Xworkz";
-l8.profile = p8;
-l8.getLinkedInDetails();
-
-LinkedIn l9 = new LinkedIn();
-l9.appId = 9;
-l9.appName = "LinkedIn Groups";
-l9.company = "Microsoft";
-l9.founder = "Reid Hoffman";
-l9.launchYear = 2007;
-l9.headquarters = "Sunnyvale, California";
-l9.users = 900000000;
-l9.platform = "Web & Mobile";
-l9.category = "Professional Communities";
-l9.website = "linkedin.com/groups";
-l9.email = "groups@linkedin.com";
-l9.contact = "923456789";
-l9.security = "High";
-l9.paymentType = "Free";
-l9.version = "4.5";
-l9.colorTheme = "Community Orange";
-l9.support = "Community Moderators";
-l9.status = "Active";
-l9.country = "USA";
-l9.language = "Multi-language";
-
-Profile p9 = new Profile();
-p9.profileId = 109;
-p9.userName = "Deepa Rani";
-p9.headline = "Data Science Student | Dhee Code Lab";
-p9.company = "Dhee Code Lab";
-p9.jobTitle = "Data Science Intern";
-p9.experienceYears = 0;
-p9.location = "Hyderabad";
-p9.education = "B.Tech CSE";
-p9.skills = "Python, Pandas, Machine Learning";
-p9.email = "deepa@dheecode.com";
-p9.phone = "901234567";
-p9.website = "linkedin.com/in/deeparanids";
-p9.connections = 180;
-p9.industry = "Data Science";
-p9.language = "English, Telugu";
-p9.certification = "Google Data Analytics";
-p9.projects = "Healthcare AI Model";
-p9.status = "Learning & Networking";
-p9.profileType = "Student";
-p9.description = "Data Science enthusiast exploring ML applications";
-l9.profile = p9;
-l9.getLinkedInDetails();
-
-LinkedIn l10 = new LinkedIn();
-l10.appId = 10;
-l10.appName = "LinkedIn Pulse";
-l10.company = "Microsoft";
-l10.founder = "Reid Hoffman";
-l10.launchYear = 2012;
-l10.headquarters = "Sunnyvale, California";
-l10.users = 900000000;
-l10.platform = "Web & Mobile";
-l10.category = "Content Publishing";
-l10.website = "linkedin.com/pulse";
-l10.email = "pulse@linkedin.com";
-l10.contact = "102345678";
-l10.security = "High";
-l10.paymentType = "Free";
-l10.version = "6.0";
-l10.colorTheme = "Content Grey";
-l10.support = "Editorial Team";
-l10.status = "Active";
-l10.country = "USA";
-l10.language = "Multi-language";
-
-Profile p10 = new Profile();
-p10.profileId = 110;
-p10.userName = "Karthik M";
-p10.headline = "Tech Content Writer | Medium";
-p10.company = "Freelance Writer";
-p10.jobTitle = "Technical Blogger";
-p10.experienceYears = 2;
-p10.location = "Chennai";
-p10.education = "B.E. IT";
-p10.skills = "Technical Writing, DSA, System Design";
-p10.email = "karthik@techwriter.in";
-p10.phone = "944567890";
-p10.website = "medium.com/@karthiktech";
-p10.connections = 800;
-p10.industry = "Content Creation";
-p10.language = "English, Tamil";
-p10.certification = "Google Technical Writing";
-p10.projects = "System Design Articles";
-p10.status = "Open to Collaborate";
-p10.profileType = "Content Creator";
-p10.description = "Writing about DSA, System Design & Placements";
-l10.profile = p10;
-l10.getLinkedInDetails();
-LinkedIn l11 = new LinkedIn();
-l11.appId = 11;
-l11.appName = "LinkedIn Analytics";
-l11.company = "Microsoft";
-l11.founder = "Reid Hoffman";
-l11.launchYear = 2015;
-l11.headquarters = "Sunnyvale, California";
-l11.users = 900000000;
-l11.platform = "Web Dashboard";
-l11.category = "Performance Analytics";
-l11.website = "linkedin.com/analytics";
-l11.email = "analytics@linkedin.com";
-l11.contact = "112345678";
-l11.security = "High";
-l11.paymentType = "Premium";
-l11.version = "4.2";
-l11.colorTheme = "Data Blue";
-l11.support = "Analytics Support";
-l11.status = "Active";
-l11.country = "USA";
-l11.language = "Multi-language";
-
-Profile p11 = new Profile();
-p11.profileId = 111;
-p11.userName = "Rahul V";
-p11.headline = "Data Analyst | TCS Analytics Team";
-p11.company = "Tata Consultancy Services";
-p11.jobTitle = "Data Analyst";
-p11.experienceYears = 2;
-p11.location = "Bangalore";
-p11.education = "M.Sc. Data Science";
-p11.skills = "Python, Tableau, SQL, Power BI";
-p11.email = "rahul.v@tcs.com";
-p11.phone = "9988776655";
-p11.website = "linkedin.com/in/rahulvdata";
-p11.connections = 950;
-p11.industry = "Analytics";
-p11.language = "English, Kannada";
-p11.certification = "Tableau Desktop Specialist";
-p11.projects = "Customer Analytics Dashboard";
-p11.status = "Open to Opportunities";
-p11.profileType = "Analyst";
-p11.description = "Building data visualizations for enterprise clients";
-l11.profile = p11;
-l11.getLinkedInDetails();
-
-LinkedIn l12 = new LinkedIn();
-l12.appId = 12;
-l12.appName = "LinkedIn Ads";
-l12.company = "Microsoft";
-l12.founder = "Reid Hoffman";
-l12.launchYear = 2008;
-l12.headquarters = "Sunnyvale, California";
-l12.users = 900000000;
-l12.platform = "Web & Mobile";
-l12.category = "Advertising Platform";
-l12.website = "linkedin.com/ads";
-l12.email = "ads@linkedin.com";
-l12.contact = "122345678";
-l12.security = "High";
-l12.paymentType = "CPC/CPM";
-l12.version = "9.8";
-l12.colorTheme = "Ad Green";
-l12.support = "Ad Support";
-l12.status = "Active";
-l12.country = "USA";
-l12.language = "Multi-language";
-
-Profile p12 = new Profile();
-p12.profileId = 112;
-p12.userName = "Neha Gupta";
-p12.headline = "Digital Marketing | Cognizant Digital";
-p12.company = "Cognizant Digital Business";
-p12.jobTitle = "Marketing Manager";
-p12.experienceYears = 4;
-p12.location = "Mumbai";
-p12.education = "MBA Marketing";
-p12.skills = "LinkedIn Ads, Google Ads, SEO";
-p12.email = "neha.gupta@cognizant.com";
-p12.phone = "9876543321";
-p12.website = "linkedin.com/in/nehaguptamarketing";
-p12.connections = 1500;
-p12.industry = "Digital Marketing";
-p12.language = "English, Hindi";
-p12.certification = "Google Analytics Certified";
-p12.projects = "B2B Lead Generation Campaigns";
-p12.status = "Actively Hiring";
-p12.profileType = "Marketer";
-p12.description = "Running LinkedIn ad campaigns for IT services";
-l12.profile = p12;
-l12.getLinkedInDetails();
-
-LinkedIn l13 = new LinkedIn();
-l13.appId = 13;
-l13.appName = "LinkedIn Showcase";
-l13.company = "Microsoft";
-l13.founder = "Reid Hoffman";
-l13.launchYear = 2013;
-l13.headquarters = "Sunnyvale, California";
-l13.users = 900000000;
-l13.platform = "Web Pages";
-l13.category = "Brand Pages";
-l13.website = "linkedin.com/showcase";
-l13.email = "showcase@linkedin.com";
-l13.contact = "132345678";
-l13.security = "High";
-l13.paymentType = "Premium";
-l13.version = "3.5";
-l13.colorTheme = "Brand Colors";
-l13.support = "Brand Support";
-l13.status = "Active";
-l13.country = "USA";
-l13.language = "Multi-language";
-
-Profile p13 = new Profile();
-p13.profileId = 113;
-p13.userName = "Anand Raj";
-p13.headline = "Community Manager | Toshiba India";
-p13.company = "Toshiba Software India";
-p13.jobTitle = "Social Media Manager";
-p13.experienceYears = 3;
-p13.location = "Hyderabad";
-p13.education = "BA Journalism";
-p13.skills = "Content Strategy, Community Building";
-p13.email = "anand.raj@toshiba.com";
-p13.phone = "9244667788";
-p13.website = "linkedin.com/in/anandrajcm";
-p13.connections = 1100;
-p13.industry = "Social Media";
-p13.language = "English, Telugu";
-p13.certification = "Hootsuite Certified";
-p13.projects = "Toshiba India LinkedIn Presence";
-p13.status = "Open to Connect";
-p13.profileType = "Community Manager";
-p13.description = "Managing Toshiba India LinkedIn showcase pages";
-l13.profile = p13;
-l13.getLinkedInDetails();
-
-LinkedIn l14 = new LinkedIn();
-l14.appId = 14;
-l14.appName = "LinkedIn Alumni";
-l14.company = "Microsoft";
-l14.founder = "Reid Hoffman";
-l14.launchYear = 2014;
-l14.headquarters = "Sunnyvale, California";
-l14.users = 900000000;
-l14.platform = "Web Tool";
-l14.category = "Networking Tool";
-l14.website = "linkedin.com/alumni";
-l14.email = "alumni@linkedin.com";
-l14.contact = "142345678";
-l14.security = "High";
-l14.paymentType = "Free";
-l14.version = "2.8";
-l14.colorTheme = "Alumni Gold";
-l14.support = "Basic Support";
-l14.status = "Active";
-l14.country = "USA";
-l14.language = "Multi-language";
-
-Profile p14 = new Profile();
-p14.profileId = 114;
-p14.userName = "Pooja K";
-p14.headline = "Alumni Coordinator | VTU Alumni";
-p14.company = "Visvesvaraya Technological University";
-p14.jobTitle = "Alumni Relations";
-p14.experienceYears = 2;
-p14.location = "Belagavi";
-p14.education = "B.E. CSE VTU";
-p14.skills = "Alumni Networking, Event Management";
-p14.email = "pooja.k@vtu.ac.in";
-p14.phone = "8333998877";
-p14.website = "linkedin.com/in/poojakvtualumni";
-p14.connections = 600;
-p14.industry = "Education";
-p14.language = "English, Kannada";
-p14.certification = "LinkedIn Alumni Tool";
-p14.projects = "VTU CSE Alumni Network";
-p14.status = "Building Network";
-p14.profileType = "Alumni Coordinator";
-p14.description = "Connecting VTU CSE alumni through LinkedIn";
-l14.profile = p14;
-l14.getLinkedInDetails();
-
-LinkedIn l15 = new LinkedIn();
-l15.appId = 15;
-l15.appName = "LinkedIn Stories";
-l15.company = "Microsoft";
-l15.founder = "Reid Hoffman";
-l15.launchYear = 2017;
-l15.headquarters = "Sunnyvale, California";
-l15.users = 900000000;
-l15.platform = "Mobile";
-l15.category = "Short-form Content";
-l15.website = "linkedin.com/stories";
-l15.email = "stories@linkedin.com";
-l15.contact = "152345678";
-l15.security = "High";
-l15.paymentType = "Free";
-l15.version = "1.9";
-l15.colorTheme = "Story Gradient";
-l15.support = "In-app";
-l15.status = "Active";
-l15.country = "USA";
-l15.language = "Multi-language";
-
-Profile p15 = new Profile();
-p15.profileId = 115;
-p15.userName = "Suresh M";
-p15.headline = "Content Strategist | iNube Marketing";
-p15.company = "iNube Software Solutions";
-p15.jobTitle = "Digital Content Creator";
-p15.experienceYears = 1;
-p15.location = "Bangalore";
-p15.education = "B.Com";
-p15.skills = "LinkedIn Stories, Video Editing";
-p15.email = "suresh@inube.com";
-p15.phone = "7979797979";
-p15.website = "linkedin.com/in/sureshinube";
-p15.connections = 420;
-p15.industry = "Digital Content";
-p15.language = "English, Kannada";
-p15.certification = "Canva Design School";
-p15.projects = "iNube LinkedIn Stories Series";
-p15.status = "Content Creator";
-p15.profileType = "Content Strategist";
-p15.description = "Creating engaging LinkedIn Stories for iNube";
-l15.profile = p15;
-l15.getLinkedInDetails();
-
-LinkedIn l16 = new LinkedIn();
-l16.appId = 16;
-l16.appName = "LinkedIn Live";
-l16.company = "Microsoft";
-l16.founder = "Reid Hoffman";
-l16.launchYear = 2019;
-l16.headquarters = "Sunnyvale, California";
-l16.users = 900000000;
-l16.platform = "Web & Mobile";
-l16.category = "Live Streaming";
-l16.website = "linkedin.com/live";
-l16.email = "live@linkedin.com";
-l16.contact = "162345678";
-l16.security = "High";
-l16.paymentType = "Event Tickets";
-l16.version = "2.3";
-l16.colorTheme = "Live Red";
-l16.support = "Live Support";
-l16.status = "Active";
-l16.country = "USA";
-l16.language = "Multi-language";
-
-Profile p16 = new Profile();
-p16.profileId = 116;
-p16.userName = "Lakshmi P";
-p16.headline = "Tech Evangelist | Xworkz Technologies";
-p16.company = "Xworkz Technologies";
-p16.jobTitle = "Technical Evangelist";
-p16.experienceYears = 3;
-p16.location = "Bangalore";
-p16.education = "M.Tech CSE";
-p16.skills = "Public Speaking, Live Streaming";
-p16.email = "lakshmi@xworkz.com";
-p16.phone = "9944556677";
-p16.website = "linkedin.com/in/lakshmiptech";
-p16.connections = 1300;
-p16.industry = "EdTech";
-p16.language = "English, Kannada";
-p16.certification = "LinkedIn Live Certified";
-p16.projects = "Weekly Tech Live Sessions";
-p16.status = "Live Streaming";
-p16.profileType = "Tech Evangelist";
-p16.description = "Hosting live coding sessions on LinkedIn Live";
-l16.profile = p16;
-l16.getLinkedInDetails();
-
-LinkedIn l17 = new LinkedIn();
-l17.appId = 17;
-l17.appName = "LinkedIn Newsletters";
-l17.company = "Microsoft";
-l17.founder = "Reid Hoffman";
-l17.launchYear = 2017;
-l17.headquarters = "Sunnyvale, California";
-l17.users = 900000000;
-l17.platform = "Web & Mobile";
-l17.category = "Email Newsletter";
-l17.website = "linkedin.com/newsletters";
-l17.email = "newsletters@linkedin.com";
-l17.contact = "172345678";
-l17.security = "High";
-l17.paymentType = "Free";
-l17.version = "3.1";
-l17.colorTheme = "Newsletter Teal";
-l17.support = "Creator Support";
-l17.status = "Active";
-l17.country = "USA";
-l17.language = "Multi-language";
-
-Profile p17 = new Profile();
-p17.profileId = 117;
-p17.userName = "Manoj Kumar";
-p17.headline = "DSA Newsletter | 5K+ Subscribers";
-p17.company = "Freelance Writer";
-p17.jobTitle = "Newsletter Author";
-p17.experienceYears = 1;
-p17.location = "Tumkūr";
-p17.education = "B.E. CSE";
-p17.skills = "Technical Writing, DSA";
-p17.email = "manoj.dsa@gmail.com";
-p17.phone = "7890123456";
-p17.website = "linkedin.com/in/manojdsanews";
-p17.connections = 750;
-p17.industry = "Content Creation";
-p17.language = "English";
-p17.certification = "Newsletter Creator";
-p17.projects = "Daily DSA Problems Newsletter";
-p17.status = "Writing Weekly";
-p17.profileType = "Newsletter Writer";
-p17.description = "Curating daily DSA problems for placements";
-l17.profile = p17;
-l17.getLinkedInDetails();
-
-LinkedIn l18 = new LinkedIn();
-l18.appId = 18;
-l18.appName = "LinkedIn Audio Events";
-l18.company = "Microsoft";
-l18.founder = "Reid Hoffman";
-l18.launchYear = 2021;
-l18.headquarters = "Sunnyvale, California";
-l18.users = 900000000;
-l18.platform = "Mobile";
-l18.category = "Audio Events";
-l18.website = "linkedin.com/audio-events";
-l18.email = "audio@linkedin.com";
-l18.contact = "182345678";
-l18.security = "High";
-l18.paymentType = "Free";
-l18.version = "1.4";
-l18.colorTheme = "Audio Purple";
-l18.support = "Event Support";
-l18.status = "Active";
-l18.country = "USA";
-l18.language = "Multi-language";
-
-Profile p18 = new Profile();
-p18.profileId = 118;
-p18.userName = "Geetha R";
-p18.headline = "Clubhouse Host | Dhee Code Lab";
-p18.company = "Dhee Code Lab";
-p18.jobTitle = "Audio Event Host";
-p18.experienceYears = 1;
-p18.location = "Hyderabad";
-p18.education = "MCA";
-p18.skills = "Audio Hosting, Tech Discussions";
-p18.email = "geetha@dheecode.com";
-p18.phone = "9123456789";
-p18.website = "linkedin.com/in/geethaaudio";
-p18.connections = 380;
-p18.industry = "EdTech";
-p18.language = "English, Telugu";
-p18.certification = "LinkedIn Audio Events";
-p18.projects = "Weekly Coding Clubhouse";
-p18.status = "Hosting Live";
-p18.profileType = "Audio Host";
-p18.description = "Hosting tech discussions on LinkedIn Audio Events";
-l18.profile = p18;
-l18.getLinkedInDetails();
-
-LinkedIn l19 = new LinkedIn();
-l19.appId = 19;
-l19.appName = "LinkedIn Top Voices";
-l19.company = "Microsoft";
-l19.founder = "Reid Hoffman";
-l19.launchYear = 2015;
-l19.headquarters = "Sunnyvale, California";
-l19.users = 900000000;
-l19.platform = "Web Recognition";
-l19.category = "Influencer Program";
-l19.website = "linkedin.com/topvoices";
-l19.email = "topvoices@linkedin.com";
-l19.contact = "192345678";
-l19.security = "High";
-l19.paymentType = "Recognition";
-l19.version = "2.0";
-l19.colorTheme = "VIP Gold";
-l19.support = "VIP Support";
-l19.status = "Active";
-l19.country = "USA";
-l19.language = "Multi-language";
-
-Profile p19 = new Profile();
-p19.profileId = 119;
-p19.userName = "Vijayalakshmi S";
-p19.headline = "Top Voice India | Placement Guru";
-p19.company = "Independent Coach";
-p19.jobTitle = "Career Coach";
-p19.experienceYears = 8;
-p19.location = "Bangalore";
-p19.education = "MBA HR";
-p19.skills = "Career Coaching, Interview Prep";
-p19.email = "viji.coach@gmail.com";
-p19.phone = "9444556677";
-p19.website = "linkedin.com/in/vijiplacementguru";
-p19.connections = 5000;
-p19.industry = "Career Coaching";
-p19.language = "English, Kannada, Hindi";
-p19.certification = "LinkedIn Top Voice 2025";
-p19.projects = "Placement Success Stories";
-p19.status = "Top Voice";
-p19.profileType = "Influencer";
-p19.description = "LinkedIn Top Voice helping students crack placements";
-l19.profile = p19;
-l19.getLinkedInDetails();
-
-LinkedIn l20 = new LinkedIn();
-l20.appId = 20;
-l20.appName = "LinkedIn Developer";
-l20.company = "Microsoft";
-l20.founder = "Reid Hoffman";
-l20.launchYear = 2015;
-l20.headquarters = "Sunnyvale, California";
-l20.users = 900000000;
-l20.platform = "API Platform";
-l20.category = "Developer Platform";
-l20.website = "developer.linkedin.com";
-l20.email = "developers@linkedin.com";
-l20.contact = "202345678";
-l20.security = "API Security";
-l20.paymentType = "API Credits";
-l20.version = "5.1";
-l20.colorTheme = "Dev Black";
-l20.support = "Developer Support";
-l20.status = "Active";
-l20.country = "USA";
-l20.language = "Multi-language";
-
-Profile p20 = new Profile();
-p20.profileId = 120;
-p20.userName = "Arunesh K";
-p20.headline = "LinkedIn API Developer | Tap";
-p20.company = "Tap";
-p20.jobTitle = "API Integration Specialist";
-p20.experienceYears = 2;
-p20.location = "Bangalore";
-p20.education = "B.Tech CSE";
-p20.skills = "LinkedIn API, OAuth, REST APIs";
-p20.email = "arunesh@tap.com";
-p20.phone = "9998887776";
-p20.website = "linkedin.com/in/aruneshapi";
-p20.connections = 650;
-p20.industry = "API Development";
-p20.language = "English";
-p20.certification = "LinkedIn API Certified";
-p20.projects = "LinkedIn Integration for Tap";
-p20.status = "Open to API Projects";
-p20.profileType = "Developer";
-p20.description = "Building LinkedIn API integrations for enterprise apps";
-l20.profile = p20;
-l20.getLinkedInDetails();
-
+        System.out.println("\n=== END OF LINKEDIN APPS & PROFILES ANALYSIS ===");
+        System.out.println("Total LinkedIn Apps: 20 | Total Profiles: 20");
     }
 }

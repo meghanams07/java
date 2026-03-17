@@ -1,5 +1,4 @@
 class Stock {
-
     int stockId;
     String stockName;
     String company;
@@ -21,8 +20,34 @@ class Stock {
     String status;
     String description;
 
-    public void getStockDetails(){
+    public Stock(int stockId, String stockName, String company, String symbol, 
+                 String exchange, double price, double marketCap, String sector,
+                 String industry, int volume, double openPrice, double closePrice,
+                 double highPrice, double lowPrice, String currency, String country,
+                 String listingYear, String category, String status, String description) {
+        this.stockId = stockId;
+        this.stockName = stockName;
+        this.company = company;
+        this.symbol = symbol;
+        this.exchange = exchange;
+        this.price = price;
+        this.marketCap = marketCap;
+        this.sector = sector;
+        this.industry = industry;
+        this.volume = volume;
+        this.openPrice = openPrice;
+        this.closePrice = closePrice;
+        this.highPrice = highPrice;
+        this.lowPrice = lowPrice;
+        this.currency = currency;
+        this.country = country;
+        this.listingYear = listingYear;
+        this.category = category;
+        this.status = status;
+        this.description = description;
+    }
 
+    public void getStockDetails() {
         System.out.println("StockId: " + stockId);
         System.out.println("StockName: " + stockName);
         System.out.println("Company: " + company);

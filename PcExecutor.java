@@ -1,928 +1,206 @@
 class PcExecutor {
-public static void main(String[] args){
-Pc p1 = new Pc();
-        p1.pcId = 1;
-        p1.pcName = "Gaming PC";
-        p1.brand = "Dell";
-        p1.processor = "Intel i7";
-        p1.ram = 16;
-        p1.storage = 512;
-        p1.os = "Windows 11";
-        p1.motherboard = "Dell Motherboard";
-        p1.graphicCard = "Nvidia RTX 3060";
-        p1.cabinetType = "ATX";
-        p1.usbPorts = 6;
-        p1.wifi = "Yes";
-        p1.bluetooth = "Yes";
-        p1.color = "Black";
-        p1.powerSupply = 650;
-        p1.keyboardType = "Mechanical";
-        p1.mouseType = "Gaming Mouse";
-        p1.monitorType = "LED";
-        p1.year = 2024;
-        p1.status = "Working";
+    public static void main(String[] args) {
 
-        Hardware h1 = new Hardware();
-        h1.hardwareId = 101;
-        h1.hardwareName = "Graphics Card";
-        h1.type = "GPU";
-        h1.manufacturer = "Nvidia";
-        h1.model = "RTX 3060";
-        h1.version = "V1";
-        h1.compatibility = "PCI Express";
-        h1.powerUsage = 170;
-        h1.connectionType = "PCIe";
-        h1.color = "Black";
-        h1.weight = 1200;
-        h1.material = "Metal";
-        h1.warranty = "3 Years";
-        h1.year = 2023;
-        h1.status = "Active";
-        h1.category = "Graphics";
-        h1.chipset = "Ampere";
-        h1.coolingType = "Dual Fan";
-        h1.speed = 1800;
-        h1.portType = "HDMI";
+        Hardware h1 = new Hardware(101, "Graphics Card", "GPU", "Nvidia", "RTX 3060", "V1",
+                "PCI Express", 170, "PCIe", "Black", 1200, "Metal", "3 Years", 2023,
+                "Active", "Graphics", "Ampere", "Dual Fan", 1800, "HDMI");
 
-        p1.hardware = h1;
+        Hardware h2 = new Hardware(102, "Motherboard", "Main Board", "HP", "HP-Board-X", "V2",
+                "Intel", 120, "ATX", "Green", 900, "Fiber", "2 Years", 2022, "Active",
+                "Board", "Intel Chipset", "Passive", 1200, "USB");
 
-        p1.getPcDetails();
-		
-		Pc p2 = new Pc();
-p2.pcId = 2;
-p2.pcName = "Office PC";
-p2.brand = "HP";
-p2.processor = "Intel i5";
-p2.ram = 8;
-p2.storage = 256;
-p2.os = "Windows 10";
-p2.motherboard = "HP Board";
-p2.graphicCard = "Integrated";
-p2.cabinetType = "Mini Tower";
-p2.usbPorts = 4;
-p2.wifi = "Yes";
-p2.bluetooth = "Yes";
-p2.color = "Silver";
-p2.powerSupply = 450;
-p2.keyboardType = "Standard";
-p2.mouseType = "Optical";
-p2.monitorType = "LCD";
-p2.year = 2022;
-p2.status = "Working";
+        Hardware h3 = new Hardware(103, "RAM", "Memory", "Corsair", "DDR4", "V1",
+                "Intel/AMD", 30, "DIMM", "Black", 200, "Silicon", "3 Years", 2023,
+                "Active", "Memory", "DDR4", "Heat Sink", 3200, "Slot");
 
-Hardware h2 = new Hardware();
-h2.hardwareId = 102;
-h2.hardwareName = "Motherboard";
-h2.type = "Main Board";
-h2.manufacturer = "HP";
-h2.model = "HP-Board-X";
-h2.version = "V2";
-h2.compatibility = "Intel";
-h2.powerUsage = 120;
-h2.connectionType = "ATX";
-h2.color = "Green";
-h2.weight = 900;
-h2.material = "Fiber";
-h2.warranty = "2 Years";
-h2.year = 2022;
-h2.status = "Active";
-h2.category = "Board";
-h2.chipset = "Intel Chipset";
-h2.coolingType = "Passive";
-h2.speed = 1200;
-h2.portType = "USB";
+        Hardware h4 = new Hardware(104, "SSD", "Storage", "Samsung", "EVO", "V3", "SATA", 20,
+                "SATA", "Black", 150, "Metal", "5 Years", 2024, "Active", "Storage",
+                "NAND", "Passive", 3500, "SATA");
 
-p2.hardware = h2;
-p2.getPcDetails();
-Pc p3 = new Pc();
-p3.pcId = 3;
-p3.pcName = "Student PC";
-p3.brand = "Lenovo";
-p3.processor = "Intel i3";
-p3.ram = 8;
-p3.storage = 512;
-p3.os = "Windows 11";
-p3.motherboard = "Lenovo Board";
-p3.graphicCard = "Integrated";
-p3.cabinetType = "Mini";
-p3.usbPorts = 4;
-p3.wifi = "Yes";
-p3.bluetooth = "Yes";
-p3.color = "Black";
-p3.powerSupply = 400;
-p3.keyboardType = "Standard";
-p3.mouseType = "Optical";
-p3.monitorType = "LED";
-p3.year = 2023;
-p3.status = "Working";
+        Hardware h5 = new Hardware(105, "Keyboard", "Input", "Logitech", "K120", "V1",
+                "Universal", 5, "USB", "Black", 300, "Plastic", "1 Year", 2022,
+                "Active", "Input Device", "Standard", "None", 100, "USB");
 
-Hardware h3 = new Hardware();
-h3.hardwareId = 103;
-h3.hardwareName = "RAM";
-h3.type = "Memory";
-h3.manufacturer = "Corsair";
-h3.model = "DDR4";
-h3.version = "V1";
-h3.compatibility = "Intel/AMD";
-h3.powerUsage = 30;
-h3.connectionType = "DIMM";
-h3.color = "Black";
-h3.weight = 200;
-h3.material = "Silicon";
-h3.warranty = "3 Years";
-h3.year = 2023;
-h3.status = "Active";
-h3.category = "Memory";
-h3.chipset = "DDR4";
-h3.coolingType = "Heat Sink";
-h3.speed = 3200;
-h3.portType = "Slot";
+        Hardware h6 = new Hardware(106, "Mouse", "Input", "HP", "HP Optical", "V2", "Universal",
+                3, "USB", "Black", 200, "Plastic", "1 Year", 2023, "Active",
+                "Input Device", "Standard", "None", 100, "USB");
 
-p3.hardware = h3;
-p3.getPcDetails();
+        Hardware h7 = new Hardware(107, "Monitor", "Output", "Samsung", "Curved", "V1", "HDMI",
+                40, "HDMI", "Black", 3000, "Plastic", "3 Years", 2024, "Active",
+                "Display", "LED", "Passive", 144, "HDMI");
 
-Pc p4 = new Pc();
-p4.pcId = 4;
-p4.pcName = "Designer PC";
-p4.brand = "Asus";
-p4.processor = "Intel i9";
-p4.ram = 32;
-p4.storage = 1024;
-p4.os = "Windows 11";
-p4.motherboard = "Asus Prime";
-p4.graphicCard = "RTX 4070";
-p4.cabinetType = "Full Tower";
-p4.usbPorts = 8;
-p4.wifi = "Yes";
-p4.bluetooth = "Yes";
-p4.color = "White";
-p4.powerSupply = 750;
-p4.keyboardType = "Mechanical";
-p4.mouseType = "Gaming";
-p4.monitorType = "4K";
-p4.year = 2024;
-p4.status = "Working";
+        Hardware h8 = new Hardware(108, "Power Supply", "Power", "Corsair", "CX550", "V1",
+                "ATX", 550, "Cable", "Black", 1500, "Metal", "5 Years", 2023,
+                "Active", "Power", "Standard", "Fan", 120, "24 Pin");
 
-Hardware h4 = new Hardware();
-h4.hardwareId = 104;
-h4.hardwareName = "SSD";
-h4.type = "Storage";
-h4.manufacturer = "Samsung";
-h4.model = "EVO";
-h4.version = "V3";
-h4.compatibility = "SATA";
-h4.powerUsage = 20;
-h4.connectionType = "SATA";
-h4.color = "Black";
-h4.weight = 150;
-h4.material = "Metal";
-h4.warranty = "5 Years";
-h4.year = 2024;
-h4.status = "Active";
-h4.category = "Storage";
-h4.chipset = "NAND";
-h4.coolingType = "Passive";
-h4.speed = 3500;
-h4.portType = "SATA";
+        Hardware h9 = new Hardware(109, "Cooling Fan", "Cooling", "Cooler Master", "Hyper 212",
+                "V2", "Universal", 15, "Fan Header", "Black", 600, "Aluminium",
+                "2 Years", 2024, "Active", "Cooling", "Fan", "Air", 2000, "4 Pin");
 
-p4.hardware = h4;
-p4.getPcDetails();
-Pc p5 = new Pc();
-p5.pcId = 5;
-p5.pcName = "Home PC";
-p5.brand = "Acer";
-p5.processor = "Intel i5";
-p5.ram = 8;
-p5.storage = 512;
-p5.os = "Windows 11";
-p5.motherboard = "Acer Board";
-p5.graphicCard = "Integrated";
-p5.cabinetType = "Mini Tower";
-p5.usbPorts = 4;
-p5.wifi = "Yes";
-p5.bluetooth = "Yes";
-p5.color = "Black";
-p5.powerSupply = 450;
-p5.keyboardType = "Standard";
-p5.mouseType = "Optical";
-p5.monitorType = "LED";
-p5.year = 2022;
-p5.status = "Working";
+        Hardware h10 = new Hardware(110, "Hard Disk", "Storage", "Seagate", "Barracuda", "V1",
+                "SATA", 25, "SATA", "Silver", 400, "Metal", "3 Years", 2022, "Active",
+                "Storage", "HDD", "Passive", 7200, "SATA");
 
-Hardware h5 = new Hardware();
-h5.hardwareId = 105;
-h5.hardwareName = "Keyboard";
-h5.type = "Input";
-h5.manufacturer = "Logitech";
-h5.model = "K120";
-h5.version = "V1";
-h5.compatibility = "Universal";
-h5.powerUsage = 5;
-h5.connectionType = "USB";
-h5.color = "Black";
-h5.weight = 300;
-h5.material = "Plastic";
-h5.warranty = "1 Year";
-h5.year = 2022;
-h5.status = "Active";
-h5.category = "Input Device";
-h5.chipset = "Standard";
-h5.coolingType = "None";
-h5.speed = 100;
-h5.portType = "USB";
+        Hardware h11 = new Hardware(111, "SSD", "Storage", "Samsung", "980", "V2", "NVMe", 10,
+                "M.2", "Black", 100, "Metal", "5 Years", 2023, "Active", "Storage",
+                "NAND", "Passive", 3500, "M.2");
 
-p5.hardware = h5;
-p5.getPcDetails();
-Pc p6 = new Pc();
-p6.pcId = 6;
-p6.pcName = "Programming PC";
-p6.brand = "Dell";
-p6.processor = "Intel i7";
-p6.ram = 16;
-p6.storage = 1024;
-p6.os = "Linux";
-p6.motherboard = "Dell Board";
-p6.graphicCard = "Integrated";
-p6.cabinetType = "Tower";
-p6.usbPorts = 6;
-p6.wifi = "Yes";
-p6.bluetooth = "Yes";
-p6.color = "Grey";
-p6.powerSupply = 550;
-p6.keyboardType = "Mechanical";
-p6.mouseType = "Optical";
-p6.monitorType = "LED";
-p6.year = 2023;
-p6.status = "Working";
+        Hardware h12 = new Hardware(112, "RAM", "Memory", "Kingston", "DDR4", "V1", "Intel", 25,
+                "DIMM", "Green", 200, "Silicon", "3 Years", 2021, "Active", "Memory",
+                "DDR4", "Heat Sink", 2666, "Slot");
 
-Hardware h6 = new Hardware();
-h6.hardwareId = 106;
-h6.hardwareName = "Mouse";
-h6.type = "Input";
-h6.manufacturer = "HP";
-h6.model = "HP Optical";
-h6.version = "V2";
-h6.compatibility = "Universal";
-h6.powerUsage = 3;
-h6.connectionType = "USB";
-h6.color = "Black";
-h6.weight = 200;
-h6.material = "Plastic";
-h6.warranty = "1 Year";
-h6.year = 2023;
-h6.status = "Active";
-h6.category = "Input Device";
-h6.chipset = "Standard";
-h6.coolingType = "None";
-h6.speed = 100;
-h6.portType = "USB";
+        Hardware h13 = new Hardware(113, "Monitor", "Output", "LG", "24MP400", "V1", "HDMI", 35,
+                "HDMI", "Black", 3200, "Plastic", "3 Years", 2022, "Active", "Display",
+                "LED", "Passive", 75, "HDMI");
 
-p6.hardware = h6;
-p6.getPcDetails();
-Pc p7 = new Pc();
-p7.pcId = 7;
-p7.pcName = "Editing PC";
-p7.brand = "Asus";
-p7.processor = "Intel i9";
-p7.ram = 32;
-p7.storage = 2048;
-p7.os = "Windows 11";
-p7.motherboard = "Asus Board";
-p7.graphicCard = "RTX 3080";
-p7.cabinetType = "Full Tower";
-p7.usbPorts = 8;
-p7.wifi = "Yes";
-p7.bluetooth = "Yes";
-p7.color = "White";
-p7.powerSupply = 750;
-p7.keyboardType = "Mechanical";
-p7.mouseType = "Gaming";
-p7.monitorType = "4K";
-p7.year = 2024;
-p7.status = "Working";
+        Hardware h14 = new Hardware(114, "Graphics Card", "GPU", "Nvidia", "RTX 4080", "V1",
+                "PCIe", 320, "PCIe", "Black", 1500, "Metal", "3 Years", 2024, "Active",
+                "Graphics", "Ada", "Triple Fan", 2500, "HDMI");
 
-Hardware h7 = new Hardware();
-h7.hardwareId = 107;
-h7.hardwareName = "Monitor";
-h7.type = "Output";
-h7.manufacturer = "Samsung";
-h7.model = "Curved";
-h7.version = "V1";
-h7.compatibility = "HDMI";
-h7.powerUsage = 40;
-h7.connectionType = "HDMI";
-h7.color = "Black";
-h7.weight = 3000;
-h7.material = "Plastic";
-h7.warranty = "3 Years";
-h7.year = 2024;
-h7.status = "Active";
-h7.category = "Display";
-h7.chipset = "LED";
-h7.coolingType = "Passive";
-h7.speed = 144;
-h7.portType = "HDMI";
+        Hardware h15 = new Hardware(115, "Keyboard", "Input", "Logitech", "K120", "V1",
+                "Universal", 5, "USB", "Black", 400, "Plastic", "1 Year", 2021,
+                "Active", "Input Device", "Standard", "None", 100, "USB");
 
-p7.hardware = h7;
-p7.getPcDetails();
-Pc p8 = new Pc();
-p8.pcId = 8;
-p8.pcName = "Developer PC";
-p8.brand = "Lenovo";
-p8.processor = "Intel i7";
-p8.ram = 16;
-p8.storage = 512;
-p8.os = "Ubuntu";
-p8.motherboard = "Lenovo Board";
-p8.graphicCard = "Integrated";
-p8.cabinetType = "Tower";
-p8.usbPorts = 6;
-p8.wifi = "Yes";
-p8.bluetooth = "Yes";
-p8.color = "Black";
-p8.powerSupply = 550;
-p8.keyboardType = "Mechanical";
-p8.mouseType = "Optical";
-p8.monitorType = "LED";
-p8.year = 2023;
-p8.status = "Working";
+        Hardware h16 = new Hardware(116, "Sound Card", "Audio", "Creative", "Sound Blaster", "V2",
+                "PCIe", 15, "PCIe", "Black", 250, "Metal", "2 Years", 2023, "Active",
+                "Audio", "Creative Chipset", "Passive", 48000, "Audio Jack");
 
-Hardware h8 = new Hardware();
-h8.hardwareId = 108;
-h8.hardwareName = "Power Supply";
-h8.type = "Power";
-h8.manufacturer = "Corsair";
-h8.model = "CX550";
-h8.version = "V1";
-h8.compatibility = "ATX";
-h8.powerUsage = 550;
-h8.connectionType = "Cable";
-h8.color = "Black";
-h8.weight = 1500;
-h8.material = "Metal";
-h8.warranty = "5 Years";
-h8.year = 2023;
-h8.status = "Active";
-h8.category = "Power";
-h8.chipset = "Standard";
-h8.coolingType = "Fan";
-h8.speed = 120;
-h8.portType = "24 Pin";
+        Hardware h17 = new Hardware(117, "Web Camera", "Input Device", "Logitech", "C270", "V1",
+                "USB", 5, "USB", "Black", 200, "Plastic", "1 Year", 2022, "Active",
+                "Camera", "HD Camera Chip", "None", 30, "USB");
 
-p8.hardware = h8;
-p8.getPcDetails();
-Pc p9 = new Pc();
-p9.pcId = 9;
-p9.pcName = "Gaming Setup";
-p9.brand = "MSI";
-p9.processor = "Intel i9";
-p9.ram = 32;
-p9.storage = 1024;
-p9.os = "Windows 11";
-p9.motherboard = "MSI Gaming";
-p9.graphicCard = "RTX 4070";
-p9.cabinetType = "Full Tower";
-p9.usbPorts = 8;
-p9.wifi = "Yes";
-p9.bluetooth = "Yes";
-p9.color = "Red";
-p9.powerSupply = 750;
-p9.keyboardType = "Mechanical";
-p9.mouseType = "Gaming";
-p9.monitorType = "Curved";
-p9.year = 2024;
-p9.status = "Working";
+        Hardware h18 = new Hardware(118, "Network Card", "Networking", "TP-Link", "TG-3468", "V1",
+                "PCIe", 10, "PCIe", "Green", 150, "Plastic", "2 Years", 2023, "Active",
+                "Network", "Gigabit Chipset", "Passive", 1000, "Ethernet");
 
-Hardware h9 = new Hardware();
-h9.hardwareId = 109;
-h9.hardwareName = "Cooling Fan";
-h9.type = "Cooling";
-h9.manufacturer = "Cooler Master";
-h9.model = "Hyper 212";
-h9.version = "V2";
-h9.compatibility = "Universal";
-h9.powerUsage = 15;
-h9.connectionType = "Fan Header";
-h9.color = "Black";
-h9.weight = 600;
-h9.material = "Aluminium";
-h9.warranty = "2 Years";
-h9.year = 2024;
-h9.status = "Active";
-h9.category = "Cooling";
-h9.chipset = "Fan";
-h9.coolingType = "Air";
-h9.speed = 2000;
-h9.portType = "4 Pin";
+        Hardware h19 = new Hardware(119, "CPU Cooler", "Cooling", "Cooler Master", "Hyper 212",
+                "V3", "Intel/AMD", 20, "Fan Header", "Black", 700, "Aluminium",
+                "3 Years", 2024, "Active", "Cooling", "Cooling Chip", "Air Cooling",
+                2000, "4 Pin");
 
-p9.hardware = h9;
-p9.getPcDetails();
-Pc p10 = new Pc();
-p10.pcId = 10;
-p10.pcName = "Office Workstation";
-p10.brand = "HP";
-p10.processor = "Intel i5";
-p10.ram = 16;
-p10.storage = 512;
-p10.os = "Windows 10";
-p10.motherboard = "HP Board";
-p10.graphicCard = "Integrated";
-p10.cabinetType = "Mini Tower";
-p10.usbPorts = 6;
-p10.wifi = "Yes";
-p10.bluetooth = "Yes";
-p10.color = "Grey";
-p10.powerSupply = 500;
-p10.keyboardType = "Standard";
-p10.mouseType = "Optical";
-p10.monitorType = "LED";
-p10.year = 2022;
-p10.status = "Working";
+        Hardware h20 = new Hardware(120, "Workstation GPU", "Graphics", "Nvidia", "RTX A4000",
+                "V1", "PCIe", 200, "PCIe", "Black", 1200, "Metal", "3 Years", 2024,
+                "Active", "Graphics", "Professional GPU", "Dual Fan", 1800, "DisplayPort");
 
-Hardware h10 = new Hardware();
-h10.hardwareId = 110;
-h10.hardwareName = "Hard Disk";
-h10.type = "Storage";
-h10.manufacturer = "Seagate";
-h10.model = "Barracuda";
-h10.version = "V1";
-h10.compatibility = "SATA";
-h10.powerUsage = 25;
-h10.connectionType = "SATA";
-h10.color = "Silver";
-h10.weight = 400;
-h10.material = "Metal";
-h10.warranty = "3 Years";
-h10.year = 2022;
-h10.status = "Active";
-h10.category = "Storage";
-h10.chipset = "HDD";
-h10.coolingType = "Passive";
-h10.speed = 7200;
-h10.portType = "SATA";
+        Pc p1 = new Pc(1, "Gaming PC", "Dell", "Intel i7", 16, 512, "Windows 11",
+                "Dell Motherboard", "Nvidia RTX 3060", "ATX", 6, "Yes", "Yes", "Black",
+                650, "Mechanical", "Gaming Mouse", "LED", 2024, "Working", h1);
 
-p10.hardware = h10;
-p10.getPcDetails();
+        Pc p2 = new Pc(2, "Office PC", "HP", "Intel i5", 8, 256, "Windows 10", "HP Board",
+                "Integrated", "Mini Tower", 4, "Yes", "Yes", "Silver", 450, "Standard",
+                "Optical", "LCD", 2022, "Working", h2);
 
-Pc p11 = new Pc();
-p11.pcId = 11;
-p11.pcName = "Design PC";
-p11.brand = "Asus";
-p11.processor = "Intel i7";
-p11.ram = 16;
-p11.storage = 1024;
-p11.os = "Windows 11";
-p11.motherboard = "Asus Prime";
-p11.graphicCard = "RTX 3050";
-p11.cabinetType = "Tower";
-p11.usbPorts = 6;
-p11.wifi = "Yes";
-p11.bluetooth = "Yes";
-p11.color = "White";
-p11.powerSupply = 650;
-p11.keyboardType = "Mechanical";
-p11.mouseType = "Gaming";
-p11.monitorType = "LED";
-p11.year = 2023;
-p11.status = "Working";
+        Pc p3 = new Pc(3, "Student PC", "Lenovo", "Intel i3", 8, 512, "Windows 11",
+                "Lenovo Board", "Integrated", "Mini", 4, "Yes", "Yes", "Black", 400,
+                "Standard", "Optical", "LED", 2023, "Working", h3);
 
-Hardware h11 = new Hardware();
-h11.hardwareId = 111;
-h11.hardwareName = "SSD";
-h11.type = "Storage";
-h11.manufacturer = "Samsung";
-h11.model = "980";
-h11.version = "V2";
-h11.compatibility = "NVMe";
-h11.powerUsage = 10;
-h11.connectionType = "M.2";
-h11.color = "Black";
-h11.weight = 100;
-h11.material = "Metal";
-h11.warranty = "5 Years";
-h11.year = 2023;
-h11.status = "Active";
-h11.category = "Storage";
-h11.chipset = "NAND";
-h11.coolingType = "Passive";
-h11.speed = 3500;
-h11.portType = "M.2";
+        Pc p4 = new Pc(4, "Designer PC", "Asus", "Intel i9", 32, 1024, "Windows 11",
+                "Asus Prime", "RTX 4070", "Full Tower", 8, "Yes", "Yes", "White", 750,
+                "Mechanical", "Gaming", "4K", 2024, "Working", h4);
 
-p11.hardware = h11;
-p11.getPcDetails();
-Pc p12 = new Pc();
-p12.pcId = 12;
-p12.pcName = "School PC";
-p12.brand = "Dell";
-p12.processor = "Intel i3";
-p12.ram = 8;
-p12.storage = 256;
-p12.os = "Windows 10";
-p12.motherboard = "Dell Board";
-p12.graphicCard = "Integrated";
-p12.cabinetType = "Mini";
-p12.usbPorts = 4;
-p12.wifi = "Yes";
-p12.bluetooth = "No";
-p12.color = "Black";
-p12.powerSupply = 400;
-p12.keyboardType = "Standard";
-p12.mouseType = "Optical";
-p12.monitorType = "LCD";
-p12.year = 2021;
-p12.status = "Working";
+        Pc p5 = new Pc(5, "Home PC", "Acer", "Intel i5", 8, 512, "Windows 11", "Acer Board",
+                "Integrated", "Mini Tower", 4, "Yes", "Yes", "Black", 450, "Standard",
+                "Optical", "LED", 2022, "Working", h5);
 
-Hardware h12 = new Hardware();
-h12.hardwareId = 112;
-h12.hardwareName = "RAM";
-h12.type = "Memory";
-h12.manufacturer = "Kingston";
-h12.model = "DDR4";
-h12.version = "V1";
-h12.compatibility = "Intel";
-h12.powerUsage = 25;
-h12.connectionType = "DIMM";
-h12.color = "Green";
-h12.weight = 200;
-h12.material = "Silicon";
-h12.warranty = "3 Years";
-h12.year = 2021;
-h12.status = "Active";
-h12.category = "Memory";
-h12.chipset = "DDR4";
-h12.coolingType = "Heat Sink";
-h12.speed = 2666;
-h12.portType = "Slot";
+        Pc p6 = new Pc(6, "Programming PC", "Dell", "Intel i7", 16, 1024, "Linux",
+                "Dell Board", "Integrated", "Tower", 6, "Yes", "Yes", "Grey", 550,
+                "Mechanical", "Optical", "LED", 2023, "Working", h6);
 
-p12.hardware = h12;
-p12.getPcDetails();
-Pc p13 = new Pc();
-p13.pcId = 13;
-p13.pcName = "Lab PC";
-p13.brand = "Lenovo";
-p13.processor = "Intel i5";
-p13.ram = 8;
-p13.storage = 512;
-p13.os = "Windows 10";
-p13.motherboard = "Lenovo Board";
-p13.graphicCard = "Integrated";
-p13.cabinetType = "Mini Tower";
-p13.usbPorts = 4;
-p13.wifi = "Yes";
-p13.bluetooth = "Yes";
-p13.color = "Black";
-p13.powerSupply = 450;
-p13.keyboardType = "Standard";
-p13.mouseType = "Optical";
-p13.monitorType = "LED";
-p13.year = 2022;
-p13.status = "Working";
+        Pc p7 = new Pc(7, "Editing PC", "Asus", "Intel i9", 32, 2048, "Windows 11",
+                "Asus Board", "RTX 3080", "Full Tower", 8, "Yes", "Yes", "White", 750,
+                "Mechanical", "Gaming", "4K", 2024, "Working", h7);
 
-Hardware h13 = new Hardware();
-h13.hardwareId = 113;
-h13.hardwareName = "Monitor";
-h13.type = "Output";
-h13.manufacturer = "LG";
-h13.model = "24MP400";
-h13.version = "V1";
-h13.compatibility = "HDMI";
-h13.powerUsage = 35;
-h13.connectionType = "HDMI";
-h13.color = "Black";
-h13.weight = 3200;
-h13.material = "Plastic";
-h13.warranty = "3 Years";
-h13.year = 2022;
-h13.status = "Active";
-h13.category = "Display";
-h13.chipset = "LED";
-h13.coolingType = "Passive";
-h13.speed = 75;
-h13.portType = "HDMI";
+        Pc p8 = new Pc(8, "Developer PC", "Lenovo", "Intel i7", 16, 512, "Ubuntu",
+                "Lenovo Board", "Integrated", "Tower", 6, "Yes", "Yes", "Black", 550,
+                "Mechanical", "Optical", "LED", 2023, "Working", h8);
 
-p13.hardware = h13;
-p13.getPcDetails();
-Pc p14 = new Pc();
-p14.pcId = 14;
-p14.pcName = "Gaming Rig";
-p14.brand = "MSI";
-p14.processor = "Intel i9";
-p14.ram = 32;
-p14.storage = 2048;
-p14.os = "Windows 11";
-p14.motherboard = "MSI Gaming Board";
-p14.graphicCard = "RTX 4080";
-p14.cabinetType = "Full Tower";
-p14.usbPorts = 8;
-p14.wifi = "Yes";
-p14.bluetooth = "Yes";
-p14.color = "Black";
-p14.powerSupply = 850;
-p14.keyboardType = "Mechanical";
-p14.mouseType = "Gaming";
-p14.monitorType = "4K";
-p14.year = 2024;
-p14.status = "Working";
+        Pc p9 = new Pc(9, "Gaming Setup", "MSI", "Intel i9", 32, 1024, "Windows 11",
+                "MSI Gaming", "RTX 4070", "Full Tower", 8, "Yes", "Yes", "Red", 750,
+                "Mechanical", "Gaming", "Curved", 2024, "Working", h9);
 
-Hardware h14 = new Hardware();
-h14.hardwareId = 114;
-h14.hardwareName = "Graphics Card";
-h14.type = "GPU";
-h14.manufacturer = "Nvidia";
-h14.model = "RTX 4080";
-h14.version = "V1";
-h14.compatibility = "PCIe";
-h14.powerUsage = 320;
-h14.connectionType = "PCIe";
-h14.color = "Black";
-h14.weight = 1500;
-h14.material = "Metal";
-h14.warranty = "3 Years";
-h14.year = 2024;
-h14.status = "Active";
-h14.category = "Graphics";
-h14.chipset = "Ada";
-h14.coolingType = "Triple Fan";
-h14.speed = 2500;
-h14.portType = "HDMI";
+        Pc p10 = new Pc(10, "Office Workstation", "HP", "Intel i5", 16, 512, "Windows 10",
+                "HP Board", "Integrated", "Mini Tower", 6, "Yes", "Yes", "Grey", 500,
+                "Standard", "Optical", "LED", 2022, "Working", h10);
 
-p14.hardware = h14;
-p14.getPcDetails();
-Pc p15 = new Pc();
-p15.pcId = 15;
-p15.pcName = "Home Study PC";
-p15.brand = "Acer";
-p15.processor = "Intel i3";
-p15.ram = 8;
-p15.storage = 256;
-p15.os = "Windows 10";
-p15.motherboard = "Acer Board";
-p15.graphicCard = "Integrated";
-p15.cabinetType = "Mini";
-p15.usbPorts = 4;
-p15.wifi = "Yes";
-p15.bluetooth = "Yes";
-p15.color = "Grey";
-p15.powerSupply = 400;
-p15.keyboardType = "Standard";
-p15.mouseType = "Optical";
-p15.monitorType = "LCD";
-p15.year = 2021;
-p15.status = "Working";
+        Pc p11 = new Pc(11, "Design PC", "Asus", "Intel i7", 16, 1024, "Windows 11",
+                "Asus Prime", "RTX 3050", "Tower", 6, "Yes", "Yes", "White", 650,
+                "Mechanical", "Gaming", "LED", 2023, "Working", h11);
 
-Hardware h15 = new Hardware();
-h15.hardwareId = 115;
-h15.hardwareName = "Keyboard";
-h15.type = "Input";
-h15.manufacturer = "Logitech";
-h15.model = "K120";
-h15.version = "V1";
-h15.compatibility = "Universal";
-h15.powerUsage = 5;
-h15.connectionType = "USB";
-h15.color = "Black";
-h15.weight = 400;
-h15.material = "Plastic";
-h15.warranty = "1 Year";
-h15.year = 2021;
-h15.status = "Active";
-h15.category = "Input Device";
-h15.chipset = "Standard";
-h15.coolingType = "None";
-h15.speed = 100;
-h15.portType = "USB";
+        Pc p12 = new Pc(12, "School PC", "Dell", "Intel i3", 8, 256, "Windows 10",
+                "Dell Board", "Integrated", "Mini", 4, "Yes", "No", "Black", 400,
+                "Standard", "Optical", "LCD", 2021, "Working", h12);
 
-p15.hardware = h15;
-p15.getPcDetails();
-Pc p16 = new Pc();
-p16.pcId = 16;
-p16.pcName = "Multimedia PC";
-p16.brand = "HP";
-p16.processor = "Intel i5";
-p16.ram = 16;
-p16.storage = 1024;
-p16.os = "Windows 11";
-p16.motherboard = "HP Motherboard";
-p16.graphicCard = "Nvidia GTX 1650";
-p16.cabinetType = "Tower";
-p16.usbPorts = 6;
-p16.wifi = "Yes";
-p16.bluetooth = "Yes";
-p16.color = "Black";
-p16.powerSupply = 600;
-p16.keyboardType = "Mechanical";
-p16.mouseType = "Gaming Mouse";
-p16.monitorType = "LED";
-p16.year = 2023;
-p16.status = "Working";
+        Pc p13 = new Pc(13, "Lab PC", "Lenovo", "Intel i5", 8, 512, "Windows 10",
+                "Lenovo Board", "Integrated", "Mini Tower", 4, "Yes", "Yes", "Black",
+                450, "Standard", "Optical", "LED", 2022, "Working", h13);
 
-Hardware h16 = new Hardware();
-h16.hardwareId = 116;
-h16.hardwareName = "Sound Card";
-h16.type = "Audio";
-h16.manufacturer = "Creative";
-h16.model = "Sound Blaster";
-h16.version = "V2";
-h16.compatibility = "PCIe";
-h16.powerUsage = 15;
-h16.connectionType = "PCIe";
-h16.color = "Black";
-h16.weight = 250;
-h16.material = "Metal";
-h16.warranty = "2 Years";
-h16.year = 2023;
-h16.status = "Active";
-h16.category = "Audio";
-h16.chipset = "Creative Chipset";
-h16.coolingType = "Passive";
-h16.speed = 48000;
-h16.portType = "Audio Jack";
+        Pc p14 = new Pc(14, "Gaming Rig", "MSI", "Intel i9", 32, 2048, "Windows 11",
+                "MSI Gaming Board", "RTX 4080", "Full Tower", 8, "Yes", "Yes", "Black",
+                850, "Mechanical", "Gaming", "4K", 2024, "Working", h14);
 
-p16.hardware = h16;
-p16.getPcDetails();
-Pc p17 = new Pc();
-p17.pcId = 17;
-p17.pcName = "Student Study PC";
-p17.brand = "Dell";
-p17.processor = "Intel i3";
-p17.ram = 8;
-p17.storage = 512;
-p17.os = "Windows 10";
-p17.motherboard = "Dell Board";
-p17.graphicCard = "Integrated";
-p17.cabinetType = "Mini Tower";
-p17.usbPorts = 4;
-p17.wifi = "Yes";
-p17.bluetooth = "Yes";
-p17.color = "Black";
-p17.powerSupply = 450;
-p17.keyboardType = "Standard";
-p17.mouseType = "Optical";
-p17.monitorType = "LED";
-p17.year = 2022;
-p17.status = "Working";
+        Pc p15 = new Pc(15, "Home Study PC", "Acer", "Intel i3", 8, 256, "Windows 10",
+                "Acer Board", "Integrated", "Mini", 4, "Yes", "Yes", "Grey", 400,
+                "Standard", "Optical", "LCD", 2021, "Working", h15);
 
-Hardware h17 = new Hardware();
-h17.hardwareId = 117;
-h17.hardwareName = "Web Camera";
-h17.type = "Input Device";
-h17.manufacturer = "Logitech";
-h17.model = "C270";
-h17.version = "V1";
-h17.compatibility = "USB";
-h17.powerUsage = 5;
-h17.connectionType = "USB";
-h17.color = "Black";
-h17.weight = 200;
-h17.material = "Plastic";
-h17.warranty = "1 Year";
-h17.year = 2022;
-h17.status = "Active";
-h17.category = "Camera";
-h17.chipset = "HD Camera Chip";
-h17.coolingType = "None";
-h17.speed = 30;
-h17.portType = "USB";
+        Pc p16 = new Pc(16, "Multimedia PC", "HP", "Intel i5", 16, 1024, "Windows 11",
+                "HP Motherboard", "Nvidia GTX 1650", "Tower", 6, "Yes", "Yes", "Black",
+                600, "Mechanical", "Gaming Mouse", "LED", 2023, "Working", h16);
 
-p17.hardware = h17;
-p17.getPcDetails();
-Pc p18 = new Pc();
-p18.pcId = 18;
-p18.pcName = "Office Desktop";
-p18.brand = "Lenovo";
-p18.processor = "Intel i5";
-p18.ram = 16;
-p18.storage = 512;
-p18.os = "Windows 11";
-p18.motherboard = "Lenovo Motherboard";
-p18.graphicCard = "Integrated";
-p18.cabinetType = "Tower";
-p18.usbPorts = 6;
-p18.wifi = "Yes";
-p18.bluetooth = "Yes";
-p18.color = "Grey";
-p18.powerSupply = 500;
-p18.keyboardType = "Standard";
-p18.mouseType = "Optical";
-p18.monitorType = "LED";
-p18.year = 2023;
-p18.status = "Working";
+        Pc p17 = new Pc(17, "Student Study PC", "Dell", "Intel i3", 8, 512, "Windows 10",
+                "Dell Board", "Integrated", "Mini Tower", 4, "Yes", "Yes", "Black", 450,
+                "Standard", "Optical", "LED", 2022, "Working", h17);
 
-Hardware h18 = new Hardware();
-h18.hardwareId = 118;
-h18.hardwareName = "Network Card";
-h18.type = "Networking";
-h18.manufacturer = "TP-Link";
-h18.model = "TG-3468";
-h18.version = "V1";
-h18.compatibility = "PCIe";
-h18.powerUsage = 10;
-h18.connectionType = "PCIe";
-h18.color = "Green";
-h18.weight = 150;
-h18.material = "Plastic";
-h18.warranty = "2 Years";
-h18.year = 2023;
-h18.status = "Active";
-h18.category = "Network";
-h18.chipset = "Gigabit Chipset";
-h18.coolingType = "Passive";
-h18.speed = 1000;
-h18.portType = "Ethernet";
+        Pc p18 = new Pc(18, "Office Desktop", "Lenovo", "Intel i5", 16, 512, "Windows 11",
+                "Lenovo Motherboard", "Integrated", "Tower", 6, "Yes", "Yes", "Grey", 500,
+                "Standard", "Optical", "LED", 2023, "Working", h18);
 
-p18.hardware = h18;
-p18.getPcDetails();
-Pc p19 = new Pc();
-p19.pcId = 19;
-p19.pcName = "Gaming Desktop";
-p19.brand = "Asus";
-p19.processor = "Intel i7";
-p19.ram = 32;
-p19.storage = 1024;
-p19.os = "Windows 11";
-p19.motherboard = "Asus Gaming Board";
-p19.graphicCard = "Nvidia RTX 3070";
-p19.cabinetType = "Full Tower";
-p19.usbPorts = 8;
-p19.wifi = "Yes";
-p19.bluetooth = "Yes";
-p19.color = "Black";
-p19.powerSupply = 750;
-p19.keyboardType = "Mechanical";
-p19.mouseType = "Gaming Mouse";
-p19.monitorType = "Curved LED";
-p19.year = 2024;
-p19.status = "Working";
+        Pc p19 = new Pc(19, "Gaming Desktop", "Asus", "Intel i7", 32, 1024, "Windows 11",
+                "Asus Gaming Board", "Nvidia RTX 3070", "Full Tower", 8, "Yes", "Yes",
+                "Black", 750, "Mechanical", "Gaming Mouse", "Curved LED", 2024, "Working", h19);
 
-Hardware h19 = new Hardware();
-h19.hardwareId = 119;
-h19.hardwareName = "CPU Cooler";
-h19.type = "Cooling";
-h19.manufacturer = "Cooler Master";
-h19.model = "Hyper 212";
-h19.version = "V3";
-h19.compatibility = "Intel/AMD";
-h19.powerUsage = 20;
-h19.connectionType = "Fan Header";
-h19.color = "Black";
-h19.weight = 700;
-h19.material = "Aluminium";
-h19.warranty = "3 Years";
-h19.year = 2024;
-h19.status = "Active";
-h19.category = "Cooling";
-h19.chipset = "Cooling Chip";
-h19.coolingType = "Air Cooling";
-h19.speed = 2000;
-h19.portType = "4 Pin";
+        Pc p20 = new Pc(20, "Workstation PC", "HP", "Intel Xeon", 64, 2048, "Windows 11 Pro",
+                "HP Workstation Board", "Nvidia RTX A4000", "Full Tower", 10, "Yes", "Yes",
+                "Black", 850, "Mechanical", "Professional Mouse", "4K LED", 2024, "Working", h20);
 
-p19.hardware = h19;
-p19.getPcDetails();
-Pc p20 = new Pc();
-p20.pcId = 20;
-p20.pcName = "Workstation PC";
-p20.brand = "HP";
-p20.processor = "Intel Xeon";
-p20.ram = 64;
-p20.storage = 2048;
-p20.os = "Windows 11 Pro";
-p20.motherboard = "HP Workstation Board";
-p20.graphicCard = "Nvidia RTX A4000";
-p20.cabinetType = "Full Tower";
-p20.usbPorts = 10;
-p20.wifi = "Yes";
-p20.bluetooth = "Yes";
-p20.color = "Black";
-p20.powerSupply = 850;
-p20.keyboardType = "Mechanical";
-p20.mouseType = "Professional Mouse";
-p20.monitorType = "4K LED";
-p20.year = 2024;
-p20.status = "Working";
-
-Hardware h20 = new Hardware();
-h20.hardwareId = 120;
-h20.hardwareName = "Workstation GPU";
-h20.type = "Graphics";
-h20.manufacturer = "Nvidia";
-h20.model = "RTX A4000";
-h20.version = "V1";
-h20.compatibility = "PCIe";
-h20.powerUsage = 200;
-h20.connectionType = "PCIe";
-h20.color = "Black";
-h20.weight = 1200;
-h20.material = "Metal";
-h20.warranty = "3 Years";
-h20.year = 2024;
-h20.status = "Active";
-h20.category = "Graphics";
-h20.chipset = "Professional GPU";
-h20.coolingType = "Dual Fan";
-h20.speed = 1800;
-h20.portType = "DisplayPort";
-
-p20.hardware = h20;
-p20.getPcDetails();
-	}
+        p1.displayDetails();
+        System.out.println("============================================");
+        p2.displayDetails();
+        System.out.println("============================================");
+        p3.displayDetails();
+        System.out.println("============================================");
+        p4.displayDetails();
+        System.out.println("============================================");
+        p5.displayDetails();
+        System.out.println("============================================");
+        p6.displayDetails();
+        System.out.println("============================================");
+        p7.displayDetails();
+        System.out.println("============================================");
+        p8.displayDetails();
+        System.out.println("============================================");
+        p9.displayDetails();
+        System.out.println("============================================");
+        p10.displayDetails();
+        System.out.println("============================================");
+        p11.displayDetails();
+        System.out.println("============================================");
+        p12.displayDetails();
+        System.out.println("============================================");
+        p13.displayDetails();
+        System.out.println("============================================");
+        p14.displayDetails();
+        System.out.println("============================================");
+        p15.displayDetails();
+        System.out.println("============================================");
+        p16.displayDetails();
+        System.out.println("============================================");
+        p17.displayDetails();
+        System.out.println("============================================");
+        p18.displayDetails();
+        System.out.println("============================================");
+        p19.displayDetails();
+        System.out.println("============================================");
+        p20.displayDetails();
+        System.out.println("============================================");
+    }
 }

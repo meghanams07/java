@@ -1,929 +1,190 @@
 class VVPuramExecutor {
+    public static void main(String[] args) {
+	
+        FoodStreet f1 = new FoodStreet(101, "VV Puram Food Street", "South Indian Snacks", 30, "Dosa",
+                "Indian", "Average", "Street Lights", "Limited", "Nearby Parking", "Evening", "Winter",
+                "High", "300 meters", "Vegetarian", "₹50-₹200", "Cash/UPI", "Local Vendors", "Open", "Very Famous");
 
-    public static void main(String[] args){
+        FoodStreet f2 = new FoodStreet(102, "Nagarthpet Pani Puri Street", "Bangarpet Pani Puri", 25, "Pani Puri",
+                "Street Snacks", "Good", "LED Lights", "Street Side", "Street Parking", "Evening", "All Year",
+                "Very High", "250 meters", "Mixed", "₹30-₹150", "Cash/UPI", "Local Crowd", "Open", "Legendary");
 
-        VVPuram v1 = new VVPuram();
+        FoodStreet f3 = new FoodStreet(103, "Russell Market Food Zone", "Shawarma Rolls", 40, "Chicken Shawarma",
+                "Multi-Cuisine", "Good", "Bright", "Market Seating", "Multi-level", "All Day", "Winter",
+                "Peak Evening", "400 meters", "Non-Veg", "₹80-₹300", "Cash/Cards", "Market Vendors", "Open", "Tourist Spot");
 
-        v1.areaId = 1;
-        v1.areaName = "VV Puram";
-        v1.city = "Bangalore";
-        v1.state = "Karnataka";
-        v1.country = "India";
-        v1.establishedYear = 1980;
-        v1.visitorsPerDay = 5000;
-        v1.famousFor = "Food Street";
-        v1.location = "Basavanagudi";
-        v1.landmark = "National College";
-        v1.category = "Street Food";
-        v1.openingTime = "6 PM";
-        v1.closingTime = "11 PM";
-        v1.cleanliness = "Good";
-        v1.security = "Police Patrol";
-        v1.transport = "Bus/Metro";
-        v1.website = "vvpuramfoodstreet.com";
-        v1.contact = "080123456";
-        v1.status = "Active";
-        v1.description = "Famous street food area in Bangalore";
+        FoodStreet f4 = new FoodStreet(104, "Frazer Town Iftar Street", "Haleem & Biryani", 35, "Chicken Haleem",
+                "Hyderabadi", "Excellent", "Festive", "Roadside", "Limited", "Iftar Time", "Ramzan",
+                "Extremely High", "500 meters", "Non-Veg", "₹100-₹400", "Cash/UPI", "Community", "Ramzan Only", "Religious Festival");
 
-        FoodStreet f1 = new FoodStreet();
+        FoodStreet f5 = new FoodStreet(105, "Koramangala Night Food", "Global Street Food", 50, "Cheese Corn",
+                "Fusion", "Premium", "Neon", "Outdoor", "Valet", "Late Night", "All Year",
+                "Youth Heavy", "800 meters", "Mixed", "₹150-₹500", "Cards/UPI", "Social Media", "Open", "Instagram Famous");
 
-        f1.streetId = 101;
-        f1.streetName = "VV Puram Food Street";
-        f1.specialty = "South Indian Snacks";
-        f1.stalls = 30;
-        f1.famousDish = "Dosa";
-        f1.cuisineType = "Indian";
-        f1.hygiene = "Average";
-        f1.lighting = "Street Lights";
-        f1.seating = "Limited";
-        f1.parking = "Nearby Parking";
-        f1.timing = "Evening";
-        f1.bestSeason = "Winter";
-        f1.crowdLevel = "High";
-        f1.streetLength = "300 meters";
-        f1.foodType = "Vegetarian";
-        f1.priceRange = "₹50-₹200";
-        f1.paymentMode = "Cash/UPI";
-        f1.guide = "Local Vendors";
-        f1.status = "Open";
-        f1.popularity = "Very Famous";
+        FoodStreet f6 = new FoodStreet(106, "Commercial Street Eaters", "Momos & Rolls", 60, "Chicken Momos",
+                "Street Fusion", "Good", "Commercial", "Takeaway", "Paid Parking", "Shopping Hours", "Festive",
+                "Shopper Heavy", "1 km", "Non-Veg", "₹100-₹350", "All Modes", "Shoppers", "Open", "Tourist Favorite");
 
-        v1.foodStreet = f1;
+        FoodStreet f7 = new FoodStreet(107, "Jayanagar Udupi Street", "Mysore Bajji", 20, "Mysore Bajji",
+                "Udupi", "Very Good", "Good", "Roadside", "Street Parking", "Evening", "Monsoon",
+                "Family Crowd", "200 meters", "Vegetarian", "₹40-₹150", "Cash/UPI", "Local Families", "Open", "Neighborhood Famous");
 
-        v1.getAreaDetails();
-		VVPuram v2 = new VVPuram();
-		v2.areaId = 2;
-		v2.areaName = "Nagarthpet";
-		v2.city = "Bangalore";
-		v2.state = "Karnataka";
-		v2.country = "India";
-		v2.establishedYear = 1930;
-		v2.visitorsPerDay = 3000;
-		v2.famousFor = "Pani Puri Street";
-		v2.location = "Central Bangalore";
-		v2.landmark = "KR Market";
-		v2.category = "Street Food";
-		v2.openingTime = "4 PM";
-		v2.closingTime = "12 AM";
-		v2.cleanliness = "Moderate";
-		v2.security = "High Crowd";
-		v2.transport = "Bus/Auto";
-		v2.website = "nagarthpetfoodstreet.com";
-		v2.contact = "080223456";
-		v2.status = "Active";
-		v2.description = "Historic central Bangalore food street";
+        FoodStreet f8 = new FoodStreet(108, "Malleshwaram Prasadam Street", "Temple Sweets", 25, "Mysore Pak",
+                "Temple Food", "Excellent", "Temple Lights", "Temple Area", "Temple Parking", "Post-Puja", "Festivals",
+                "Devotee Heavy", "350 meters", "Vegetarian", "₹30-₹200", "Cash", "Temple Priests", "Open", "Spiritual Hub");
 
-		FoodStreet f2 = new FoodStreet();
-		f2.streetId = 102;
-		f2.streetName = "Nagarthpet Pani Puri Street";
-		f2.specialty = "Bangarpet Pani Puri";
-		f2.stalls = 25;
-		f2.famousDish = "Pani Puri";
-		f2.cuisineType = "Street Snacks";
-		f2.hygiene = "Good";
-		f2.lighting = "LED Lights";
-		f2.seating = "Street Side";
-		f2.parking = "Street Parking";
-		f2.timing = "Evening";
-		f2.bestSeason = "All Year";
-		f2.crowdLevel = "Very High";
-		f2.streetLength = "250 meters";
-		f2.foodType = "Mixed";
-		f2.priceRange = "₹30-₹150";
-		f2.paymentMode = "Cash/UPI";
-		f2.guide = "Local Crowd";
-		f2.status = "Open";
-		f2.popularity = "Legendary";
-		v2.foodStreet = f2;
-		v2.getAreaDetails();
+        FoodStreet f9 = new FoodStreet(109, "Indiranagar Global Street", "Truffle Fries", 45, "Peri Peri Fries",
+                "International", "World Class", "Designer", "Trendy", "Valet", "Nightlife", "All Year",
+                "Elite Crowd", "600 meters", "Mixed", "₹200-₹800", "Cards Only", "Influencers", "Open", "Luxury Street");
 
-		VVPuram v3 = new VVPuram();
-		v3.areaId = 3;
-		v3.areaName = "Russell Market Area";
-		v3.city = "Bangalore";
-		v3.state = "Karnataka";
-		v3.country = "India";
-		v3.establishedYear = 1927;
-		v3.visitorsPerDay = 8000;
-		v3.famousFor = "Fruit Market Food";
-		v3.location = "Shivajinagar";
-		v3.landmark = "Russell Market";
-		v3.category = "Market Food";
-		v3.openingTime = "9 AM";
-		v3.closingTime = "11 PM";
-		v3.cleanliness = "Moderate";
-		v3.security = "Police Presence";
-		v3.transport = "Metro/Bus";
-		v3.website = "russellmarketfood.com";
-		v3.contact = "080323456";
-		v3.status = "Active";
-		v3.description = "Historic market with food stalls";
+        FoodStreet f10 = new FoodStreet(110, "ITPL Corporate Street", "Quick Service Food", 55, "Paneer Rolls",
+                "Fast Food", "Corporate Standard", "Professional", "Office Style", "Corporate Parking", "Lunch/Dinner", "All Year",
+                "Office Crowd", "700 meters", "Mixed", "₹100-₹400", "Digital Only", "Office Colleagues", "Open", "IT Hub");
 
-		FoodStreet f3 = new FoodStreet();
-		f3.streetId = 103;
-		f3.streetName = "Russell Market Food Zone";
-		f3.specialty = "Shawarma Rolls";
-		f3.stalls = 40;
-		f3.famousDish = "Chicken Shawarma";
-		f3.cuisineType = "Multi-Cuisine";
-		f3.hygiene = "Good";
-		f3.lighting = "Bright";
-		f3.seating = "Market Seating";
-		f3.parking = "Multi-level";
-		f3.timing = "All Day";
-		f3.bestSeason = "Winter";
-		f3.crowdLevel = "Peak Evening";
-		f3.streetLength = "400 meters";
-		f3.foodType = "Non-Veg";
-		f3.priceRange = "₹80-₹300";
-		f3.paymentMode = "Cash/Cards";
-		f3.guide = "Market Vendors";
-		f3.status = "Open";
-		f3.popularity = "Tourist Spot";
-		v3.foodStreet = f3;
-		v3.getAreaDetails();
+        FoodStreet f11 = new FoodStreet(111, "Shivaji Nagar Biryani Street", "Mutton Biryani", 45, "Chicken Dum Biryani",
+                "Hyderabadi", "Good", "Market Lights", "Roadside", "Market Parking", "Lunch/Dinner", "Winter",
+                "Very High", "600 meters", "Non-Veg", "₹120-₹350", "Cash/UPI", "Auto Drivers", "Open", "Biryani Heaven");
 
-		VVPuram v4 = new VVPuram();
-		v4.areaId = 4;
-		v4.areaName = "Frazer Town";
-		v4.city = "Bangalore";
-		v4.state = "Karnataka";
-		v4.country = "India";
-		v4.establishedYear = 1950;
-		v4.visitorsPerDay = 4000;
-		v4.famousFor = "Iftar Street Food";
-		v4.location = "MM Road";
-		v4.landmark = "Masjid-e-Nimrah";
-		v4.category = "Ramzan Special";
-		v4.openingTime = "3 PM";
-		v4.closingTime = "2 AM";
-		v4.cleanliness = "Good";
-		v4.security = "Festival Security";
-		v4.transport = "Bus/Metro";
-		v4.website = "frazerifta.com";
-		v4.contact = "080423456";
-		v4.status = "Seasonal";
-		v4.description = "Ramzan special food street";
+        FoodStreet f12 = new FoodStreet(112, "Banashankari Prasadam Street", "Temple Sweets", 22, "Kharjuradi Palya",
+                "Temple Cuisine", "Excellent", "Temple Glow", "Devotee Area", "Temple Parking", "Evening Aarti", "Festivals",
+                "Devotee Heavy", "250 meters", "Vegetarian", "₹20-₹100", "Cash", "Temple Staff", "Open", "Spiritual Favorite");
 
-		FoodStreet f4 = new FoodStreet();
-		f4.streetId = 104;
-		f4.streetName = "Frazer Town Iftar Street";
-		f4.specialty = "Haleem & Biryani";
-		f4.stalls = 35;
-		f4.famousDish = "Chicken Haleem";
-		f4.cuisineType = "Hyderabadi";
-		f4.hygiene = "Excellent";
-		f4.lighting = "Festive";
-		f4.seating = "Roadside";
-		f4.parking = "Limited";
-		f4.timing = "Iftar Time";
-		f4.bestSeason = "Ramzan";
-		f4.crowdLevel = "Extremely High";
-		f4.streetLength = "500 meters";
-		f4.foodType = "Non-Veg";
-		f4.priceRange = "₹100-₹400";
-		f4.paymentMode = "Cash/UPI";
-		f4.guide = "Community";
-		f4.status = "Ramzan Only";
-		f4.popularity = "Religious Festival";
-		v4.foodStreet = f4;
-		v4.getAreaDetails();
+        FoodStreet f13 = new FoodStreet(113, "Johnson Market Kebab Street", "Seekh Kebabs", 28, "Chicken Seekh",
+                "Mughlai", "Very Good", "Street Lights", "Outdoor", "Street Parking", "Lunch/Late Night", "All Year",
+                "Foodies", "300 meters", "Non-Veg", "₹150-₹400", "Cash/Cards", "Local Foodies", "Open", "Meat Lovers");
 
-		VVPuram v5 = new VVPuram();
-		v5.areaId = 5;
-		v5.areaName = "Koramangala 80 Feet Road";
-		v5.city = "Bangalore";
-		v5.state = "Karnataka";
-		v5.country = "India";
-		v5.establishedYear = 2005;
-		v5.visitorsPerDay = 10000;
-		v5.famousFor = "Pub Street Food";
-		v5.location = "Koramangala";
-		v5.landmark = "Forum Mall";
-		v5.category = "Late Night";
-		v5.openingTime = "7 PM";
-		v5.closingTime = "2 AM";
-		v5.cleanliness = "Excellent";
-		v5.security = "Private Security";
-		v5.transport = "Cabs/Metro";
-		v5.website = "kormangalafood.com";
-		v5.contact = "080523456";
-		v5.status = "Active";
-		v5.description = "Trendy nightlife food street";
+        FoodStreet f14 = new FoodStreet(114, "KR Market Snack Street", "Fresh Fruit Chaat", 60, "Mixed Fruit Chat",
+                "Market Fresh", "Fresh", "Natural + Street", "Standing", "Wholesale Area", "All Day", "Summer",
+                "Market Busy", "800 meters", "Vegetarian", "₹20-₹80", "Cash Only", "Market Regulars", "Open", "Wholesale Hub");
 
-		FoodStreet f5 = new FoodStreet();
-		f5.streetId = 105;
-		f5.streetName = "Koramangala Night Food";
-		f5.specialty = "Global Street Food";
-		f5.stalls = 50;
-		f5.famousDish = "Cheese Corn";
-		f5.cuisineType = "Fusion";
-		f5.hygiene = "Premium";
-		f5.lighting = "Neon";
-		f5.seating = "Outdoor";
-		f5.parking = "Valet";
-		f5.timing = "Late Night";
-		f5.bestSeason = "All Year";
-		f5.crowdLevel = "Youth Heavy";
-		f5.streetLength = "800 meters";
-		f5.foodType = "Mixed";
-		f5.priceRange = "₹150-₹500";
-		f5.paymentMode = "Cards/UPI";
-		f5.guide = "Social Media";
-		f5.status = "Open";
-		f5.popularity = "Instagram Famous";
-		v5.foodStreet = f5;
-		v5.getAreaDetails();
+        FoodStreet f15 = new FoodStreet(115, "Loafer's Lane Bombay Sandwich", "Bombay Sandwich", 18, "Chicken Boat",
+                "Mumbai Street", "Good", "Colorful", "Street Side", "Limited", "Evening", "All Year",
+                "Student Heavy", "200 meters", "Mixed", "₹80-₹250", "Cash/UPI", "College Students", "Open", "Youth Icon");
 
-		VVPuram v6 = new VVPuram();
-		v6.areaId = 6;
-		v6.areaName = "Commercial Street";
-		v6.city = "Bangalore";
-		v6.state = "Karnataka";
-		v6.country = "India";
-		v6.establishedYear = 1960;
-		v6.visitorsPerDay = 15000;
-		v6.famousFor = "Shopping Food";
-		v6.location = "Central Bangalore";
-		v6.landmark = "Commercial Street";
-		v6.category = "Shopping Area";
-		v6.openingTime = "11 AM";
-		v6.closingTime = "11 PM";
-		v6.cleanliness = "Good";
-		v6.security = "CCTV Coverage";
-		v6.transport = "Metro/Bus";
-		v6.website = "commercialstreetfood.com";
-		v6.contact = "080623456";
-		v6.status = "Active";
-		v6.description = "Shopping + street food destination";
+        FoodStreet f16 = new FoodStreet(116, "HBR Jolada Rotti Street", "Jolada Rotti", 24, "Ennegai Curry",
+                "North Karnataka", "Very Good", "Street Lights", "Roadside", "Street Parking", "Dinner", "Winter",
+                "Family Crowd", "400 meters", "Vegetarian", "₹60-₹200", "Cash/UPI", "Local Families", "Open", "Regional Gem");
 
-		FoodStreet f6 = new FoodStreet();
-		f6.streetId = 106;
-		f6.streetName = "Commercial Street Eaters";
-		f6.specialty = "Momos & Rolls";
-		f6.stalls = 60;
-		f6.famousDish = "Chicken Momos";
-		f6.cuisineType = "Street Fusion";
-		f6.hygiene = "Good";
-		f6.lighting = "Commercial";
-		f6.seating = "Takeaway";
-		f6.parking = "Paid Parking";
-		f6.timing = "Shopping Hours";
-		f6.bestSeason = "Festive";
-		f6.crowdLevel = "Shopper Heavy";
-		f6.streetLength = "1 km";
-		f6.foodType = "Non-Veg";
-		f6.priceRange = "₹100-₹350";
-		f6.paymentMode = "All Modes";
-		f6.guide = "Shoppers";
-		f6.status = "Open";
-		f6.popularity = "Tourist Favorite";
-		v6.foodStreet = f6;
-		v6.getAreaDetails();
+        FoodStreet f17 = new FoodStreet(117, "Kammanahalli Global Street", "Chinese Bhel", 38, "Schezwan Momos",
+                "Indo-Chinese", "Premium", "Neon Signs", "Outdoor Seating", "Paid Parking", "Late Night", "All Year",
+                "Young Crowd", "500 meters", "Mixed", "₹100-₹350", "All Modes", "Social Media", "Open", "Trendy Spot");
 
-		VVPuram v7 = new VVPuram();
-		v7.areaId = 7;
-		v7.areaName = "Jayanagar 4th Block";
-		v7.city = "Bangalore";
-		v7.state = "Karnataka";
-		v7.country = "India";
-		v7.establishedYear = 1975;
-		v7.visitorsPerDay = 6000;
-		v7.famousFor = "Udupi Snacks";
-		v7.location = "South Bangalore";
-		v7.landmark = "Jayanagar Shopping Complex";
-		v7.category = "Traditional";
-		v7.openingTime = "4 PM";
-		v7.closingTime = "10 PM";
-		v7.cleanliness = "Excellent";
-		v7.security = "Community Watch";
-		v7.transport = "Bus/Auto";
-		v7.website = "jayanagarfoodstreet.com";
-		v7.contact = "080723456";
-		v7.status = "Active";
-		v7.description = "Classic South Bangalore food area";
+        FoodStreet f18 = new FoodStreet(118, "Marathahalli IT Food Street", "Andhra Meals", 52, "Chicken 65",
+                "South Indian", "Corporate Standard", "Bright", "Office Style", "Multi-level", "Lunch/Dinner", "All Year",
+                "IT Crowd", "750 meters", "Non-Veg", "₹120-₹400", "Digital", "Office Colleagues", "Open", "ITPL Extension");
 
-		FoodStreet f7 = new FoodStreet();
-		f7.streetId = 107;
-		f7.streetName = "Jayanagar Udupi Street";
-		f7.specialty = "Mysore Bajji";
-		f7.stalls = 20;
-		f7.famousDish = "Mysore Bajji";
-		f7.cuisineType = "Udupi";
-		f7.hygiene = "Very Good";
-		f7.lighting = "Good";
-		f7.seating = "Roadside";
-		f7.parking = "Street Parking";
-		f7.timing = "Evening";
-		f7.bestSeason = "Monsoon";
-		f7.crowdLevel = "Family Crowd";
-		f7.streetLength = "200 meters";
-		f7.foodType = "Vegetarian";
-		f7.priceRange = "₹40-₹150";
-		f7.paymentMode = "Cash/UPI";
-		f7.guide = "Local Families";
-		f7.status = "Open";
-		f7.popularity = "Neighborhood Famous";
-		v7.foodStreet = f7;
-		v7.getAreaDetails();
+        FoodStreet f19 = new FoodStreet(119, "BTM Kerala Street", "Malabar Parotta", 32, "Beef Fry",
+                "Kerala", "Very Good", "Street Lights", "Roadside", "Street Parking", "Dinner", "Monsoon",
+                "Family Crowd", "450 meters", "Non-Veg", "₹90-₹300", "Cash/UPI", "Kerala Community", "Open", "Regional Favorite");
 
-		VVPuram v8 = new VVPuram();
-		v8.areaId = 8;
-		v8.areaName = "Malleshwaram 8th Cross";
-		v8.city = "Bangalore";
-		v8.state = "Karnataka";
-		v8.country = "India";
-		v8.establishedYear = 1965;
-		v8.visitorsPerDay = 7000;
-		v8.famousFor = "Temple Prasadam";
-		v8.location = "North Bangalore";
-		v8.landmark = "Kadumalleswara Temple";
-		v8.category = "Temple Food";
-		v8.openingTime = "5 PM";
-		v8.closingTime = "10 PM";
-		v8.cleanliness = "Very Good";
-		v8.security = "Temple Security";
-		v8.transport = "Bus/Metro";
-		v8.website = "malleshwaramfood.com";
-		v8.contact = "080823456";
-		v8.status = "Active";
-		v8.description = "Spiritual + street food area";
+        FoodStreet f20 = new FoodStreet(120, "E-City Global Food Plaza", "International Quick Bites", 65, "Korean Ramen",
+                "Global Fusion", "World Class", "Professional", "Corporate Style", "Multi-level", "24 Hours Peak", "All Year",
+                "Global IT Crowd", "1 km", "Mixed", "₹150-₹600", "Digital Only", "Multinational Staff", "Open", "Silicon Valley Food");
 
-		FoodStreet f8 = new FoodStreet();
-		f8.streetId = 108;
-		f8.streetName = "Malleshwaram Prasadam Street";
-		f8.specialty = "Temple Sweets";
-		f8.stalls = 25;
-		f8.famousDish = "Mysore Pak";
-		f8.cuisineType = "Temple Food";
-		f8.hygiene = "Excellent";
-		f8.lighting = "Temple Lights";
-		f8.seating = "Temple Area";
-		f8.parking = "Temple Parking";
-		f8.timing = "Post-Puja";
-		f8.bestSeason = "Festivals";
-		f8.crowdLevel = "Devotee Heavy";
-		f8.streetLength = "350 meters";
-		f8.foodType = "Vegetarian";
-		f8.priceRange = "₹30-₹200";
-		f8.paymentMode = "Cash";
-		f8.guide = "Temple Priests";
-		f8.status = "Open";
-		f8.popularity = "Spiritual Hub";
-		v8.foodStreet = f8;
-		v8.getAreaDetails();
+        VVPuram v1 = new VVPuram(1, "VV Puram", "Bangalore", "Karnataka", "India", 1980, 5000, "Food Street",
+                "Basavanagudi", "National College", "Street Food", "6 PM", "11 PM", "Good", "Police Patrol",
+                "Bus/Metro", "vvpuramfoodstreet.com", "080123456", "Active", "Famous street food area in Bangalore", f1);
 
-		VVPuram v9 = new VVPuram();
-		v9.areaId = 9;
-		v9.areaName = "Indiranagar 100 Feet Road";
-		v9.city = "Bangalore";
-		v9.state = "Karnataka";
-		v9.country = "India";
-		v9.establishedYear = 1995;
-		v9.visitorsPerDay = 12000;
-		v9.famousFor = "Cosmopolitan Food";
-		v9.location = "East Bangalore";
-		v9.landmark = "Indiranagar Flyover";
-		v9.category = "Global Street";
-		v9.openingTime = "6 PM";
-		v9.closingTime = "1 AM";
-		v9.cleanliness = "Premium";
-		v9.security = "Private Guards";
-		v9.transport = "Cabs/Metro";
-		v9.website = "indiranagarfood.com";
-		v9.contact = "080923456";
-		v9.status = "Active";
-		v9.description = "Elite Bangalore food street";
+        VVPuram v2 = new VVPuram(2, "Nagarthpet", "Bangalore", "Karnataka", "India", 1930, 3000, "Pani Puri Street",
+                "Central Bangalore", "KR Market", "Street Food", "4 PM", "12 AM", "Moderate", "High Crowd",
+                "Bus/Auto", "nagarthpetfoodstreet.com", "080223456", "Active", "Historic central Bangalore food street", f2);
 
-		FoodStreet f9 = new FoodStreet();
-		f9.streetId = 109;
-		f9.streetName = "Indiranagar Global Street";
-		f9.specialty = "Truffle Fries";
-		f9.stalls = 45;
-		f9.famousDish = "Peri Peri Fries";
-		f9.cuisineType = "International";
-		f9.hygiene = "World Class";
-		f9.lighting = "Designer";
-		f9.seating = "Trendy";
-		f9.parking = "Valet";
-		f9.timing = "Nightlife";
-		f9.bestSeason = "All Year";
-		f9.crowdLevel = "Elite Crowd";
-		f9.streetLength = "600 meters";
-		f9.foodType = "Mixed";
-		f9.priceRange = "₹200-₹800";
-		f9.paymentMode = "Cards Only";
-		f9.guide = "Influencers";
-		f9.status = "Open";
-		f9.popularity = "Luxury Street";
-		v9.foodStreet = f9;
-		v9.getAreaDetails();
+        VVPuram v3 = new VVPuram(3, "Russell Market Area", "Bangalore", "Karnataka", "India", 1927, 8000, "Fruit Market Food",
+                "Shivajinagar", "Russell Market", "Market Food", "9 AM", "11 PM", "Moderate", "Police Presence",
+                "Metro/Bus", "russellmarketfood.com", "080323456", "Active", "Historic market with food stalls", f3);
 
-		VVPuram v10 = new VVPuram();
-		v10.areaId = 10;
-		v10.areaName = "Whitefield ITPL";
-		v10.city = "Bangalore";
-		v10.state = "Karnataka";
-		v10.country = "India";
-		v10.establishedYear = 2008;
-		v10.visitorsPerDay = 9000;
-		v10.famousFor = "Corporate Food";
-		v10.location = "East Bangalore";
-		v10.landmark = "ITPL Gate";
-		v10.category = "IT Crowd Food";
-		v10.openingTime = "11 AM";
-		v10.closingTime = "12 AM";
-		v10.cleanliness = "Excellent";
-		v10.security = "Corporate Security";
-		v10.transport = "Company Shuttles";
-		v10.website = "whitefieldfoodplaza.com";
-		v10.contact = "0801023456";
-		v10.status = "Active";
-		v10.description = "IT professionals food street";
+        VVPuram v4 = new VVPuram(4, "Frazer Town", "Bangalore", "Karnataka", "India", 1950, 4000, "Iftar Street Food",
+                "MM Road", "Masjid-e-Nimrah", "Ramzan Special", "3 PM", "2 AM", "Good", "Festival Security",
+                "Bus/Metro", "frazerifta.com", "080423456", "Seasonal", "Ramzan special food street", f4);
 
-		FoodStreet f10 = new FoodStreet();
-		f10.streetId = 110;
-		f10.streetName = "ITPL Corporate Street";
-		f10.specialty = "Quick Service Food";
-		f10.stalls = 55;
-		f10.famousDish = "Paneer Rolls";
-		f10.cuisineType = "Fast Food";
-		f10.hygiene = "Corporate Standard";
-		f10.lighting = "Professional";
-		f10.seating = "Office Style";
-		f10.parking = "Corporate Parking";
-		f10.timing = "Lunch/Dinner";
-		f10.bestSeason = "All Year";
-		f10.crowdLevel = "Office Crowd";
-		f10.streetLength = "700 meters";
-		f10.foodType = "Mixed";
-		f10.priceRange = "₹100-₹400";
-		f10.paymentMode = "Digital Only";
-		f10.guide = "Office Colleagues";
-		f10.status = "Open";
-		f10.popularity = "IT Hub";
-		v10.foodStreet = f10;
-		v10.getAreaDetails();
-		VVPuram v11 = new VVPuram();
-v11.areaId = 11;
-v11.areaName = "Shivaji Nagar Market";
-v11.city = "Bangalore";
-v11.state = "Karnataka";
-v11.country = "India";
-v11.establishedYear = 1950;
-v11.visitorsPerDay = 20000;
-v11.famousFor = "Biryani Street";
-v11.location = "Central Bangalore";
-v11.landmark = "Shivaji Nagar Bus Stand";
-v11.category = "Market Food";
-v11.openingTime = "10 AM";
-v11.closingTime = "12 AM";
-v11.cleanliness = "Moderate";
-v11.security = "Market Security";
-v11.transport = "Bus/Metro";
-v11.website = "shivajinagarfood.com";
-v11.contact = "0801123456";
-v11.status = "Active";
-v11.description = "Bustling market with biryani specialists";
+        VVPuram v5 = new VVPuram(5, "Koramangala 80 Feet Road", "Bangalore", "Karnataka", "India", 2005, 10000, "Pub Street Food",
+                "Koramangala", "Forum Mall", "Late Night", "7 PM", "2 AM", "Excellent", "Private Security",
+                "Cabs/Metro", "kormangalafood.com", "080523456", "Active", "Trendy nightlife food street", f5);
 
-FoodStreet f11 = new FoodStreet();
-f11.streetId = 111;
-f11.streetName = "Shivaji Nagar Biryani Street";
-f11.specialty = "Mutton Biryani";
-f11.stalls = 45;
-f11.famousDish = "Chicken Dum Biryani";
-f11.cuisineType = "Hyderabadi";
-f11.hygiene = "Good";
-f11.lighting = "Market Lights";
-f11.seating = "Roadside";
-f11.parking = "Market Parking";
-f11.timing = "Lunch/Dinner";
-f11.bestSeason = "Winter";
-f11.crowdLevel = "Very High";
-f11.streetLength = "600 meters";
-f11.foodType = "Non-Veg";
-f11.priceRange = "₹120-₹350";
-f11.paymentMode = "Cash/UPI";
-f11.guide = "Auto Drivers";
-f11.status = "Open";
-f11.popularity = "Biryani Heaven";
-v11.foodStreet = f11;
-v11.getAreaDetails();
+        VVPuram v6 = new VVPuram(6, "Commercial Street", "Bangalore", "Karnataka", "India", 1960, 15000, "Shopping Food",
+                "Central Bangalore", "Commercial Street", "Shopping Area", "11 AM", "11 PM", "Good", "CCTV Coverage",
+                "Metro/Bus", "commercialstreetfood.com", "080623456", "Active", "Shopping + street food destination", f6);
 
-VVPuram v12 = new VVPuram();
-v12.areaId = 12;
-v12.areaName = "Banashankari Temple Street";
-v12.city = "Bangalore";
-v12.state = "Karnataka";
-v12.country = "India";
-v12.establishedYear = 1970;
-v12.visitorsPerDay = 8000;
-v12.famousFor = "Temple Prasadam";
-v12.location = "South Bangalore";
-v12.landmark = "Banashankari Temple";
-v12.category = "Spiritual Food";
-v12.openingTime = "4 PM";
-v12.closingTime = "11 PM";
-v12.cleanliness = "Very Good";
-v12.security = "Temple Security";
-v12.transport = "Bus/Metro";
-v12.website = "banashankarifood.com";
-v12.contact = "0801223456";
-v12.status = "Active";
-v12.description = "Temple area with authentic prasadam stalls";
+        VVPuram v7 = new VVPuram(7, "Jayanagar 4th Block", "Bangalore", "Karnataka", "India", 1975, 6000, "Udupi Snacks",
+                "South Bangalore", "Jayanagar Shopping Complex", "Traditional", "4 PM", "10 PM", "Excellent", "Community Watch",
+                "Bus/Auto", "jayanagarfoodstreet.com", "080723456", "Active", "Classic South Bangalore food area", f7);
 
-FoodStreet f12 = new FoodStreet();
-f12.streetId = 112;
-f12.streetName = "Banashankari Prasadam Street";
-f12.specialty = "Temple Sweets";
-f12.stalls = 22;
-f12.famousDish = "Kharjuradi Palya";
-f12.cuisineType = "Temple Cuisine";
-f12.hygiene = "Excellent";
-f12.lighting = "Temple Glow";
-f12.seating = "Devotee Area";
-f12.parking = "Temple Parking";
-f12.timing = "Evening Aarti";
-f12.bestSeason = "Festivals";
-f12.crowdLevel = "Devotee Heavy";
-f12.streetLength = "250 meters";
-f12.foodType = "Vegetarian";
-f12.priceRange = "₹20-₹100";
-f12.paymentMode = "Cash";
-f12.guide = "Temple Staff";
-f12.status = "Open";
-f12.popularity = "Spiritual Favorite";
-v12.foodStreet = f12;
-v12.getAreaDetails();
+        VVPuram v8 = new VVPuram(8, "Malleshwaram 8th Cross", "Bangalore", "Karnataka", "India", 1965, 7000, "Temple Prasadam",
+                "North Bangalore", "Kadumalleswara Temple", "Temple Food", "5 PM", "10 PM", "Very Good", "Temple Security",
+                "Bus/Metro", "malleshwaramfood.com", "080823456", "Active", "Spiritual + street food area", f8);
 
-VVPuram v13 = new VVPuram();
-v13.areaId = 13;
-v13.areaName = "Johnson Market";
-v13.city = "Bangalore";
-v13.state = "Karnataka";
-v13.country = "India";
-v13.establishedYear = 1985;
-v13.visitorsPerDay = 5000;
-v13.famousFor = "Meat Street Food";
-v13.location = "Richmond Town";
-v13.landmark = "Johnson Market";
-v13.category = "Non-Veg Special";
-v13.openingTime = "12 PM";
-v13.closingTime = "1 AM";
-v13.cleanliness = "Good";
-v13.security = "Private Security";
-v13.transport = "Cabs/Bus";
-v13.website = "johnsonmarketfood.com";
-v13.contact = "0801323456";
-v13.status = "Active";
-v13.description = "Richmond Town meat lovers paradise";
+        VVPuram v9 = new VVPuram(9, "Indiranagar 100 Feet Road", "Bangalore", "Karnataka", "India", 1995, 12000, "Cosmopolitan Food",
+                "East Bangalore", "Indiranagar Flyover", "Global Street", "6 PM", "1 AM", "Premium", "Private Guards",
+                "Cabs/Metro", "indiranagarfood.com", "080923456", "Active", "Elite Bangalore food street", f9);
 
-FoodStreet f13 = new FoodStreet();
-f13.streetId = 113;
-f13.streetName = "Johnson Market Kebab Street";
-f13.specialty = "Seekh Kebabs";
-f13.stalls = 28;
-f13.famousDish = "Chicken Seekh";
-f13.cuisineType = "Mughlai";
-f13.hygiene = "Very Good";
-f13.lighting = "Street Lights";
-f13.seating = "Outdoor";
-f13.parking = "Street Parking";
-f13.timing = "Lunch/Late Night";
-f13.bestSeason = "All Year";
-f13.crowdLevel = "Foodies";
-f13.streetLength = "300 meters";
-f13.foodType = "Non-Veg";
-f13.priceRange = "₹150-₹400";
-f13.paymentMode = "Cash/Cards";
-f13.guide = "Local Foodies";
-f13.status = "Open";
-f13.popularity = "Meat Lovers";
-v13.foodStreet = f13;
-v13.getAreaDetails();
+        VVPuram v10 = new VVPuram(10, "Whitefield ITPL", "Bangalore", "Karnataka", "India", 2008, 9000, "Corporate Food",
+                "East Bangalore", "ITPL Gate", "IT Crowd Food", "11 AM", "12 AM", "Excellent", "Corporate Security",
+                "Company Shuttles", "whitefieldfoodplaza.com", "0801023456", "Active", "IT professionals food street", f10);
 
-VVPuram v14 = new VVPuram();
-v14.areaId = 14;
-v14.areaName = "KR Market Area";
-v14.city = "Bangalore";
-v14.state = "Karnataka";
-v14.country = "India";
-v14.establishedYear = 1928;
-v14.visitorsPerDay = 25000;
-v14.famousFor = "Flower Market Snacks";
-v14.location = "Central Bangalore";
-v14.landmark = "KR Market";
-v14.category = "Wholesale Food";
-v14.openingTime = "5 AM";
-v14.closingTime = "10 PM";
-v14.cleanliness = "Moderate";
-v14.security = "Market Patrol";
-v14.transport = "Bus/Auto";
-v14.website = "krmarketfood.com";
-v14.contact = "0801423456";
-v14.status = "Active";
-v14.description = "Historic wholesale market food zone";
+        VVPuram v11 = new VVPuram(11, "Shivaji Nagar Market", "Bangalore", "Karnataka", "India", 1950, 20000, "Biryani Street",
+                "Central Bangalore", "Shivaji Nagar Bus Stand", "Market Food", "10 AM", "12 AM", "Moderate", "Market Security",
+                "Bus/Metro", "shivajinagarfood.com", "0801123456", "Active", "Bustling market with biryani specialists", f11);
 
-FoodStreet f14 = new FoodStreet();
-f14.streetId = 114;
-f14.streetName = "KR Market Snack Street";
-f14.specialty = "Fresh Fruit Chaat";
-f14.stalls = 60;
-f14.famousDish = "Mixed Fruit Chat";
-f14.cuisineType = "Market Fresh";
-f14.hygiene = "Fresh";
-f14.lighting = "Natural + Street";
-f14.seating = "Standing";
-f14.parking = "Wholesale Area";
-f14.timing = "All Day";
-f14.bestSeason = "Summer";
-f14.crowdLevel = "Market Busy";
-f14.streetLength = "800 meters";
-f14.foodType = "Vegetarian";
-f14.priceRange = "₹20-₹80";
-f14.paymentMode = "Cash Only";
-f14.guide = "Market Regulars";
-f14.status = "Open";
-f14.popularity = "Wholesale Hub";
-v14.foodStreet = f14;
-v14.getAreaDetails();
+        VVPuram v12 = new VVPuram(12, "Banashankari Temple Street", "Bangalore", "Karnataka", "India", 1970, 8000, "Temple Prasadam",
+                "South Bangalore", "Banashankari Temple", "Spiritual Food", "4 PM", "11 PM", "Very Good", "Temple Security",
+                "Bus/Metro", "banashankarifood.com", "0801223456", "Active", "Temple area with authentic prasadam stalls", f12);
 
-VVPuram v15 = new VVPuram();
-v15.areaId = 15;
-v15.areaName = "Vasanth Nagar Loafer's Lane";
-v15.city = "Bangalore";
-v15.state = "Karnataka";
-v15.country = "India";
-v15.establishedYear = 1990;
-v15.visitorsPerDay = 6000;
-v15.famousFor = "Student Food Street";
-v15.location = "Central Bangalore";
-v15.landmark = "King Edward Road";
-v15.category = "Youth Food";
-v15.openingTime = "4 PM";
-v15.closingTime = "12 AM";
-v15.cleanliness = "Good";
-v15.security = "Police Patrol";
-v15.transport = "Metro/Cabs";
-v15.website = "loaferslane.com";
-v15.contact = "0801523456";
-v15.status = "Active";
-v15.description = "Famous student hangout food street";
+        VVPuram v13 = new VVPuram(13, "Johnson Market", "Bangalore", "Karnataka", "India", 1985, 5000, "Meat Street Food",
+                "Richmond Town", "Johnson Market", "Non-Veg Special", "12 PM", "1 AM", "Good", "Private Security",
+                "Cabs/Bus", "johnsonmarketfood.com", "0801323456", "Active", "Richmond Town meat lovers paradise", f13);
 
-FoodStreet f15 = new FoodStreet();
-f15.streetId = 115;
-f15.streetName = "Loafer's Lane Bombay Sandwich";
-f15.specialty = "Bombay Sandwich";
-f15.stalls = 18;
-f15.famousDish = "Chicken Boat";
-f15.cuisineType = "Mumbai Street";
-f15.hygiene = "Good";
-f15.lighting = "Colorful";
-f15.seating = "Street Side";
-f15.parking = "Limited";
-f15.timing = "Evening";
-f15.bestSeason = "All Year";
-f15.crowdLevel = "Student Heavy";
-f15.streetLength = "200 meters";
-f15.foodType = "Mixed";
-f15.priceRange = "₹80-₹250";
-f15.paymentMode = "Cash/UPI";
-f15.guide = "College Students";
-f15.status = "Open";
-f15.popularity = "Youth Icon";
-v15.foodStreet = f15;
-v15.getAreaDetails();
+        VVPuram v14 = new VVPuram(14, "KR Market Area", "Bangalore", "Karnataka", "India", 1928, 25000, "Flower Market Snacks",
+                "Central Bangalore", "KR Market", "Wholesale Food", "5 AM", "10 PM", "Moderate", "Market Patrol",
+                "Bus/Auto", "krmarketfood.com", "0801423456", "Active", "Historic wholesale market food zone", f14);
 
-VVPuram v16 = new VVPuram();
-v16.areaId = 16;
-v16.areaName = "HBR Layout";
-v16.city = "Bangalore";
-v16.state = "Karnataka";
-v16.country = "India";
-v16.establishedYear = 2000;
-v16.visitorsPerDay = 7000;
-v16.famousFor = "North Karnataka Food";
-v16.location = "North Bangalore";
-v16.landmark = "HBR Layout Main Road";
-v16.category = "Regional Cuisine";
-v16.openingTime = "5 PM";
-v16.closingTime = "11 PM";
-v16.cleanliness = "Good";
-v16.security = "Local Patrol";
-v16.transport = "Bus/Auto";
-v16.website = "hbrfoodstreet.com";
-v16.contact = "0801623456";
-v16.status = "Active";
-v16.description = "Authentic North Karnataka street food";
+        VVPuram v15 = new VVPuram(15, "Vasanth Nagar Loafer's Lane", "Bangalore", "Karnataka", "India", 1990, 6000, "Student Food Street",
+                "Central Bangalore", "King Edward Road", "Youth Food", "4 PM", "12 AM", "Good", "Police Patrol",
+                "Metro/Cabs", "loaferslane.com", "0801523456", "Active", "Famous student hangout food street", f15);
 
-FoodStreet f16 = new FoodStreet();
-f16.streetId = 116;
-f16.streetName = "HBR Jolada Rotti Street";
-f16.specialty = "Jolada Rotti";
-f16.stalls = 24;
-f16.famousDish = "Ennegai Curry";
-f16.cuisineType = "North Karnataka";
-f16.hygiene = "Very Good";
-f16.lighting = "Street Lights";
-f16.seating = "Roadside";
-f16.parking = "Street Parking";
-f16.timing = "Dinner";
-f16.bestSeason = "Winter";
-f16.crowdLevel = "Family Crowd";
-f16.streetLength = "400 meters";
-f16.foodType = "Vegetarian";
-f16.priceRange = "₹60-₹200";
-f16.paymentMode = "Cash/UPI";
-f16.guide = "Local Families";
-f16.status = "Open";
-f16.popularity = "Regional Gem";
-v16.foodStreet = f16;
-v16.getAreaDetails();
+        VVPuram v16 = new VVPuram(16, "HBR Layout", "Bangalore", "Karnataka", "India", 2000, 7000, "North Karnataka Food",
+                "North Bangalore", "HBR Layout Main Road", "Regional Cuisine", "5 PM", "11 PM", "Good", "Local Patrol",
+                "Bus/Auto", "hbrfoodstreet.com", "0801623456", "Active", "Authentic North Karnataka street food", f16);
 
-VVPuram v17 = new VVPuram();
-v17.areaId = 17;
-v17.areaName = "Kammanahalli Main Road";
-v17.city = "Bangalore";
-v17.state = "Karnataka";
-v17.country = "India";
-v17.establishedYear = 1995;
-v17.visitorsPerDay = 9000;
-v17.famousFor = "Multi-Cuisine Street";
-v17.location = "North East Bangalore";
-v17.landmark = "Kammanahalli Circle";
-v17.category = "Diverse Food";
-v17.openingTime = "6 PM";
-v17.closingTime = "1 AM";
-v17.cleanliness = "Excellent";
-v17.security = "CCTV Coverage";
-v17.transport = "Bus/Cabs";
-v17.website = "kammanahallifood.com";
-v17.contact = "0801723456";
-v17.status = "Active";
-v17.description = "Vibrant multi-cuisine food street";
+        VVPuram v17 = new VVPuram(17, "Kammanahalli Main Road", "Bangalore", "Karnataka", "India", 1995, 9000, "Multi-Cuisine Street",
+                "North East Bangalore", "Kammanahalli Circle", "Diverse Food", "6 PM", "1 AM", "Excellent", "CCTV Coverage",
+                "Bus/Cabs", "kammanahallifood.com", "0801723456", "Active", "Vibrant multi-cuisine food street", f17);
 
-FoodStreet f17 = new FoodStreet();
-f17.streetId = 117;
-f17.streetName = "Kammanahalli Global Street";
-f17.specialty = "Chinese Bhel";
-f17.stalls = 38;
-f17.famousDish = "Schezwan Momos";
-f17.cuisineType = "Indo-Chinese";
-f17.hygiene = "Premium";
-f17.lighting = "Neon Signs";
-f17.seating = "Outdoor Seating";
-f17.parking = "Paid Parking";
-f17.timing = "Late Night";
-f17.bestSeason = "All Year";
-f17.crowdLevel = "Young Crowd";
-f17.streetLength = "500 meters";
-f17.foodType = "Mixed";
-f17.priceRange = "₹100-₹350";
-f17.paymentMode = "All Modes";
-f17.guide = "Social Media";
-f17.status = "Open";
-f17.popularity = "Trendy Spot";
-v17.foodStreet = f17;
-v17.getAreaDetails();
+        VVPuram v18 = new VVPuram(18, "Marathahalli Bridge", "Bangalore", "Karnataka", "India", 2005, 15000, "IT Food Street",
+                "East Bangalore", "Marathahalli Bridge", "Corporate Food", "11 AM", "2 AM", "Very Good", "Private Security",
+                "Company Buses", "marathahallifood.com", "0801823456", "Active", "IT professionals favorite food street", f18);
 
-VVPuram v18 = new VVPuram();
-v18.areaId = 18;
-v18.areaName = "Marathahalli Bridge";
-v18.city = "Bangalore";
-v18.state = "Karnataka";
-v18.country = "India";
-v18.establishedYear = 2005;
-v18.visitorsPerDay = 15000;
-v18.famousFor = "IT Food Street";
-v18.location = "East Bangalore";
-v18.landmark = "Marathahalli Bridge";
-v18.category = "Corporate Food";
-v18.openingTime = "11 AM";
-v18.closingTime = "2 AM";
-v18.cleanliness = "Very Good";
-v18.security = "Private Security";
-v18.transport = "Company Buses";
-v18.website = "marathahallifood.com";
-v18.contact = "0801823456";
-v18.status = "Active";
-v18.description = "IT professionals favorite food street";
+        VVPuram v19 = new VVPuram(19, "Btm Layout 2nd Stage", "Bangalore", "Karnataka", "India", 1998, 11000, "Kerala Food Street",
+                "South Bangalore", "BTM Water Tank", "Regional Special", "5 PM", "12 AM", "Good", "Local Patrol",
+                "Bus/Auto", "btmfoodstreet.com", "0801923456", "Active", "Kerala cuisine specialist street", f19);
 
-FoodStreet f18 = new FoodStreet();
-f18.streetId = 118;
-f18.streetName = "Marathahalli IT Food Street";
-f18.specialty = "Andhra Meals";
-f18.stalls = 52;
-f18.famousDish = "Chicken 65";
-f18.cuisineType = "South Indian";
-f18.hygiene = "Corporate Standard";
-f18.lighting = "Bright";
-f18.seating = "Office Style";
-f18.parking = "Multi-level";
-f18.timing = "Lunch/Dinner";
-f18.bestSeason = "All Year";
-f18.crowdLevel = "IT Crowd";
-f18.streetLength = "750 meters";
-f18.foodType = "Non-Veg";
-f18.priceRange = "₹120-₹400";
-f18.paymentMode = "Digital";
-f18.guide = "Office Colleagues";
-f18.status = "Open";
-f18.popularity = "ITPL Extension";
-v18.foodStreet = f18;
-v18.getAreaDetails();
+        VVPuram v20 = new VVPuram(20, "Electronic City Food Plaza", "Bangalore", "Karnataka", "India", 2010, 18000, "Multinational Food",
+                "South Bangalore", "Infosys Campus", "Global Corporate", "10 AM", "2 AM", "Excellent", "Corporate Security",
+                "Company Shuttles", "e.cityfoodplaza.com", "0802023456", "Active", "Electronic City multinational food hub", f20);
 
-VVPuram v19 = new VVPuram();
-v19.areaId = 19;
-v19.areaName = "Btm Layout 2nd Stage";
-v19.city = "Bangalore";
-v19.state = "Karnataka";
-v19.country = "India";
-v19.establishedYear = 1998;
-v19.visitorsPerDay = 11000;
-v19.famousFor = "Kerala Food Street";
-v19.location = "South Bangalore";
-v19.landmark = "BTM Water Tank";
-v19.category = "Regional Special";
-v19.openingTime = "5 PM";
-v19.closingTime = "12 AM";
-v19.cleanliness = "Good";
-v19.security = "Local Patrol";
-v19.transport = "Bus/Auto";
-v19.website = "btmfoodstreet.com";
-v19.contact = "0801923456";
-v19.status = "Active";
-v19.description = "Kerala cuisine specialist street";
+        System.out.println("BANGALORE'S ULTIMATE FOOD STREET GUIDE 2026 🍽️\n");
+        
+        v1.displayDetails();
+        v2.displayDetails();
+        v3.displayDetails();
+        v4.displayDetails();
+        v5.displayDetails();
+        v6.displayDetails();
+        v7.displayDetails();
+        v8.displayDetails();
+        v9.displayDetails();
+        v10.displayDetails();
+        v11.displayDetails();
+        v12.displayDetails();
+        v13.displayDetails();
+        v14.displayDetails();
+        v15.displayDetails();
+        v16.displayDetails();
+        v17.displayDetails();
+        v18.displayDetails();
+        v19.displayDetails();
+        v20.displayDetails();
 
-FoodStreet f19 = new FoodStreet();
-f19.streetId = 119;
-f19.streetName = "BTM Kerala Street";
-f19.specialty = "Malabar Parotta";
-f19.stalls = 32;
-f19.famousDish = "Beef Fry";
-f19.cuisineType = "Kerala";
-f19.hygiene = "Very Good";
-f19.lighting = "Street Lights";
-f19.seating = "Roadside";
-f19.parking = "Street Parking";
-f19.timing = "Dinner";
-f19.bestSeason = "Monsoon";
-f19.crowdLevel = "Family Crowd";
-f19.streetLength = "450 meters";
-f19.foodType = "Non-Veg";
-f19.priceRange = "₹90-₹300";
-f19.paymentMode = "Cash/UPI";
-f19.guide = "Kerala Community";
-f19.status = "Open";
-f19.popularity = "Regional Favorite";
-v19.foodStreet = f19;
-v19.getAreaDetails();
-
-VVPuram v20 = new VVPuram();
-v20.areaId = 20;
-v20.areaName = "Electronic City Food Plaza";
-v20.city = "Bangalore";
-v20.state = "Karnataka";
-v20.country = "India";
-v20.establishedYear = 2010;
-v20.visitorsPerDay = 18000;
-v20.famousFor = "Multinational Food";
-v20.location = "South Bangalore";
-v20.landmark = "Infosys Campus";
-v20.category = "Global Corporate";
-v20.openingTime = "10 AM";
-v20.closingTime = "2 AM";
-v20.cleanliness = "Excellent";
-v20.security = "Corporate Security";
-v20.transport = "Company Shuttles";
-v20.website = "e.cityfoodplaza.com";
-v20.contact = "0802023456";
-v20.status = "Active";
-v20.description = "Electronic City multinational food hub";
-
-FoodStreet f20 = new FoodStreet();
-f20.streetId = 120;
-f20.streetName = "E-City Global Food Plaza";
-f20.specialty = "International Quick Bites";
-f20.stalls = 65;
-f20.famousDish = "Korean Ramen";
-f20.cuisineType = "Global Fusion";
-f20.hygiene = "World Class";
-f20.lighting = "Professional";
-f20.seating = "Corporate Style";
-f20.parking = "Multi-level";
-f20.timing = "24 Hours Peak";
-f20.bestSeason = "All Year";
-f20.crowdLevel = "Global IT Crowd";
-f20.streetLength = "1 km";
-f20.foodType = "Mixed";
-f20.priceRange = "₹150-₹600";
-f20.paymentMode = "Digital Only";
-f20.guide = "Multinational Staff";
-f20.status = "Open";
-f20.popularity = "Silicon Valley Food";
-v20.foodStreet = f20;
-v20.getAreaDetails();
-
-
+        System.out.println("\n BANGALORE - THE STREET FOOD CAPITAL OF INDIA! 🌟");
+        System.out.println(" Pick your favorite and enjoy authentic Bangalore flavors!");
     }
 }

@@ -1,929 +1,184 @@
 class UniverseExecutor {
-public static void main(String[] args){
-        Universe u1 = new Universe();
+    public static void main(String[] args) {
+        Earth e1 = new Earth(3, "Earth", "Terrestrial", 6371, 5.97, 9.8, 7, 5, 195, 8000000000,
+                "Nitrogen Oxygen", "15C", "24 Hours", "365 Days", "Moon", "Blue",
+                "Yes", "Planet", "Habitable", "Home of Humans");
+        Universe u1 = new Universe(1, "Observable Universe", "Cosmic", 2000000000L, 1000000000000L, 1000000000000L,
+                "Edwin Hubble", 1929, "Big Bang", "13.8 Billion Years", "Accelerating", "Black", "3D",
+                "Cosmic Web", "Astronomy", "Big Bang", "2.7K", "Expanding", "Telescopes", "Vast cosmic space", e1);
 
-        u1.universeId = 1;
-        u1.universeName = "Observable Universe";
-        u1.type = "Cosmic";
-        u1.galaxies = 2000000000L;
-        u1.stars = 1000000000000L;
-        u1.planets = 1000000000000L;
-        u1.discoveredBy = "Edwin Hubble";
-        u1.discoveredYear = 1929;
-        u1.theory = "Big Bang";
-        u1.age = "13.8 Billion Years";
-        u1.expansionType = "Accelerating";
-        u1.color = "Black";
-        u1.dimension = "3D";
-        u1.structure = "Cosmic Web";
-        u1.category = "Astronomy";
-        u1.origin = "Big Bang";
-        u1.temperature = "2.7K";
-        u1.status = "Expanding";
-        u1.observationMethod = "Telescopes";
-        u1.description = "Vast cosmic space";
+        Earth e2 = new Earth(4, "Mars", "Terrestrial", 3389, 0.64, 3.71, 0, 0, 0, 0,
+                "Carbon Dioxide", "-60C", "24.6 Hours", "687 Days", "Phobos, Deimos", "Red",
+                "Microbial?", "Planet", "Potentially Habitable", "Red Planet");
+        Universe u2 = new Universe(2, "Milky Way Universe", "Galactic", 1L, 400000000000L, 800000000000L,
+                "William Herschel", 1785, "Dark Matter Dominated", "13.6 Billion Years", "Rotating",
+                "Milky White", "3D", "Spiral Arms", "Astronomy", "Big Bang", "2.7K", "Stable",
+                "Radio Telescopes", "Our home galaxy universe", e2);
 
-        Earth e1 = new Earth();
+        Earth e3 = new Earth(5, "Venus", "Terrestrial", 6052, 4.87, 8.87, 0, 0, 0, 0,
+                "Carbon Dioxide", "464C", "243 Days", "225 Days", "None", "Yellowish White",
+                "No", "Planet", "Unhabitable", "Hottest Planet");
+        Universe u3 = new Universe(3, "Andromeda Universe", "Galactic", 1L, 1000000000000L, 2000000000000L,
+                "Charles Messier", 1764, "Spiral Galaxy", "10 Billion Years", "Approaching",
+                "Silvery", "3D", "Barred Spiral", "Astronomy", "Big Bang", "2.7K", "Colliding",
+                "Optical Telescopes", "Nearest spiral galaxy", e3);
 
-        e1.planetId = 3;
-        e1.planetName = "Earth";
-        e1.type = "Terrestrial";
-        e1.radius = 6371;
-        e1.mass = 5.97;
-        e1.gravity = 9.8;
-        e1.continents = 7;
-        e1.oceans = 5;
-        e1.countries = 195;
-        e1.population = 800000000;
-        e1.atmosphere = "Nitrogen Oxygen";
-        e1.temperature = "15C";
-        e1.rotationPeriod = "24 Hours";
-        e1.revolutionPeriod = "365 Days";
-        e1.satellite = "Moon";
-        e1.color = "Blue";
-        e1.lifeExistence = "Yes";
-        e1.category = "Planet";
-        e1.status = "Habitable";
-        e1.description = "Home of Humans";
+        Earth e4 = new Earth(6, "Mercury", "Terrestrial", 2439, 0.33, 3.7, 0, 0, 0, 0,
+                "Thin Exosphere", "427C Day", "58.6 Days", "88 Days", "None", "Grey",
+                "No", "Planet", "Unhabitable", "Closest to Sun");
+        Universe u4 = new Universe(4, "Triangulum Universe", "Galactic", 1L, 40000000000L, 80000000000L,
+                "Charles Messier", 1764, "Scutum-Centaurus Arm", "10 Billion Years", "Receding",
+                "Blue-White", "3D", "Spiral", "Astronomy", "Big Bang", "2.7K", "Stable",
+                "Infrared Telescopes", "Third largest galaxy", e4);
 
-        u1.earth = e1;
+        Earth e5 = new Earth(7, "Jupiter", "Gas Giant", 69911, 317.8, 24.79, 0, 0, 0, 0,
+                "Hydrogen Helium", "-145C", "9.9 Hours", "11.9 Years", "95 Moons", "Orange Brown",
+                "No", "Planet", "Unhabitable", "Largest Planet");
+        Universe u5 = new Universe(5, "Centaurus A Universe", "Elliptical", 1L, 100000000000L, 200000000000L,
+                "James Dunlop", 1826, "Active Galactic Nucleus", "12 Billion Years", "Jet Emission",
+                "Radio Bright", "3D", "Elliptical", "Astronomy", "Big Bang", "2.7K", "Active",
+                "Radio Astronomy", "Radio Galaxy", e5);
 
-        u1.getUniverseDetails();
-		Universe u1 = new Universe();
+        Earth e6 = new Earth(8, "Saturn", "Gas Giant", 58232, 95.2, 10.44, 0, 0, 0, 0,
+                "Hydrogen Helium", "-185C", "10.7 Hours", "29.5 Years", "146 Moons", "Golden",
+                "No", "Planet", "Unhabitable", "Ringed Planet");
+        Universe u6 = new Universe(6, "Sombrero Galaxy Universe", "Spiral", 1L, 80000000000L, 160000000000L,
+                "Pierre Méchain", 1783, "Dust Ring Galaxy", "11 Billion Years", "Stable",
+                "White", "3D", "Spiral Sa", "Astronomy", "Big Bang", "2.7K", "Stable",
+                "Hubble Space Telescope", "Hat-shaped galaxy", e6);
 
+        Earth e7 = new Earth(9, "Uranus", "Ice Giant", 25362, 14.5, 8.69, 0, 0, 0, 0,
+                "Hydrogen Methane", "-224C", "17.2 Hours", "84 Years", "27 Moons", "Light Blue",
+                "No", "Planet", "Unhabitable", "Sideways Planet");
+        Universe u7 = new Universe(7, "Whirlpool Galaxy Universe", "Grand Design Spiral", 1L, 200000000000L, 400000000000L,
+                "Charles Messier", 1773, "Gravitational Interaction", "400 Million Years", "Interacting",
+                "Blue-White", "3D", "Spiral", "Astronomy", "Big Bang", "2.7K", "Interacting",
+                "Deep Space Imaging", "Perfect spiral galaxy", e7);
 
-Universe u2 = new Universe();
-u2.universeId = 2;
-u2.universeName = "Milky Way Universe";
-u2.type = "Galactic";
-u2.galaxies = 1L;
-u2.stars = 400000000000L;
-u2.planets = 800000000000L;
-u2.discoveredBy = "William Herschel";
-u2.discoveredYear = 1785;
-u2.theory = "Dark Matter Dominated";
-u2.age = "13.6 Billion Years";
-u2.expansionType = "Rotating";
-u2.color = "Milky White";
-u2.dimension = "3D";
-u2.structure = "Spiral Arms";
-u2.category = "Astronomy";
-u2.origin = "Big Bang";
-u2.temperature = "2.7K";
-u2.status = "Stable";
-u2.observationMethod = "Radio Telescopes";
-u2.description = "Our home galaxy universe";
+        Earth e8 = new Earth(10, "Neptune", "Ice Giant", 24622, 17.1, 11.15, 0, 0, 0, 0,
+                "Hydrogen Helium Methane", "-218C", "16.1 Hours", "164.8 Years", "14 Moons", "Deep Blue",
+                "No", "Planet", "Unhabitable", "Windy Planet");
+        Universe u8 = new Universe(8, "Pinwheel Galaxy Universe", "Grand Design Spiral", 1L, 100000000000L, 200000000000L,
+                "Pierre Méchain", 1781, "Face-on Spiral", "9 Billion Years", "Receding",
+                "Bright White", "3D", "Spiral Sc", "Astronomy", "Big Bang", "2.7K", "Stable",
+                "Amateur Telescopes", "Face-on beauty", e8);
 
-Earth e2 = new Earth();
-e2.planetId = 4;
-e2.planetName = "Mars";
-e2.type = "Terrestrial";
-e2.radius = 3389;
-e2.mass = 0.64;
-e2.gravity = 3.71;
-e2.continents = 0;
-e2.oceans = 0;
-e2.countries = 0;
-e2.population = 0;
-e2.atmosphere = "Carbon Dioxide";
-e2.temperature = "-60C";
-e2.rotationPeriod = "24.6 Hours";
-e2.revolutionPeriod = "687 Days";
-e2.satellite = "Phobos, Deimos";
-e2.color = "Red";
-e2.lifeExistence = "Microbial?";
-e2.category = "Planet";
-e2.status = "Potentially Habitable";
-e2.description = "Red Planet";
-u2.earth = e2;
-u2.getUniverseDetails();
+        Earth e9 = new Earth(11, "Pluto", "Dwarf Planet", 1188, 0.002, 0.62, 0, 0, 0, 0,
+                "Thin Nitrogen", "-229C", "6.4 Days", "248 Years", "5 Moons", "Icy White",
+                "No", "Dwarf Planet", "Frozen", "Former Planet");
+        Universe u9 = new Universe(9, "Black Eye Galaxy Universe", "Spiral", 1L, 50000000000L, 100000000000L,
+                "Charles Messier", 1780, "Dust Lane Galaxy", "11 Billion Years", "Stable",
+                "Yellow Core", "3D", "Spiral Sb", "Astronomy", "Big Bang", "2.7K", "Stable",
+                "Deep Sky Imaging", "Dark dust lane galaxy", e9);
 
-Universe u3 = new Universe();
-u3.universeId = 3;
-u3.universeName = "Andromeda Universe";
-u3.type = "Galactic";
-u3.galaxies = 1L;
-u3.stars = 1000000000000L;
-u3.planets = 2000000000000L;
-u3.discoveredBy = "Charles Messier";
-u3.discoveredYear = 1764;
-u3.theory = "Spiral Galaxy";
-u3.age = "10 Billion Years";
-u3.expansionType = "Approaching";
-u3.color = "Silvery";
-u3.dimension = "3D";
-u3.structure = "Barred Spiral";
-u3.category = "Astronomy";
-u3.origin = "Big Bang";
-u3.temperature = "2.7K";
-u3.status = "Colliding";
-u3.observationMethod = "Optical Telescopes";
-u3.description = "Nearest spiral galaxy";
+        Earth e10 = new Earth(12, "Europa", "Icy Moon", 1560, 0.008, 1.31, 0, 0, 0, 0,
+                "Thin Oxygen", "-171C", "3.5 Days", "3.5 Days", "None", "White Ice",
+                "Possible Oceanic", "Moon", "Potentially Habitable", "Jupiter's icy moon");
+        Universe u10 = new Universe(10, "Large Magellanic Cloud", "Dwarf Irregular", 1L, 10000000000L, 20000000000L,
+                "Ferdinand Magellan", 1519, "Satellite Galaxy", "13 Billion Years", "Orbiting",
+                "Blue Irregular", "3D", "Irregular", "Astronomy", "Big Bang", "2.7K", "Orbiting Milky Way",
+                "Southern Hemisphere", "Nearest satellite galaxy", e10);
 
-Earth e3 = new Earth();
-e3.planetId = 5;
-e3.planetName = "Venus";
-e3.type = "Terrestrial";
-e3.radius = 6052;
-e3.mass = 4.87;
-e3.gravity = 8.87;
-e3.continents = 0;
-e3.oceans = 0;
-e3.countries = 0;
-e3.population = 0;
-e3.atmosphere = "Carbon Dioxide";
-e3.temperature = "464C";
-e3.rotationPeriod = "243 Days";
-e3.revolutionPeriod = "225 Days";
-e3.satellite = "None";
-e3.color = "Yellowish White";
-e3.lifeExistence = "No";
-e3.category = "Planet";
-e3.status = "Unhabitable";
-e3.description = "Hottest Planet";
-u3.earth = e3;
-u3.getUniverseDetails();
+                Earth e11 = new Earth(13, "Enceladus", "Icy Moon", 252, 0.00011, 0.11, 0, 0, 0, 0,
+                "Water Vapor", "-198C", "1.4 Days", "1.4 Days", "None", "Bright White",
+                "Possible Hydrothermal", "Moon", "Potentially Habitable", "Saturn's geyser moon");
+        Universe u11 = new Universe(11, "Small Magellanic Cloud Universe", "Dwarf Irregular", 1L, 3000000000L, 6000000000L,
+                "Yves Tholot", 1752, "Satellite Galaxy", "13 Billion Years", "Orbiting",
+                "Blue Irregular", "3D", "Irregular", "Astronomy", "Big Bang", "2.7K", "Orbiting Milky Way",
+                "Southern Sky", "Smaller satellite galaxy", e11);
 
-Universe u4 = new Universe();
-u4.universeId = 4;
-u4.universeName = "Triangulum Universe";
-u4.type = "Galactic";
-u4.galaxies = 1L;
-u4.stars = 40000000000L;
-u4.planets = 80000000000L;
-u4.discoveredBy = "Charles Messier";
-u4.discoveredYear = 1764;
-u4.theory = "Scutum-Centaurus Arm";
-u4.age = "10 Billion Years";
-u4.expansionType = "Receding";
-u4.color = "Blue-White";
-u4.dimension = "3D";
-u4.structure = "Spiral";
-u4.category = "Astronomy";
-u4.origin = "Big Bang";
-u4.temperature = "2.7K";
-u4.status = "Stable";
-u4.observationMethod = "Infrared Telescopes";
-u4.description = "Third largest galaxy";
+        Earth e12 = new Earth(14, "Titan", "Icy Moon", 2575, 0.0225, 1.35, 0, 0, 0, 0,
+                "Nitrogen Methane", "-179C", "15.9 Days", "15.9 Days", "None", "Orange Haze",
+                "Possible Methane Life", "Moon", "Potentially Habitable", "Saturn's largest moon");
+        Universe u12 = new Universe(12, "Bode's Galaxy Universe", "Spiral", 1L, 80000000000L, 160000000000L,
+                "Johann Elert Bode", 1774, "Classic Spiral", "10 Billion Years", "Receding",
+                "White Arms", "3D", "Spiral Sb", "Astronomy", "Big Bang", "2.7K", "Stable",
+                "Northern Hemisphere", "Beautiful spiral galaxy", e12);
 
-Earth e4 = new Earth();
-e4.planetId = 6;
-e4.planetName = "Mercury";
-e4.type = "Terrestrial";
-e4.radius = 2439;
-e4.mass = 0.33;
-e4.gravity = 3.7;
-e4.continents = 0;
-e4.oceans = 0;
-e4.countries = 0;
-e4.population = 0;
-e4.atmosphere = "Thin Exosphere";
-e4.temperature = "427C Day";
-e4.rotationPeriod = "58.6 Days";
-e4.revolutionPeriod = "88 Days";
-e4.satellite = "None";
-e4.color = "Grey";
-e4.lifeExistence = "No";
-e4.category = "Planet";
-e4.status = "Unhabitable";
-e4.description = "Closest to Sun";
-u4.earth = e4;
-u4.getUniverseDetails();
+        Earth e13 = new Earth(15, "Ganymede", "Icy Moon", 2631, 0.025, 1.43, 0, 0, 0, 0,
+                "Thin Oxygen", "-163C", "7.2 Days", "7.2 Days", "None", "Grey Ice",
+                "Possible Subsurface", "Moon", "Potentially Habitable", "Largest moon in solar system");
+        Universe u13 = new Universe(13, "Sunflower Galaxy Universe", "Grand Design Spiral", 1L, 300000000000L, 600000000000L,
+                "Pierre Méchain", 1781, "Perfect Spiral Arms", "9 Billion Years", "Receding",
+                "Bright Blue-White", "3D", "Spiral Sc", "Astronomy", "Big Bang", "2.7K", "Stable",
+                "Deep Sky Photography", "Classic spiral beauty", e13);
 
-Universe u5 = new Universe();
-u5.universeId = 5;
-u5.universeName = "Centaurus A Universe";
-u5.type = "Elliptical";
-u5.galaxies = 1L;
-u5.stars = 100000000000L;
-u5.planets = 200000000000L;
-u5.discoveredBy = "James Dunlop";
-u5.discoveredYear = 1826;
-u5.theory = "Active Galactic Nucleus";
-u5.age = "12 Billion Years";
-u5.expansionType = "Jet Emission";
-u5.color = "Radio Bright";
-u5.dimension = "3D";
-u5.structure = "Elliptical";
-u5.category = "Astronomy";
-u5.origin = "Big Bang";
-u5.temperature = "2.7K";
-u5.status = "Active";
-u5.observationMethod = "Radio Astronomy";
-u5.description = "Radio Galaxy";
+        Earth e14 = new Earth(16, "Callisto", "Icy Moon", 2410, 0.018, 1.24, 0, 0, 0, 0,
+                "Carbon Dioxide", "-140C", "16.7 Days", "16.7 Days", "None", "Dark Grey",
+                "Possible Subsurface", "Moon", "Ancient Cratered", "Jupiter's outermost moon");
+        Universe u14 = new Universe(14, "Cartwheel Galaxy Universe", "Ring Galaxy", 1L, 50000000000L, 100000000000L,
+                "Fritz Zwicky", 1941, "Galactic Collision", "500 Million Years", "Expanding Ring",
+                "Bright Ring", "3D", "Ring", "Astronomy", "Big Bang", "2.7K", "Post-Collision",
+                "Hubble Space Telescope", "Stunning ring galaxy", e14);
 
-Earth e5 = new Earth();
-e5.planetId = 7;
-e5.planetName = "Jupiter";
-e5.type = "Gas Giant";
-e5.radius = 69911;
-e5.mass = 317.8;
-e5.gravity = 24.79;
-e5.continents = 0;
-e5.oceans = 0;
-e5.countries = 0;
-e5.population = 0;
-e5.atmosphere = "Hydrogen Helium";
-e5.temperature = "-145C";
-e5.rotationPeriod = "9.9 Hours";
-e5.revolutionPeriod = "11.9 Years";
-e5.satellite = "95 Moons";
-e5.color = "Orange Brown";
-e5.lifeExistence = "No";
-e5.category = "Planet";
-e5.status = "Unhabitable";
-e5.description = "Largest Planet";
-u5.earth = e5;
-u5.getUniverseDetails();
+        Earth e15 = new Earth(17, "Io", "Volcanic Moon", 1821, 0.015, 1.8, 0, 0, 0, 0,
+                "Sulfur Dioxide", "-143C", "1.8 Days", "1.8 Days", "None", "Yellow Sulfur",
+                "No", "Moon", "Volcanically Active", "Most volcanic body");
+        Universe u15 = new Universe(15, "NGC 1300 Universe", "Barred Spiral", 1L, 100000000000L, 200000000000L,
+                "John Herschel", 1836, "Barred Spiral Structure", "12 Billion Years", "Stable",
+                "Golden Arms", "3D", "Barred Spiral", "Astronomy", "Big Bang", "2.7K", "Stable",
+                "Hubble Imaging", "Perfect barred spiral", e15);
 
-Universe u6 = new Universe();
-u6.universeId = 6;
-u6.universeName = "Sombrero Galaxy Universe";
-u6.type = "Spiral";
-u6.galaxies = 1L;
-u6.stars = 80000000000L;
-u6.planets = 160000000000L;
-u6.discoveredBy = "Pierre Méchain";
-u6.discoveredYear = 1783;
-u6.theory = "Dust Ring Galaxy";
-u6.age = "11 Billion Years";
-u6.expansionType = "Stable";
-u6.color = "White";
-u6.dimension = "3D";
-u6.structure = "Spiral Sa";
-u6.category = "Astronomy";
-u6.origin = "Big Bang";
-u6.temperature = "2.7K";
-u6.status = "Stable";
-u6.observationMethod = "Hubble Space Telescope";
-u6.description = "Hat-shaped galaxy";
+        Earth e16 = new Earth(18, "Triton", "Icy Moon", 1353, 0.0036, 0.78, 0, 0, 0, 0,
+                "Nitrogen", "-235C", "5.9 Days", "5.9 Days", "None", "Pink Ice",
+                "Possible Subsurface", "Moon", "Retrograde Orbit", "Neptune's largest moon");
+        Universe u16 = new Universe(16, "Hoag's Object Universe", "Ring Galaxy", 1L, 100000000000L, 200000000000L,
+                "Arthur Hoag", 1950, "Perfect Ring", "10 Billion Years", "Stable Ring",
+                "Yellow Ring", "3D", "Ring", "Astronomy", "Big Bang", "2.7K", "Stable",
+                "Palomar Observatory", "Most perfect ring galaxy", e16);
 
-Earth e6 = new Earth();
-e6.planetId = 8;
-e6.planetName = "Saturn";
-e6.type = "Gas Giant";
-e6.radius = 58232;
-e6.mass = 95.2;
-e6.gravity = 10.44;
-e6.continents = 0;
-e6.oceans = 0;
-e6.countries = 0;
-e6.population = 0;
-e6.atmosphere = "Hydrogen Helium";
-e6.temperature = "-185C";
-e6.rotationPeriod = "10.7 Hours";
-e6.revolutionPeriod = "29.5 Years";
-e6.satellite = "146 Moons";
-e6.color = "Golden";
-e6.lifeExistence = "No";
-e6.category = "Planet";
-e6.status = "Unhabitable";
-e6.description = "Ringed Planet";
-u6.earth = e6;
-u6.getUniverseDetails();
+        Earth e17 = new Earth(19, "Titania", "Icy Moon", 788, 0.0005, 0.38, 0, 0, 0, 0,
+                "None", "-203C", "8.7 Days", "8.7 Days", "None", "Grey Ice",
+                "No", "Moon", "Uranus' Largest Moon", "Uranus' biggest moon");
+        Universe u17 = new Universe(17, "Messier 87 Universe", "Elliptical Giant", 1L, 1000000000000L, 2000000000000L,
+                "Charles Messier", 1781, "Supermassive Black Hole", "12 Billion Years", "Jet Active",
+                "Jet Bright", "3D", "Elliptical E0", "Astronomy", "Big Bang", "2.7K", "Active Nucleus",
+                "Event Horizon Telescope", "First black hole image galaxy", e17);
 
-Universe u7 = new Universe();
-u7.universeId = 7;
-u7.universeName = "Whirlpool Galaxy Universe";
-u7.type = "Grand Design Spiral";
-u7.galaxies = 1L;
-u7.stars = 200000000000L;
-u7.planets = 400000000000L;
-u7.discoveredBy = "Charles Messier";
-u7.discoveredYear = 1773;
-u7.theory = "Gravitational Interaction";
-u7.age = "400 Million Years";
-u7.expansionType = "Interacting";
-u7.color = "Blue-White";
-u7.dimension = "3D";
-u7.structure = "Spiral";
-u7.category = "Astronomy";
-u7.origin = "Big Bang";
-u7.temperature = "2.7K";
-u7.status = "Interacting";
-u7.observationMethod = "Deep Space Imaging";
-u7.description = "Perfect spiral galaxy";
+        Earth e18 = new Earth(20, "Rhea", "Icy Moon", 764, 0.0004, 0.27, 0, 0, 0, 0,
+                "Thin Oxygen", "-174C", "4.5 Days", "4.5 Days", "None", "Bright Ice",
+                "No", "Moon", "Saturn's Second Largest", "Saturn's icy moon");
+        Universe u18 = new Universe(18, "Tadpole Galaxy Universe", "Interacting Spiral", 2L, 100000000000L, 200000000000L,
+                "Halton Arp", 1966, "Tidal Interaction", "500 Million Years", "Tadpole Tail",
+                "Long Blue Tail", "3D", "Tidal Tail", "Astronomy", "Big Bang", "2.7K", "Interacting",
+                "Hubble Deep Field", "Dramatic tadpole shape", e18);
 
-Earth e7 = new Earth();
-e7.planetId = 9;
-e7.planetName = "Uranus";
-e7.type = "Ice Giant";
-e7.radius = 25362;
-e7.mass = 14.5;
-e7.gravity = 8.69;
-e7.continents = 0;
-e7.oceans = 0;
-e7.countries = 0;
-e7.population = 0;
-e7.atmosphere = "Hydrogen Methane";
-e7.temperature = "-224C";
-e7.rotationPeriod = "17.2 Hours";
-e7.revolutionPeriod = "84 Years";
-e7.satellite = "27 Moons";
-e7.color = "Light Blue";
-e7.lifeExistence = "No";
-e7.category = "Planet";
-e7.status = "Unhabitable";
-e7.description = "Sideways Planet";
-u7.earth = e7;
-u7.getUniverseDetails();
+        Earth e19 = new Earth(21, "Iapetus", "Icy Moon", 735, 0.0003, 0.22, 0, 0, 0, 0,
+                "None", "-183C", "79 Days", "79 Days", "None", "Two-Toned",
+                "No", "Moon", "Walnut Moon", "Saturn's two-faced moon");
+        Universe u19 = new Universe(19, "Antennae Galaxies Universe", "Merging Spirals", 2L, 200000000000L, 400000000000L,
+                "William Herschel", 1790, "Starburst Galaxy", "100 Million Years", "Merging",
+                "Bright Starburst", "3D", "Merging Spirals", "Astronomy", "Big Bang", "2.7K", "Starburst Phase",
+                "Infrared & UV", "Violent galactic merger", e19);
 
-Universe u8 = new Universe();
-u8.universeId = 8;
-u8.universeName = "Pinwheel Galaxy Universe";
-u8.type = "Grand Design Spiral";
-u8.galaxies = 1L;
-u8.stars = 100000000000L;
-u8.planets = 200000000000L;
-u8.discoveredBy = "Pierre Méchain";
-u8.discoveredYear = 1781;
-u8.theory = "Face-on Spiral";
-u8.age = "9 Billion Years";
-u8.expansionType = "Receding";
-u8.color = "Bright White";
-u8.dimension = "3D";
-u8.structure = "Spiral Sc";
-u8.category = "Astronomy";
-u8.origin = "Big Bang";
-u8.temperature = "2.7K";
-u8.status = "Stable";
-u8.observationMethod = "Amateur Telescopes";
-u8.description = "Face-on beauty";
+        Earth e20 = new Earth(22, "Charon", "Dwarf Moon", 606, 0.0002, 0.29, 0, 0, 0, 0,
+                "Thin Nitrogen", "-220C", "6.4 Days", "6.4 Days", "None", "Grey Ice",
+                "Possible Subsurface", "Moon", "Pluto's Companion", "Largest moon of Pluto");
+        Universe u20 = new Universe(20, "Mice Galaxies Universe", "Interacting Spirals", 2L, 150000000000L, 300000000000L,
+                "Fritz Zwicky", 1933, "Galactic Collision", "500 Million Years", "Long Tails",
+                "Blue Tidal Tails", "3D", "Tidal Interaction", "Astronomy", "Big Bang", "2.7K", "Colliding",
+                "Hubble Space Telescope", "Dramatic collision with tails", e20);
 
-Earth e8 = new Earth();
-e8.planetId = 10;
-e8.planetName = "Neptune";
-e8.type = "Ice Giant";
-e8.radius = 24622;
-e8.mass = 17.1;
-e8.gravity = 11.15;
-e8.continents = 0;
-e8.oceans = 0;
-e8.countries = 0;
-e8.population = 0;
-e8.atmosphere = "Hydrogen Helium Methane";
-e8.temperature = "-218C";
-e8.rotationPeriod = "16.1 Hours";
-e8.revolutionPeriod = "164.8 Years";
-e8.satellite = "14 Moons";
-e8.color = "Deep Blue";
-e8.lifeExistence = "No";
-e8.category = "Planet";
-e8.status = "Unhabitable";
-e8.description = "Windy Planet";
-u8.earth = e8;
-u8.getUniverseDetails();
-
-Universe u9 = new Universe();
-u9.universeId = 9;
-u9.universeName = "Black Eye Galaxy Universe";
-u9.type = "Spiral";
-u9.galaxies = 1L;
-u9.stars = 50000000000L;
-u9.planets = 100000000000L;
-u9.discoveredBy = "Charles Messier";
-u9.discoveredYear = 1780;
-u9.theory = "Dust Lane Galaxy";
-u9.age = "11 Billion Years";
-u9.expansionType = "Stable";
-u9.color = "Yellow Core";
-u9.dimension = "3D";
-u9.structure = "Spiral Sb";
-u9.category = "Astronomy";
-u9.origin = "Big Bang";
-u9.temperature = "2.7K";
-u9.status = "Stable";
-u9.observationMethod = "Deep Sky Imaging";
-u9.description = "Dark dust lane galaxy";
-
-Earth e9 = new Earth();
-e9.planetId = 11;
-e9.planetName = "Pluto";
-e9.type = "Dwarf Planet";
-e9.radius = 1188;
-e9.mass = 0.002;
-e9.gravity = 0.62;
-e9.continents = 0;
-e9.oceans = 0;
-e9.countries = 0;
-e9.population = 0;
-e9.atmosphere = "Thin Nitrogen";
-e9.temperature = "-229C";
-e9.rotationPeriod = "6.4 Days";
-e9.revolutionPeriod = "248 Years";
-e9.satellite = "5 Moons";
-e9.color = "Icy White";
-e9.lifeExistence = "No";
-e9.category = "Dwarf Planet";
-e9.status = "Frozen";
-e9.description = "Former Planet";
-u9.earth = e9;
-u9.getUniverseDetails();
-
-Universe u10 = new Universe();
-u10.universeId = 10;
-u10.universeName = "Large Magellanic Cloud";
-u10.type = "Dwarf Irregular";
-u10.galaxies = 1L;
-u10.stars = 10000000000L;
-u10.planets = 20000000000L;
-u10.discoveredBy = "Ferdinand Magellan";
-u10.discoveredYear = 1519;
-u10.theory = "Satellite Galaxy";
-u10.age = "13 Billion Years";
-u10.expansionType = "Orbiting";
-u10.color = "Blue Irregular";
-u10.dimension = "3D";
-u10.structure = "Irregular";
-u10.category = "Astronomy";
-u10.origin = "Big Bang";
-u10.temperature = "2.7K";
-u10.status = "Orbiting Milky Way";
-u10.observationMethod = "Southern Hemisphere";
-u10.description = "Nearest satellite galaxy";
-
-Earth e10 = new Earth();
-e10.planetId = 12;
-e10.planetName = "Europa";
-e10.type = "Icy Moon";
-e10.radius = 1560;
-e10.mass = 0.008;
-e10.gravity = 1.31;
-e10.continents = 0;
-e10.oceans = "Subsurface Ocean";
-e10.countries = 0;
-e10.population = 0;
-e10.atmosphere = "Thin Oxygen";
-e10.temperature = "-171C";
-e10.rotationPeriod = "3.5 Days";
-e10.revolutionPeriod = "3.5 Days";
-e10.satellite = "None";
-e10.color = "White Ice";
-e10.lifeExistence = "Possible Oceanic";
-e10.category = "Moon";
-e10.status = "Potentially Habitable";
-e10.description = "Jupiter's icy moon";
-u10.earth = e10;
-u10.getUniverseDetails();
-Universe u11 = new Universe();
-u11.universeId = 11;
-u11.universeName = "Small Magellanic Cloud Universe";
-u11.type = "Dwarf Irregular";
-u11.galaxies = 1L;
-u11.stars = 3000000000L;
-u11.planets = 6000000000L;
-u11.discoveredBy = "Yves Tholot";
-u11.discoveredYear = 1752;
-u11.theory = "Satellite Galaxy";
-u11.age = "13 Billion Years";
-u11.expansionType = "Orbiting";
-u11.color = "Blue Irregular";
-u11.dimension = "3D";
-u11.structure = "Irregular";
-u11.category = "Astronomy";
-u11.origin = "Big Bang";
-u11.temperature = "2.7K";
-u11.status = "Orbiting Milky Way";
-u11.observationMethod = "Southern Sky";
-u11.description = "Smaller satellite galaxy";
-
-Earth e11 = new Earth();
-e11.planetId = 13;
-e11.planetName = "Enceladus";
-e11.type = "Icy Moon";
-e11.radius = 252;
-e11.mass = 0.00011;
-e11.gravity = 0.11;
-e11.continents = 0;
-e11.oceans = "Subsurface Ocean";
-e11.countries = 0;
-e11.population = 0;
-e11.atmosphere = "Water Vapor";
-e11.temperature = "-198C";
-e11.rotationPeriod = "1.4 Days";
-e11.revolutionPeriod = "1.4 Days";
-e11.satellite = "None";
-e11.color = "Bright White";
-e11.lifeExistence = "Possible Hydrothermal";
-e11.category = "Moon";
-e11.status = "Potentially Habitable";
-e11.description = "Saturn's geyser moon";
-u11.earth = e11;
-u11.getUniverseDetails();
-
-Universe u12 = new Universe();
-u12.universeId = 12;
-u12.universeName = "Bode's Galaxy Universe";
-u12.type = "Spiral";
-u12.galaxies = 1L;
-u12.stars = 80000000000L;
-u12.planets = 160000000000L;
-u12.discoveredBy = "Johann Elert Bode";
-u12.discoveredYear = 1774;
-u12.theory = "Classic Spiral";
-u12.age = "10 Billion Years";
-u12.expansionType = "Receding";
-u12.color = "White Arms";
-u12.dimension = "3D";
-u12.structure = "Spiral Sb";
-u12.category = "Astronomy";
-u12.origin = "Big Bang";
-u12.temperature = "2.7K";
-u12.status = "Stable";
-u12.observationMethod = "Northern Hemisphere";
-u12.description = "Beautiful spiral galaxy";
-
-Earth e12 = new Earth();
-e12.planetId = 14;
-e12.planetName = "Titan";
-e12.type = "Icy Moon";
-e12.radius = 2575;
-e12.mass = 0.0225;
-e12.gravity = 1.35;
-e12.continents = 0;
-e12.oceans = "Methane Lakes";
-e12.countries = 0;
-e12.population = 0;
-e12.atmosphere = "Nitrogen Methane";
-e12.temperature = "-179C";
-e12.rotationPeriod = "15.9 Days";
-e12.revolutionPeriod = "15.9 Days";
-e12.satellite = "None";
-e12.color = "Orange Haze";
-e12.lifeExistence = "Possible Methane Life";
-e12.category = "Moon";
-e12.status = "Potentially Habitable";
-e12.description = "Saturn's largest moon";
-u12.earth = e12;
-u12.getUniverseDetails();
-
-Universe u13 = new Universe();
-u13.universeId = 13;
-u13.universeName = "Sunflower Galaxy Universe";
-u13.type = "Grand Design Spiral";
-u13.galaxies = 1L;
-u13.stars = 300000000000L;
-u13.planets = 600000000000L;
-u13.discoveredBy = "Pierre Méchain";
-u13.discoveredYear = 1781;
-u13.theory = "Perfect Spiral Arms";
-u13.age = "9 Billion Years";
-u13.expansionType = "Receding";
-u13.color = "Bright Blue-White";
-u13.dimension = "3D";
-u13.structure = "Spiral Sc";
-u13.category = "Astronomy";
-u13.origin = "Big Bang";
-u13.temperature = "2.7K";
-u13.status = "Stable";
-u13.observationMethod = "Deep Sky Photography";
-u13.description = "Classic spiral beauty";
-
-Earth e13 = new Earth();
-e13.planetId = 15;
-e13.planetName = "Ganymede";
-e13.type = "Icy Moon";
-e13.radius = 2631;
-e13.mass = 0.025;
-e13.gravity = 1.43;
-e13.continents = 0;
-e13.oceans = "Subsurface Ocean";
-e13.countries = 0;
-e13.population = 0;
-e13.atmosphere = "Thin Oxygen";
-e13.temperature = "-163C";
-e13.rotationPeriod = "7.2 Days";
-e13.revolutionPeriod = "7.2 Days";
-e13.satellite = "None";
-e13.color = "Grey Ice";
-e13.lifeExistence = "Possible Subsurface";
-e13.category = "Moon";
-e13.status = "Potentially Habitable";
-e13.description = "Largest moon in solar system";
-u13.earth = e13;
-u13.getUniverseDetails();
-
-Universe u14 = new Universe();
-u14.universeId = 14;
-u14.universeName = "Cartwheel Galaxy Universe";
-u14.type = "Ring Galaxy";
-u14.galaxies = 1L;
-u14.stars = 50000000000L;
-u14.planets = 100000000000L;
-u14.discoveredBy = "Fritz Zwicky";
-u14.discoveredYear = 1941;
-u14.theory = "Galactic Collision";
-u14.age = "500 Million Years";
-u14.expansionType = "Expanding Ring";
-u14.color = "Bright Ring";
-u14.dimension = "3D";
-u14.structure = "Ring";
-u14.category = "Astronomy";
-u14.origin = "Big Bang";
-u14.temperature = "2.7K";
-u14.status = "Post-Collision";
-u14.observationMethod = "Hubble Space Telescope";
-u14.description = "Stunning ring galaxy";
-
-Earth e14 = new Earth();
-e14.planetId = 16;
-e14.planetName = "Callisto";
-e14.type = "Icy Moon";
-e14.radius = 2410;
-e14.mass = 0.018;
-e14.gravity = 1.24;
-e14.continents = 0;
-e14.oceans = "Possible Subsurface";
-e14.countries = 0;
-e14.population = 0;
-e14.atmosphere = "Carbon Dioxide";
-e14.temperature = "-140C";
-e14.rotationPeriod = "16.7 Days";
-e14.revolutionPeriod = "16.7 Days";
-e14.satellite = "None";
-e14.color = "Dark Grey";
-e14.lifeExistence = "Possible Subsurface";
-e14.category = "Moon";
-e14.status = "Ancient Cratered";
-e14.description = "Jupiter's outermost moon";
-u14.earth = e14;
-u14.getUniverseDetails();
-
-Universe u15 = new Universe();
-u15.universeId = 15;
-u15.universeName = "NGC 1300 Universe";
-u15.type = "Barred Spiral";
-u15.galaxies = 1L;
-u15.stars = 100000000000L;
-u15.planets = 200000000000L;
-u15.discoveredBy = "John Herschel";
-u15.discoveredYear = 1836;
-u15.theory = "Barred Spiral Structure";
-u15.age = "12 Billion Years";
-u15.expansionType = "Stable";
-u15.color = "Golden Arms";
-u15.dimension = "3D";
-u15.structure = "Barred Spiral";
-u15.category = "Astronomy";
-u15.origin = "Big Bang";
-u15.temperature = "2.7K";
-u15.status = "Stable";
-u15.observationMethod = "Hubble Imaging";
-u15.description = "Perfect barred spiral";
-
-Earth e15 = new Earth();
-e15.planetId = 17;
-e15.planetName = "Io";
-e15.type = "Volcanic Moon";
-e15.radius = 1821;
-e15.mass = 0.015;
-e15.gravity = 1.8;
-e15.continents = 0;
-e15.oceans = "Lava Oceans";
-e15.countries = 0;
-e15.population = 0;
-e15.atmosphere = "Sulfur Dioxide";
-e15.temperature = "-143C";
-e15.rotationPeriod = "1.8 Days";
-e15.revolutionPeriod = "1.8 Days";
-e15.satellite = "None";
-e15.color = "Yellow Sulfur";
-e15.lifeExistence = "No";
-e15.category = "Moon";
-e15.status = "Volcanically Active";
-e15.description = "Most volcanic body";
-u15.earth = e15;
-u15.getUniverseDetails();
-
-Universe u16 = new Universe();
-u16.universeId = 16;
-u16.universeName = "Hoag's Object Universe";
-u16.type = "Ring Galaxy";
-u16.galaxies = 1L;
-u16.stars = 100000000000L;
-u16.planets = 200000000000L;
-u16.discoveredBy = "Arthur Hoag";
-u16.discoveredYear = 1950;
-u16.theory = "Perfect Ring";
-u16.age = "10 Billion Years";
-u16.expansionType = "Stable Ring";
-u16.color = "Yellow Ring";
-u16.dimension = "3D";
-u16.structure = "Ring";
-u16.category = "Astronomy";
-u16.origin = "Big Bang";
-u16.temperature = "2.7K";
-u16.status = "Stable";
-u16.observationMethod = "Palomar Observatory";
-u16.description = "Most perfect ring galaxy";
-
-Earth e16 = new Earth();
-e16.planetId = 18;
-e16.planetName = "Triton";
-e16.type = "Icy Moon";
-e16.radius = 1353;
-e16.mass = 0.0036;
-e16.gravity = 0.78;
-e16.continents = 0;
-e16.oceans = "Subsurface Cryo-Ocean";
-e16.countries = 0;
-e16.population = 0;
-e16.atmosphere = "Nitrogen";
-e16.temperature = "-235C";
-e16.rotationPeriod = "5.9 Days";
-e16.revolutionPeriod = "5.9 Days";
-e16.satellite = "None";
-e16.color = "Pink Ice";
-e16.lifeExistence = "Possible Subsurface";
-e16.category = "Moon";
-e16.status = "Retrograde Orbit";
-e16.description = "Neptune's largest moon";
-u16.earth = e16;
-u16.getUniverseDetails();
-
-Universe u17 = new Universe();
-u17.universeId = 17;
-u17.universeName = "Messier 87 Universe";
-u17.type = "Elliptical Giant";
-u17.galaxies = 1L;
-u17.stars = 1000000000000L;
-u17.planets = 2000000000000L;
-u17.discoveredBy = "Charles Messier";
-u17.discoveredYear = 1781;
-u17.theory = "Supermassive Black Hole";
-u17.age = "12 Billion Years";
-u17.expansionType = "Jet Active";
-u17.color = "Jet Bright";
-u17.dimension = "3D";
-u17.structure = "Elliptical E0";
-u17.category = "Astronomy";
-u17.origin = "Big Bang";
-u17.temperature = "2.7K";
-u17.status = "Active Nucleus";
-u17.observationMethod = "Event Horizon Telescope";
-u17.description = "First black hole image galaxy";
-
-Earth e17 = new Earth();
-e17.planetId = 19;
-e17.planetName = "Titania";
-e17.type = "Icy Moon";
-e17.radius = 788;
-e17.mass = 0.0005;
-e17.gravity = 0.38;
-e17.continents = 0;
-e17.oceans = "Possible Subsurface";
-e17.countries = 0;
-e17.population = 0;
-e17.atmosphere = "None";
-e17.temperature = "-203C";
-e17.rotationPeriod = "8.7 Days";
-e17.revolutionPeriod = "8.7 Days";
-e17.satellite = "None";
-e17.color = "Grey Ice";
-e17.lifeExistence = "No";
-e17.category = "Moon";
-e17.status = "Uranus' Largest Moon";
-e17.description = "Uranus' biggest moon";
-u17.earth = e17;
-u17.getUniverseDetails();
-
-Universe u18 = new Universe();
-u18.universeId = 18;
-u18.universeName = "Tadpole Galaxy Universe";
-u18.type = "Interacting Spiral";
-u18.galaxies = 2L;
-u18.stars = 100000000000L;
-u18.planets = 200000000000L;
-u18.discoveredBy = "Halton Arp";
-u18.discoveredYear = 1966;
-u18.theory = "Tidal Interaction";
-u18.age = "500 Million Years";
-u18.expansionType = "Tadpole Tail";
-u18.color = "Long Blue Tail";
-u18.dimension = "3D";
-u18.structure = "Tidal Tail";
-u18.category = "Astronomy";
-u18.origin = "Big Bang";
-u18.temperature = "2.7K";
-u18.status = "Interacting";
-u18.observationMethod = "Hubble Deep Field";
-u18.description = "Dramatic tadpole shape";
-
-Earth e18 = new Earth();
-e18.planetId = 20;
-e18.planetName = "Rhea";
-e18.type = "Icy Moon";
-e18.radius = 764;
-e18.mass = 0.0004;
-e18.gravity = 0.27;
-e18.continents = 0;
-e18.oceans = 0;
-e18.countries = 0;
-e18.population = 0;
-e18.atmosphere = "Thin Oxygen";
-e18.temperature = "-174C";
-e18.rotationPeriod = "4.5 Days";
-e18.revolutionPeriod = "4.5 Days";
-e18.satellite = "None";
-e18.color = "Bright Ice";
-e18.lifeExistence = "No";
-e18.category = "Moon";
-e18.status = "Saturn's Second Largest";
-e18.description = "Saturn's icy moon";
-u18.earth = e18;
-u18.getUniverseDetails();
-
-Universe u19 = new Universe();
-u19.universeId = 19;
-u19.universeName = "Antennae Galaxies Universe";
-u19.type = "Merging Spirals";
-u19.galaxies = 2L;
-u19.stars = 200000000000L;
-u19.planets = 400000000000L;
-u19.discoveredBy = "William Herschel";
-u19.discoveredYear = 1790;
-u19.theory = "Starburst Galaxy";
-u19.age = "100 Million Years";
-u19.expansionType = "Merging";
-u19.color = "Bright Starburst";
-u19.dimension = "3D";
-u19.structure = "Merging Spirals";
-u19.category = "Astronomy";
-u19.origin = "Big Bang";
-u19.temperature = "2.7K";
-u19.status = "Starburst Phase";
-u19.observationMethod = "Infrared & UV";
-u19.description = "Violent galactic merger";
-
-Earth e19 = new Earth();
-e19.planetId = 21;
-e19.planetName = "Iapetus";
-e19.type = "Icy Moon";
-e19.radius = 735;
-e19.mass = 0.0003;
-e19.gravity = 0.22;
-e19.continents = 0;
-e19.oceans = 0;
-e19.countries = 0;
-e19.population = 0;
-e19.atmosphere = "None";
-e19.temperature = "-183C";
-e19.rotationPeriod = "79 Days";
-e19.revolutionPeriod = "79 Days";
-e19.satellite = "None";
-e19.color = "Two-Toned";
-e19.lifeExistence = "No";
-e19.category = "Moon";
-e19.status = "Walnut Moon";
-e19.description = "Saturn's two-faced moon";
-u19.earth = e19;
-u19.getUniverseDetails();
-
-Universe u20 = new Universe();
-u20.universeId = 20;
-u20.universeName = "Mice Galaxies Universe";
-u20.type = "Interacting Spirals";
-u20.galaxies = 2L;
-u20.stars = 150000000000L;
-u20.planets = 300000000000L;
-u20.discoveredBy = "Fritz Zwicky";
-u20.discoveredYear = 1933;
-u20.theory = "Galactic Collision";
-u20.age = "500 Million Years";
-u20.expansionType = "Long Tails";
-u20.color = "Blue Tidal Tails";
-u20.dimension = "3D";
-u20.structure = "Tidal Interaction";
-u20.category = "Astronomy";
-u20.origin = "Big Bang";
-u20.temperature = "2.7K";
-u20.status = "Colliding";
-u20.observationMethod = "Hubble Space Telescope";
-u20.description = "Dramatic collision with tails";
-
-Earth e20 = new Earth();
-e20.planetId = 22;
-e20.planetName = "Charon";
-e20.type = "Dwarf Moon";
-e20.radius = 606;
-e20.mass = 0.0002;
-e20.gravity = 0.29;
-e20.continents = 0;
-e20.oceans = "Possible Subsurface";
-e20.countries = 0;
-e20.population = 0;
-e20.atmosphere = "Thin Nitrogen";
-e20.temperature = "-220C";
-e20.rotationPeriod = "6.4 Days";
-e20.revolutionPeriod = "6.4 Days";
-e20.satellite = "None";
-e20.color = "Grey Ice";
-e20.lifeExistence = "Possible Subsurface";
-e20.category = "Moon";
-e20.status = "Pluto's Companion";
-e20.description = "Largest moon of Pluto";
-u20.earth = e20;
-u20.getUniverseDetails();
-
+        u1.displayDetails();
+        u2.displayDetails();
+        u3.displayDetails();
+        u4.displayDetails();
+        u5.displayDetails();
+        u6.displayDetails();
+        u7.displayDetails();
+        u8.displayDetails();
+        u9.displayDetails();
+        u10.displayDetails();
+        u11.displayDetails();
+        u12.displayDetails();
+        u13.displayDetails();
+        u14.displayDetails();
+        u15.displayDetails();
+        u16.displayDetails();
+        u17.displayDetails();
+        u18.displayDetails();
+        u19.displayDetails();
+        u20.displayDetails();
     }
 }
+

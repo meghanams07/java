@@ -1,5 +1,4 @@
 class Profile {
-
     int profileId;
     String userName;
     String headline;
@@ -21,8 +20,34 @@ class Profile {
     String profileType;
     String description;
 
-    public void getProfileDetails(){
+    public Profile(int profileId, String userName, String headline, String company,
+                  String jobTitle, int experienceYears, String location, String education,
+                  String skills, String email, String phone, String website, int connections,
+                  String industry, String language, String certification, String projects,
+                  String status, String profileType, String description) {
+        this.profileId = profileId;
+        this.userName = userName;
+        this.headline = headline;
+        this.company = company;
+        this.jobTitle = jobTitle;
+        this.experienceYears = experienceYears;
+        this.location = location;
+        this.education = education;
+        this.skills = skills;
+        this.email = email;
+        this.phone = phone;
+        this.website = website;
+        this.connections = connections;
+        this.industry = industry;
+        this.language = language;
+        this.certification = certification;
+        this.projects = projects;
+        this.status = status;
+        this.profileType = profileType;
+        this.description = description;
+    }
 
+    public void getProfileDetails() {
         System.out.println("ProfileId: " + profileId);
         System.out.println("UserName: " + userName);
         System.out.println("Headline: " + headline);

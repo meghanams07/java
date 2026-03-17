@@ -1,953 +1,267 @@
 class NewsPaperExecutor {
-
-    public static void main(String[] args){
-
-        NewsPaper n1 = new NewsPaper();
-
-        n1.paperId = 1;
-        n1.paperName = "The Hindu";
-        n1.language = "English";
-        n1.country = "India";
-        n1.city = "Chennai";
-        n1.publisher = "The Hindu Group";
-        n1.establishedYear = 1878;
-        n1.pages = 20;
-        n1.circulation = 1500000;
-        n1.category = "Daily News";
-        n1.website = "thehindu.com";
-        n1.editor = "Suresh Nambath";
-        n1.printingType = "Offset";
-        n1.colorTheme = "Black and White";
-        n1.frequency = "Daily";
-        n1.contact = "044123456";
-        n1.email = "info@thehindu.com";
-        n1.price = "₹10";
-        n1.status = "Active";
-        n1.distribution = "National";
-
-        Article a1 = new Article();
-
-        a1.articleId = 101;
-        a1.title = "Technology Growth in India";
-        a1.author = "Ravi Kumar";
-        a1.category = "Technology";
-        a1.language = "English";
-        a1.wordCount = 800;
-        a1.publishDate = "2026";
-        a1.editor = "Senior Editor";
-        a1.topic = "IT Industry";
-        a1.location = "Bangalore";
-        a1.newspaper = "The Hindu";
-        a1.source = "Reporter";
-        a1.keywords = "Technology, India";
-        a1.description = "Growth of IT sector";
-        a1.format = "Column";
-        a1.section = "Business";
-        a1.reference = "Industry Reports";
-        a1.status = "Published";
-        a1.rating = "5 Star";
-        a1.type = "Feature";
-
-        n1.article = a1;
-
-        n1.getNewsPaperDetails();
-		NewsPaper n2 = new NewsPaper();
-
-n2.paperId = 2;
-n2.paperName = "Deccan Herald";
-n2.language = "English";
-n2.country = "India";
-n2.city = "Bangalore";
-n2.publisher = "The Printers (Mysore) Pvt Ltd";
-n2.establishedYear = 1948;
-n2.pages = 16;
-n2.circulation = 250000;
-n2.category = "Daily News";
-n2.website = "deccanherald.com";
-n2.editor = "K N Shanth Kumar";
-n2.printingType = "Offset";
-n2.colorTheme = "Full Color";
-n2.frequency = "Daily";
-n2.contact = "080223456";
-n2.email = "editor@deccanherald.com";
-n2.price = "₹8";
-n2.status = "Active";
-n2.distribution = "Karnataka";
-
-Article a2 = new Article();
-
-a2.articleId = 102;
-a2.title = "Campus Placements Boom 2026";
-a2.author = "Megha Shenoy";
-a2.category = "Education";
-a2.language = "English";
-a2.wordCount = 650;
-a2.publishDate = "2026-03-15";
-a2.editor = "Chief Editor";
-a2.topic = "Campus Recruitment";
-a2.location = "Bangalore";
-a2.newspaper = "Deccan Herald";
-a2.source = "Industry Sources";
-a2.keywords = "placements, IT jobs, TCS";
-a2.description = "Record placements in engineering colleges";
-a2.format = "News Report";
-a2.section = "Education";
-a2.reference = "College Reports";
-a2.status = "Published";
-a2.rating = "4 Star";
-a2.type = "News";
-n2.article = a2;
-
-n2.getNewsPaperDetails();
-
-NewsPaper n3 = new NewsPaper();
-
-n3.paperId = 3;
-n3.paperName = "The Times of India";
-n3.language = "English";
-n3.country = "India";
-n3.city = "Mumbai";
-n3.publisher = "Bennett Coleman & Co";
-n3.establishedYear = 1838;
-n3.pages = 32;
-n3.circulation = 4000000;
-n3.category = "Daily News";
-n3.website = "timesofindia.indiatimes.com";
-n3.editor = "Jaideep Bose";
-n3.printingType = "Offset";
-n3.colorTheme = "Full Color";
-n3.frequency = "Daily";
-n3.contact = "022323456";
-n3.email = "toi.editor@timesgroup.com";
-n3.price = "₹12";
-n3.status = "Active";
-n3.distribution = "National";
-
-Article a3 = new Article();
-
-a3.articleId = 103;
-a3.title = "AI Revolutionizing Job Market";
-a3.author = "Shalini Singh";
-a3.category = "Technology";
-a3.language = "English";
-a3.wordCount = 950;
-a3.publishDate = "2026-03-14";
-a3.editor = "Technology Editor";
-a3.topic = "Artificial Intelligence";
-a3.location = "Delhi";
-a3.newspaper = "The Times of India";
-a3.source = "Expert Interviews";
-a3.keywords = "AI, machine learning, jobs";
-a3.description = "Impact of AI on employment landscape";
-a3.format = "Analysis";
-a3.section = "Technology";
-a3.reference = "NASSCOM Report";
-a3.status = "Published";
-a3.rating = "5 Star";
-a3.type = "Opinion";
-n3.article = a3;
-
-n3.getNewsPaperDetails();
-
-NewsPaper n4 = new NewsPaper();
-
-n4.paperId = 4;
-n4.paperName = "Indian Express";
-n4.language = "English";
-n4.country = "India";
-n4.city = "Delhi";
-n4.publisher = "Indian Express Group";
-n4.establishedYear = 1932;
-n4.pages = 24;
-n4.circulation = 500000;
-n4.category = "Daily News";
-n4.website = "indianexpress.com";
-n4.editor = "Rajan Shukla";
-n4.printingType = "Offset";
-n4.colorTheme = "Full Color";
-n4.frequency = "Daily";
-n4.contact = "011423456";
-n4.email = "editor@indianexpress.com";
-n4.price = "₹10";
-n4.status = "Active";
-n4.distribution = "National";
-
-Article a4 = new Article();
-
-a4.articleId = 104;
-a4.title = "Freshers Coding Skills Gap";
-a4.author = "Arun George";
-a4.category = "Education";
-a4.language = "English";
-a4.wordCount = 700;
-a4.publishDate = "2026-03-13";
-a4.editor = "Education Editor";
-a4.topic = "Skill Development";
-a4.location = "Hyderabad";
-a4.newspaper = "Indian Express";
-a4.source = "Industry Survey";
-a4.keywords = "coding, DSA, placements";
-a4.description = "Engineering graduates lacking core programming skills";
-a4.format = "Report";
-a4.section = "Education";
-a4.reference = "NASSCOM Survey";
-a4.status = "Published";
-a4.rating = "4 Star";
-a4.type = "Reportage";
-n4.article = a4;
-
-n4.getNewsPaperDetails();
-
-NewsPaper n5 = new NewsPaper();
-
-n5.paperId = 5;
-n5.paperName = "Prajavani";
-n5.language = "Kannada";
-n5.country = "India";
-n5.city = "Bangalore";
-n5.publisher = "The Printers (Mysore) Pvt Ltd";
-n5.establishedYear = 1948;
-n5.pages = 20;
-n5.circulation = 800000;
-n5.category = "Daily News";
-n5.website = "prajavani.net";
-n5.editor = "K N Shanth Kumar";
-n5.printingType = "Offset";
-n5.colorTheme = "Full Color";
-n5.frequency = "Daily";
-n5.contact = "080523456";
-n5.email = "editor@prajavani.net";
-n5.price = "₹6";
-n5.status = "Active";
-n5.distribution = "Karnataka";
-
-Article a5 = new Article();
-
-a5.articleId = 105;
-a5.title = "ತುಮಕೂರು ಕಾಲೇಜುಗಳಲ್ಲಿ ಉದ್ಯೋಗಾವಕಾಶಗಳು";
-a5.author = "ಶ್ರೀನಿವಾಸ್ ಎಂ";
-a5.category = "ಶಿಕ್ಷಣ";
-a5.language = "Kannada";
-a5.wordCount = 550;
-a5.publishDate = "2026-03-15";
-a5.editor = "ಮುಖ್ಯ ಸಂಪಾದಕ";
-a5.topic = "ಕ್ಯಾಂಪಸ್ ಉದ್ಯೋಗ";
-a5.location = "ತುಮಕೂರು";
-a5.newspaper = "Prajavani";
-a5.source = "ಕಾಲೇಜುಗಳ ಮಾಹಿತಿ";
-a5.keywords = "ಉದ್ಯೋಗ, ಐಟಿ, ಎಂಜಿನಿಯರಿಂಗ್";
-a5.description = "ತುಮಕೂರು ಎಂಜಿನಿಯರಿಂಗ್ ಕಾಲೇಜುಗಳಲ್ಲಿ ಉದ್ಯೋಗಾವಕಾಶಗಳು";
-a5.format = "ಸುದ್ದಿ";
-a5.section = "ಶಿಕ್ಷಣ";
-a5.reference = "ಕಾಲೇಜು ವರದಿಗಳು";
-a5.status = "Published";
-a5.rating = "4 Star";
-a5.type = "News";
-n5.article = a5;
-
-n5.getNewsPaperDetails();
-
-NewsPaper n6 = new NewsPaper();
-
-n6.paperId = 6;
-n6.paperName = "Dinakaran";
-n6.language = "Tamil";
-n6.country = "India";
-n6.city = "Chennai";
-n6.publisher = "Sun Group";
-n6.establishedYear = 1977;
-n6.pages = 24;
-n6.circulation = 1200000;
-n6.category = "Daily News";
-n6.website = "dinakaran.com";
-n6.editor = "Sun News Management";
-n6.printingType = "Offset";
-n6.colorTheme = "Full Color";
-n6.frequency = "Daily";
-n6.contact = "044623456";
-n6.email = "editor@dinakaran.com";
-n6.price = "₹5";
-n6.status = "Active";
-n6.distribution = "Tamil Nadu";
-
-Article a6 = new Article();
-
-a6.articleId = 106;
-a6.title = "ஐடி நிறுவனங்களில் புதிய வேலைவாய்ப்புகள்";
-a6.author = "ராம்குமார்";
-a6.category = "தொழில்நுட்பம்";
-a6.language = "Tamil";
-a6.wordCount = 600;
-a6.publishDate = "2026-03-14";
-a6.editor = "முதுநிலை ஆசிரியர்";
-a6.topic = "உடன்பட்டு தேர்வு";
-a6.location = "சென்னை";
-a6.newspaper = "Dinakaran";
-a6.source = "தொழில்துறை ஆதாரங்கள்";
-a6.keywords = "ஐடி வேலை, காலேஜ் பிளேஸ்மென்ட்";
-a6.description = "புதிய இஞ்சினியரிங் பட்டதாரர்களுக்கு வாய்ப்புகள்";
-a6.format = "செய்தி";
-a6.section = "தொழில்நுட்பம்";
-a6.reference = "நிறுவன அறிக்கைகள்";
-a6.status = "Published";
-a6.rating = "4 Star";
-a6.type = "News";
-n6.article = a6;
-
-n6.getNewsPaperDetails();
-
-NewsPaper n7 = new NewsPaper();
-
-n7.paperId = 7;
-n7.paperName = "Vijaya Karnataka";
-n7.language = "Kannada";
-n7.country = "India";
-n7.city = "Bangalore";
-n7.publisher = "Times Group";
-n7.establishedYear = 1949;
-n7.pages = 28;
-n7.circulation = 1000000;
-n7.category = "Daily News";
-n7.website = "vijayakarnataka.com";
-n7.editor = "Jayaprakash Nayak";
-n7.printingType = "Offset";
-n7.colorTheme = "Full Color";
-n7.frequency = "Daily";
-n7.contact = "080723456";
-n7.email = "editor@vijayakarnataka.com";
-n7.price = "₹7";
-n7.status = "Active";
-n7.distribution = "Karnataka";
-
-Article a7 = new Article();
-
-a7.articleId = 107;
-a7.title = "ಕಂಪನಿ ಕ್ಯಾಮ್ಪಸ್‌ಗಳಲ್ಲಿ ದೊಡ್ಡ ಉದ್ಯೋಗ ಸಾಧನೆ";
-a7.author = "ನಾಗರಾಜ್ ಪಿ";
-a7.category = "ಉದ್ಯಮ";
-a7.language = "Kannada";
-a7.wordCount = 750;
-a7.publishDate = "2026-03-12";
-a7.editor = "ವ್ಯಾಪಾರ ಸಂಪಾದಕ";
-a7.topic = "ಐಟಿ ಉದ್ಯೋಗ";
-a7.location = "ಬೆಂಗಳೂರು";
-a7.newspaper = "Vijaya Karnataka";
-a7.source = "ನೀತಿ ಸರ್ಕಾರಿ ಮೂಲಗಳು";
-a7.keywords = "ಕ್ಯಾಮ್ಪಸ್, ಐಟಿ, ಉದ್ಯೋಗ";
-a7.description = "ಐಟಿ ಕಂಪನಿಗಳ ಕ್ಯಾಮ್ಪಸ್ ಉದ್ಯೋಗ ಸಾಧನೆಯ ಸಂಖ್ಯೆ ಹೆಚ್ಚಾಗಿದೆ";
-a7.format = "ವಿಶ್ಲೇಷಣೆ";
-a7.section = "ವ್ಯಾಪಾರ";
-a7.reference = "ಉದ್ಯಮ ವರದಿಗಳು";
-a7.status = "Published";
-a7.rating = "5 Star";
-a7.type = "Analysis";
-n7.article = a7;
-
-n7.getNewsPaperDetails();
-
-NewsPaper n8 = new NewsPaper();
-
-n8.paperId = 8;
-n8.paperName = "Eenadu";
-n8.language = "Telugu";
-n8.country = "India";
-n8.city = "Visakhapatnam";
-n8.publisher = "Eenadu Group";
-n8.establishedYear = 1974;
-n8.pages = 32;
-n8.circulation = 1800000;
-n8.category = "Daily News";
-n8.website = "eenadu.net";
-n8.editor = "Margadarsi Chitranjan";
-n8.printingType = "Offset";
-n8.colorTheme = "Full Color";
-n8.frequency = "Daily";
-n8.contact = "089123456";
-n8.email = "editor@eenadu.net";
-n8.price = "₹5";
-n8.status = "Active";
-n8.distribution = "Andhra Pradesh, Telangana";
-
-Article a8 = new Article();
-
-a8.articleId = 108;
-a8.title = "ఐటీ క్యాంపస్ ప్లేస్‌మెంట్స్ రికార్డు స్థాయి";
-a8.author = "రాజీవ్ కుమార్";
-a8.category = "విద్య";
-a8.language = "Telugu";
-a8.wordCount = 680;
-a8.publishDate = "2026-03-15";
-a8.editor = "విద్యా సంపాదకుడు";
-a8.topic = "క్యాంపస్ ఉద్యోగాలు";
-a8.location = "హైదరాబాద్";
-a8.newspaper = "Eenadu";
-a8.source = "కాలేజీలు";
-a8.keywords = "ఐటీ, ప్లేస్‌మెంట్స్, ఉద్యోగాలు";
-a8.description = "ఐటీ కంపెనీల క్యాంపస్ రికార్డు ఉద్యోగాలు";
-a8.format = "రిపోర్ట్";
-a8.section = "విద్య";
-a8.reference = "కాలేజీ డేటా";
-a8.status = "Published";
-a8.rating = "4 Star";
-a8.type = "Report";
-n8.article = a8;
-
-n8.getNewsPaperDetails();
-
-NewsPaper n9 = new NewsPaper();
-
-n9.paperId = 9;
-n9.paperName = "Business Standard";
-n9.language = "English";
-n9.country = "India";
-n9.city = "Mumbai";
-n9.publisher = "Business Standard Pvt Ltd";
-n9.establishedYear = 1975;
-n9.pages = 16;
-n9.circulation = 200000;
-n9.category = "Business News";
-n9.website = "business-standard.com";
-n9.editor = "T N Ninan";
-n9.printingType = "Offset";
-n9.colorTheme = "Full Color";
-n9.frequency = "Daily";
-n9.contact = "022923456";
-n9.email = "editor@bsmail.in";
-n9.price = "₹15";
-n9.status = "Active";
-n9.distribution = "Major Cities";
-
-Article a9 = new Article();
-
-a9.articleId = 109;
-a9.title = "IT Hiring Surge for Campus Graduates";
-a9.author = "Surabhi Agarwal";
-a9.category = "Business";
-a9.language = "English";
-a9.wordCount = 900;
-a9.publishDate = "2026-03-16";
-a9.editor = "Business Editor";
-a9.topic = "IT Recruitment";
-a9.location = "Mumbai";
-a9.newspaper = "Business Standard";
-a9.source = "Company Filings";
-a9.keywords = "IT hiring, campus, freshers";
-a9.description = "Major IT firms ramp up campus hiring";
-a9.format = "Business Analysis";
-a9.section = "Companies";
-a9.reference = "Q4 Earnings";
-a9.status = "Published";
-a9.rating = "5 Star";
-a9.type = "Analysis";
-n9.article = a9;
-
-n9.getNewsPaperDetails();
-
-NewsPaper n10 = new NewsPaper();
-
-n10.paperId = 10;
-n10.paperName = "Economic Times";
-n10.language = "English";
-n10.country = "India";
-n10.city = "Mumbai";
-n10.publisher = "Times Group";
-n10.establishedYear = 1961;
-n10.pages = 28;
-n10.circulation = 800000;
-n10.category = "Business News";
-n10.website = "economictimes.indiatimes.com";
-n10.editor = "Ravi Shankar";
-n10.printingType = "Offset";
-n10.colorTheme = "Full Color";
-n10.frequency = "Daily";
-n10.contact = "0221023456";
-n10.email = "et.editor@timesgroup.com";
-n10.price = "₹18";
-n10.status = "Active";
-n10.distribution = "Metro Cities";
-
-Article a10 = new Article();
-
-a10.articleId = 110;
-a10.title = "TCS Cognizant Campus Hiring Spree";
-a10.author = "Pankaj Mishra";
-a10.category = "Corporate";
-a10.language = "English";
-a10.wordCount = 1100;
-a10.publishDate = "2026-03-15";
-a10.editor = "Corporate Editor";
-a10.topic = "Campus Recruitment";
-a10.location = "All India";
-a10.newspaper = "Economic Times";
-a10.source = "HR Sources";
-a10.keywords = "TCS, Cognizant, hiring";
-a10.description = "IT majors hiring record numbers from campuses";
-a10.format = "Exclusive";
-a10.section = "Corporate Trends";
-a10.reference = "Industry Executives";
-a10.status = "Published";
-a10.rating = "5 Star";
-a10.type = "Exclusive";
-n10.article = a10;
-NewsPaper n11 = new NewsPaper();
-n11.paperId = 11;
-n11.paperName = "Udayavani";
-n11.language = "Kannada";
-n11.country = "India";
-n11.city = "Mangalore";
-n11.publisher = "Manipal Printing Press";
-n11.establishedYear = 1970;
-n11.pages = 20;
-n11.circulation = 600000;
-n11.category = "Daily News";
-n11.website = "udayavani.com";
-n11.editor = "J F Pinto";
-n11.printingType = "Offset";
-n11.colorTheme = "Full Color";
-n11.frequency = "Daily";
-n11.contact = "0824223456";
-n11.email = "editor@udayavani.com";
-n11.price = "₹6";
-n11.status = "Active";
-n11.distribution = "Coastal Karnataka";
-
-Article a11 = new Article();
-a11.articleId = 111;
-a11.title = "Mangalore Colleges Achieve 90% Placement";
-a11.author = "Rajesh P";
-a11.category = "Education";
-a11.language = "English";
-a11.wordCount = 520;
-a11.publishDate = "2026-03-14";
-a11.editor = "Local Editor";
-a11.topic = "Campus Placement";
-a11.location = "Mangalore";
-a11.newspaper = "Udayavani";
-a11.source = "Colleges";
-a11.keywords = "Mangalore, placement, IT";
-a11.description = "Mangalore colleges record excellent placement success";
-a11.format = "Local News";
-a11.section = "Education";
-a11.reference = "College Data";
-a11.status = "Published";
-a11.rating = "4 Star";
-a11.type = "Local News";
-n11.article = a11;
-n11.getNewsPaperDetails();
-
-NewsPaper n12 = new NewsPaper();
-n12.paperId = 12;
-n12.paperName = "Vartha Bharati";
-n12.language = "Kannada";
-n12.country = "India";
-n12.city = "Bidar";
-n12.publisher = "Vartha Bharati";
-n12.establishedYear = 2008;
-n12.pages = 16;
-n12.circulation = 150000;
-n12.category = "Daily News";
-n12.website = "varthabharati.in";
-n12.editor = "K M Ashraf";
-n12.printingType = "Offset";
-n12.colorTheme = "Full Color";
-n12.frequency = "Daily";
-n12.contact = "0848223456";
-n12.email = "editor@varthabharati.in";
-n12.price = "₹5";
-n12.status = "Active";
-n12.distribution = "North Karnataka";
-
-Article a12 = new Article();
-a12.articleId = 112;
-a12.title = "IT Job Opportunities in Bidar District";
-a12.author = "Fahim Ahmed";
-a12.category = "Business";
-a12.language = "English";
-a12.wordCount = 480;
-a12.publishDate = "2026-03-15";
-a12.editor = "Business Editor";
-a12.topic = "IT Jobs";
-a12.location = "Bidar";
-a12.newspaper = "Vartha Bharati";
-a12.source = "Local Employment Center";
-a12.keywords = "Bidar, IT, jobs";
-a12.description = "IT companies offering jobs in Bidar district";
-a12.format = "News";
-a12.section = "Business";
-a12.reference = "Employment Center";
-a12.status = "Published";
-a12.rating = "3 Star";
-a12.type = "Local News";
-n12.article = a12;
-n12.getNewsPaperDetails();
-
-NewsPaper n13 = new NewsPaper();
-n13.paperId = 13;
-n13.paperName = "Dina Thanthi";
-n13.language = "Tamil";
-n13.country = "India";
-n13.city = "Chennai";
-n13.publisher = "Thanthi Trust";
-n13.establishedYear = 1942;
-n13.pages = 24;
-n13.circulation = 1100000;
-n13.category = "Daily News";
-n13.website = "dinathanthi.com";
-n13.editor = "N Ravi";
-n13.printingType = "Offset";
-n13.colorTheme = "Full Color";
-n13.frequency = "Daily";
-n13.contact = "0441223456";
-n13.email = "editor@dinathanthi.com";
-n13.price = "₹4";
-n13.status = "Active";
-n13.distribution = "Tamil Nadu";
-
-Article a13 = new Article();
-a13.articleId = 113;
-a13.title = "Coimbatore Engineering Students Get High Salaries";
-a13.author = "Murugan";
-a13.category = "Education";
-a13.language = "English";
-a13.wordCount = 580;
-a13.publishDate = "2026-03-13";
-a13.editor = "Education Editor";
-a13.topic = "Placement";
-a13.location = "Coimbatore";
-a13.newspaper = "Dina Thanthi";
-a13.source = "Colleges";
-a13.keywords = "Coimbatore, placement, IT";
-a13.description = "High salary placements in Coimbatore engineering colleges";
-a13.format = "News";
-a13.section = "Education";
-a13.reference = "College Information";
-a13.status = "Published";
-a13.rating = "4 Star";
-a13.type = "News";
-n13.article = a13;
-n13.getNewsPaperDetails();
-
-NewsPaper n14 = new NewsPaper();
-n14.paperId = 14;
-n14.paperName = "Sakshi";
-n14.language = "Telugu";
-n14.country = "India";
-n14.city = "Hyderabad";
-n14.publisher = "Jagathi Publications";
-n14.establishedYear = 2008;
-n14.pages = 28;
-n14.circulation = 1000000;
-n14.category = "Daily News";
-n14.website = "sakshi.com";
-n14.editor = "K N Murali Sankar";
-n14.printingType = "Offset";
-n14.colorTheme = "Full Color";
-n14.frequency = "Daily";
-n14.contact = "0401323456";
-n14.email = "editor@sakshi.com";
-n14.price = "₹5";
-n14.status = "Active";
-n14.distribution = "Telangana, AP";
-
-Article a14 = new Article();
-a14.articleId = 114;
-a14.title = "Vijayawada Colleges Record Placements";
-a14.author = "Suresh Babu";
-a14.category = "Education";
-a14.language = "English";
-a14.wordCount = 620;
-a14.publishDate = "2026-03-15";
-a14.editor = "Education Editor";
-a14.topic = "Placements";
-a14.location = "Vijayawada";
-a14.newspaper = "Sakshi";
-a14.source = "Colleges";
-a14.keywords = "Vijayawada, placements, IT";
-a14.description = "Record job placements in Vijayawada colleges";
-a14.format = "Report";
-a14.section = "Education";
-a14.reference = "College Data";
-a14.status = "Published";
-a14.rating = "4 Star";
-a14.type = "Report";
-n14.article = a14;
-n14.getNewsPaperDetails();
-
-NewsPaper n15 = new NewsPaper();
-n15.paperId = 15;
-n15.paperName = "Hindustan Times";
-n15.language = "English";
-n15.country = "India";
-n15.city = "Delhi";
-n15.publisher = "HT Media";
-n15.establishedYear = 1924;
-n15.pages = 24;
-n15.circulation = 700000;
-n15.category = "Daily News";
-n15.website = "hindustantimes.com";
-n15.editor = "Sutirtho Patranobis";
-n15.printingType = "Offset";
-n15.colorTheme = "Full Color";
-n15.frequency = "Daily";
-n15.contact = "0111523456";
-n15.email = "editor@hindustantimes.com";
-n15.price = "₹12";
-n15.status = "Active";
-n15.distribution = "North India";
-
-Article a15 = new Article();
-a15.articleId = 115;
-a15.title = "Engineering Colleges Set Placement Records";
-a15.author = "Shivani Singh";
-a15.category = "Education";
-a15.language = "English";
-a15.wordCount = 720;
-a15.publishDate = "2026-03-14";
-a15.editor = "Education Editor";
-a15.topic = "Campus Hiring";
-a15.location = "Delhi-NCR";
-a15.newspaper = "Hindustan Times";
-a15.source = "College Principals";
-a15.keywords = "placements, engineering, IT hiring";
-a15.description = "Delhi-NCR engineering colleges achieve placement milestones";
-a15.format = "News Feature";
-a15.section = "Education";
-a15.reference = "College Data";
-a15.status = "Published";
-a15.rating = "4 Star";
-a15.type = "Feature";
-n15.article = a15;
-n15.getNewsPaperDetails();
-
-NewsPaper n16 = new NewsPaper();
-n16.paperId = 16;
-n16.paperName = "Mathrubhumi";
-n16.language = "Malayalam";
-n16.country = "India";
-n16.city = "Kozhikode";
-n16.publisher = "Mathrubhumi Printing";
-n16.establishedYear = 1923;
-n16.pages = 20;
-n16.circulation = 1000000;
-n16.category = "Daily News";
-n16.website = "mathrubhumi.com";
-n16.editor = "P V Chandran";
-n16.printingType = "Offset";
-n16.colorTheme = "Full Color";
-n16.frequency = "Daily";
-n16.contact = "04951623456";
-n16.email = "editor@mathrubhumi.com";
-n16.price = "₹8";
-n16.status = "Active";
-n16.distribution = "Kerala";
-
-Article a16 = new Article();
-a16.articleId = 116;
-a16.title = "Kerala Colleges IT Placement Record";
-a16.author = "Rajeev Kumar";
-a16.category = "Education";
-a16.language = "English";
-a16.wordCount = 650;
-a16.publishDate = "2026-03-13";
-a16.editor = "Education Editor";
-a16.topic = "Placement";
-a16.location = "Kochi";
-a16.newspaper = "Mathrubhumi";
-a16.source = "Colleges";
-a16.keywords = "placement, IT, Kerala";
-a16.description = "Record placements in Kerala engineering colleges";
-a16.format = "Report";
-a16.section = "Education";
-a16.reference = "College Data";
-a16.status = "Published";
-a16.rating = "4 Star";
-a16.type = "Report";
-n16.article = a16;
-n16.getNewsPaperDetails();
-
-NewsPaper n17 = new NewsPaper();
-n17.paperId = 17;
-n17.paperName = "Lokmat";
-n17.language = "Marathi";
-n17.country = "India";
-n17.city = "Mumbai";
-n17.publisher = "Lokmat Group";
-n17.establishedYear = 1971;
-n17.pages = 24;
-n17.circulation = 900000;
-n17.category = "Daily News";
-n17.website = "lokmat.com";
-n17.editor = "Devendra Vestry";
-n17.printingType = "Offset";
-n17.colorTheme = "Full Color";
-n17.frequency = "Daily";
-n17.contact = "0221723456";
-n17.email = "editor@lokmat.com";
-n17.price = "₹7";
-n17.status = "Active";
-n17.distribution = "Maharashtra";
-
-Article a17 = new Article();
-a17.articleId = 117;
-a17.title = "Pune Colleges High Salary Packages";
-a17.author = "Prakash Deshmukh";
-a17.category = "Education";
-a17.language = "English";
-a17.wordCount = 700;
-a17.publishDate = "2026-03-15";
-a17.editor = "Education Editor";
-a17.topic = "Campus Placement";
-a17.location = "Pune";
-a17.newspaper = "Lokmat";
-a17.source = "Colleges";
-a17.keywords = "placement, IT, Pune";
-a17.description = "High salary packages in Pune engineering colleges";
-a17.format = "Report";
-a17.section = "Education";
-a17.reference = "College Data";
-a17.status = "Published";
-a17.rating = "5 Star";
-a17.type = "Report";
-n17.article = a17;
-n17.getNewsPaperDetails();
-
-NewsPaper n18 = new NewsPaper();
-n18.paperId = 18;
-n18.paperName = "Anandabazar Patrika";
-n18.language = "Bengali";
-n18.country = "India";
-n18.city = "Kolkata";
-n18.publisher = "ABP Group";
-n18.establishedYear = 1922;
-n18.pages = 28;
-n18.circulation = 1200000;
-n18.category = "Daily News";
-n18.website = "abp.in";
-n18.editor = "Rishikesh Bhattacharya";
-n18.printingType = "Offset";
-n18.colorTheme = "Full Color";
-n18.frequency = "Daily";
-n18.contact = "0331823456";
-n18.email = "editor@abp.in";
-n18.price = "₹6";
-n18.status = "Active";
-n18.distribution = "West Bengal";
-
-Article a18 = new Article();
-a18.articleId = 118;
-a18.title = "Kolkata IT Campus Placement Record";
-a18.author = "Soumyajit Das";
-a18.category = "Education";
-a18.language = "English";
-a18.wordCount = 680;
-a18.publishDate = "2026-03-14";
-a18.editor = "Education Editor";
-a18.topic = "Campus Placement";
-a18.location = "Kolkata";
-a18.newspaper = "Anandabazar Patrika";
-a18.source = "Colleges";
-a18.keywords = "placement, IT, Kolkata";
-a18.description = "Record placements in Kolkata engineering colleges";
-a18.format = "Report";
-a18.section = "Education";
-a18.reference = "College Data";
-a18.status = "Published";
-a18.rating = "4 Star";
-a18.type = "Report";
-n18.article = a18;
-n18.getNewsPaperDetails();
-
-NewsPaper n19 = new NewsPaper();
-n19.paperId = 19;
-n19.paperName = "Financial Express";
-n19.language = "English";
-n19.country = "India";
-n19.city = "Delhi";
-n19.publisher = "The Indian Express Group";
-n19.establishedYear = 1961;
-n19.pages = 20;
-n19.circulation = 150000;
-n19.category = "Business News";
-n19.website = "financialexpress.com";
-n19.editor = "Anant Goenka";
-n19.printingType = "Offset";
-n19.colorTheme = "Full Color";
-n19.frequency = "Daily";
-n19.contact = "0111923456";
-n19.email = "editor@financialexpress.com";
-n19.price = "₹14";
-n19.status = "Active";
-n19.distribution = "Major Cities";
-
-Article a19 = new Article();
-a19.articleId = 119;
-a19.title = "IT Giants Double Campus Hiring Budgets";
-a19.author = "Rachna Monga";
-a19.category = "Business";
-a19.language = "English";
-a19.wordCount = 850;
-a19.publishDate = "2026-03-16";
-a19.editor = "Business Editor";
-a19.topic = "Campus Hiring";
-a19.location = "Pan-India";
-a19.newspaper = "Financial Express";
-a19.source = "Industry Sources";
-a19.keywords = "IT hiring, campus, budget";
-a19.description = "IT companies allocating record budgets for campus recruitment";
-a19.format = "Analysis";
-a19.section = "Corporate";
-a19.reference = "Company Budgets";
-a19.status = "Published";
-a19.rating = "5 Star";
-a19.type = "Analysis";
-n19.article = a19;
-n19.getNewsPaperDetails();
-
-NewsPaper n20 = new NewsPaper();
-n20.paperId = 20;
-n20.paperName = "Dainik Bhaskar";
-n20.language = "Hindi";
-n20.country = "India";
-n20.city = "Bhopal";
-n20.publisher = "DB Corp";
-n20.establishedYear = 1958;
-n20.pages = 32;
-n20.circulation = 3500000;
-n20.category = "Daily News";
-n20.website = "bhaskar.com";
-n20.editor = "Girdharilal Bhandari";
-n20.printingType = "Offset";
-n20.colorTheme = "Full Color";
-n20.frequency = "Daily";
-n20.contact = "07552023456";
-n20.email = "editor@bhaskar.com";
-n20.price = "₹5";
-n20.status = "Active";
-n20.distribution = "Hindi Belt";
-
-Article a20 = new Article();
-a20.articleId = 120;
-a20.title = "IT Campus Recruitment Records Growth";
-a20.author = "Anil Sharma";
-a20.category = "Education";
-a20.language = "English";
-a20.wordCount = 780;
-a20.publishDate = "2026-03-15";
-a20.editor = "Education Editor";
-a20.topic = "Campus Placement";
-a20.location = "Lucknow";
-a20.newspaper = "Dainik Bhaskar";
-a20.source = "Colleges";
-a20.keywords = "placement, IT, campus";
-a20.description = "Record recruitment of engineering students in IT companies";
-a20.format = "Report";
-a20.section = "Education";
-a20.reference = "College Data";
-a20.status = "Published";
-a20.rating = "5 Star";
-a20.type = "Report";
-n20.article = a20;
-n20.getNewsPaperDetails();
-
+    public static void main(String[] args) {
+
+        Article a1 = new Article(101, "Technology Growth in India", "Ravi Kumar", "Technology",
+                "English", 800, "2026", "Senior Editor", "IT Industry", "Bangalore",
+                "The Hindu", "Reporter", "Technology, India", "Growth of IT sector",
+                "Column", "Business", "Industry Reports", "Published", "5 Star", "Feature");
+
+        Article a2 = new Article(102, "Campus Placements Boom 2026", "Megha Shenoy", "Education",
+                "English", 650, "2026-03-15", "Chief Editor", "Campus Recruitment", "Bangalore",
+                "Deccan Herald", "Industry Sources", "placements, IT jobs, TCS",
+                "Record placements in engineering colleges", "News Report", "Education",
+                "College Reports", "Published", "4 Star", "News");
+
+        Article a3 = new Article(103, "AI Revolutionizing Job Market", "Shalini Singh", "Technology",
+                "English", 950, "2026-03-14", "Technology Editor", "Artificial Intelligence", "Delhi",
+                "The Times of India", "Expert Interviews", "AI, machine learning, jobs",
+                "Impact of AI on employment landscape", "Analysis", "Technology",
+                "NASSCOM Report", "Published", "5 Star", "Opinion");
+
+        Article a4 = new Article(104, "Freshers Coding Skills Gap", "Arun George", "Education",
+                "English", 700, "2026-03-13", "Education Editor", "Skill Development", "Hyderabad",
+                "Indian Express", "Industry Survey", "coding, DSA, placements",
+                "Engineering graduates lacking core programming skills", "Report", "Education",
+                "NASSCOM Survey", "Published", "4 Star", "Reportage");
+
+        Article a5 = new Article(109, "IT Hiring Surge for Campus Graduates", "Surabhi Agarwal", "Business",
+                "English", 900, "2026-03-16", "Business Editor", "IT Recruitment", "Mumbai",
+                "Business Standard", "Company Filings", "IT hiring, campus, freshers",
+                "Major IT firms ramp up campus hiring", "Business Analysis", "Companies",
+                "Q4 Earnings", "Published", "5 Star", "Analysis");
+
+        Article a6 = new Article(109, "IT Hiring Surge for Campus Graduates", "Surabhi Agarwal", "Business",
+                "English", 900, "2026-03-16", "Business Editor", "IT Recruitment", "Mumbai",
+                "Business Standard", "Company Filings", "IT hiring, campus, freshers",
+                "Major IT firms ramp up campus hiring", "Business Analysis", "Companies",
+                "Q4 Earnings", "Published", "5 Star", "Analysis");
+
+        Article a7 = new Article(109, "IT Hiring Surge for Campus Graduates", "Surabhi Agarwal", "Business",
+                "English", 900, "2026-03-16", "Business Editor", "IT Recruitment", "Mumbai",
+                "Business Standard", "Company Filings", "IT hiring, campus, freshers",
+                "Major IT firms ramp up campus hiring", "Business Analysis", "Companies",
+                "Q4 Earnings", "Published", "5 Star", "Analysis");
+
+        Article a8 = new Article(109, "IT Hiring Surge for Campus Graduates", "Surabhi Agarwal", "Business",
+                "English", 900, "2026-03-16", "Business Editor", "IT Recruitment", "Mumbai",
+                "Business Standard", "Company Filings", "IT hiring, campus, freshers",
+                "Major IT firms ramp up campus hiring", "Business Analysis", "Companies",
+                "Q4 Earnings", "Published", "5 Star", "Analysis");
+
+        Article a9 = new Article(109, "IT Hiring Surge for Campus Graduates", "Surabhi Agarwal", "Business",
+                "English", 900, "2026-03-16", "Business Editor", "IT Recruitment", "Mumbai",
+                "Business Standard", "Company Filings", "IT hiring, campus, freshers",
+                "Major IT firms ramp up campus hiring", "Business Analysis", "Companies",
+                "Q4 Earnings", "Published", "5 Star", "Analysis");
+
+        Article a10 = new Article(110, "TCS Cognizant Campus Hiring Spree", "Pankaj Mishra", "Corporate",
+                "English", 1100, "2026-03-15", "Corporate Editor", "Campus Recruitment", "All India",
+                "Economic Times", "HR Sources", "TCS, Cognizant, hiring",
+                "IT majors hiring record numbers from campuses", "Exclusive", "Corporate Trends",
+                "Industry Executives", "Published", "5 Star", "Exclusive");
+
+        Article a11 = new Article(111, "Mangalore Colleges Achieve 90% Placement", "Rajesh P", "Education",
+                "English", 520, "2026-03-14", "Local Editor", "Campus Placement", "Mangalore",
+                "Udayavani", "Colleges", "Mangalore, placement, IT",
+                "Mangalore colleges record excellent placement success", "Local News", "Education",
+                "College Data", "Published", "4 Star", "Local News");
+
+        Article a12 = new Article(112, "IT Job Opportunities in Bidar District", "Fahim Ahmed", "Business",
+                "English", 480, "2026-03-15", "Business Editor", "IT Jobs", "Bidar",
+                "Vartha Bharati", "Local Employment Center", "Bidar, IT, jobs",
+                "IT companies offering jobs in Bidar district", "News", "Business",
+                "Employment Center", "Published", "3 Star", "Local News");
+
+        Article a13 = new Article(113, "Coimbatore Engineering Students Get High Salaries", "Murugan", "Education",
+                "English", 580, "2026-03-13", "Education Editor", "Placement", "Coimbatore",
+                "Dina Thanthi", "Colleges", "Coimbatore, placement, IT",
+                "High salary placements in Coimbatore engineering colleges", "News", "Education",
+                "College Information", "Published", "4 Star", "News");
+
+        Article a14 = new Article(114, "Vijayawada Colleges Record Placements", "Suresh Babu", "Education",
+                "English", 620, "2026-03-15", "Education Editor", "Placements", "Vijayawada",
+                "Sakshi", "Colleges", "Vijayawada, placements, IT",
+                "Record job placements in Vijayawada colleges", "Report", "Education",
+                "College Data", "Published", "4 Star", "Report");
+
+        Article a15 = new Article(115, "Engineering Colleges Set Placement Records", "Shivani Singh", "Education",
+                "English", 720, "2026-03-14", "Education Editor", "Campus Hiring", "Delhi-NCR",
+                "Hindustan Times", "College Principals", "placements, engineering, IT hiring",
+                "Delhi-NCR engineering colleges achieve placement milestones", "News Feature", "Education",
+                "College Data", "Published", "4 Star", "Feature");
+
+        Article a16 = new Article(116, "Kerala Colleges IT Placement Record", "Rajeev Kumar", "Education",
+                "English", 650, "2026-03-13", "Education Editor", "Placement", "Kochi",
+                "Mathrubhumi", "Colleges", "placement, IT, Kerala",
+                "Record placements in Kerala engineering colleges", "Report", "Education",
+                "College Data", "Published", "4 Star", "Report");
+
+        Article a17 = new Article(117, "Pune Colleges High Salary Packages", "Prakash Deshmukh", "Education",
+                "English", 700, "2026-03-15", "Education Editor", "Campus Placement", "Pune",
+                "Lokmat", "Colleges", "placement, IT, Pune",
+                "High salary packages in Pune engineering colleges", "Report", "Education",
+                "College Data", "Published", "5 Star", "Report");
+
+        Article a18 = new Article(118, "Kolkata IT Campus Placement Record", "Soumyajit Das", "Education",
+                "English", 680, "2026-03-14", "Education Editor", "Campus Placement", "Kolkata",
+                "Anandabazar Patrika", "Colleges", "placement, IT, Kolkata",
+                "Record placements in Kolkata engineering colleges", "Report", "Education",
+                "College Data", "Published", "4 Star", "Report");
+
+        Article a19 = new Article(119, "IT Giants Double Campus Hiring Budgets", "Rachna Monga", "Business",
+                "English", 850, "2026-03-16", "Business Editor", "Campus Hiring", "Pan-India",
+                "Financial Express", "Industry Sources", "IT hiring, campus, budget",
+                "IT companies allocating record budgets for campus recruitment", "Analysis", "Corporate",
+                "Company Budgets", "Published", "5 Star", "Analysis");
+
+        Article a20 = new Article(120, "IT Campus Recruitment Records Growth", "Anil Sharma", "Education",
+                "English", 780, "2026-03-15", "Education Editor", "Campus Placement", "Lucknow",
+                "Dainik Bhaskar", "Colleges", "placement, IT, campus",
+                "Record recruitment of engineering students in IT companies", "Report", "Education",
+                "College Data", "Published", "5 Star", "Report");
+
+        NewsPaper n1 = new NewsPaper(1, "The Hindu", "English", "India", "Chennai",
+                "The Hindu Group", 1878, 20, 1500000, "Daily News", "thehindu.com",
+                "Suresh Nambath", "Offset", "Black and White", "Daily", "044123456",
+                "info@thehindu.com", "₹10", "Active", "National", a1);
+
+        NewsPaper n2 = new NewsPaper(2, "Deccan Herald", "English", "India", "Bangalore",
+                "The Printers (Mysore) Pvt Ltd", 1948, 16, 250000, "Daily News", "deccanherald.com",
+                "K N Shanth Kumar", "Offset", "Full Color", "Daily", "080223456",
+                "editor@deccanherald.com", "₹8", "Active", "Karnataka", a2);
+
+        NewsPaper n3 = new NewsPaper(3, "The Times of India", "English", "India", "Mumbai",
+                "Bennett Coleman & Co", 1838, 32, 4000000, "Daily News", "timesofindia.indiatimes.com",
+                "Jaideep Bose", "Offset", "Full Color", "Daily", "022323456",
+                "toi.editor@timesgroup.com", "₹12", "Active", "National", a3);
+
+        NewsPaper n4 = new NewsPaper(4, "Indian Express", "English", "India", "Delhi",
+                "Indian Express Group", 1932, 24, 500000, "Daily News", "indianexpress.com",
+                "Rajan Shukla", "Offset", "Full Color", "Daily", "011423456",
+                "editor@indianexpress.com", "₹10", "Active", "National", a4);
+
+        NewsPaper n5 = new NewsPaper(5, "Prajavani", "Kannada", "India", "Bangalore",
+                "The Printers (Mysore) Pvt Ltd", 1948, 20, 800000, "Daily News", "prajavani.net",
+                "K N Shanth Kumar", "Offset", "Full Color", "Daily", "080523456",
+                "editor@prajavani.net", "₹6", "Active", "Karnataka", a5);
+
+        NewsPaper n6 = new NewsPaper(6, "Dinakaran", "Tamil", "India", "Chennai",
+                "Sun Group", 1977, 24, 1200000, "Daily News", "dinakaran.com",
+                "Sun News Management", "Offset", "Full Color", "Daily", "044623456",
+                "editor@dinakaran.com", "₹5", "Active", "Tamil Nadu", a6);
+
+        NewsPaper n7 = new NewsPaper(7, "Vijaya Karnataka", "Kannada", "India", "Bangalore",
+                "Times Group", 1949, 28, 1000000, "Daily News", "vijayakarnataka.com",
+                "Jayaprakash Nayak", "Offset", "Full Color", "Daily", "080723456",
+                "editor@vijayakarnataka.com", "₹7", "Active", "Karnataka", a7);
+
+        NewsPaper n8 = new NewsPaper(8, "Eenadu", "Telugu", "India", "Visakhapatnam",
+                "Eenadu Group", 1974, 32, 1800000, "Daily News", "eenadu.net",
+                "Margadarsi Chitranjan", "Offset", "Full Color", "Daily", "089123456",
+                "editor@eenadu.net", "₹5", "Active", "Andhra Pradesh, Telangana", a8);
+
+        NewsPaper n9 = new NewsPaper(9, "Business Standard", "English", "India", "Mumbai",
+                "Business Standard Pvt Ltd", 1975, 16, 200000, "Business News", "business-standard.com",
+                "T N Ninan", "Offset", "Full Color", "Daily", "022923456",
+                "editor@bsmail.in", "₹15", "Active", "Major Cities", a9);
+
+        NewsPaper n10 = new NewsPaper(10, "Economic Times", "English", "India", "Mumbai",
+                "Times Group", 1961, 28, 800000, "Business News", "economictimes.indiatimes.com",
+                "Ravi Shankar", "Offset", "Full Color", "Daily", "0221023456",
+                "et.editor@timesgroup.com", "₹18", "Active", "Metro Cities", a10);
+
+        NewsPaper n11 = new NewsPaper(11, "Udayavani", "Kannada", "India", "Mangalore",
+                "Manipal Printing Press", 1970, 20, 600000, "Daily News", "udayavani.com",
+                "J F Pinto", "Offset", "Full Color", "Daily", "0824223456",
+                "editor@udayavani.com", "₹6", "Active", "Coastal Karnataka", a11);
+
+        NewsPaper n12 = new NewsPaper(12, "Vartha Bharati", "Kannada", "India", "Bidar",
+                "Vartha Bharati", 2008, 16, 150000, "Daily News", "varthabharati.in",
+                "K M Ashraf", "Offset", "Full Color", "Daily", "0848223456",
+                "editor@varthabharati.in", "₹5", "Active", "North Karnataka", a12);
+
+        NewsPaper n13 = new NewsPaper(13, "Dina Thanthi", "Tamil", "India", "Chennai",
+                "Thanthi Trust", 1942, 24, 1100000, "Daily News", "dinathanthi.com",
+                "N Ravi", "Offset", "Full Color", "Daily", "0441223456",
+                "editor@dinathanthi.com", "₹4", "Active", "Tamil Nadu", a13);
+
+        NewsPaper n14 = new NewsPaper(14, "Sakshi", "Telugu", "India", "Hyderabad",
+                "Jagathi Publications", 2008, 28, 1000000, "Daily News", "sakshi.com",
+                "K N Murali Sankar", "Offset", "Full Color", "Daily", "0401323456",
+                "editor@sakshi.com", "₹5", "Active", "Telangana, AP", a14);
+
+        NewsPaper n15 = new NewsPaper(15, "Hindustan Times", "English", "India", "Delhi",
+                "HT Media", 1924, 24, 700000, "Daily News", "hindustantimes.com",
+                "Sutirtho Patranobis", "Offset", "Full Color", "Daily", "0111523456",
+                "editor@hindustantimes.com", "₹12", "Active", "North India", a15);
+
+        NewsPaper n16 = new NewsPaper(16, "Mathrubhumi", "Malayalam", "India", "Kozhikode",
+                "Mathrubhumi Printing", 1923, 20, 1000000, "Daily News", "mathrubhumi.com",
+                "P V Chandran", "Offset", "Full Color", "Daily", "04951623456",
+                "editor@mathrubhumi.com", "₹8", "Active", "Kerala", a16);
+
+        NewsPaper n17 = new NewsPaper(17, "Lokmat", "Marathi", "India", "Mumbai",
+                "Lokmat Group", 1971, 24, 900000, "Daily News", "lokmat.com",
+                "Devendra Vestry", "Offset", "Full Color", "Daily", "0221723456",
+                "editor@lokmat.com", "₹7", "Active", "Maharashtra", a17);
+
+        NewsPaper n18 = new NewsPaper(18, "Anandabazar Patrika", "Bengali", "India", "Kolkata",
+                "ABP Group", 1922, 28, 1200000, "Daily News", "abp.in",
+                "Rishikesh Bhattacharya", "Offset", "Full Color", "Daily", "0331823456",
+                "editor@abp.in", "₹6", "Active", "West Bengal", a18);
+
+        NewsPaper n19 = new NewsPaper(19, "Financial Express", "English", "India", "Delhi",
+                "The Indian Express Group", 1961, 20, 150000, "Business News", "financialexpress.com",
+                "Anant Goenka", "Offset", "Full Color", "Daily", "0111923456",
+                "editor@financialexpress.com", "₹14", "Active", "Major Cities", a19);
+
+        NewsPaper n20 = new NewsPaper(20, "Dainik Bhaskar", "Hindi", "India", "Bhopal",
+                "DB Corp", 1958, 32, 3500000, "Daily News", "bhaskar.com",
+                "Girdharilal Bhandari", "Offset", "Full Color", "Daily", "07552023456",
+                "editor@bhaskar.com", "₹5", "Active", "Hindi Belt", a20);
+
+        System.out.println("=== INDIAN NEWSPAPERS - CAMPUS PLACEMENT NEWS 2026 ===\n");
+        
+        n1.displayDetails();
+        System.out.println();
+        n2.displayDetails();
+        System.out.println();
+        n3.displayDetails();
+        System.out.println();
+        n4.displayDetails();
+        System.out.println();
+        n5.displayDetails();
+        System.out.println();
+        n6.displayDetails();
+        System.out.println();
+        n7.displayDetails();
+        System.out.println();
+        n8.displayDetails();
+        System.out.println();
+        n9.displayDetails();
+        System.out.println();
+        n10.displayDetails();
+        System.out.println();
+        n11.displayDetails();
+        System.out.println();
+        n12.displayDetails();
+        System.out.println();
+        n13.displayDetails();
+        System.out.println();
+        n14.displayDetails();
+        System.out.println();
+        n15.displayDetails();
+        System.out.println();
+        n16.displayDetails();
+        System.out.println();
+        n17.displayDetails();
+        System.out.println();
+        n18.displayDetails();
+        System.out.println();
+        n19.displayDetails();
+        System.out.println();
+        n20.displayDetails();
+
+        System.out.println("\n=== END OF NEWSPAPER REPORTS ===");
     }
 }

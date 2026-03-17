@@ -1,5 +1,4 @@
 class Ipl {
-
     int teamId;
     String teamName;
     String captain;
@@ -20,11 +19,36 @@ class Ipl {
     String status;
     String manager;
     String league;
-
     Player player;
 
-    public void getIplDetails() {
+    public Ipl(int teamId, String teamName, String captain, String coach, String homeGround,
+               int championships, int playersCount, String owner, String city, String sponsor,
+               int foundedYear, String color, String category, int matchesPlayed, int wins,
+               int losses, int points, String status, String manager, String league, Player player) {
+        this.teamId = teamId;
+        this.teamName = teamName;
+        this.captain = captain;
+        this.coach = coach;
+        this.homeGround = homeGround;
+        this.championships = championships;
+        this.playersCount = playersCount;
+        this.owner = owner;
+        this.city = city;
+        this.sponsor = sponsor;
+        this.foundedYear = foundedYear;
+        this.color = color;
+        this.category = category;
+        this.matchesPlayed = matchesPlayed;
+        this.wins = wins;
+        this.losses = losses;
+        this.points = points;
+        this.status = status;
+        this.manager = manager;
+        this.league = league;
+        this.player = player;
+    }
 
+    public void getIplDetails() {
         System.out.println("TeamId: " + teamId);
         System.out.println("TeamName: " + teamName);
         System.out.println("Captain: " + captain);
@@ -45,7 +69,8 @@ class Ipl {
         System.out.println("Status: " + status);
         System.out.println("Manager: " + manager);
         System.out.println("League: " + league);
-
+        System.out.println("=== Player Details ===");
         this.player.getPlayerDetails();
+        System.out.println("=================================");
     }
 }

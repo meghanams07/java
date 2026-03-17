@@ -1,931 +1,229 @@
 class GrowwExecutor {
+    public static void main(String[] args) {
+        System.out.println("=== GROWW INVESTMENT APPS & ASSOCIATED STOCKS ===\n");
+        
+        Stock s1 = new Stock(101, "Infosys", "Infosys Ltd", "INFY", "NSE",
+                           1500.50, 600000000, "IT", "Software Services",
+                           2000000, 1480, 1500, 1520, 1470, "INR", "India",
+                           "1993", "Equity", "Active", "IT Services Company");
 
-    public static void main(String[] args){
+        Stock s2 = new Stock(102, "TCS", "Tata Consultancy Services Ltd", "TCS", "NSE",
+                           3800.75, 1400000000, "IT", "IT Services",
+                           1500000, 3750, 3795, 3825, 3730, "INR", "India",
+                           "2004", "Equity", "Active", "Global IT services company");
 
-        Groww g1 = new Groww();
+        Stock s3 = new Stock(103, "HDFC Bank", "HDFC Bank Ltd", "HDFCBANK", "NSE",
+                           1600.25, 900000000, "Banking", "Private Bank",
+                           3000000, 1585, 1598, 1615, 1575, "INR", "India",
+                           "1995", "Equity", "Active", "Leading private sector bank");
 
-        g1.appId = 1;
-        g1.appName = "Groww";
-        g1.company = "Groww Technologies";
-        g1.founder = "Lalit Keshre";
-        g1.headquarters = "Bangalore";
-        g1.launchYear = 2016;
-        g1.users = 40000000;
-        g1.platform = "Mobile App";
-        g1.category = "Investment";
-        g1.website = "groww.in";
-        g1.email = "support@groww.in";
-        g1.contact = "080123456";
-        g1.license = "SEBI Registered";
-        g1.security = "High";
-        g1.paymentMethod = "UPI/Bank";
-        g1.version = "6.0";
-        g1.colorTheme = "Green";
-        g1.support = "24/7";
-        g1.status = "Active";
-        g1.country = "India";
+        Stock s4 = new Stock(104, "Reliance Industries", "Reliance Industries Ltd", "RELIANCE", "NSE",
+                           2600.00, 1800000000, "Conglomerate", "Energy & Retail",
+                           5000000, 2580, 2595, 2625, 2560, "INR", "India",
+                           "1978", "Equity", "Active", "Diversified Indian conglomerate");
 
-        Stock s1 = new Stock();
+        Stock s5 = new Stock(105, "Apple Inc", "Apple Inc", "AAPL", "NASDAQ",
+                           190.30, 2500000000, "Technology", "Consumer Electronics",
+                           80000000, 188.0, 189.5, 192.0, 187.5, "USD", "USA",
+                           "1980", "Equity", "Active", "Global tech giant");
 
-        s1.stockId = 101;
-        s1.stockName = "Infosys";
-        s1.company = "Infosys Ltd";
-        s1.symbol = "INFY";
-        s1.exchange = "NSE";
-        s1.price = 1500.50;
-        s1.marketCap = 600000000;
-        s1.sector = "IT";
-        s1.industry = "Software Services";
-        s1.volume = 2000000;
-        s1.openPrice = 1480;
-        s1.closePrice = 1500;
-        s1.highPrice = 1520;
-        s1.lowPrice = 1470;
-        s1.currency = "INR";
-        s1.country = "India";
-        s1.listingYear = "1993";
-        s1.category = "Equity";
-        s1.status = "Active";
-        s1.description = "IT Services Company";
+        Stock s6 = new Stock(106, "HDFC AMC", "HDFC Asset Management Co", "HDFCAMC", "NSE",
+                           3100.90, 650000000, "Financial Services", "Asset Management",
+                           450000, 3050, 3090, 3125, 3030, "INR", "India",
+                           "2018", "Equity", "Active", "Mutual fund AMC");
 
-        g1.stock = s1;
+        Stock s7 = new Stock(107, "Muthoot Finance", "Muthoot Finance Ltd", "MUTHOOTFIN", "NSE",
+                           1250.40, 500000000, "NBFC", "Gold Loans",
+                           900000, 1235, 1248, 1265, 1220, "INR", "India",
+                           "2011", "Equity", "Active", "Gold loan NBFC");
+
+        Stock s8 = new Stock(108, "NSE Nifty 50 ETF", "Various AMCs", "NIFTYBEES", "NSE",
+                           240.75, 200000000, "Index Fund", "ETF",
+                           5000000, 238.0, 240.0, 242.5, 237.5, "INR", "India",
+                           "2002", "ETF", "Active", "Nifty 50 index ETF");
+
+        Stock s9 = new Stock(109, "NIFTY 50", "NSE Index", "NIFTY", "NSE",
+                           22000.00, 0, "Index", "Benchmark Index",
+                           0, 21850, 21980, 22100, 21800, "INR", "India",
+                           "1996", "Index", "Active", "Benchmark equity index");
+
+        Stock s10 = new Stock(110, "SBI Life", "SBI Life Insurance Co Ltd", "SBILIFE", "NSE",
+                            1400.10, 500000000, "Insurance", "Life Insurance",
+                            650000, 1385, 1398, 1415, 1375, "INR", "India",
+                            "2017", "Equity", "Active", "Life insurance company");
+
+        Stock s11 = new Stock(111, "ITC", "ITC Ltd", "ITC", "NSE",
+                            430.40, 600000000, "FMCG", "Consumer Goods",
+                            12000000, 425, 429, 435, 423, "INR", "India",
+                            "1954", "Equity", "Active", "Diversified FMCG company");
+
+        Stock s12 = new Stock(112, "Axis Bank", "Axis Bank Ltd", "AXISBANK", "NSE",
+                            1180.60, 700000000, "Banking", "Private Bank",
+                            3200000, 1165, 1178, 1195, 1160, "INR", "India",
+                            "1998", "Equity", "Active", "Private sector bank");
+
+        Stock s13 = new Stock(113, "SBI", "State Bank of India", "SBIN", "NSE",
+                            780.25, 900000000, "Banking", "PSU Bank",
+                            9000000, 770, 778, 785, 768, "INR", "India",
+                            "1997", "Equity", "Active", "India's largest public bank");
+
+        Stock s14 = new Stock(114, "REC Ltd Bond", "REC Ltd", "REC-BOND", "NSE-BOND",
+                            1025.00, 0, "PSU", "Power Finance",
+                            200000, 1020, 1023, 1030, 1018, "INR", "India",
+                            "2020", "Bond", "Active", "Tax saving PSU bond");
+
+        Stock s15 = new Stock(115, "Zomato", "Zomato Ltd", "ZOMATO", "NSE",
+                            160.00, 450000000, "Internet", "Food Delivery",
+                            25000000, 156, 159, 162, 155, "INR", "India",
+                            "2021", "Equity", "Active", "Online food delivery platform");
+
+        Stock s16 = new Stock(116, "Bajaj Finance", "Bajaj Finance Ltd", "BAJFINANCE", "NSE",
+                            6500.50, 800000000, "NBFC", "Consumer Finance",
+                            1200000, 6420, 6485, 6550, 6400, "INR", "India",
+                            "1994", "Equity", "Active", "Leading NBFC");
+
+        Stock s17 = new Stock(117, "Tata Power", "Tata Power Co Ltd", "TATAPOWER", "NSE",
+                            410.30, 400000000, "Power", "Renewable & Thermal",
+                            11000000, 402, 408, 414, 400, "INR", "India",
+                            "1911", "Equity", "Active", "Power generation & distribution");
+
+        Stock s18 = new Stock(118, "Bitcoin ETF", "Global AMC", "BTCETF", "NYSE",
+                            50.20, 300000000, "Crypto-linked", "ETF",
+                            7000000, 49.0, 50.0, 51.5, 48.8, "USD", "USA",
+                            "2021", "ETF", "Active", "Bitcoin price tracking ETF");
+
+        Stock s19 = new Stock(119, "Infosys ADR", "Infosys Ltd", "INFY", "NYSE",
+                            19.80, 600000000, "IT", "Software Services",
+                            3000000, 19.4, 19.7, 20.1, 19.2, "USD", "USA",
+                            "1999", "Equity", "Active", "Infosys ADR in US");
+
+        Stock s20 = new Stock(120, "HUL", "Hindustan Unilever Ltd", "HINDUNILVR", "NSE",
+                            2500.80, 1200000000, "FMCG", "Consumer Products",
+                            1800000, 2465, 2495, 2515, 2455, "INR", "India",
+                            "1956", "Equity", "Active", "Leading FMCG company");
+
+        Groww g1 = new Groww(1, "Groww", "Groww Technologies", "Lalit Keshre", "Bangalore",
+                           2016, 40000000, "Mobile App", "Investment", "groww.in",
+                           "support@groww.in", "080123456", "SEBI Registered", "High",
+                           "UPI/Bank", "6.0", "Green", "24/7", "Active", "India", s1);
+
+        Groww g2 = new Groww(2, "Groww Pro", "Groww Technologies", "Lalit Keshre", "Bangalore",
+                           2020, 10000000, "Web App", "Investment", "pro.groww.in",
+                           "prosupport@groww.in", "080200200", "SEBI Registered", "Very High",
+                           "UPI/Bank/Cards", "3.5", "Dark Green", "Email Support", "Active", "India", s2);
+
+        Groww g3 = new Groww(3, "Groww Lite", "Groww Technologies", "Lalit Keshre", "Bangalore",
+                           2019, 5000000, "Mobile App", "Investment", "lite.groww.in",
+                           "lite@groww.in", "080300300", "SEBI Registered", "High",
+                           "UPI", "2.1", "Light Green", "Chat Support", "Active", "India", s3);
+
+        Groww g4 = new Groww(4, "Groww Derivatives", "Groww Technologies", "Lalit Keshre", "Bangalore",
+                           2021, 3000000, "Mobile & Web", "Investment", "derivatives.groww.in",
+                           "fno@groww.in", "080400400", "SEBI Registered", "High",
+                           "UPI/Bank", "1.8", "Blue Green", "Phone Support", "Active", "India", s4);
+
+        Groww g5 = new Groww(5, "Groww Global", "Groww Technologies", "Lalit Keshre", "Bangalore",
+                           2022, 2000000, "Mobile App", "Investment", "global.groww.in",
+                           "global@groww.in", "080500500", "Registered Broker", "High",
+                           "Bank Transfer", "1.2", "Teal", "Email Support", "Active", "India", s5);
+
+        Groww g6 = new Groww(6, "Groww SIP", "Groww Technologies", "Lalit Keshre", "Bangalore",
+                           2018, 7000000, "Mobile App", "Mutual Funds", "sip.groww.in",
+                           "sip@groww.in", "080600600", "SEBI Registered", "High",
+                           "Auto-debit/UPI", "4.0", "Mint Green", "Chat & Email", "Active", "India", s6);
+
+        Groww g7 = new Groww(7, "Groww Gold", "Groww Technologies", "Lalit Keshre", "Bangalore",
+                           2020, 2500000, "Mobile App", "Digital Gold", "gold.groww.in",
+                           "gold@groww.in", "080700700", "SEBI Registered Partner", "High",
+                           "UPI/NetBanking", "1.5", "Gold", "Chat Support", "Active", "India", s7);
+
+        Groww g8 = new Groww(8, "Groww Learn", "Groww Technologies", "Lalit Keshre", "Bangalore",
+                           2021, 1000000, "Web & Mobile", "Education", "learn.groww.in",
+                           "learn@groww.in", "080800800", "EdTech", "High",
+                           "UPI/Cards", "1.0", "Blue", "Email", "Active", "India", s8);
+
+        Groww g9 = new Groww(9, "Groww Options", "Groww Technologies", "Lalit Keshre", "Bangalore",
+                           2023, 1500000, "Mobile App", "Derivatives", "options.groww.in",
+                           "options@groww.in", "080900900", "SEBI Registered", "Very High",
+                           "UPI/Bank", "1.1", "Dark Blue", "Phone & Chat", "Active", "India", s9);
+
+        Groww g10 = new Groww(10, "Groww Corporate", "Groww Technologies", "Lalit Keshre", "Bangalore",
+                            2022, 300000, "Web App", "Wealth Management", "corporate.groww.in",
+                            "corp@groww.in", "080111000", "SEBI Registered", "High",
+                            "Bank Transfer", "1.3", "Navy Blue", "RM Support", "Active", "India", s10);
+
+        Groww g11 = new Groww(11, "Groww Junior", "Groww Technologies", "Lalit Keshre", "Bangalore",
+                            2023, 800000, "Mobile App", "Investment Education", "junior.groww.in",
+                            "junior@groww.in", "080111111", "Learning", "High",
+                            "UPI", "1.0", "Yellow", "Chatbot", "Active", "India", s11);
+
+        Groww g12 = new Groww(12, "Groww Tax Saver", "Groww Technologies", "Lalit Keshre", "Bangalore",
+                            2019, 2500000, "Mobile & Web", "ELSS/Tax Saving", "tax.groww.in",
+                            "tax@groww.in", "080121212", "SEBI Registered", "High",
+                            "UPI/NetBanking", "2.4", "Olive Green", "Email & Chat", "Active", "India", s12);
+
+        Groww g13 = new Groww(13, "Groww Pension", "Groww Technologies", "Lalit Keshre", "Bangalore",
+                            2021, 600000, "Mobile App", "Retirement", "pension.groww.in",
+                            "pension@groww.in", "080131313", "PFRDA Partner", "High",
+                            "UPI/Bank", "1.3", "Brown", "Phone Support", "Active", "India", s13);
+
+        Groww g14 = new Groww(14, "Groww Bonds", "Groww Technologies", "Lalit Keshre", "Bangalore",
+                            2022, 400000, "Web & Mobile", "Fixed Income", "bonds.groww.in",
+                            "bonds@groww.in", "080141414", "SEBI Registered", "High",
+                            "Bank Transfer", "1.0", "Grey", "Email Support", "Active", "India", s14);
+
+        Groww g15 = new Groww(15, "Groww IPO", "Groww Technologies", "Lalit Keshre", "Bangalore",
+                            2020, 2200000, "Mobile & Web", "IPO Investing", "ipo.groww.in",
+                            "ipo@groww.in", "080151515", "SEBI Registered", "High",
+                            "UPI", "2.0", "Violet", "Chat Support", "Active", "India", s15);
+
+        Groww g16 = new Groww(16, "Groww Ultra", "Groww Technologies", "Lalit Keshre", "Bangalore",
+                            2024, 500000, "Mobile App", "Premium Trading", "ultra.groww.in",
+                            "ultra@groww.in", "080161616", "SEBI Registered", "Very High",
+                            "Bank/UPI", "1.0", "Black", "Priority RM", "Active", "India", s16);
+
+        Groww g17 = new Groww(17, "Groww ESG", "Groww Technologies", "Lalit Keshre", "Bangalore",
+                            2022, 300000, "Web & Mobile", "ESG Investing", "esg.groww.in",
+                            "esg@groww.in", "080171717", "SEBI Registered", "High",
+                            "UPI/Bank", "1.0", "Forest Green", "Email", "Active", "India", s17);
+
+        Groww g18 = new Groww(18, "Groww Crypto Watch", "Groww Technologies", "Lalit Keshre", "Bangalore",
+                            2021, 900000, "Mobile App", "Price Tracking", "crypto.groww.in",
+                            "crypto@groww.in", "080181818", "Info Only", "High",
+                            "N/A", "1.1", "Purple", "In-app FAQ", "Active", "India", s18);
+
+        Groww g19 = new Groww(19, "Groww Campus", "Groww Technologies", "Lalit Keshre", "Bangalore",
+                            2023, 200000, "Web", "Student Investing", "campus.groww.in",
+                            "campus@groww.in", "080191919", "Learning", "High",
+                            "UPI", "1.0", "Sky Blue", "Campus Reps", "Active", "India", s19);
+
+        Groww g20 = new Groww(20, "Groww Family", "Groww Technologies", "Lalit Keshre", "Bangalore",
+                            2024, 150000, "Mobile App", "Family Investing", "family.groww.in",
+                            "family@groww.in", "080202020", "SEBI Registered", "Very High",
+                            "UPI/Bank", "1.0", "Turquoise", "Phone & Chat", "Active", "India", s20);
 
         g1.getGrowwDetails();
-		
-		Groww g2 = new Groww();
-g2.appId = 2;
-g2.appName = "Groww Pro";
-g2.company = "Groww Technologies";
-g2.founder = "Lalit Keshre";
-g2.headquarters = "Bangalore";
-g2.launchYear = 2020;
-g2.users = 10000000;
-g2.platform = "Web App";
-g2.category = "Investment";
-g2.website = "pro.groww.in";
-g2.email = "prosupport@groww.in";
-g2.contact = "080200200";
-g2.license = "SEBI Registered";
-g2.security = "Very High";
-g2.paymentMethod = "UPI/Bank/Cards";
-g2.version = "3.5";
-g2.colorTheme = "Dark Green";
-g2.support = "Email Support";
-g2.status = "Active";
-g2.country = "India";
+        g2.getGrowwDetails();
+        g3.getGrowwDetails();
+        g4.getGrowwDetails();
+        g5.getGrowwDetails();
+        g6.getGrowwDetails();
+        g7.getGrowwDetails();
+        g8.getGrowwDetails();
+        g9.getGrowwDetails();
+        g10.getGrowwDetails();
+        g11.getGrowwDetails();
+        g12.getGrowwDetails();
+        g13.getGrowwDetails();
+        g14.getGrowwDetails();
+        g15.getGrowwDetails();
+        g16.getGrowwDetails();
+        g17.getGrowwDetails();
+        g18.getGrowwDetails();
+        g19.getGrowwDetails();
+        g20.getGrowwDetails();
 
-Stock s2 = new Stock();
-s2.stockId = 102;
-s2.stockName = "TCS";
-s2.company = "Tata Consultancy Services Ltd";
-s2.symbol = "TCS";
-s2.exchange = "NSE";
-s2.price = 3800.75;
-s2.marketCap = 1400000000;
-s2.sector = "IT";
-s2.industry = "IT Services";
-s2.volume = 1500000;
-s2.openPrice = 3750;
-s2.closePrice = 3795;
-s2.highPrice = 3825;
-s2.lowPrice = 3730;
-s2.currency = "INR";
-s2.country = "India";
-s2.listingYear = "2004";
-s2.category = "Equity";
-s2.status = "Active";
-s2.description = "Global IT services company";
-g2.stock = s2;
-g2.getGrowwDetails();
-
-Groww g3 = new Groww();
-g3.appId = 3;
-g3.appName = "Groww Lite";
-g3.company = "Groww Technologies";
-g3.founder = "Lalit Keshre";
-g3.headquarters = "Bangalore";
-g3.launchYear = 2019;
-g3.users = 5000000;
-g3.platform = "Mobile App";
-g3.category = "Investment";
-g3.website = "lite.groww.in";
-g3.email = "lite@groww.in";
-g3.contact = "080300300";
-g3.license = "SEBI Registered";
-g3.security = "High";
-g3.paymentMethod = "UPI";
-g3.version = "2.1";
-g3.colorTheme = "Light Green";
-g3.support = "Chat Support";
-g3.status = "Active";
-g3.country = "India";
-
-Stock s3 = new Stock();
-s3.stockId = 103;
-s3.stockName = "HDFC Bank";
-s3.company = "HDFC Bank Ltd";
-s3.symbol = "HDFCBANK";
-s3.exchange = "NSE";
-s3.price = 1600.25;
-s3.marketCap = 900000000;
-s3.sector = "Banking";
-s3.industry = "Private Bank";
-s3.volume = 3000000;
-s3.openPrice = 1585;
-s3.closePrice = 1598;
-s3.highPrice = 1615;
-s3.lowPrice = 1575;
-s3.currency = "INR";
-s3.country = "India";
-s3.listingYear = "1995";
-s3.category = "Equity";
-s3.status = "Active";
-s3.description = "Leading private sector bank";
-g3.stock = s3;
-g3.getGrowwDetails();
-
-Groww g4 = new Groww();
-g4.appId = 4;
-g4.appName = "Groww Derivatives";
-g4.company = "Groww Technologies";
-g4.founder = "Lalit Keshre";
-g4.headquarters = "Bangalore";
-g4.launchYear = 2021;
-g4.users = 3000000;
-g4.platform = "Mobile & Web";
-g4.category = "Investment";
-g4.website = "derivatives.groww.in";
-g4.email = "fno@groww.in";
-g4.contact = "080400400";
-g4.license = "SEBI Registered";
-g4.security = "High";
-g4.paymentMethod = "UPI/Bank";
-g4.version = "1.8";
-g4.colorTheme = "Blue Green";
-g4.support = "Phone Support";
-g4.status = "Active";
-g4.country = "India";
-
-Stock s4 = new Stock();
-s4.stockId = 104;
-s4.stockName = "Reliance Industries";
-s4.company = "Reliance Industries Ltd";
-s4.symbol = "RELIANCE";
-s4.exchange = "NSE";
-s4.price = 2600.00;
-s4.marketCap = 1800000000;
-s4.sector = "Conglomerate";
-s4.industry = "Energy & Retail";
-s4.volume = 5000000;
-s4.openPrice = 2580;
-s4.closePrice = 2595;
-s4.highPrice = 2625;
-s4.lowPrice = 2560;
-s4.currency = "INR";
-s4.country = "India";
-s4.listingYear = "1978";
-s4.category = "Equity";
-s4.status = "Active";
-s4.description = "Diversified Indian conglomerate";
-g4.stock = s4;
-g4.getGrowwDetails();
-
-Groww g5 = new Groww();
-g5.appId = 5;
-g5.appName = "Groww Global";
-g5.company = "Groww Technologies";
-g5.founder = "Lalit Keshre";
-g5.headquarters = "Bangalore";
-g5.launchYear = 2022;
-g5.users = 2000000;
-g5.platform = "Mobile App";
-g5.category = "Investment";
-g5.website = "global.groww.in";
-g5.email = "global@groww.in";
-g5.contact = "080500500";
-g5.license = "Registered Broker";
-g5.security = "High";
-g5.paymentMethod = "Bank Transfer";
-g5.version = "1.2";
-g5.colorTheme = "Teal";
-g5.support = "Email Support";
-g5.status = "Active";
-g5.country = "India";
-
-Stock s5 = new Stock();
-s5.stockId = 105;
-s5.stockName = "Apple Inc";
-s5.company = "Apple Inc";
-s5.symbol = "AAPL";
-s5.exchange = "NASDAQ";
-s5.price = 190.30;
-s5.marketCap = 2500000000;
-s5.sector = "Technology";
-s5.industry = "Consumer Electronics";
-s5.volume = 80000000;
-s5.openPrice = 188.0;
-s5.closePrice = 189.5;
-s5.highPrice = 192.0;
-s5.lowPrice = 187.5;
-s5.currency = "USD";
-s5.country = "USA";
-s5.listingYear = "1980";
-s5.category = "Equity";
-s5.status = "Active";
-s5.description = "Global tech giant";
-g5.stock = s5;
-g5.getGrowwDetails();
-
-Groww g6 = new Groww();
-g6.appId = 6;
-g6.appName = "Groww SIP";
-g6.company = "Groww Technologies";
-g6.founder = "Lalit Keshre";
-g6.headquarters = "Bangalore";
-g6.launchYear = 2018;
-g6.users = 7000000;
-g6.platform = "Mobile App";
-g6.category = "Mutual Funds";
-g6.website = "sip.groww.in";
-g6.email = "sip@groww.in";
-g6.contact = "080600600";
-g6.license = "SEBI Registered";
-g6.security = "High";
-g6.paymentMethod = "Auto-debit/UPI";
-g6.version = "4.0";
-g6.colorTheme = "Mint Green";
-g6.support = "Chat & Email";
-g6.status = "Active";
-g6.country = "India";
-
-Stock s6 = new Stock();
-s6.stockId = 106;
-s6.stockName = "HDFC AMC";
-s6.company = "HDFC Asset Management Co";
-s6.symbol = "HDFCAMC";
-s6.exchange = "NSE";
-s6.price = 3100.90;
-s6.marketCap = 650000000;
-s6.sector = "Financial Services";
-s6.industry = "Asset Management";
-s6.volume = 450000;
-s6.openPrice = 3050;
-s6.closePrice = 3090;
-s6.highPrice = 3125;
-s6.lowPrice = 3030;
-s6.currency = "INR";
-s6.country = "India";
-s6.listingYear = "2018";
-s6.category = "Equity";
-s6.status = "Active";
-s6.description = "Mutual fund AMC";
-g6.stock = s6;
-g6.getGrowwDetails();
-
-Groww g7 = new Groww();
-g7.appId = 7;
-g7.appName = "Groww Gold";
-g7.company = "Groww Technologies";
-g7.founder = "Lalit Keshre";
-g7.headquarters = "Bangalore";
-g7.launchYear = 2020;
-g7.users = 2500000;
-g7.platform = "Mobile App";
-g7.category = "Digital Gold";
-g7.website = "gold.groww.in";
-g7.email = "gold@groww.in";
-g7.contact = "080700700";
-g7.license = "SEBI Registered Partner";
-g7.security = "High";
-g7.paymentMethod = "UPI/NetBanking";
-g7.version = "1.5";
-g7.colorTheme = "Gold";
-g7.support = "Chat Support";
-g7.status = "Active";
-g7.country = "India";
-
-Stock s7 = new Stock();
-s7.stockId = 107;
-s7.stockName = "Muthoot Finance";
-s7.company = "Muthoot Finance Ltd";
-s7.symbol = "MUTHOOTFIN";
-s7.exchange = "NSE";
-s7.price = 1250.40;
-s7.marketCap = 500000000;
-s7.sector = "NBFC";
-s7.industry = "Gold Loans";
-s7.volume = 900000;
-s7.openPrice = 1235;
-s7.closePrice = 1248;
-s7.highPrice = 1265;
-s7.lowPrice = 1220;
-s7.currency = "INR";
-s7.country = "India";
-s7.listingYear = "2011";
-s7.category = "Equity";
-s7.status = "Active";
-s7.description = "Gold loan NBFC";
-g7.stock = s7;
-g7.getGrowwDetails();
-
-Groww g8 = new Groww();
-g8.appId = 8;
-g8.appName = "Groww Learn";
-g8.company = "Groww Technologies";
-g8.founder = "Lalit Keshre";
-g8.headquarters = "Bangalore";
-g8.launchYear = 2021;
-g8.users = 1000000;
-g8.platform = "Web & Mobile";
-g8.category = "Education";
-g8.website = "learn.groww.in";
-g8.email = "learn@groww.in";
-g8.contact = "080800800";
-g8.license = "EdTech";
-g8.security = "High";
-g8.paymentMethod = "UPI/Cards";
-g8.version = "1.0";
-g8.colorTheme = "Blue";
-g8.support = "Email";
-g8.status = "Active";
-g8.country = "India";
-
-Stock s8 = new Stock();
-s8.stockId = 108;
-s8.stockName = "NSE Nifty 50 ETF";
-s8.company = "Various AMCs";
-s8.symbol = "NIFTYBEES";
-s8.exchange = "NSE";
-s8.price = 240.75;
-s8.marketCap = 200000000;
-s8.sector = "Index Fund";
-s8.industry = "ETF";
-s8.volume = 5000000;
-s8.openPrice = 238.0;
-s8.closePrice = 240.0;
-s8.highPrice = 242.5;
-s8.lowPrice = 237.5;
-s8.currency = "INR";
-s8.country = "India";
-s8.listingYear = "2002";
-s8.category = "ETF";
-s8.status = "Active";
-s8.description = "Nifty 50 index ETF";
-g8.stock = s8;
-g8.getGrowwDetails();
-
-Groww g9 = new Groww();
-g9.appId = 9;
-g9.appName = "Groww Options";
-g9.company = "Groww Technologies";
-g9.founder = "Lalit Keshre";
-g9.headquarters = "Bangalore";
-g9.launchYear = 2023;
-g9.users = 1500000;
-g9.platform = "Mobile App";
-g9.category = "Derivatives";
-g9.website = "options.groww.in";
-g9.email = "options@groww.in";
-g9.contact = "080900900";
-g9.license = "SEBI Registered";
-g9.security = "Very High";
-g9.paymentMethod = "UPI/Bank";
-g9.version = "1.1";
-g9.colorTheme = "Dark Blue";
-g9.support = "Phone & Chat";
-g9.status = "Active";
-g9.country = "India";
-
-Stock s9 = new Stock();
-s9.stockId = 109;
-s9.stockName = "NIFTY 50";
-s9.company = "NSE Index";
-s9.symbol = "NIFTY";
-s9.exchange = "NSE";
-s9.price = 22000.00;
-s9.marketCap = 0;
-s9.sector = "Index";
-s9.industry = "Benchmark Index";
-s9.volume = 0;
-s9.openPrice = 21850;
-s9.closePrice = 21980;
-s9.highPrice = 22100;
-s9.lowPrice = 21800;
-s9.currency = "INR";
-s9.country = "India";
-s9.listingYear = "1996";
-s9.category = "Index";
-s9.status = "Active";
-s9.description = "Benchmark equity index";
-g9.stock = s9;
-g9.getGrowwDetails();
-
-Groww g10 = new Groww();
-g10.appId = 10;
-g10.appName = "Groww Corporate";
-g10.company = "Groww Technologies";
-g10.founder = "Lalit Keshre";
-g10.headquarters = "Bangalore";
-g10.launchYear = 2022;
-g10.users = 300000;
-g10.platform = "Web App";
-g10.category = "Wealth Management";
-g10.website = "corporate.groww.in";
-g10.email = "corp@groww.in";
-g10.contact = "080111000";
-g10.license = "SEBI Registered";
-g10.security = "High";
-g10.paymentMethod = "Bank Transfer";
-g10.version = "1.3";
-g10.colorTheme = "Navy Blue";
-g10.support = "RM Support";
-g10.status = "Active";
-g10.country = "India";
-
-Stock s10 = new Stock();
-s10.stockId = 110;
-s10.stockName = "SBI Life";
-s10.company = "SBI Life Insurance Co Ltd";
-s10.symbol = "SBILIFE";
-s10.exchange = "NSE";
-s10.price = 1400.10;
-s10.marketCap = 500000000;
-s10.sector = "Insurance";
-s10.industry = "Life Insurance";
-s10.volume = 650000;
-s10.openPrice = 1385;
-s10.closePrice = 1398;
-s10.highPrice = 1415;
-s10.lowPrice = 1375;
-s10.currency = "INR";
-s10.country = "India";
-s10.listingYear = "2017";
-s10.category = "Equity";
-s10.status = "Active";
-s10.description = "Life insurance company";
-g10.stock = s10;
-g10.getGrowwDetails();
-
-// 11–20
-
-Groww g11 = new Groww();
-g11.appId = 11;
-g11.appName = "Groww Junior";
-g11.company = "Groww Technologies";
-g11.founder = "Lalit Keshre";
-g11.headquarters = "Bangalore";
-g11.launchYear = 2023;
-g11.users = 800000;
-g11.platform = "Mobile App";
-g11.category = "Investment Education";
-g11.website = "junior.groww.in";
-g11.email = "junior@groww.in";
-g11.contact = "080111111";
-g11.license = "Learning";
-g11.security = "High";
-g11.paymentMethod = "UPI";
-g11.version = "1.0";
-g11.colorTheme = "Yellow";
-g11.support = "Chatbot";
-g11.status = "Active";
-g11.country = "India";
-
-Stock s11 = new Stock();
-s11.stockId = 111;
-s11.stockName = "ITC";
-s11.company = "ITC Ltd";
-s11.symbol = "ITC";
-s11.exchange = "NSE";
-s11.price = 430.40;
-s11.marketCap = 600000000;
-s11.sector = "FMCG";
-s11.industry = "Consumer Goods";
-s11.volume = 12000000;
-s11.openPrice = 425;
-s11.closePrice = 429;
-s11.highPrice = 435;
-s11.lowPrice = 423;
-s11.currency = "INR";
-s11.country = "India";
-s11.listingYear = "1954";
-s11.category = "Equity";
-s11.status = "Active";
-s11.description = "Diversified FMCG company";
-g11.stock = s11;
-g11.getGrowwDetails();
-
-Groww g12 = new Groww();
-g12.appId = 12;
-g12.appName = "Groww Tax Saver";
-g12.company = "Groww Technologies";
-g12.founder = "Lalit Keshre";
-g12.headquarters = "Bangalore";
-g12.launchYear = 2019;
-g12.users = 2500000;
-g12.platform = "Mobile & Web";
-g12.category = "ELSS/Tax Saving";
-g12.website = "tax.groww.in";
-g12.email = "tax@groww.in";
-g12.contact = "080121212";
-g12.license = "SEBI Registered";
-g12.security = "High";
-g12.paymentMethod = "UPI/NetBanking";
-g12.version = "2.4";
-g12.colorTheme = "Olive Green";
-g12.support = "Email & Chat";
-g12.status = "Active";
-g12.country = "India";
-
-Stock s12 = new Stock();
-s12.stockId = 112;
-s12.stockName = "Axis Bank";
-s12.company = "Axis Bank Ltd";
-s12.symbol = "AXISBANK";
-s12.exchange = "NSE";
-s12.price = 1180.60;
-s12.marketCap = 700000000;
-s12.sector = "Banking";
-s12.industry = "Private Bank";
-s12.volume = 3200000;
-s12.openPrice = 1165;
-s12.closePrice = 1178;
-s12.highPrice = 1195;
-s12.lowPrice = 1160;
-s12.currency = "INR";
-s12.country = "India";
-s12.listingYear = "1998";
-s12.category = "Equity";
-s12.status = "Active";
-s12.description = "Private sector bank";
-g12.stock = s12;
-g12.getGrowwDetails();
-
-Groww g13 = new Groww();
-g13.appId = 13;
-g13.appName = "Groww Pension";
-g13.company = "Groww Technologies";
-g13.founder = "Lalit Keshre";
-g13.headquarters = "Bangalore";
-g13.launchYear = 2021;
-g13.users = 600000;
-g13.platform = "Mobile App";
-g13.category = "Retirement";
-g13.website = "pension.groww.in";
-g13.email = "pension@groww.in";
-g13.contact = "080131313";
-g13.license = "PFRDA Partner";
-g13.security = "High";
-g13.paymentMethod = "UPI/Bank";
-g13.version = "1.3";
-g13.colorTheme = "Brown";
-g13.support = "Phone Support";
-g13.status = "Active";
-g13.country = "India";
-
-Stock s13 = new Stock();
-s13.stockId = 113;
-s13.stockName = "SBI";
-s13.company = "State Bank of India";
-s13.symbol = "SBIN";
-s13.exchange = "NSE";
-s13.price = 780.25;
-s13.marketCap = 900000000;
-s13.sector = "Banking";
-s13.industry = "PSU Bank";
-s13.volume = 9000000;
-s13.openPrice = 770;
-s13.closePrice = 778;
-s13.highPrice = 785;
-s13.lowPrice = 768;
-s13.currency = "INR";
-s13.country = "India";
-s13.listingYear = "1997";
-s13.category = "Equity";
-s13.status = "Active";
-s13.description = "India's largest public bank";
-g13.stock = s13;
-g13.getGrowwDetails();
-
-Groww g14 = new Groww();
-g14.appId = 14;
-g14.appName = "Groww Bonds";
-g14.company = "Groww Technologies";
-g14.founder = "Lalit Keshre";
-g14.headquarters = "Bangalore";
-g14.launchYear = 2022;
-g14.users = 400000;
-g14.platform = "Web & Mobile";
-g14.category = "Fixed Income";
-g14.website = "bonds.groww.in";
-g14.email = "bonds@groww.in";
-g14.contact = "080141414";
-g14.license = "SEBI Registered";
-g14.security = "High";
-g14.paymentMethod = "Bank Transfer";
-g14.version = "1.0";
-g14.colorTheme = "Grey";
-g14.support = "Email Support";
-g14.status = "Active";
-g14.country = "India";
-
-Stock s14 = new Stock();
-s14.stockId = 114;
-s14.stockName = "REC Ltd Bond";
-s14.company = "REC Ltd";
-s14.symbol = "REC-BOND";
-s14.exchange = "NSE-BOND";
-s14.price = 1025.00;
-s14.marketCap = 0;
-s14.sector = "PSU";
-s14.industry = "Power Finance";
-s14.volume = 200000;
-s14.openPrice = 1020;
-s14.closePrice = 1023;
-s14.highPrice = 1030;
-s14.lowPrice = 1018;
-s14.currency = "INR";
-s14.country = "India";
-s14.listingYear = "2020";
-s14.category = "Bond";
-s14.status = "Active";
-s14.description = "Tax saving PSU bond";
-g14.stock = s14;
-g14.getGrowwDetails();
-
-Groww g15 = new Groww();
-g15.appId = 15;
-g15.appName = "Groww IPO";
-g15.company = "Groww Technologies";
-g15.founder = "Lalit Keshre";
-g15.headquarters = "Bangalore";
-g15.launchYear = 2020;
-g15.users = 2200000;
-g15.platform = "Mobile & Web";
-g15.category = "IPO Investing";
-g15.website = "ipo.groww.in";
-g15.email = "ipo@groww.in";
-g15.contact = "080151515";
-g15.license = "SEBI Registered";
-g15.security = "High";
-g15.paymentMethod = "UPI";
-g15.version = "2.0";
-g15.colorTheme = "Violet";
-g15.support = "Chat Support";
-g15.status = "Active";
-g15.country = "India";
-
-Stock s15 = new Stock();
-s15.stockId = 115;
-s15.stockName = "Zomato";
-s15.company = "Zomato Ltd";
-s15.symbol = "ZOMATO";
-s15.exchange = "NSE";
-s15.price = 160.00;
-s15.marketCap = 450000000;
-s15.sector = "Internet";
-s15.industry = "Food Delivery";
-s15.volume = 25000000;
-s15.openPrice = 156;
-s15.closePrice = 159;
-s15.highPrice = 162;
-s15.lowPrice = 155;
-s15.currency = "INR";
-s15.country = "India";
-s15.listingYear = "2021";
-s15.category = "Equity";
-s15.status = "Active";
-s15.description = "Online food delivery platform";
-g15.stock = s15;
-g15.getGrowwDetails();
-
-Groww g16 = new Groww();
-g16.appId = 16;
-g16.appName = "Groww Ultra";
-g16.company = "Groww Technologies";
-g16.founder = "Lalit Keshre";
-g16.headquarters = "Bangalore";
-g16.launchYear = 2024;
-g16.users = 500000;
-g16.platform = "Mobile App";
-g16.category = "Premium Trading";
-g16.website = "ultra.groww.in";
-g16.email = "ultra@groww.in";
-g16.contact = "080161616";
-g16.license = "SEBI Registered";
-g16.security = "Very High";
-g16.paymentMethod = "Bank/UPI";
-g16.version = "1.0";
-g16.colorTheme = "Black";
-g16.support = "Priority RM";
-g16.status = "Active";
-g16.country = "India";
-
-Stock s16 = new Stock();
-s16.stockId = 116;
-s16.stockName = "Bajaj Finance";
-s16.company = "Bajaj Finance Ltd";
-s16.symbol = "BAJFINANCE";
-s16.exchange = "NSE";
-s16.price = 6500.50;
-s16.marketCap = 800000000;
-s16.sector = "NBFC";
-s16.industry = "Consumer Finance";
-s16.volume = 1200000;
-s16.openPrice = 6420;
-s16.closePrice = 6485;
-s16.highPrice = 6550;
-s16.lowPrice = 6400;
-s16.currency = "INR";
-s16.country = "India";
-s16.listingYear = "1994";
-s16.category = "Equity";
-s16.status = "Active";
-s16.description = "Leading NBFC";
-g16.stock = s16;
-g16.getGrowwDetails();
-
-Groww g17 = new Groww();
-g17.appId = 17;
-g17.appName = "Groww ESG";
-g17.company = "Groww Technologies";
-g17.founder = "Lalit Keshre";
-g17.headquarters = "Bangalore";
-g17.launchYear = 2022;
-g17.users = 300000;
-g17.platform = "Web & Mobile";
-g17.category = "ESG Investing";
-g17.website = "esg.groww.in";
-g17.email = "esg@groww.in";
-g17.contact = "080171717";
-g17.license = "SEBI Registered";
-g17.security = "High";
-g17.paymentMethod = "UPI/Bank";
-g17.version = "1.0";
-g17.colorTheme = "Forest Green";
-g17.support = "Email";
-g17.status = "Active";
-g17.country = "India";
-
-Stock s17 = new Stock();
-s17.stockId = 117;
-s17.stockName = "Tata Power";
-s17.company = "Tata Power Co Ltd";
-s17.symbol = "TATAPOWER";
-s17.exchange = "NSE";
-s17.price = 410.30;
-s17.marketCap = 400000000;
-s17.sector = "Power";
-s17.industry = "Renewable & Thermal";
-s17.volume = 11000000;
-s17.openPrice = 402;
-s17.closePrice = 408;
-s17.highPrice = 414;
-s17.lowPrice = 400;
-s17.currency = "INR";
-s17.country = "India";
-s17.listingYear = "1911";
-s17.category = "Equity";
-s17.status = "Active";
-s17.description = "Power generation & distribution";
-g17.stock = s17;
-g17.getGrowwDetails();
-
-Groww g18 = new Groww();
-g18.appId = 18;
-g18.appName = "Groww Crypto Watch";
-g18.company = "Groww Technologies";
-g18.founder = "Lalit Keshre";
-g18.headquarters = "Bangalore";
-g18.launchYear = 2021;
-g18.users = 900000;
-g18.platform = "Mobile App";
-g18.category = "Price Tracking";
-g18.website = "crypto.groww.in";
-g18.email = "crypto@groww.in";
-g18.contact = "080181818";
-g18.license = "Info Only";
-g18.security = "High";
-g18.paymentMethod = "N/A";
-g18.version = "1.1";
-g18.colorTheme = "Purple";
-g18.support = "In-app FAQ";
-g18.status = "Active";
-g18.country = "India";
-
-Stock s18 = new Stock();
-s18.stockId = 118;
-s18.stockName = "Bitcoin ETF";
-s18.company = "Global AMC";
-s18.symbol = "BTCETF";
-s18.exchange = "NYSE";
-s18.price = 50.20;
-s18.marketCap = 300000000;
-s18.sector = "Crypto-linked";
-s18.industry = "ETF";
-s18.volume = 7000000;
-s18.openPrice = 49.0;
-s18.closePrice = 50.0;
-s18.highPrice = 51.5;
-s18.lowPrice = 48.8;
-s18.currency = "USD";
-s18.country = "USA";
-s18.listingYear = "2021";
-s18.category = "ETF";
-s18.status = "Active";
-s18.description = "Bitcoin price tracking ETF";
-g18.stock = s18;
-g18.getGrowwDetails();
-
-Groww g19 = new Groww();
-g19.appId = 19;
-g19.appName = "Groww Campus";
-g19.company = "Groww Technologies";
-g19.founder = "Lalit Keshre";
-g19.headquarters = "Bangalore";
-g19.launchYear = 2023;
-g19.users = 200000;
-g19.platform = "Web";
-g19.category = "Student Investing";
-g19.website = "campus.groww.in";
-g19.email = "campus@groww.in";
-g19.contact = "080191919";
-g19.license = "Learning";
-g19.security = "High";
-g19.paymentMethod = "UPI";
-g19.version = "1.0";
-g19.colorTheme = "Sky Blue";
-g19.support = "Campus Reps";
-g19.status = "Active";
-g19.country = "India";
-
-Stock s19 = new Stock();
-s19.stockId = 119;
-s19.stockName = "Infosys ADR";
-s19.company = "Infosys Ltd";
-s19.symbol = "INFY";
-s19.exchange = "NYSE";
-s19.price = 19.80;
-s19.marketCap = 600000000;
-s19.sector = "IT";
-s19.industry = "Software Services";
-s19.volume = 3000000;
-s19.openPrice = 19.4;
-s19.closePrice = 19.7;
-s19.highPrice = 20.1;
-s19.lowPrice = 19.2;
-s19.currency = "USD";
-s19.country = "USA";
-s19.listingYear = "1999";
-s19.category = "Equity";
-s19.status = "Active";
-s19.description = "Infosys ADR in US";
-g19.stock = s19;
-g19.getGrowwDetails();
-
-Groww g20 = new Groww();
-g20.appId = 20;
-g20.appName = "Groww Family";
-g20.company = "Groww Technologies";
-g20.founder = "Lalit Keshre";
-g20.headquarters = "Bangalore";
-g20.launchYear = 2024;
-g20.users = 150000;
-g20.platform = "Mobile App";
-g20.category = "Family Investing";
-g20.website = "family.groww.in";
-g20.email = "family@groww.in";
-g20.contact = "080202020";
-g20.license = "SEBI Registered";
-g20.security = "Very High";
-g20.paymentMethod = "UPI/Bank";
-g20.version = "1.0";
-g20.colorTheme = "Turquoise";
-g20.support = "Phone & Chat";
-g20.status = "Active";
-g20.country = "India";
-
-Stock s20 = new Stock();
-s20.stockId = 120;
-s20.stockName = "HUL";
-s20.company = "Hindustan Unilever Ltd";
-s20.symbol = "HINDUNILVR";
-s20.exchange = "NSE";
-s20.price = 2500.80;
-s20.marketCap = 1200000000;
-s20.sector = "FMCG";
-s20.industry = "Consumer Products";
-s20.volume = 1800000;
-s20.openPrice = 2465;
-s20.closePrice = 2495;
-s20.highPrice = 2515;
-s20.lowPrice = 2455;
-s20.currency = "INR";
-s20.country = "India";
-s20.listingYear = "1956";
-s20.category = "Equity";
-s20.status = "Active";
-s20.description = "Leading FMCG company";
-g20.stock = s20;
-g20.getGrowwDetails();
+        System.out.println("\n=== END OF ALL GROWW APPS & STOCK DETAILS ===");
+        System.out.println("Total Groww Apps: 20 | Total Stocks Tracked: 20");
     }
 }

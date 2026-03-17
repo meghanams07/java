@@ -1,1029 +1,212 @@
 class DanceExecutor {
-public static void main(String[] args){
-Dance d1 = new Dance();
-d1.danceId = 1;
-d1.danceName = "Bharatanatyam";
-d1.originCountry = "India";
-d1.originState = "Tamil Nadu";
-d1.style = "Classical";
-d1.musicType = "Carnatic";
-d1.costume = "Traditional Saree";
-d1.difficultyLevel = "High";
-d1.performers = 1;
-d1.duration = 60;
-d1.famousArtist = "Rukmini Devi";
-d1.category = "Classical";
-d1.stageType = "Theatre";
-d1.rhythm = "Adi Tala";
-d1.culture = "Indian";
-d1.colorTheme = "Red and Gold";
-d1.year = 1930;
-d1.language = "Tamil";
-d1.instrument = "Mridangam";
-d1.status = "Active";
+    public static void main(String[] args) {
+        Form f1 = new Form(101, "Alarippu", "Tamil Nadu", "Classical", "Traditional",
+                "Carnatic", "Tisra", "Temple Stage", "Solo", 1, 10, "Medium",
+                "South Indian", "Nattuvangam", "Orange", "Opening Item", "Tamil",
+                "Bharatanatyam Tradition", 1900, "Performed");
 
-Form f1 = new Form();
-f1.formId = 101;
-f1.formName = "Alarippu";
-f1.originPlace = "Tamil Nadu";
-f1.danceType = "Classical";
-f1.costumeType = "Traditional";
-f1.music = "Carnatic";
-f1.rhythm = "Tisra";
-f1.stage = "Temple Stage";
-f1.performerType = "Solo";
-f1.performers = 1;
-f1.duration = 10;
-f1.difficulty = "Medium";
-f1.culture = "South Indian";
-f1.instrument = "Nattuvangam";
-f1.color = "Orange";
-f1.category = "Opening Item";
-f1.language = "Tamil";
-f1.tradition = "Bharatanatyam Tradition";
-f1.year = 1900;
-f1.status = "Performed";
+        Form f2 = new Form(102, "Thaat", "UP", "Classical", "Traditional", "Hindustani",
+                "Slow", "Court", "Solo", 1, 8, "Medium", "Indian", "Tabla", "White",
+                "Opening", "Hindi", "Kathak Tradition", 1910, "Performed");
 
-d1.form = f1;
+        Form f3 = new Form(103, "Tarangam", "AP", "Classical", "Traditional", "Carnatic",
+                "Medium", "Temple", "Solo", 1, 12, "Hard", "South Indian", "Mridangam",
+                "Green", "Performance", "Telugu", "Kuchipudi", 1920, "Performed");
 
-d1.getDanceDetails();
-Dance d2 = new Dance();
-d2.danceId = 2;
-d2.danceName = "Kathak";
-d2.originCountry = "India";
-d2.originState = "Uttar Pradesh";
-d2.style = "Classical";
-d2.musicType = "Hindustani";
-d2.costume = "Lehenga";
-d2.difficultyLevel = "High";
-d2.performers = 1;
-d2.duration = 50;
-d2.famousArtist = "Birju Maharaj";
-d2.category = "Classical";
-d2.stageType = "Stage";
-d2.rhythm = "Teentaal";
-d2.culture = "North Indian";
-d2.colorTheme = "White";
-d2.year = 1920;
-d2.language = "Hindi";
-d2.instrument = "Tabla";
-d2.status = "Active";
+        Form f4 = new Form(104, "Mangalacharan", "Odisha", "Classical", "Traditional",
+                "Odissi", "Slow", "Temple", "Solo", 1, 10, "Medium", "Indian",
+                "Pakhawaj", "White", "Opening", "Odia", "Odissi", 1940, "Performed");
 
-Form f2 = new Form();
-f2.formId = 102;
-f2.formName = "Thaat";
-f2.originPlace = "UP";
-f2.danceType = "Classical";
-f2.costumeType = "Traditional";
-f2.music = "Hindustani";
-f2.rhythm = "Slow";
-f2.stage = "Court";
-f2.performerType = "Solo";
-f2.performers = 1;
-f2.duration = 8;
-f2.difficulty = "Medium";
-f2.culture = "Indian";
-f2.instrument = "Tabla";
-f2.color = "White";
-f2.category = "Opening";
-f2.language = "Hindi";
-f2.tradition = "Kathak Tradition";
-f2.year = 1910;
-f2.status = "Performed";
+        Form f5 = new Form(105, "Cholkettu", "Kerala", "Classical", "Traditional",
+                "Carnatic", "Medium", "Temple", "Solo", 1, 12, "Medium", "South Indian",
+                "Mridangam", "White", "Opening", "Malayalam", "Mohiniyattam", 1920, "Performed");
 
-d2.form = f2;
-d2.getDanceDetails();
-Dance d3 = new Dance();
-d3.danceId = 3;
-d3.danceName = "Kuchipudi";
-d3.originCountry = "India";
-d3.originState = "Andhra Pradesh";
-d3.style = "Classical";
-d3.musicType = "Carnatic";
-d3.costume = "Traditional";
-d3.difficultyLevel = "High";
-d3.performers = 1;
-d3.duration = 45;
-d3.famousArtist = "Vempati Chinna Satyam";
-d3.category = "Classical";
-d3.stageType = "Stage";
-d3.rhythm = "Adi";
-d3.culture = "Telugu";
-d3.colorTheme = "Green";
-d3.year = 1935;
-d3.language = "Telugu";
-d3.instrument = "Mridangam";
-d3.status = "Active";
+        Form f6 = new Form(106, "Keli", "Kerala", "Classical", "Traditional", "Kerala Music",
+                "Fast", "Temple", "Group", 10, 20, "Hard", "Indian", "Chenda", "Green",
+                "Opening", "Malayalam", "Kathakali", 1600, "Performed");
 
-Form f3 = new Form();
-f3.formId = 103;
-f3.formName = "Tarangam";
-f3.originPlace = "AP";
-f3.danceType = "Classical";
-f3.costumeType = "Traditional";
-f3.music = "Carnatic";
-f3.rhythm = "Medium";
-f3.stage = "Temple";
-f3.performerType = "Solo";
-f3.performers = 1;
-f3.duration = 12;
-f3.difficulty = "Hard";
-f3.culture = "South Indian";
-f3.instrument = "Mridangam";
-f3.color = "Green";
-f3.category = "Performance";
-f3.language = "Telugu";
-f3.tradition = "Kuchipudi";
-f3.year = 1920;
-f3.status = "Performed";
+        Form f7 = new Form(107, "Ras Leela", "Manipur", "Classical", "Traditional", "Devotional",
+                "Slow", "Temple", "Group", 5, 25, "Medium", "Indian", "Pung", "Pink",
+                "Devotional", "Manipuri", "Manipuri", 1750, "Performed");
 
-d3.form = f3;
-d3.getDanceDetails();
-Dance d4 = new Dance();
-d4.danceId = 4;
-d4.danceName = "Odissi";
-d4.originCountry = "India";
-d4.originState = "Odisha";
-d4.style = "Classical";
-d4.musicType = "Odissi Music";
-d4.costume = "Traditional";
-d4.difficultyLevel = "High";
-d4.performers = 1;
-d4.duration = 40;
-d4.famousArtist = "Kelucharan Mohapatra";
-d4.category = "Classical";
-d4.stageType = "Stage";
-d4.rhythm = "Ektali";
-d4.culture = "Odisha";
-d4.colorTheme = "Silver";
-d4.year = 1950;
-d4.language = "Odia";
-d4.instrument = "Pakhawaj";
-d4.status = "Active";
+        Form f8 = new Form(108, "Ramdani", "Assam", "Classical", "Traditional", "Devotional",
+                "Medium", "Temple", "Group", 3, 15, "Medium", "Indian", "Khol", "Yellow",
+                "Performance", "Assamese", "Sattriya", 1500, "Performed");
 
-Form f4 = new Form();
-f4.formId = 104;
-f4.formName = "Mangalacharan";
-f4.originPlace = "Odisha";
-f4.danceType = "Classical";
-f4.costumeType = "Traditional";
-f4.music = "Odissi";
-f4.rhythm = "Slow";
-f4.stage = "Temple";
-f4.performerType = "Solo";
-f4.performers = 1;
-f4.duration = 10;
-f4.difficulty = "Medium";
-f4.culture = "Indian";
-f4.instrument = "Pakhawaj";
-f4.color = "White";
-f4.category = "Opening";
-f4.language = "Odia";
-f4.tradition = "Odissi";
-f4.year = 1940;
-f4.status = "Performed";
+        Form f9 = new Form(109, "Dandiya", "Gujarat", "Folk", "Traditional", "Folk",
+                "Fast", "Festival Stage", "Group", 20, 30, "Easy", "Indian", "Dhol", "Multi",
+                "Festival", "Gujarati", "Garba", 1880, "Performed");
 
-d4.form = f4;
-d4.getDanceDetails();
-Dance d5 = new Dance();
-d5.danceId = 5;
-d5.danceName = "Mohiniyattam";
-d5.originCountry = "India";
-d5.originState = "Kerala";
-d5.style = "Classical";
-d5.musicType = "Carnatic";
-d5.costume = "White and Gold";
-d5.difficultyLevel = "Medium";
-d5.performers = 1;
-d5.duration = 35;
-d5.famousArtist = "Kalamandalam Kalyanikutty";
-d5.category = "Classical";
-d5.stageType = "Stage";
-d5.rhythm = "Adi";
-d5.culture = "Kerala";
-d5.colorTheme = "White";
-d5.year = 1930;
-d5.language = "Malayalam";
-d5.instrument = "Mridangam";
-d5.status = "Active";
+        Form f10 = new Form(110, "Jhumar", "Punjab", "Folk", "Traditional", "Punjabi",
+                "Fast", "Festival", "Group", 8, 20, "Medium", "Punjabi", "Dhol", "Yellow",
+                "Festival", "Punjabi", "Bhangra", 1750, "Performed");
 
-Form f5 = new Form();
-f5.formId = 105;
-f5.formName = "Cholkettu";
-f5.originPlace = "Kerala";
-f5.danceType = "Classical";
-f5.costumeType = "Traditional";
-f5.music = "Carnatic";
-f5.rhythm = "Medium";
-f5.stage = "Temple";
-f5.performerType = "Solo";
-f5.performers = 1;
-f5.duration = 12;
-f5.difficulty = "Medium";
-f5.culture = "South Indian";
-f5.instrument = "Mridangam";
-f5.color = "White";
-f5.category = "Opening";
-f5.language = "Malayalam";
-f5.tradition = "Mohiniyattam";
-f5.year = 1920;
-f5.status = "Performed";
+        Form f11 = new Form(111, "Shringar Lavani", "Maharashtra", "Folk", "Traditional",
+                "Lavani Music", "Fast", "Stage", "Solo", 1, 10, "Medium", "Indian",
+                "Dholki", "Red", "Performance", "Marathi", "Lavani", 1800, "Performed");
 
-d5.form = f5;
-d5.getDanceDetails();
-Dance d6 = new Dance();
-d6.danceId = 6;
-d6.danceName = "Kathakali";
-d6.originCountry = "India";
-d6.originState = "Kerala";
-d6.style = "Classical";
-d6.musicType = "Traditional";
-d6.costume = "Heavy Makeup";
-d6.difficultyLevel = "High";
-d6.performers = 10;
-d6.duration = 120;
-d6.famousArtist = "Kalamandalam Gopi";
-d6.category = "Drama Dance";
-d6.stageType = "Open Stage";
-d6.rhythm = "Chenda";
-d6.culture = "Kerala";
-d6.colorTheme = "Green";
-d6.year = 1700;
-d6.language = "Malayalam";
-d6.instrument = "Chenda";
-d6.status = "Active";
+        Form f12 = new Form(112, "Traditional Ghoomar", "Rajasthan", "Folk", "Traditional",
+                "Folk", "Medium", "Festival Stage", "Group", 10, 15, "Easy", "Indian",
+                "Dhol", "Multi", "Festival", "Hindi", "Ghoomar", 1650, "Performed");
 
-Form f6 = new Form();
-f6.formId = 106;
-f6.formName = "Keli";
-f6.originPlace = "Kerala";
-f6.danceType = "Classical";
-f6.costumeType = "Traditional";
-f6.music = "Kerala Music";
-f6.rhythm = "Fast";
-f6.stage = "Temple";
-f6.performerType = "Group";
-f6.performers = 10;
-f6.duration = 20;
-f6.difficulty = "Hard";
-f6.culture = "Indian";
-f6.instrument = "Chenda";
-f6.color = "Green";
-f6.category = "Opening";
-f6.language = "Malayalam";
-f6.tradition = "Kathakali";
-f6.year = 1600;
-f6.status = "Performed";
+        Form f13 = new Form(113, "Prasanga", "Karnataka", "Drama", "Traditional", "Yakshagana",
+                "Fast", "Open Stage", "Group", 12, 30, "Hard", "Indian", "Chende", "Red",
+                "Drama", "Kannada", "Yakshagana", 1550, "Performed");
 
-d6.form = f6;
-d6.getDanceDetails();
-Dance d7 = new Dance();
-d7.danceId = 7;
-d7.danceName = "Manipuri";
-d7.originCountry = "India";
-d7.originState = "Manipur";
-d7.style = "Classical";
-d7.musicType = "Traditional";
-d7.costume = "Potloi";
-d7.difficultyLevel = "Medium";
-d7.performers = 4;
-d7.duration = 40;
-d7.famousArtist = "Guru Bipin Singh";
-d7.category = "Classical";
-d7.stageType = "Stage";
-d7.rhythm = "Manipuri Tala";
-d7.culture = "Manipur";
-d7.colorTheme = "Pink";
-d7.year = 1800;
-d7.language = "Manipuri";
-d7.instrument = "Pung";
-d7.status = "Active";
+        Form f14 = new Form(114, "Temple Dollu", "Karnataka", "Folk", "Traditional", "Drum",
+                "Fast", "Temple", "Group", 16, 15, "Medium", "Indian", "Dollu", "Orange",
+                "Festival", "Kannada", "Dollu Kunitha", 1450, "Performed");
 
-Form f7 = new Form();
-f7.formId = 107;
-f7.formName = "Ras Leela";
-f7.originPlace = "Manipur";
-f7.danceType = "Classical";
-f7.costumeType = "Traditional";
-f7.music = "Devotional";
-f7.rhythm = "Slow";
-f7.stage = "Temple";
-f7.performerType = "Group";
-f7.performers = 5;
-f7.duration = 25;
-f7.difficulty = "Medium";
-f7.culture = "Indian";
-f7.instrument = "Pung";
-f7.color = "Pink";
-f7.category = "Devotional";
-f7.language = "Manipuri";
-f7.tradition = "Manipuri";
-f7.year = 1750;
-f7.status = "Performed";
+        Form f15 = new Form(115, "Kolattam Round", "Tamil Nadu", "Folk", "Traditional", "Folk",
+                "Medium", "Festival", "Group", 12, 15, "Easy", "Indian", "Stick", "Multi",
+                "Festival", "Tamil", "Kolattam", 1650, "Performed");
 
-d7.form = f7;
-d7.getDanceDetails();
-Dance d8 = new Dance();
-d8.danceId = 8;
-d8.danceName = "Sattriya";
-d8.originCountry = "India";
-d8.originState = "Assam";
-d8.style = "Classical";
-d8.musicType = "Devotional";
-d8.costume = "Traditional";
-d8.difficultyLevel = "Medium";
-d8.performers = 3;
-d8.duration = 30;
-d8.famousArtist = "Jatin Goswami";
-d8.category = "Classical";
-d8.stageType = "Stage";
-d8.rhythm = "Khol";
-d8.culture = "Assam";
-d8.colorTheme = "Yellow";
-d8.year = 1600;
-d8.language = "Assamese";
-d8.instrument = "Khol";
-d8.status = "Active";
+        Form f16 = new Form(116, "Karagam Balance", "Tamil Nadu", "Folk", "Traditional", "Folk",
+                "Medium", "Temple Festival", "Group", 4, 15, "Medium", "Indian", "Thavil",
+                "Yellow", "Festival", "Tamil", "Karagattam", 1750, "Performed");
 
-Form f8 = new Form();
-f8.formId = 108;
-f8.formName = "Ramdani";
-f8.originPlace = "Assam";
-f8.danceType = "Classical";
-f8.costumeType = "Traditional";
-f8.music = "Devotional";
-f8.rhythm = "Medium";
-f8.stage = "Temple";
-f8.performerType = "Group";
-f8.performers = 3;
-f8.duration = 15;
-f8.difficulty = "Medium";
-f8.culture = "Indian";
-f8.instrument = "Khol";
-f8.color = "Yellow";
-f8.category = "Performance";
-f8.language = "Assamese";
-f8.tradition = "Sattriya";
-f8.year = 1500;
-f8.status = "Performed";
+        Form f17 = new Form(117, "Kummi Round", "Tamil Nadu", "Folk", "Traditional", "Folk",
+                "Slow", "Festival", "Group", 10, 10, "Easy", "Indian", "Clap", "Multi",
+                "Festival", "Tamil", "Kummi", 1650, "Performed");
 
-d8.form = f8;
-d8.getDanceDetails();
+        Form f18 = new Form(118, "Peacock Dance", "Tamil Nadu", "Folk", "Peacock Costume",
+                "Devotional", "Medium", "Temple", "Solo", 1, 10, "Medium", "Indian",
+                "Thavil", "Blue", "Devotional", "Tamil", "Mayilattam", 1750, "Performed");
 
-Dance d9 = new Dance();
-d9.danceId = 9;
-d9.danceName = "Garba";
-d9.originCountry = "India";
-d9.originState = "Gujarat";
-d9.style = "Folk";
-d9.musicType = "Folk Music";
-d9.costume = "Chaniya Choli";
-d9.difficultyLevel = "Easy";
-d9.performers = 20;
-d9.duration = 60;
-d9.famousArtist = "Falguni Pathak";
-d9.category = "Festival";
-d9.stageType = "Open Ground";
-d9.rhythm = "Dhol";
-d9.culture = "Gujarati";
-d9.colorTheme = "Colorful";
-d9.year = 1900;
-d9.language = "Gujarati";
-d9.instrument = "Dhol";
-d9.status = "Active";
+        Form f19 = new Form(119, "Rongali Bihu", "Assam", "Folk", "Traditional", "Folk",
+                "Fast", "Festival Stage", "Group", 12, 15, "Easy", "Indian", "Dhol", "Red",
+                "Festival", "Assamese", "Bihu", 1650, "Performed");
 
-Form f9 = new Form();
-f9.formId = 109;
-f9.formName = "Dandiya";
-f9.originPlace = "Gujarat";
-f9.danceType = "Folk";
-f9.costumeType = "Traditional";
-f9.music = "Folk";
-f9.rhythm = "Fast";
-f9.stage = "Festival Stage";
-f9.performerType = "Group";
-f9.performers = 20;
-f9.duration = 30;
-f9.difficulty = "Easy";
-f9.culture = "Indian";
-f9.instrument = "Dhol";
-f9.color = "Multi";
-f9.category = "Festival";
-f9.language = "Gujarati";
-f9.tradition = "Garba";
-f9.year = 1880;
-f9.status = "Performed";
+        Form f20 = new Form(120, "Mask Dance", "Jharkhand", "Martial", "Mask Costume", "Traditional",
+                "Fast", "Open Ground", "Group", 8, 20, "Hard", "Indian", "Dhol", "Multi",
+                "Drama", "Hindi", "Chhau", 1550, "Performed");
 
-d9.form = f9;
-d9.getDanceDetails();
-Dance d10 = new Dance();
-d10.danceId = 10;
-d10.danceName = "Bhangra";
-d10.originCountry = "India";
-d10.originState = "Punjab";
-d10.style = "Folk";
-d10.musicType = "Punjabi";
-d10.costume = "Kurta";
-d10.difficultyLevel = "Medium";
-d10.performers = 8;
-d10.duration = 25;
-d10.famousArtist = "Diljit";
-d10.category = "Festival";
-d10.stageType = "Open Stage";
-d10.rhythm = "Dhol Beat";
-d10.culture = "Punjabi";
-d10.colorTheme = "Bright";
-d10.year = 1800;
-d10.language = "Punjabi";
-d10.instrument = "Dhol";
-d10.status = "Active";
 
-Form f10 = new Form();
-f10.formId = 110;
-f10.formName = "Jhumar";
-f10.originPlace = "Punjab";
-f10.danceType = "Folk";
-f10.costumeType = "Traditional";
-f10.music = "Punjabi";
-f10.rhythm = "Fast";
-f10.stage = "Festival";
-f10.performerType = "Group";
-f10.performers = 8;
-f10.duration = 20;
-f10.difficulty = "Medium";
-f10.culture = "Punjabi";
-f10.instrument = "Dhol";
-f10.color = "Yellow";
-f10.category = "Festival";
-f10.language = "Punjabi";
-f10.tradition = "Bhangra";
-f10.year = 1750;
-f10.status = "Performed";
+        Dance d1 = new Dance(1, "Bharatanatyam", "India", "Tamil Nadu", "Classical",
+                "Carnatic", "Traditional Saree", "High", 1, 60, "Rukmini Devi", "Classical",
+                "Theatre", "Adi Tala", "Indian", "Red and Gold", 1930, "Tamil", "Mridangam",
+                "Active", f1);
 
-d10.form = f10;
-d10.getDanceDetails();
+        Dance d2 = new Dance(2, "Kathak", "India", "Uttar Pradesh", "Classical", "Hindustani",
+                "Lehenga", "High", 1, 50, "Birju Maharaj", "Classical", "Stage", "Teentaal",
+                "North Indian", "White", 1920, "Hindi", "Tabla", "Active", f2);
 
-Dance d11 = new Dance();
-d11.danceId = 11;
-d11.danceName = "Lavani";
-d11.originCountry = "India";
-d11.originState = "Maharashtra";
-d11.style = "Folk";
-d11.musicType = "Dholki";
-d11.costume = "Nauvari Saree";
-d11.difficultyLevel = "Medium";
-d11.performers = 2;
-d11.duration = 20;
-d11.famousArtist = "Surekha Punekar";
-d11.category = "Folk";
-d11.stageType = "Stage";
-d11.rhythm = "Dholki Beat";
-d11.culture = "Marathi";
-d11.colorTheme = "Red";
-d11.year = 1850;
-d11.language = "Marathi";
-d11.instrument = "Dholki";
-d11.status = "Active";
+        Dance d3 = new Dance(3, "Kuchipudi", "India", "Andhra Pradesh", "Classical", "Carnatic",
+                "Traditional", "High", 1, 45, "Vempati Chinna Satyam", "Classical", "Stage",
+                "Adi", "Telugu", "Green", 1935, "Telugu", "Mridangam", "Active", f3);
 
-Form f11 = new Form();
-f11.formId = 111;
-f11.formName = "Shringar Lavani";
-f11.originPlace = "Maharashtra";
-f11.danceType = "Folk";
-f11.costumeType = "Traditional";
-f11.music = "Lavani Music";
-f11.rhythm = "Fast";
-f11.stage = "Stage";
-f11.performerType = "Solo";
-f11.performers = 1;
-f11.duration = 10;
-f11.difficulty = "Medium";
-f11.culture = "Indian";
-f11.instrument = "Dholki";
-f11.color = "Red";
-f11.category = "Performance";
-f11.language = "Marathi";
-f11.tradition = "Lavani";
-f11.year = 1800;
-f11.status = "Performed";
+        Dance d4 = new Dance(4, "Odissi", "India", "Odisha", "Classical", "Odissi Music",
+                "Traditional", "High", 1, 40, "Kelucharan Mohapatra", "Classical", "Stage",
+                "Ektali", "Odisha", "Silver", 1950, "Odia", "Pakhawaj", "Active", f4);
 
-d11.form = f11;
-d11.getDanceDetails();
+        Dance d5 = new Dance(5, "Mohiniyattam", "India", "Kerala", "Classical", "Carnatic",
+                "White and Gold", "Medium", 1, 35, "Kalamandalam Kalyanikutty", "Classical",
+                "Stage", "Adi", "Kerala", "White", 1930, "Malayalam", "Mridangam", "Active", f5);
 
-Dance d11 = new Dance();
-d11.danceId = 11;
-d11.danceName = "Lavani";
-d11.originCountry = "India";
-d11.originState = "Maharashtra";
-d11.style = "Folk";
-d11.musicType = "Dholki";
-d11.costume = "Nauvari Saree";
-d11.difficultyLevel = "Medium";
-d11.performers = 2;
-d11.duration = 20;
-d11.famousArtist = "Surekha Punekar";
-d11.category = "Folk";
-d11.stageType = "Stage";
-d11.rhythm = "Dholki Beat";
-d11.culture = "Marathi";
-d11.colorTheme = "Red";
-d11.year = 1850;
-d11.language = "Marathi";
-d11.instrument = "Dholki";
-d11.status = "Active";
+        Dance d6 = new Dance(6, "Kathakali", "India", "Kerala", "Classical", "Traditional",
+                "Heavy Makeup", "High", 10, 120, "Kalamandalam Gopi", "Drama Dance",
+                "Open Stage", "Chenda", "Kerala", "Green", 1700, "Malayalam", "Chenda",
+                "Active", f6);
 
-Form f11 = new Form();
-f11.formId = 111;
-f11.formName = "Shringar Lavani";
-f11.originPlace = "Maharashtra";
-f11.danceType = "Folk";
-f11.costumeType = "Traditional";
-f11.music = "Lavani Music";
-f11.rhythm = "Fast";
-f11.stage = "Stage";
-f11.performerType = "Solo";
-f11.performers = 1;
-f11.duration = 10;
-f11.difficulty = "Medium";
-f11.culture = "Indian";
-f11.instrument = "Dholki";
-f11.color = "Red";
-f11.category = "Performance";
-f11.language = "Marathi";
-f11.tradition = "Lavani";
-f11.year = 1800;
-f11.status = "Performed";
+        Dance d7 = new Dance(7, "Manipuri", "India", "Manipur", "Classical", "Traditional",
+                "Potloi", "Medium", 4, 40, "Guru Bipin Singh", "Classical", "Stage",
+                "Manipuri Tala", "Manipur", "Pink", 1800, "Manipuri", "Pung", "Active", f7);
 
-d11.form = f11;
-d11.getDanceDetails();
+        Dance d8 = new Dance(8, "Sattriya", "India", "Assam", "Classical", "Devotional",
+                "Traditional", "Medium", 3, 30, "Jatin Goswami", "Classical", "Stage", "Khol",
+                "Assam", "Yellow", 1600, "Assamese", "Khol", "Active", f8);
 
-Dance d12 = new Dance();
-d12.danceId = 12;
-d12.danceName = "Ghoomar";
-d12.originCountry = "India";
-d12.originState = "Rajasthan";
-d12.style = "Folk";
-d12.musicType = "Rajasthani Folk";
-d12.costume = "Ghagra";
-d12.difficultyLevel = "Easy";
-d12.performers = 10;
-d12.duration = 25;
-d12.famousArtist = "Rajasthani Folk Groups";
-d12.category = "Festival";
-d12.stageType = "Open Stage";
-d12.rhythm = "Dhol";
-d12.culture = "Rajasthani";
-d12.colorTheme = "Colorful";
-d12.year = 1700;
-d12.language = "Hindi";
-d12.instrument = "Dhol";
-d12.status = "Active";
+        Dance d9 = new Dance(9, "Garba", "India", "Gujarat", "Folk", "Folk Music",
+                "Chaniya Choli", "Easy", 20, 60, "Falguni Pathak", "Festival",
+                "Open Ground", "Dhol", "Gujarati", "Colorful", 1900, "Gujarati", "Dhol",
+                "Active", f9);
 
-Form f12 = new Form();
-f12.formId = 112;
-f12.formName = "Traditional Ghoomar";
-f12.originPlace = "Rajasthan";
-f12.danceType = "Folk";
-f12.costumeType = "Traditional";
-f12.music = "Folk";
-f12.rhythm = "Medium";
-f12.stage = "Festival Stage";
-f12.performerType = "Group";
-f12.performers = 10;
-f12.duration = 15;
-f12.difficulty = "Easy";
-f12.culture = "Indian";
-f12.instrument = "Dhol";
-f12.color = "Multi";
-f12.category = "Festival";
-f12.language = "Hindi";
-f12.tradition = "Ghoomar";
-f12.year = 1650;
-f12.status = "Performed";
+        Dance d10 = new Dance(10, "Bhangra", "India", "Punjab", "Folk", "Punjabi",
+                "Kurta", "Medium", 8, 25, "Diljit", "Festival", "Open Stage", "Dhol Beat",
+                "Punjabi", "Bright", 1800, "Punjabi", "Dhol", "Active", f10);
 
-d12.form = f12;
-d12.getDanceDetails();
+        Dance d11 = new Dance(11, "Lavani", "India", "Maharashtra", "Folk", "Dholki",
+                "Nauvari Saree", "Medium", 2, 20, "Surekha Punekar", "Folk", "Stage",
+                "Dholki Beat", "Marathi", "Red", 1850, "Marathi", "Dholki", "Active", f11);
 
-Dance d13 = new Dance();
-d13.danceId = 13;
-d13.danceName = "Yakshagana";
-d13.originCountry = "India";
-d13.originState = "Karnataka";
-d13.style = "Theatre Dance";
-d13.musicType = "Yakshagana Music";
-d13.costume = "Heavy Costume";
-d13.difficultyLevel = "High";
-d13.performers = 12;
-d13.duration = 90;
-d13.famousArtist = "Keremane Shivarama";
-d13.category = "Drama";
-d13.stageType = "Open Stage";
-d13.rhythm = "Chande";
-d13.culture = "Kannada";
-d13.colorTheme = "Bright";
-d13.year = 1600;
-d13.language = "Kannada";
-d13.instrument = "Chende";
-d13.status = "Active";
+        Dance d12 = new Dance(12, "Ghoomar", "India", "Rajasthan", "Folk", "Rajasthani Folk",
+                "Ghagra", "Easy", 10, 25, "Rajasthani Folk Groups", "Festival",
+                "Open Stage", "Dhol", "Rajasthani", "Colorful", 1700, "Hindi", "Dhol",
+                "Active", f12);
 
-Form f13 = new Form();
-f13.formId = 113;
-f13.formName = "Prasanga";
-f13.originPlace = "Karnataka";
-f13.danceType = "Drama";
-f13.costumeType = "Traditional";
-f13.music = "Yakshagana";
-f13.rhythm = "Fast";
-f13.stage = "Open Stage";
-f13.performerType = "Group";
-f13.performers = 12;
-f13.duration = 30;
-f13.difficulty = "Hard";
-f13.culture = "Indian";
-f13.instrument = "Chende";
-f13.color = "Red";
-f13.category = "Drama";
-f13.language = "Kannada";
-f13.tradition = "Yakshagana";
-f13.year = 1550;
-f13.status = "Performed";
+        Dance d13 = new Dance(13, "Yakshagana", "India", "Karnataka", "Theatre Dance",
+                "Yakshagana Music", "Heavy Costume", "High", 12, 90, "Keremane Shivarama",
+                "Drama", "Open Stage", "Chande", "Kannada", "Bright", 1600, "Kannada",
+                "Chende", "Active", f13);
 
-d13.form = f13;
-d13.getDanceDetails();
-Dance d13 = new Dance();
-d13.danceId = 13;
-d13.danceName = "Yakshagana";
-d13.originCountry = "India";
-d13.originState = "Karnataka";
-d13.style = "Theatre Dance";
-d13.musicType = "Yakshagana Music";
-d13.costume = "Heavy Costume";
-d13.difficultyLevel = "High";
-d13.performers = 12;
-d13.duration = 90;
-d13.famousArtist = "Keremane Shivarama";
-d13.category = "Drama";
-d13.stageType = "Open Stage";
-d13.rhythm = "Chande";
-d13.culture = "Kannada";
-d13.colorTheme = "Bright";
-d13.year = 1600;
-d13.language = "Kannada";
-d13.instrument = "Chende";
-d13.status = "Active";
+        Dance d14 = new Dance(14, "Dollu Kunitha", "India", "Karnataka", "Folk", "Drum Music",
+                "Traditional", "Medium", 16, 20, "Village Artists", "Festival", "Open Ground",
+                "Drum Beat", "Kannada", "Orange", 1500, "Kannada", "Dollu", "Active", f14);
 
-Form f13 = new Form();
-f13.formId = 113;
-f13.formName = "Prasanga";
-f13.originPlace = "Karnataka";
-f13.danceType = "Drama";
-f13.costumeType = "Traditional";
-f13.music = "Yakshagana";
-f13.rhythm = "Fast";
-f13.stage = "Open Stage";
-f13.performerType = "Group";
-f13.performers = 12;
-f13.duration = 30;
-f13.difficulty = "Hard";
-f13.culture = "Indian";
-f13.instrument = "Chende";
-f13.color = "Red";
-f13.category = "Drama";
-f13.language = "Kannada";
-f13.tradition = "Yakshagana";
-f13.year = 1550;
-f13.status = "Performed";
+        Dance d15 = new Dance(15, "Kolattam", "India", "Tamil Nadu", "Folk", "Folk Music",
+                "Traditional", "Easy", 12, 20, "Village Artists", "Festival", "Open Stage",
+                "Stick Beat", "Tamil", "Multi", 1700, "Tamil", "Stick", "Active", f15);
 
-d13.form = f13;
-d13.getDanceDetails();
+        Dance d16 = new Dance(16, "Karagattam", "India", "Tamil Nadu", "Folk", "Folk Music",
+                "Traditional", "Medium", 4, 25, "Village Artists", "Festival", "Open Stage",
+                "Drum Beat", "Tamil", "Yellow", 1800, "Tamil", "Thavil", "Active", f16);
 
-Dance d14 = new Dance();
-d14.danceId = 14;
-d14.danceName = "Dollu Kunitha";
-d14.originCountry = "India";
-d14.originState = "Karnataka";
-d14.style = "Folk";
-d14.musicType = "Drum Music";
-d14.costume = "Traditional";
-d14.difficultyLevel = "Medium";
-d14.performers = 16;
-d14.duration = 20;
-d14.famousArtist = "Village Artists";
-d14.category = "Festival";
-d14.stageType = "Open Ground";
-d14.rhythm = "Drum Beat";
-d14.culture = "Kannada";
-d14.colorTheme = "Orange";
-d14.year = 1500;
-d14.language = "Kannada";
-d14.instrument = "Dollu";
-d14.status = "Active";
+        Dance d17 = new Dance(17, "Kummi", "India", "Tamil Nadu", "Folk", "Clap Rhythm",
+                "Traditional", "Easy", 10, 20, "Village Women", "Festival", "Open Ground",
+                "Clap Beat", "Tamil", "Colorful", 1700, "Tamil", "Hand Clap", "Active", f17);
 
-Form f14 = new Form();
-f14.formId = 114;
-f14.formName = "Temple Dollu";
-f14.originPlace = "Karnataka";
-f14.danceType = "Folk";
-f14.costumeType = "Traditional";
-f14.music = "Drum";
-f14.rhythm = "Fast";
-f14.stage = "Temple";
-f14.performerType = "Group";
-f14.performers = 16;
-f14.duration = 15;
-f14.difficulty = "Medium";
-f14.culture = "Indian";
-f14.instrument = "Dollu";
-f14.color = "Orange";
-f14.category = "Festival";
-f14.language = "Kannada";
-f14.tradition = "Dollu Kunitha";
-f14.year = 1450;
-f14.status = "Performed";
+        Dance d18 = new Dance(18, "Mayilattam", "India", "Tamil Nadu", "Folk", "Folk Music",
+                "Peacock Costume", "Medium", 2, 15, "Temple Artists", "Devotional",
+                "Temple Stage", "Drum Beat", "Tamil", "Blue", 1800, "Tamil", "Thavil",
+                "Active", f18);
 
-d14.form = f14;
-d14.getDanceDetails();
-Dance d15 = new Dance();
-d15.danceId = 15;
-d15.danceName = "Kolattam";
-d15.originCountry = "India";
-d15.originState = "Tamil Nadu";
-d15.style = "Folk";
-d15.musicType = "Folk Music";
-d15.costume = "Traditional";
-d15.difficultyLevel = "Easy";
-d15.performers = 12;
-d15.duration = 20;
-d15.famousArtist = "Village Artists";
-d15.category = "Festival";
-d15.stageType = "Open Stage";
-d15.rhythm = "Stick Beat";
-d15.culture = "Tamil";
-d15.colorTheme = "Multi";
-d15.year = 1700;
-d15.language = "Tamil";
-d15.instrument = "Stick";
-d15.status = "Active";
+        Dance d19 = new Dance(19, "Bihu", "India", "Assam", "Folk", "Assamese Folk",
+                "Traditional", "Easy", 12, 20, "Assam Artists", "Festival", "Open Stage",
+                "Fast Beat", "Assamese", "Red", 1700, "Assamese", "Dhol", "Active", f19);
 
-Form f15 = new Form();
-f15.formId = 115;
-f15.formName = "Kolattam Round";
-f15.originPlace = "Tamil Nadu";
-f15.danceType = "Folk";
-f15.costumeType = "Traditional";
-f15.music = "Folk";
-f15.rhythm = "Medium";
-f15.stage = "Festival";
-f15.performerType = "Group";
-f15.performers = 12;
-f15.duration = 15;
-f15.difficulty = "Easy";
-f15.culture = "Indian";
-f15.instrument = "Stick";
-f15.color = "Multi";
-f15.category = "Festival";
-f15.language = "Tamil";
-f15.tradition = "Kolattam";
-f15.year = 1650;
-f15.status = "Performed";
+        Dance d20 = new Dance(20, "Chhau", "India", "Jharkhand", "Martial Dance", "Traditional",
+                "Mask Costume", "High", 8, 30, "Chhau Artists", "Drama", "Open Stage",
+                "Drum Beat", "Indian", "Multi", 1600, "Hindi", "Dhol", "Active", f20);
 
-d15.form = f15;
-d15.getDanceDetails();
-Dance d16 = new Dance();
-d16.danceId = 16;
-d16.danceName = "Karagattam";
-d16.originCountry = "India";
-d16.originState = "Tamil Nadu";
-d16.style = "Folk";
-d16.musicType = "Folk Music";
-d16.costume = "Traditional";
-d16.difficultyLevel = "Medium";
-d16.performers = 4;
-d16.duration = 25;
-d16.famousArtist = "Village Artists";
-d16.category = "Festival";
-d16.stageType = "Open Stage";
-d16.rhythm = "Drum Beat";
-d16.culture = "Tamil";
-d16.colorTheme = "Yellow";
-d16.year = 1800;
-d16.language = "Tamil";
-d16.instrument = "Thavil";
-d16.status = "Active";
-
-Form f16 = new Form();
-f16.formId = 116;
-f16.formName = "Karagam Balance";
-f16.originPlace = "Tamil Nadu";
-f16.danceType = "Folk";
-f16.costumeType = "Traditional";
-f16.music = "Folk";
-f16.rhythm = "Medium";
-f16.stage = "Temple Festival";
-f16.performerType = "Group";
-f16.performers = 4;
-f16.duration = 15;
-f16.difficulty = "Medium";
-f16.culture = "Indian";
-f16.instrument = "Thavil";
-f16.color = "Yellow";
-f16.category = "Festival";
-f16.language = "Tamil";
-f16.tradition = "Karagattam";
-f16.year = 1750;
-f16.status = "Performed";
-
-d16.form = f16;
-d16.getDanceDetails();
-Dance d17 = new Dance();
-d17.danceId = 17;
-d17.danceName = "Kummi";
-d17.originCountry = "India";
-d17.originState = "Tamil Nadu";
-d17.style = "Folk";
-d17.musicType = "Clap Rhythm";
-d17.costume = "Traditional";
-d17.difficultyLevel = "Easy";
-d17.performers = 10;
-d17.duration = 20;
-d17.famousArtist = "Village Women";
-d17.category = "Festival";
-d17.stageType = "Open Ground";
-d17.rhythm = "Clap Beat";
-d17.culture = "Tamil";
-d17.colorTheme = "Colorful";
-d17.year = 1700;
-d17.language = "Tamil";
-d17.instrument = "Hand Clap";
-d17.status = "Active";
-
-Form f17 = new Form();
-f17.formId = 117;
-f17.formName = "Kummi Round";
-f17.originPlace = "Tamil Nadu";
-f17.danceType = "Folk";
-f17.costumeType = "Traditional";
-f17.music = "Folk";
-f17.rhythm = "Slow";
-f17.stage = "Festival";
-f17.performerType = "Group";
-f17.performers = 10;
-f17.duration = 10;
-f17.difficulty = "Easy";
-f17.culture = "Indian";
-f17.instrument = "Clap";
-f17.color = "Multi";
-f17.category = "Festival";
-f17.language = "Tamil";
-f17.tradition = "Kummi";
-f17.year = 1650;
-f17.status = "Performed";
-
-d17.form = f17;
-d17.getDanceDetails();
-Dance d18 = new Dance();
-d18.danceId = 18;
-d18.danceName = "Mayilattam";
-d18.originCountry = "India";
-d18.originState = "Tamil Nadu";
-d18.style = "Folk";
-d18.musicType = "Folk Music";
-d18.costume = "Peacock Costume";
-d18.difficultyLevel = "Medium";
-d18.performers = 2;
-d18.duration = 15;
-d18.famousArtist = "Temple Artists";
-d18.category = "Devotional";
-d18.stageType = "Temple Stage";
-d18.rhythm = "Drum Beat";
-d18.culture = "Tamil";
-d18.colorTheme = "Blue";
-d18.year = 1800;
-d18.language = "Tamil";
-d18.instrument = "Thavil";
-d18.status = "Active";
-
-Form f18 = new Form();
-f18.formId = 118;
-f18.formName = "Peacock Dance";
-f18.originPlace = "Tamil Nadu";
-f18.danceType = "Folk";
-f18.costumeType = "Peacock Costume";
-f18.music = "Devotional";
-f18.rhythm = "Medium";
-f18.stage = "Temple";
-f18.performerType = "Solo";
-f18.performers = 1;
-f18.duration = 10;
-f18.difficulty = "Medium";
-f18.culture = "Indian";
-f18.instrument = "Thavil";
-f18.color = "Blue";
-f18.category = "Devotional";
-f18.language = "Tamil";
-f18.tradition = "Mayilattam";
-f18.year = 1750;
-f18.status = "Performed";
-
-d18.form = f18;
-d18.getDanceDetails();
-
-Dance d19 = new Dance();
-d19.danceId = 19;
-d19.danceName = "Bihu";
-d19.originCountry = "India";
-d19.originState = "Assam";
-d19.style = "Folk";
-d19.musicType = "Assamese Folk";
-d19.costume = "Traditional";
-d19.difficultyLevel = "Easy";
-d19.performers = 12;
-d19.duration = 20;
-d19.famousArtist = "Assam Artists";
-d19.category = "Festival";
-d19.stageType = "Open Stage";
-d19.rhythm = "Fast Beat";
-d19.culture = "Assamese";
-d19.colorTheme = "Red";
-d19.year = 1700;
-d19.language = "Assamese";
-d19.instrument = "Dhol";
-d19.status = "Active";
-
-Form f19 = new Form();
-f19.formId = 119;
-f19.formName = "Rongali Bihu";
-f19.originPlace = "Assam";
-f19.danceType = "Folk";
-f19.costumeType = "Traditional";
-f19.music = "Folk";
-f19.rhythm = "Fast";
-f19.stage = "Festival Stage";
-f19.performerType = "Group";
-f19.performers = 12;
-f19.duration = 15;
-f19.difficulty = "Easy";
-f19.culture = "Indian";
-f19.instrument = "Dhol";
-f19.color = "Red";
-f19.category = "Festival";
-f19.language = "Assamese";
-f19.tradition = "Bihu";
-f19.year = 1650;
-f19.status = "Performed";
-
-d19.form = f19;
-d19.getDanceDetails();
-
-Dance d20 = new Dance();
-d20.danceId = 20;
-d20.danceName = "Chhau";
-d20.originCountry = "India";
-d20.originState = "Jharkhand";
-d20.style = "Martial Dance";
-d20.musicType = "Traditional";
-d20.costume = "Mask Costume";
-d20.difficultyLevel = "High";
-d20.performers = 8;
-d20.duration = 30;
-d20.famousArtist = "Chhau Artists";
-d20.category = "Drama";
-d20.stageType = "Open Stage";
-d20.rhythm = "Drum Beat";
-d20.culture = "Indian";
-d20.colorTheme = "Multi";
-d20.year = 1600;
-d20.language = "Hindi";
-d20.instrument = "Dhol";
-d20.status = "Active";
-
-Form f20 = new Form();
-f20.formId = 120;
-f20.formName = "Mask Dance";
-f20.originPlace = "Jharkhand";
-f20.danceType = "Martial";
-f20.costumeType = "Mask Costume";
-f20.music = "Traditional";
-f20.rhythm = "Fast";
-f20.stage = "Open Ground";
-f20.performerType = "Group";
-f20.performers = 8;
-f20.duration = 20;
-f20.difficulty = "Hard";
-f20.culture = "Indian";
-f20.instrument = "Dhol";
-f20.color = "Multi";
-f20.category = "Drama";
-f20.language = "Hindi";
-f20.tradition = "Chhau";
-f20.year = 1550;
-f20.status = "Performed";
-
-d20.form = f20;
-d20.getDanceDetails();
-
+        d1.displayDetails();
+        System.out.println("----------------------------------------");
+        d2.displayDetails();
+        System.out.println("----------------------------------------");
+        d3.displayDetails();
+        System.out.println("----------------------------------------");
+        d4.displayDetails();
+        System.out.println("----------------------------------------");
+        d5.displayDetails();
+        System.out.println("----------------------------------------");
+        d6.displayDetails();
+        System.out.println("----------------------------------------");
+        d7.displayDetails();
+        System.out.println("----------------------------------------");
+        d8.displayDetails();
+        System.out.println("----------------------------------------");
+        d9.displayDetails();
+        System.out.println("----------------------------------------");
+        d10.displayDetails();
+        System.out.println("----------------------------------------");
+        d11.displayDetails();
+        System.out.println("----------------------------------------");
+        d12.displayDetails();
+        System.out.println("----------------------------------------");
+        d13.displayDetails();
+        System.out.println("----------------------------------------");
+        d14.displayDetails();
+        System.out.println("----------------------------------------");
+        d15.displayDetails();
+        System.out.println("----------------------------------------");
+        d16.displayDetails();
+        System.out.println("----------------------------------------");
+        d17.displayDetails();
+        System.out.println("----------------------------------------");
+        d18.displayDetails();
+        System.out.println("----------------------------------------");
+        d19.displayDetails();
+        System.out.println("----------------------------------------");
+        d20.displayDetails();
+        System.out.println("----------------------------------------");
+    }
 }
-}
-
-
-

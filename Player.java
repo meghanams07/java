@@ -1,5 +1,4 @@
 class Player {
-
     int playerId;
     String playerName;
     String role;
@@ -21,8 +20,34 @@ class Player {
     String experience;
     String awards;
 
-    public void getPlayerDetails() {
+    public Player(int playerId, String playerName, String role, String country, int age,
+                  String battingStyle, String bowlingStyle, int jerseyNumber, int matches,
+                  int runs, int wickets, int catches, String team, int strikeRate, 
+                  int economy, String category, int debutYear, String status,
+                  String experience, String awards) {
+        this.playerId = playerId;
+        this.playerName = playerName;
+        this.role = role;
+        this.country = country;
+        this.age = age;
+        this.battingStyle = battingStyle;
+        this.bowlingStyle = bowlingStyle;
+        this.jerseyNumber = jerseyNumber;
+        this.matches = matches;
+        this.runs = runs;
+        this.wickets = wickets;
+        this.catches = catches;
+        this.team = team;
+        this.strikeRate = strikeRate;
+        this.economy = economy;
+        this.category = category;
+        this.debutYear = debutYear;
+        this.status = status;
+        this.experience = experience;
+        this.awards = awards;
+    }
 
+    public void getPlayerDetails() {
         System.out.println("PlayerId: " + playerId);
         System.out.println("PlayerName: " + playerName);
         System.out.println("Role: " + role);

@@ -1,5 +1,4 @@
 class Diamond {
-
     int diamondId;
     String diamondName;
     double weight;
@@ -21,8 +20,35 @@ class Diamond {
     String usage;
     String rarity;
 
-    public void getDiamondDetails(){
+    public Diamond(int diamondId, String diamondName, double weight, String color,
+                  String clarity, String originCountry, int discoveredYear, 
+                  String discoveredBy, String cutType, String shape, String category,
+                  String hardness, double price, String owner, String displaySection,
+                  String certification, String lightingType, String status, 
+                  String usage, String rarity) {
+        this.diamondId = diamondId;
+        this.diamondName = diamondName;
+        this.weight = weight;
+        this.color = color;
+        this.clarity = clarity;
+        this.originCountry = originCountry;
+        this.discoveredYear = discoveredYear;
+        this.discoveredBy = discoveredBy;
+        this.cutType = cutType;
+        this.shape = shape;
+        this.category = category;
+        this.hardness = hardness;
+        this.price = price;
+        this.owner = owner;
+        this.displaySection = displaySection;
+        this.certification = certification;
+        this.lightingType = lightingType;
+        this.status = status;
+        this.usage = usage;
+        this.rarity = rarity;
+    }
 
+    public void getDiamondDetails() {
         System.out.println("DiamondId: " + diamondId);
         System.out.println("DiamondName: " + diamondName);
         System.out.println("Weight: " + weight);

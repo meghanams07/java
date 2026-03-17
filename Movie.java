@@ -1,5 +1,4 @@
 class Movie {
-
     int movieId;
     String movieName;
     String director;
@@ -21,8 +20,35 @@ class Movie {
     String status;
     String award;
 
-    public void getMovieDetails(){
+    public Movie(int movieId, String movieName, String director, String hero, 
+                 String heroine, String language, String genre, int duration, 
+                 int releaseYear, String producer, String musicDirector, 
+                 String cinematographer, String editor, String country, 
+                 String platform, String rating, int budget, int boxOffice, 
+                 String status, String award) {
+        this.movieId = movieId;
+        this.movieName = movieName;
+        this.director = director;
+        this.hero = hero;
+        this.heroine = heroine;
+        this.language = language;
+        this.genre = genre;
+        this.duration = duration;
+        this.releaseYear = releaseYear;
+        this.producer = producer;
+        this.musicDirector = musicDirector;
+        this.cinematographer = cinematographer;
+        this.editor = editor;
+        this.country = country;
+        this.platform = platform;
+        this.rating = rating;
+        this.budget = budget;
+        this.boxOffice = boxOffice;
+        this.status = status;
+        this.award = award;
+    }
 
+    public void getMovieDetails() {
         System.out.println("MovieId: " + movieId);
         System.out.println("MovieName: " + movieName);
         System.out.println("Director: " + director);

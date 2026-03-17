@@ -1,928 +1,250 @@
 class ProductionHouseExecutor {
+    public static void main(String[] args) {
+	
+        Movie m1 = new Movie(101, "Jailer", "Nelson", "Rajinikanth", "Ramya Krishnan",
+                           "Tamil", "Action", 170, 2023, "Sun Pictures", "Anirudh",
+                           "Vijay Kartik", "R Nirmal", "India", "Theatre", "8/10",
+                           200, 600, "Blockbuster", "Best Actor");
 
-    public static void main(String[] args){
+        Movie m2 = new Movie(102, "2.0", "S Shankar", "Rajinikanth", "Amy Jackson",
+                           "Tamil", "Sci-Fi Action", 168, 2018, "Lyca Productions", "A R Rahman",
+                           "Nirav Shah", "Anthony", "India", "Theatre", "7.5/10",
+                           550, 800, "Super Hit", "Technical Awards");
 
-        ProductionHouse ph1 = new ProductionHouse();
+        Movie m3 = new Movie(103, "Leo", "Lokesh Kanagaraj", "Vijay", "Trisha",
+                           "Tamil", "Action Thriller", 160, 2023, "7 Screen Studio", "Anirudh",
+                           "Manoj Paramahamsa", "Anand Ekaraj", "India", "Theatre", "8.2/10",
+                           280, 620, "Blockbuster", "Best Director");
 
-        ph1.houseId = 1;
-        ph1.houseName = "Sun Pictures";
-        ph1.founder = "Kalanithi Maran";
-        ph1.location = "Chennai";
-        ph1.city = "Chennai";
-        ph1.country = "India";
-        ph1.establishedYear = 2000;
-        ph1.totalMovies = 50;
-        ph1.ceo = "Kalanithi Maran";
-        ph1.category = "Film Production";
-        ph1.industry = "Kollywood";
-        ph1.website = "sunpictures.in";
-        ph1.contact = "044123456";
-        ph1.email = "info@sunpictures.in";
-        ph1.colorTheme = "Red";
-        ph1.employees = 200;
-        ph1.studioType = "Private";
-        ph1.awards = "National Awards";
-        ph1.status = "Active";
-        ph1.famousMovie = "Jailer";
+        Movie m4 = new Movie(104, "Asuran", "Vetrimaaran", "Dhanush", "Manju Warrier",
+                           "Tamil", "Action Drama", 151, 2019, "AGS Entertainment", "G V Prakash",
+                           "Vetri Palaniswamy", "R Ramar", "India", "Theatre", "8.8/10",
+                           25, 110, "Super Hit", "National Award");
 
-        Movie m1 = new Movie();
+        Movie m5 = new Movie(105, "Annapoorani", "Nilesh Krishnaa", "Jai", "Nayanthara",
+                           "Tamil", "Drama", 158, 2023, "Wonder Studios", "Yuvan Shankar Raja",
+                           "Kalaiselvan", "Govi", "India", "Theatre/OTT", "7.2/10",
+                           15, 45, "Hit", "Best Actress");
 
-        m1.movieId = 101;
-        m1.movieName = "Jailer";
-        m1.director = "Nelson";
-        m1.hero = "Rajinikanth";
-        m1.heroine = "Ramya Krishnan";
-        m1.language = "Tamil";
-        m1.genre = "Action";
-        m1.duration = 170;
-        m1.releaseYear = 2023;
-        m1.producer = "Sun Pictures";
-        m1.musicDirector = "Anirudh";
-        m1.cinematographer = "Vijay Kartik";
-        m1.editor = "R Nirmal";
-        m1.country = "India";
-        m1.platform = "Theatre";
-        m1.rating = "8/10";
-        m1.budget = 200;
-        m1.boxOffice = 600;
-        m1.status = "Blockbuster";
-        m1.award = "Best Actor";
+        Movie m6 = new Movie(106, "Master", "Lokesh Kanagaraj", "Vijay", "Vijay Sethupathi",
+                           "Tamil", "Action Thriller", 179, 2021, "Kalanithi Maran", "Anirudh",
+                           "Sathyan Sooryan", "Anand Ekaraj", "India", "Theatre/OTT", "8.1/10",
+                           135, 300, "Blockbuster", "Best Film");
 
-        ph1.movie = m1;
+        Movie m7 = new Movie(107, "Good Night", "Vinayak Vaithiyanathan", "Mithun", "Meetha Raghunath",
+                           "Tamil", "Comedy Drama", 125, 2023, "Axess Film Factory", "Sean Roldan",
+                           "Prince Vijay", "R Ramar", "India", "Theatre", "7.8/10",
+                           5, 25, "Hit", "Best Debut");
 
+        Movie m8 = new Movie(108, "Blue Star", "S A Rajkumar", "Ashok Selvan", "Shanthnu Bhagyaraj",
+                           "Tamil", "Sports Drama", 162, 2024, "Freshworks Studio", "Govind Vasantha",
+                           "Mari Selvaraj", "Shivan", "India", "Theatre/OTT", "8.5/10",
+                           12, 35, "Critical Acclaim", "Best Film");
+
+        Movie m9 = new Movie(109, "Sardar", "PS Mithran", "Karthi", "Rashi Khanna",
+                           "Tamil", "Spy Thriller", 158, 2022, "Think Studios", "G V Prakash",
+                           "Vijay Kartik Kannan", "NJ Rathnam", "India", "Theatre", "7.9/10",
+                           40, 95, "Hit", "Best Thriller");
+
+        Movie m10 = new Movie(110, "Leo Special Edition", "Fan Edit", "Vijay", "Trisha",
+                            "Tamil", "Action Fan Edit", 165, 2024, "V House Productions", "Anirudh",
+                            "Fan Compilation", "Fan Editors", "India", "YouTube", "9/10",
+                            1, 0, "Viral Hit", "Fan Favorite");
+
+        Movie m11 = new Movie(111, "Karnan", "Mari Selvaraj", "Dhanush", "Lakshmi Priyaa",
+                            "Tamil", "Action Drama", 148, 2021, "2D Entertainment", "Santhosh Narayanan",
+                            "Pa Aadhan", "R Ramar", "India", "Theatre/OTT", "8.7/10",
+                            20, 65, "Critical Acclaim", "Best Film");
+
+        Movie m12 = new Movie(112, "Vikram", "Lokesh Kanagaraj", "Kamal Haasan", "Fahadh Faasil",
+                            "Tamil", "Action Thriller", 174, 2022, "Raaj Kamal Films", "Anirudh",
+                            "Girish Gangadharan", "Anand Ekaraj", "India", "Theatre", "9.1/10",
+                            80, 425, "All Time Blockbuster", "Best Actor");
+
+        Movie m13 = new Movie(113, "Parasakthi", "Krishnan-Panju", "Sivaji Ganesan", "Pandari Bai",
+                            "Tamil", "Social Drama", 183, 1952, "AVM Productions", "R Sudarsanam",
+                            "S Maruthi Rao", "T R Sethuraman", "India", "Theatre", "9.5/10",
+                            1, 10, "Classic", "Landmark Film");
+
+        Movie m14 = new Movie(114, "Enga Veettu Pillai", "A C Tirulokchander", "M G Ramachandran", "Jayalalithaa",
+                            "Tamil", "Family Drama", 178, 1965, "Sri Rajalakshmi Films", "M S Viswanathan",
+                            "K S Prasad", "T R Sethuraman", "India", "Theatre", "9.2/10",
+                            2, 15, "Jubilee Hit", "Evergreen Classic");
+
+        Movie m15 = new Movie(115, "Ulagam Sutrum Valiban", "M G Ramachandran", "M G Ramachandran", "Jayalalithaa",
+                            "Tamil", "Action Adventure", 185, 1970, "Kamala Film Factory", "M S Viswanathan",
+                            "P Ellappa", "K Govindan", "India", "Theatre", "8.9/10",
+                            3, 20, "Silver Jubilee", "Color Classic");
+
+        Movie m16 = new Movie(116, "Ambuli", "T K Bharathan", "Vinay Rai", "Rupa Manjari",
+                            "Tamil", "Horror Thriller", 128, 2011, "Excel Entertainment", "S Thaman",
+                            "J Krishnasamy", "K L Praveen", "India", "Theatre", "7.0/10",
+                            8, 18, "Average", "Best Horror");
+
+        Movie m17 = new Movie(117, "Irudhi Suttru", "Sudha Kongara", "R Madhavan", "Ritika Singh",
+                            "Tamil", "Sports Drama", 134, 2016, "Dream Warriors", "Santhosh Narayanan",
+                            "R Velraj", "Sathish Suriyaraj", "India", "Theatre/OTT", "8.4/10",
+                            10, 50, "Critical Success", "National Award");
+
+        Movie m18 = new Movie(118, "Puriyatha Puthir", "Rishi Kesavan", "Vijay", "Gayathrie",
+                            "Tamil", "Romantic Thriller", 136, 2017, "Global Infotainment", "Sam C S",
+                            "Aravinnd Singh", "Lawrence Kishore", "India", "Theatre", "6.5/10",
+                            6, 12, "Average", "None");
+
+        Movie m19 = new Movie(119, "7Aum Arivu", "A R Murugadoss", "Suriya", "Shruti Haasan",
+                            "Tamil", "Sci-Fi Thriller", 167, 2011, "UTV Motion Pictures", "A R Rahman",
+                            "R Ganesh", "A Sreekar Prasad", "India", "Theatre", "7.3/10",
+                            45, 115, "Hit", "Technical Excellence");
+
+        Movie m20 = new Movie(120, "Kaathuvaakula Rendu Kaadhal", "Vignesh Shivan", "Vijay Sethupathi", "Samantha, Nayanthara",
+                            "Tamil", "Romantic Comedy", 156, 2022, "Red Giant Movies", "Anirudh",
+                            "Vishnu Rangasamy", "A Sreekar Prasad", "India", "Theatre/OTT", "7.6/10",
+                            35, 110, "Hit", "Best Comedy");
+
+        ProductionHouse ph1 = new ProductionHouse(1, "Sun Pictures", "Kalanithi Maran", "Chennai",
+                                                "Chennai", "India", 2000, 50, "Kalanithi Maran",
+                                                "Film Production", "Kollywood", "sunpictures.in",
+                                                "044123456", "info@sunpictures.in", "Red", 200,
+                                                "Private", "National Awards", "Active", "Jailer", m1);
+
+        ProductionHouse ph2 = new ProductionHouse(2, "Lyca Productions", "S Subaskaran", "Chennai",
+                                                "Chennai", "India", 2009, 25, "S Subaskaran",
+                                                "Film Production", "Kollywood", "lycaproductions.com",
+                                                "044223456", "info@lyca.in", "Gold", 150,
+                                                "Private", "National Film Awards", "Active", "2.0", m2);
+
+        ProductionHouse ph3 = new ProductionHouse(3, "7 Screen Studio", "Kalanithi Maran", "Chennai",
+                                                "Chennai", "India", 2022, 5, "Kalanithi Maran",
+                                                "Film Production", "Kollywood", "7screenstudio.com",
+                                                "044323456", "info@7screen.in", "Blue", 100,
+                                                "Private", "Filmfare Awards", "Active", "Leo", m3);
+
+        ProductionHouse ph4 = new ProductionHouse(4, "Ags Entertainment", "A G Subramaniam", "Chennai",
+                                                "Chennai", "India", 2008, 30, "A G Subramaniam",
+                                                "Film Production", "Kollywood", "agsentertainment.com",
+                                                "044423456", "info@ags.in", "Silver", 120,
+                                                "Private", "Vijay Awards", "Active", "Asuran", m4);
+
+        ProductionHouse ph5 = new ProductionHouse(5, "Wonder Studios", "Nayanthara", "Chennai",
+                                                "Chennai", "India", 2021, 3, "Nayanthara",
+                                                "Film Production", "Kollywood", "wonderstudios.in",
+                                                "044523456", "info@wonder.in", "Purple", 50,
+                                                "Private", "Filmfare South", "Active", "Annapoorani", m5);
+
+        ProductionHouse ph6 = new ProductionHouse(6, "Kalanithi Maran Productions", "Kalanithi Maran", "Chennai",
+                                                "Chennai", "India", 1993, 75, "Kalanithi Maran",
+                                                "Film Production", "Kollywood", "sunnetwork.in",
+                                                "044623456", "films@sun.in", "Orange", 300,
+                                                "Private", "Multiple National Awards", "Active", "Master", m6);
+
+        ProductionHouse ph7 = new ProductionHouse(7, "Axess Film Factory", "Axess Group", "Chennai",
+                                                "Chennai", "India", 2020, 8, "Axess Group",
+                                                "Film Production", "Kollywood", "axessfilmfactory.com",
+                                                "044723456", "info@axess.in", "Green", 80,
+                                                "Private", "Vijay Awards", "Active", "Good Night", m7);
+
+        ProductionHouse ph8 = new ProductionHouse(8, "Freshworks Studio", "Freshworks Team", "Chennai",
+                                                "Chennai", "India", 2023, 1, "Freshworks CEO",
+                                                "Film Production", "Kollywood", "freshworksstudio.com",
+                                                "044823456", "films@freshworks.in", "Tech Blue", 30,
+                                                "Corporate", "None", "Active", "Blue Star", m8);
+
+        ProductionHouse ph9 = new ProductionHouse(9, "Think Studios", "Think Music Team", "Chennai",
+                                                "Chennai", "India", 2018, 12, "Think Music CEO",
+                                                "Film Production", "Kollywood", "thinkmusic.in",
+                                                "044923456", "films@think.in", "Black", 60,
+                                                "Music Label", "Mirchi Music Awards", "Active", "Sardar", m9);
+
+        ProductionHouse ph10 = new ProductionHouse(10, "V House Productions", "Vijay Team", "Chennai",
+                                                 "Chennai", "India", 2024, 1, "Vijay Fans Association",
+                                                 "Fan Production", "Kollywood", "vhproductions.in",
+                                                 "0441023456", "info@vh.in", "Thalapathy Yellow", 40,
+                                                 "Fan-Based", "None", "Active", "Leo Special", m10);
+
+        ProductionHouse ph11 = new ProductionHouse(11, "2D Entertainment", "Dhanush", "Chennai",
+                                                 "Chennai", "India", 2014, 10, "Dhanush",
+                                                 "Film Production", "Kollywood", "2dentertainment.com",
+                                                 "0441123456", "info@2d.in", "Brown", 70,
+                                                 "Private", "National Awards", "Active", "Karnan", m11);
+
+        ProductionHouse ph12 = new ProductionHouse(12, "Raaj Kamal Films", "Kamal Haasan", "Chennai",
+                                                 "Chennai", "India", 1978, 45, "Kamal Haasan",
+                                                 "Film Production", "Kollywood", "raajkamalfilms.com",
+                                                 "0442123456", "info@rkf.in", "Ulaga Nayagan Blue", 180,
+                                                 "Private", "Multiple National Awards", "Active", "Vikram", m12);
+
+        ProductionHouse ph13 = new ProductionHouse(13, "AVM Productions", "A V Meiyappan", "Chennai",
+                                                 "Chennai", "India", 1935, 175, "M Balasubramaniam",
+                                                 "Film Production", "Kollywood", "avmproductions.com",
+                                                 "0443123456", "info@avm.in", "Classic Gold", 400,
+                                                 "Legacy Studio", "Dadasaheb Phalke Award", "Active", "Parasakthi", m13);
+
+        ProductionHouse ph14 = new ProductionHouse(14, "Sri Rajalakshmi Films", "M G Ramachandran", "Chennai",
+                                                 "Chennai", "India", 1959, 35, "MGR Family",
+                                                 "Film Production", "Kollywood", "srirajalakshmi.com",
+                                                 "0444123456", "info@sri.in", "MGR Green", 90,
+                                                 "Legacy", "State Awards", "Active", "Enga Veettu Pillai", m14);
+
+        ProductionHouse ph15 = new ProductionHouse(15, "Kamala Film Factory", "M S Viswanathan Family", "Chennai",
+                                                 "Chennai", "India", 1961, 40, "MSV Family",
+                                                 "Film Production", "Kollywood", "kamalafilms.com",
+                                                 "0445123456", "info@kamala.in", "Music Purple", 110,
+                                                 "Music Legacy", "Music Awards", "Active", "Ulagam Sutrum Valiban", m15);
+
+        ProductionHouse ph16 = new ProductionHouse(16, "Excel Entertainment", "Ritesh Sidhwani, Farhan Akhtar", "Mumbai",
+                                                 "Mumbai", "India", 1999, 20, "Ritesh Sidhwani",
+                                                 "Film Production", "Bollywood/Kollywood", "excelmovies.com",
+                                                 "0226123456", "info@excel.in", "Excel Red", 200,
+                                                 "Pan-India", "National Awards", "Active", "Ambuli", m16);
+
+        ProductionHouse ph17 = new ProductionHouse(17, "Dream Warriors", "R Madhavan", "Chennai",
+                                                 "Chennai", "India", 2010, 8, "R Madhavan",
+                                                 "Film Production", "Kollywood", "dreamwarriors.in",
+                                                 "0447123456", "info@dream.in", "Dream Blue", 65,
+                                                 "Private", "Filmfare Awards", "Active", "Irudhi Suttru", m17);
+
+        ProductionHouse ph18 = new ProductionHouse(18, "Global Infotainment", "Arya", "Chennai",
+                                                 "Chennai", "India", 2013, 15, "Arya",
+                                                 "Film Production", "Kollywood", "globalinfotainment.com",
+                                                 "0448123456", "info@global.in", "Global Green", 85,
+                                                 "Private", "Vijay Awards", "Active", "Puriyatha Puthir", m18);
+
+        ProductionHouse ph19 = new ProductionHouse(19, "UTV Motion Pictures", "Ronnie Screwvala", "Mumbai",
+                                                 "Mumbai", "India", 2004, 50, "Disney India",
+                                                 "Film Production", "Bollywood/Kollywood", "utvdisney.in",
+                                                 "0229123456", "films@utv.in", "Disney Magic", 350,
+                                                 "Corporate", "National Awards", "Active", "7Aum Arivu", m19);
+
+        ProductionHouse ph20 = new ProductionHouse(20, "Red Giant Movies", "Udhayanidhi Stalin", "Chennai",
+                                                 "Chennai", "India", 2007, 60, "Udhayanidhi Stalin",
+                                                 "Film Distribution", "Kollywood", "redgiantmovies.com",
+                                                 "0442923456", "info@redgiant.in", "Red", 250,
+                                                 "Distribution", "Distribution Excellence", "Active", "Kaathuvaakula Rendu Kaadhal", m20);
+
+
+        System.out.println("=== KOLLYWOOD PRODUCTION HOUSES & THEIR FAMOUS MOVIES ===\n");
+        
         ph1.getProductionHouseDetails();
-		ProductionHouse ph2 = new ProductionHouse();
-ph2.houseId = 2;
-ph2.houseName = "Lyca Productions";
-ph2.founder = "S Subaskaran";
-ph2.location = "Chennai";
-ph2.city = "Chennai";
-ph2.country = "India";
-ph2.establishedYear = 2009;
-ph2.totalMovies = 25;
-ph2.ceo = "S Subaskaran";
-ph2.category = "Film Production";
-ph2.industry = "Kollywood";
-ph2.website = "lycaproductions.com";
-ph2.contact = "044223456";
-ph2.email = "info@lyca.in";
-ph2.colorTheme = "Gold";
-ph2.employees = 150;
-ph2.studioType = "Private";
-ph2.awards = "National Film Awards";
-ph2.status = "Active";
-ph2.famousMovie = "2.0";
+        ph2.getProductionHouseDetails();
+        ph3.getProductionHouseDetails();
+        ph4.getProductionHouseDetails();
+        ph5.getProductionHouseDetails();
+        ph6.getProductionHouseDetails();
+        ph7.getProductionHouseDetails();
+        ph8.getProductionHouseDetails();
+        ph9.getProductionHouseDetails();
+        ph10.getProductionHouseDetails();
+        ph11.getProductionHouseDetails();
+        ph12.getProductionHouseDetails();
+        ph13.getProductionHouseDetails();
+        ph14.getProductionHouseDetails();
+        ph15.getProductionHouseDetails();
+        ph16.getProductionHouseDetails();
+        ph17.getProductionHouseDetails();
+        ph18.getProductionHouseDetails();
+        ph19.getProductionHouseDetails();
+        ph20.getProductionHouseDetails();
 
-Movie m2 = new Movie();
-m2.movieId = 102;
-m2.movieName = "2.0";
-m2.director = "S Shankar";
-m2.hero = "Rajinikanth";
-m2.heroine = "Amy Jackson";
-m2.language = "Tamil";
-m2.genre = "Sci-Fi Action";
-m2.duration = 168;
-m2.releaseYear = 2018;
-m2.producer = "Lyca Productions";
-m2.musicDirector = "A R Rahman";
-m2.cinematographer = "Nirav Shah";
-m2.editor = "Anthony";
-m2.country = "India";
-m2.platform = "Theatre";
-m2.rating = "7.5/10";
-m2.budget = 550;
-m2.boxOffice = 800;
-m2.status = "Super Hit";
-m2.award = "Technical Awards";
-ph2.movie = m2;
-ph2.getProductionHouseDetails();
-
-ProductionHouse ph3 = new ProductionHouse();
-ph3.houseId = 3;
-ph3.houseName = "7 Screen Studio";
-ph3.founder = "Kalanithi Maran";
-ph3.location = "Chennai";
-ph3.city = "Chennai";
-ph3.country = "India";
-ph3.establishedYear = 2022;
-ph3.totalMovies = 5;
-ph3.ceo = "Kalanithi Maran";
-ph3.category = "Film Production";
-ph3.industry = "Kollywood";
-ph3.website = "7screenstudio.com";
-ph3.contact = "044323456";
-ph3.email = "info@7screen.in";
-ph3.colorTheme = "Blue";
-ph3.employees = 100;
-ph3.studioType = "Private";
-ph3.awards = "Filmfare Awards";
-ph3.status = "Active";
-ph3.famousMovie = "Leo";
-
-Movie m3 = new Movie();
-m3.movieId = 103;
-m3.movieName = "Leo";
-m3.director = "Lokesh Kanagaraj";
-m3.hero = "Vijay";
-m3.heroine = "Trisha";
-m3.language = "Tamil";
-m3.genre = "Action Thriller";
-m3.duration = 160;
-m3.releaseYear = 2023;
-m3.producer = "7 Screen Studio";
-m3.musicDirector = "Anirudh";
-m3.cinematographer = "Manoj Paramahamsa";
-m3.editor = "Anand Ekaraj";
-m3.country = "India";
-m3.platform = "Theatre";
-m3.rating = "8.2/10";
-m3.budget = 280;
-m3.boxOffice = 620;
-m3.status = "Blockbuster";
-m3.award = "Best Director";
-ph3.movie = m3;
-ph3.getProductionHouseDetails();
-
-ProductionHouse ph4 = new ProductionHouse();
-ph4.houseId = 4;
-ph4.houseName = "Ags Entertainment";
-ph4.founder = "A G Subramaniam";
-ph4.location = "Chennai";
-ph4.city = "Chennai";
-ph4.country = "India";
-ph4.establishedYear = 2008;
-ph4.totalMovies = 30;
-ph4.ceo = "A G Subramaniam";
-ph4.category = "Film Production";
-ph4.industry = "Kollywood";
-ph4.website = "agsentertainment.com";
-ph4.contact = "044423456";
-ph4.email = "info@ags.in";
-ph4.colorTheme = "Silver";
-ph4.employees = 120;
-ph4.studioType = "Private";
-ph4.awards = "Vijay Awards";
-ph4.status = "Active";
-ph4.famousMovie = "Asuran";
-
-Movie m4 = new Movie();
-m4.movieId = 104;
-m4.movieName = "Asuran";
-m4.director = "Vetrimaaran";
-m4.hero = "Dhanush";
-m4.heroine = "Manju Warrier";
-m4.language = "Tamil";
-m4.genre = "Action Drama";
-m4.duration = 151;
-m4.releaseYear = 2019;
-m4.producer = "AGS Entertainment";
-m4.musicDirector = "G V Prakash";
-m4.cinematographer = "Vetri Palaniswamy";
-m4.editor = "R Ramar";
-m4.country = "India";
-m4.platform = "Theatre";
-m4.rating = "8.8/10";
-m4.budget = 25;
-m4.boxOffice = 110;
-m4.status = "Super Hit";
-m4.award = "National Award";
-ph4.movie = m4;
-ph4.getProductionHouseDetails();
-
-ProductionHouse ph5 = new ProductionHouse();
-ph5.houseId = 5;
-ph5.houseName = "Wonder Studios";
-ph5.founder = "Nayanthara";
-ph5.location = "Chennai";
-ph5.city = "Chennai";
-ph5.country = "India";
-ph5.establishedYear = 2021;
-ph5.totalMovies = 3;
-ph5.ceo = "Nayanthara";
-ph5.category = "Film Production";
-ph5.industry = "Kollywood";
-ph5.website = "wonderstudios.in";
-ph5.contact = "044523456";
-ph5.email = "info@wonder.in";
-ph5.colorTheme = "Purple";
-ph5.employees = 50;
-ph5.studioType = "Private";
-ph5.awards = "Filmfare South";
-ph5.status = "Active";
-ph5.famousMovie = "Annapoorani";
-
-Movie m5 = new Movie();
-m5.movieId = 105;
-m5.movieName = "Annapoorani";
-m5.director = "Nilesh Krishnaa";
-m5.hero = "Jai";
-m5.heroine = "Nayanthara";
-m5.language = "Tamil";
-m5.genre = "Drama";
-m5.duration = 158;
-m5.releaseYear = 2023;
-m5.producer = "Wonder Studios";
-m5.musicDirector = "Yuvan Shankar Raja";
-m5.cinematographer = "Kalaiselvan";
-m5.editor = "Govi";
-m5.country = "India";
-m5.platform = "Theatre/OTT";
-m5.rating = "7.2/10";
-m5.budget = 15;
-m5.boxOffice = 45;
-m5.status = "Hit";
-m5.award = "Best Actress";
-ph5.movie = m5;
-ph5.getProductionHouseDetails();
-
-ProductionHouse ph6 = new ProductionHouse();
-ph6.houseId = 6;
-ph6.houseName = "Kalanithi Maran Productions";
-ph6.founder = "Kalanithi Maran";
-ph6.location = "Chennai";
-ph6.city = "Chennai";
-ph6.country = "India";
-ph6.establishedYear = 1993;
-ph6.totalMovies = 75;
-ph6.ceo = "Kalanithi Maran";
-ph6.category = "Film Production";
-ph6.industry = "Kollywood";
-ph6.website = "sunnetwork.in";
-ph6.contact = "044623456";
-ph6.email = "films@sun.in";
-ph6.colorTheme = "Orange";
-ph6.employees = 300;
-ph6.studioType = "Private";
-ph6.awards = "Multiple National Awards";
-ph6.status = "Active";
-ph6.famousMovie = "Master";
-
-Movie m6 = new Movie();
-m6.movieId = 106;
-m6.movieName = "Master";
-m6.director = "Lokesh Kanagaraj";
-m6.hero = "Vijay";
-m6.heroine = "Vijay Sethupathi";
-m6.language = "Tamil";
-m6.genre = "Action Thriller";
-m6.duration = 179;
-m6.releaseYear = 2021;
-m6.producer = "Kalanithi Maran";
-m6.musicDirector = "Anirudh";
-m6.cinematographer = "Sathyan Sooryan";
-m6.editor = "Anand Ekaraj";
-m6.country = "India";
-m6.platform = "Theatre/OTT";
-m6.rating = "8.1/10";
-m6.budget = 135;
-m6.boxOffice = 300;
-m6.status = "Blockbuster";
-m6.award = "Best Film";
-ph6.movie = m6;
-ph6.getProductionHouseDetails();
-
-ProductionHouse ph7 = new ProductionHouse();
-ph7.houseId = 7;
-ph7.houseName = "Axess Film Factory";
-ph7.founder = "Axess Group";
-ph7.location = "Chennai";
-ph7.city = "Chennai";
-ph7.country = "India";
-ph7.establishedYear = 2020;
-ph7.totalMovies = 8;
-ph7.ceo = "Axess Group";
-ph7.category = "Film Production";
-ph7.industry = "Kollywood";
-ph7.website = "axessfilmfactory.com";
-ph7.contact = "044723456";
-ph7.email = "info@axess.in";
-ph7.colorTheme = "Green";
-ph7.employees = 80;
-ph7.studioType = "Private";
-ph7.awards = "Vijay Awards";
-ph7.status = "Active";
-ph7.famousMovie = "Good Night";
-
-Movie m7 = new Movie();
-m7.movieId = 107;
-m7.movieName = "Good Night";
-m7.director = "Vinayak Vaithiyanathan";
-m7.hero = "Mithun";
-m7.heroine = "Meetha Raghunath";
-m7.language = "Tamil";
-m7.genre = "Comedy Drama";
-m7.duration = 125;
-m7.releaseYear = 2023;
-m7.producer = "Axess Film Factory";
-m7.musicDirector = "Sean Roldan";
-m7.cinematographer = "Prince Vijay";
-m7.editor = "R Ramar";
-m7.country = "India";
-m7.platform = "Theatre";
-m7.rating = "7.8/10";
-m7.budget = 5;
-m7.boxOffice = 25;
-m7.status = "Hit";
-m7.award = "Best Debut";
-ph7.movie = m7;
-ph7.getProductionHouseDetails();
-
-ProductionHouse ph8 = new ProductionHouse();
-ph8.houseId = 8;
-ph8.houseName = "Freshworks Studio";
-ph8.founder = "Freshworks Team";
-ph8.location = "Chennai";
-ph8.city = "Chennai";
-ph8.country = "India";
-ph8.establishedYear = 2023;
-ph8.totalMovies = 1;
-ph8.ceo = "Freshworks CEO";
-ph8.category = "Film Production";
-ph8.industry = "Kollywood";
-ph8.website = "freshworksstudio.com";
-ph8.contact = "044823456";
-ph8.email = "films@freshworks.in";
-ph8.colorTheme = "Tech Blue";
-ph8.employees = 30;
-ph8.studioType = "Corporate";
-ph8.awards = "None";
-ph8.status = "Active";
-ph8.famousMovie = "Blue Star";
-
-Movie m8 = new Movie();
-m8.movieId = 108;
-m8.movieName = "Blue Star";
-m8.director = "S A Rajkumar";
-m8.hero = "Ashok Selvan";
-m8.heroine = "Shanthnu Bhagyaraj";
-m8.language = "Tamil";
-m8.genre = "Sports Drama";
-m8.duration = 162;
-m8.releaseYear = 2024;
-m8.producer = "Freshworks Studio";
-m8.musicDirector = "Govind Vasantha";
-m8.cinematographer = "Mari Selvaraj";
-m8.editor = "Shivan";
-m8.country = "India";
-m8.platform = "Theatre/OTT";
-m8.rating = "8.5/10";
-m8.budget = 12;
-m8.boxOffice = 35;
-m8.status = "Critical Acclaim";
-m8.award = "Best Film";
-ph8.movie = m8;
-ph8.getProductionHouseDetails();
-
-ProductionHouse ph9 = new ProductionHouse();
-ph9.houseId = 9;
-ph9.houseName = "Think Studios";
-ph9.founder = "Think Music Team";
-ph9.location = "Chennai";
-ph9.city = "Chennai";
-ph9.country = "India";
-ph9.establishedYear = 2018;
-ph9.totalMovies = 12;
-ph9.ceo = "Think Music CEO";
-ph9.category = "Film Production";
-ph9.industry = "Kollywood";
-ph9.website = "thinkmusic.in";
-ph9.contact = "044923456";
-ph9.email = "films@think.in";
-ph9.colorTheme = "Black";
-ph9.employees = 60;
-ph9.studioType = "Music Label";
-ph9.awards = "Mirchi Music Awards";
-ph9.status = "Active";
-ph9.famousMovie = "Sardar";
-
-Movie m9 = new Movie();
-m9.movieId = 109;
-m9.movieName = "Sardar";
-m9.director = "PS Mithran";
-m9.hero = "Karthi";
-m9.heroine = "Rashi Khanna";
-m9.language = "Tamil";
-m9.genre = "Spy Thriller";
-m9.duration = 158;
-m9.releaseYear = 2022;
-m9.producer = "Think Studios";
-m9.musicDirector = "G V Prakash";
-m9.cinematographer = "Vijay Kartik Kannan";
-m9.editor = "NJ Rathnam";
-m9.country = "India";
-m9.platform = "Theatre";
-m9.rating = "7.9/10";
-m9.budget = 40;
-m9.boxOffice = 95;
-m9.status = "Hit";
-m9.award = "Best Thriller";
-ph9.movie = m9;
-ph9.getProductionHouseDetails();
-
-ProductionHouse ph10 = new ProductionHouse();
-ph10.houseId = 10;
-ph10.houseName = "V House Productions";
-ph10.founder = "Vijay Team";
-ph10.location = "Chennai";
-ph10.city = "Chennai";
-ph10.country = "India";
-ph10.establishedYear = 2024;
-ph10.totalMovies = 1;
-ph10.ceo = "Vijay Fans Association";
-ph10.category = "Fan Production";
-ph10.industry = "Kollywood";
-ph10.website = "vhproductions.in";
-ph10.contact = "0441023456";
-ph10.email = "info@vh.in";
-ph10.colorTheme = "Thalapathy Yellow";
-ph10.employees = 40;
-ph10.studioType = "Fan-Based";
-ph10.awards = "None";
-ph10.status = "Active";
-ph10.famousMovie = "Leo Special";
-
-Movie m10 = new Movie();
-m10.movieId = 110;
-m10.movieName = "Leo Special Edition";
-m10.director = "Fan Edit";
-m10.hero = "Vijay";
-m10.heroine = "Trisha";
-m10.language = "Tamil";
-m10.genre = "Action Fan Edit";
-m10.duration = 165;
-m10.releaseYear = 2024;
-m10.producer = "V House Productions";
-m10.musicDirector = "Anirudh";
-m10.cinematographer = "Fan Compilation";
-m10.editor = "Fan Editors";
-m10.country = "India";
-m10.platform = "YouTube";
-m10.rating = "9/10";
-m10.budget = 1;
-m10.boxOffice = 0;
-m10.status = "Viral Hit";
-m10.award = "Fan Favorite";
-ph10.movie = m10;
-ph10.getProductionHouseDetails();
-ProductionHouse ph11 = new ProductionHouse();
-ph11.houseId = 11;
-ph11.houseName = "2D Entertainment";
-ph11.founder = "Dhanush";
-ph11.location = "Chennai";
-ph11.city = "Chennai";
-ph11.country = "India";
-ph11.establishedYear = 2014;
-ph11.totalMovies = 10;
-ph11.ceo = "Dhanush";
-ph11.category = "Film Production";
-ph11.industry = "Kollywood";
-ph11.website = "2dentertainment.com";
-ph11.contact = "0441123456";
-ph11.email = "info@2d.in";
-ph11.colorTheme = "Brown";
-ph11.employees = 70;
-ph11.studioType = "Private";
-ph11.awards = "National Awards";
-ph11.status = "Active";
-ph11.famousMovie = "Karnan";
-
-Movie m11 = new Movie();
-m11.movieId = 111;
-m11.movieName = "Karnan";
-m11.director = "Mari Selvaraj";
-m11.hero = "Dhanush";
-m11.heroine = "Lakshmi Priyaa";
-m11.language = "Tamil";
-m11.genre = "Action Drama";
-m11.duration = 148;
-m11.releaseYear = 2021;
-m11.producer = "2D Entertainment";
-m11.musicDirector = "Santhosh Narayanan";
-m11.cinematographer = "Pa Aadhan";
-m11.editor = "R Ramar";
-m11.country = "India";
-m11.platform = "Theatre/OTT";
-m11.rating = "8.7/10";
-m11.budget = 20;
-m11.boxOffice = 65;
-m11.status = "Critical Acclaim";
-m11.award = "Best Film";
-ph11.movie = m11;
-ph11.getProductionHouseDetails();
-
-ProductionHouse ph12 = new ProductionHouse();
-ph12.houseId = 12;
-ph12.houseName = "Raaj Kamal Films";
-ph12.founder = "Kamal Haasan";
-ph12.location = "Chennai";
-ph12.city = "Chennai";
-ph12.country = "India";
-ph12.establishedYear = 1978;
-ph12.totalMovies = 45;
-ph12.ceo = "Kamal Haasan";
-ph12.category = "Film Production";
-ph12.industry = "Kollywood";
-ph12.website = "raajkamalfilms.com";
-ph12.contact = "0442123456";
-ph12.email = "info@rkf.in";
-ph12.colorTheme = "Ulaga Nayagan Blue";
-ph12.employees = 180;
-ph12.studioType = "Private";
-ph12.awards = "Multiple National Awards";
-ph12.status = "Active";
-ph12.famousMovie = "Vikram";
-
-Movie m12 = new Movie();
-m12.movieId = 112;
-m12.movieName = "Vikram";
-m12.director = "Lokesh Kanagaraj";
-m12.hero = "Kamal Haasan";
-m12.heroine = "Fahadh Faasil";
-m12.language = "Tamil";
-m12.genre = "Action Thriller";
-m12.duration = 174;
-m12.releaseYear = 2022;
-m12.producer = "Raaj Kamal Films";
-m12.musicDirector = "Anirudh";
-m12.cinematographer = "Girish Gangadharan";
-m12.editor = "Anand Ekaraj";
-m12.country = "India";
-m12.platform = "Theatre";
-m12.rating = "9.1/10";
-m12.budget = 80;
-m12.boxOffice = 425;
-m12.status = "All Time Blockbuster";
-m12.award = "Best Actor";
-ph12.movie = m12;
-ph12.getProductionHouseDetails();
-
-ProductionHouse ph13 = new ProductionHouse();
-ph13.houseId = 13;
-ph13.houseName = "AVM Productions";
-ph13.founder = "A V Meiyappan";
-ph13.location = "Chennai";
-ph13.city = "Chennai";
-ph13.country = "India";
-ph13.establishedYear = 1935;
-ph13.totalMovies = 175;
-ph13.ceo = "M Balasubramaniam";
-ph13.category = "Film Production";
-ph13.industry = "Kollywood";
-ph13.website = "avmproductions.com";
-ph13.contact = "0443123456";
-ph13.email = "info@avm.in";
-ph13.colorTheme = "Classic Gold";
-ph13.employees = 400;
-ph13.studioType = "Legacy Studio";
-ph13.awards = "Dadasaheb Phalke Award";
-ph13.status = "Active";
-ph13.famousMovie = "Parasakthi";
-
-Movie m13 = new Movie();
-m13.movieId = 113;
-m13.movieName = "Parasakthi";
-m13.director = "Krishnan-Panju";
-m13.hero = "Sivaji Ganesan";
-m13.heroine = "Pandari Bai";
-m13.language = "Tamil";
-m13.genre = "Social Drama";
-m13.duration = 183;
-m13.releaseYear = 1952;
-m13.producer = "AVM Productions";
-m13.musicDirector = "R Sudarsanam";
-m13.cinematographer = "S Maruthi Rao";
-m13.editor = "T R Sethuraman";
-m13.country = "India";
-m13.platform = "Theatre";
-m13.rating = "9.5/10";
-m13.budget = 1;
-m13.boxOffice = 10;
-m13.status = "Classic";
-m13.award = "Landmark Film";
-ph13.movie = m13;
-ph13.getProductionHouseDetails();
-
-ProductionHouse ph14 = new ProductionHouse();
-ph14.houseId = 14;
-ph14.houseName = "Sri Rajalakshmi Films";
-ph14.founder = "M G Ramachandran";
-ph14.location = "Chennai";
-ph14.city = "Chennai";
-ph14.country = "India";
-ph14.establishedYear = 1959;
-ph14.totalMovies = 35;
-ph14.ceo = "MGR Family";
-ph14.category = "Film Production";
-ph14.industry = "Kollywood";
-ph14.website = "srirajalakshmi.com";
-ph14.contact = "0444123456";
-ph14.email = "info@sri.in";
-ph14.colorTheme = "MGR Green";
-ph14.employees = 90;
-ph14.studioType = "Legacy";
-ph14.awards = "State Awards";
-ph14.status = "Active";
-ph14.famousMovie = "Enga Veettu Pillai";
-
-Movie m14 = new Movie();
-m14.movieId = 114;
-m14.movieName = "Enga Veettu Pillai";
-m14.director = "A C Tirulokchander";
-m14.hero = "M G Ramachandran";
-m14.heroine = "Jayalalithaa";
-m14.language = "Tamil";
-m14.genre = "Family Drama";
-m14.duration = 178;
-m14.releaseYear = 1965;
-m14.producer = "Sri Rajalakshmi Films";
-m14.musicDirector = "M S Viswanathan";
-m14.cinematographer = "K S Prasad";
-m14.editor = "T R Sethuraman";
-m14.country = "India";
-m14.platform = "Theatre";
-m14.rating = "9.2/10";
-m14.budget = 2;
-m14.boxOffice = 15;
-m14.status = "Jubilee Hit";
-m14.award = "Evergreen Classic";
-ph14.movie = m14;
-ph14.getProductionHouseDetails();
-
-ProductionHouse ph15 = new ProductionHouse();
-ph15.houseId = 15;
-ph15.houseName = "Kamala Film Factory";
-ph15.founder = "M S Viswanathan Family";
-ph15.location = "Chennai";
-ph15.city = "Chennai";
-ph15.country = "India";
-ph15.establishedYear = 1961;
-ph15.totalMovies = 40;
-ph15.ceo = "MSV Family";
-ph15.category = "Film Production";
-ph15.industry = "Kollywood";
-ph15.website = "kamalafilms.com";
-ph15.contact = "0445123456";
-ph15.email = "info@kamala.in";
-ph15.colorTheme = "Music Purple";
-ph15.employees = 110;
-ph15.studioType = "Music Legacy";
-ph15.awards = "Music Awards";
-ph15.status = "Active";
-ph15.famousMovie = "Ulagam Sutrum Valiban";
-
-Movie m15 = new Movie();
-m15.movieId = 115;
-m15.movieName = "Ulagam Sutrum Valiban";
-m15.director = "M G Ramachandran";
-m15.hero = "M G Ramachandran";
-m15.heroine = "Jayalalithaa";
-m15.language = "Tamil";
-m15.genre = "Action Adventure";
-m15.duration = 185;
-m15.releaseYear = 1970;
-m15.producer = "Kamala Film Factory";
-m15.musicDirector = "M S Viswanathan";
-m15.cinematographer = "P Ellappa";
-m15.editor = "K Govindan";
-m15.country = "India";
-m15.platform = "Theatre";
-m15.rating = "8.9/10";
-m15.budget = 3;
-m15.boxOffice = 20;
-m15.status = "Silver Jubilee";
-m15.award = "Color Classic";
-ph15.movie = m15;
-ph15.getProductionHouseDetails();
-
-ProductionHouse ph16 = new ProductionHouse();
-ph16.houseId = 16;
-ph16.houseName = "Excel Entertainment";
-ph16.founder = "Ritesh Sidhwani, Farhan Akhtar";
-ph16.location = "Mumbai";
-ph16.city = "Mumbai";
-ph16.country = "India";
-ph16.establishedYear = 1999;
-ph16.totalMovies = 20;
-ph16.ceo = "Ritesh Sidhwani";
-ph16.category = "Film Production";
-ph16.industry = "Bollywood/Kollywood";
-ph16.website = "excelmovies.com";
-ph16.contact = "0226123456";
-ph16.email = "info@excel.in";
-ph16.colorTheme = "Excel Red";
-ph16.employees = 200;
-ph16.studioType = "Pan-India";
-ph16.awards = "National Awards";
-ph16.status = "Active";
-ph16.famousMovie = "Ambuli";
-
-Movie m16 = new Movie();
-m16.movieId = 116;
-m16.movieName = "Ambuli";
-m16.director = "T K Bharathan";
-m16.hero = "Vinay Rai";
-m16.heroine = "Rupa Manjari";
-m16.language = "Tamil";
-m16.genre = "Horror Thriller";
-m16.duration = 128;
-m16.releaseYear = 2011;
-m16.producer = "Excel Entertainment";
-m16.musicDirector = "S Thaman";
-m16.cinematographer = "J Krishnasamy";
-m16.editor = " K L Praveen";
-m16.country = "India";
-m16.platform = "Theatre";
-m16.rating = "7.0/10";
-m16.budget = 8;
-m16.boxOffice = 18;
-m16.status = "Average";
-m16.award = "Best Horror";
-ph16.movie = m16;
-ph16.getProductionHouseDetails();
-
-ProductionHouse ph17 = new ProductionHouse();
-ph17.houseId = 17;
-ph17.houseName = "Dream Warriors";
-ph17.founder = "R Madhavan";
-ph17.location = "Chennai";
-ph17.city = "Chennai";
-ph17.country = "India";
-ph17.establishedYear = 2010;
-ph17.totalMovies = 8;
-ph17.ceo = "R Madhavan";
-ph17.category = "Film Production";
-ph17.industry = "Kollywood";
-ph17.website = "dreamwarriors.in";
-ph17.contact = "0447123456";
-ph17.email = "info@dream.in";
-ph17.colorTheme = "Dream Blue";
-ph17.employees = 65;
-ph17.studioType = "Private";
-ph17.awards = "Filmfare Awards";
-ph17.status = "Active";
-ph17.famousMovie = "Irudhi Suttru";
-
-Movie m17 = new Movie();
-m17.movieId = 117;
-m17.movieName = "Irudhi Suttru";
-m17.director = "Sudha Kongara";
-m17.hero = "R Madhavan";
-m17.heroine = "Ritika Singh";
-m17.language = "Tamil";
-m17.genre = "Sports Drama";
-m17.duration = 134;
-m17.releaseYear = 2016;
-m17.producer = "Dream Warriors";
-m17.musicDirector = "Santhosh Narayanan";
-m17.cinematographer = "R Velraj";
-m17.editor = "Sathish Suriyaraj";
-m17.country = "India";
-m17.platform = "Theatre/OTT";
-m17.rating = "8.4/10";
-m17.budget = 10;
-m17.boxOffice = 50;
-m17.status = "Critical Success";
-m17.award = "National Award";
-ph17.movie = m17;
-ph17.getProductionHouseDetails();
-
-ProductionHouse ph18 = new ProductionHouse();
-ph18.houseId = 18;
-ph18.houseName = "Global Infotainment";
-ph18.founder = "Arya";
-ph18.location = "Chennai";
-ph18.city = "Chennai";
-ph18.country = "India";
-ph18.establishedYear = 2013;
-ph18.totalMovies = 15;
-ph18.ceo = "Arya";
-ph18.category = "Film Production";
-ph18.industry = "Kollywood";
-ph18.website = "globalinfotainment.com";
-ph18.contact = "0448123456";
-ph18.email = "info@global.in";
-ph18.colorTheme = "Global Green";
-ph18.employees = 85;
-ph18.studioType = "Private";
-ph18.awards = "Vijay Awards";
-ph18.status = "Active";
-ph18.famousMovie = "Puriyatha Puthir";
-
-Movie m18 = new Movie();
-m18.movieId = 118;
-m18.movieName = "Puriyatha Puthir";
-m18.director = "Rishi Kesavan";
-m18.hero = "Vijay";
-m18.heroine = "Gayathrie";
-m18.language = "Tamil";
-m18.genre = "Romantic Thriller";
-m18.duration = 136;
-m18.releaseYear = 2017;
-m18.producer = "Global Infotainment";
-m18.musicDirector = "Sam C S";
-m18.cinematographer = "Aravinnd Singh";
-m18.editor = "Lawrence Kishore";
-m18.country = "India";
-m18.platform = "Theatre";
-m18.rating = "6.5/10";
-m18.budget = 6;
-m18.boxOffice = 12;
-m18.status = "Average";
-m18.award = "None";
-ph18.movie = m18;
-ph18.getProductionHouseDetails();
-
-ProductionHouse ph19 = new ProductionHouse();
-ph19.houseId = 19;
-ph19.houseName = "UTV Motion Pictures";
-ph19.founder = "Ronnie Screwvala";
-ph19.location = "Mumbai";
-ph19.city = "Mumbai";
-ph19.country = "India";
-ph19.establishedYear = 2004;
-ph19.totalMovies = 50;
-ph19.ceo = "Disney India";
-ph19.category = "Film Production";
-ph19.industry = "Bollywood/Kollywood";
-ph19.website = "utvdisney.in";
-ph19.contact = "0229123456";
-ph19.email = "films@utv.in";
-ph19.colorTheme = "Disney Magic";
-ph19.employees = 350;
-ph19.studioType = "Corporate";
-ph19.awards = "National Awards";
-ph19.status = "Active";
-ph19.famousMovie = "7Aum Arivu";
-
-Movie m19 = new Movie();
-m19.movieId = 119;
-m19.movieName = "7Aum Arivu";
-m19.director = "A R Murugadoss";
-m19.hero = "Suriya";
-m19.heroine = "Shruti Haasan";
-m19.language = "Tamil";
-m19.genre = "Sci-Fi Thriller";
-m19.duration = 167;
-m19.releaseYear = 2011;
-m19.producer = "UTV Motion Pictures";
-m19.musicDirector = "A R Rahman";
-m19.cinematographer = "R Ganesh";
-m19.editor = "A Sreekar Prasad";
-m19.country = "India";
-m19.platform = "Theatre";
-m19.rating = "7.3/10";
-m19.budget = 45;
-m19.boxOffice = 115;
-m19.status = "Hit";
-m19.award = "Technical Excellence";
-ph19.movie = m19;
-ph19.getProductionHouseDetails();
-
-ProductionHouse ph20 = new ProductionHouse();
-ph20.houseId = 20;
-ph20.houseName = "Red Giant Movies";
-ph20.founder = "Udhayanidhi Stalin";
-ph20.location = "Chennai";
-ph20.city = "Chennai";
-ph20.country = "India";
-ph20.establishedYear = 2007;
-ph20.totalMovies = 60;
-ph20.ceo = "Udhayanidhi Stalin";
-ph20.category = "Film Distribution";
-ph20.industry = "Kollywood";
-ph20.website = "redgiantmovies.com";
-ph20.contact = "0442923456";
-ph20.email = "info@redgiant.in";
-ph20.colorTheme = "Red";
-ph20.employees = 250;
-ph20.studioType = "Distribution";
-ph20.awards = "Distribution Excellence";
-ph20.status = "Active";
-ph20.famousMovie = "Kaathuvaakula Rendu Kaadhal";
-
-Movie m20 = new Movie();
-m20.movieId = 120;
-m20.movieName = "Kaathuvaakula Rendu Kaadhal";
-m20.director = "Vignesh Shivan";
-m20.hero = "Vijay Sethupathi";
-m20.heroine = "Samantha, Nayanthara";
-m20.language = "Tamil";
-m20.genre = "Romantic Comedy";
-m20.duration = 156;
-m20.releaseYear = 2022;
-m20.producer = "Red Giant Movies";
-m20.musicDirector = "Anirudh";
-m20.cinematographer = "Vishnu Rangasamy";
-m20.editor = "A Sreekar Prasad";
-m20.country = "India";
-m20.platform = "Theatre/OTT";
-m20.rating = "7.6/10";
-m20.budget = 35;
-m20.boxOffice = 110;
-m20.status = "Hit";
-m20.award = "Best Comedy";
-ph20.movie = m20;
-ph20.getProductionHouseDetails();
-
+        System.out.println("\n=== END OF PRODUCTION HOUSE DETAILS ===");
     }
 }

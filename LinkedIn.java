@@ -1,5 +1,4 @@
 class LinkedIn {
-
     int appId;
     String appName;
     String company;
@@ -23,8 +22,35 @@ class LinkedIn {
 
     Profile profile;
 
-    public void getLinkedInDetails(){
+    public LinkedIn(int appId, String appName, String company, String founder, int launchYear,
+                   String headquarters, int users, String platform, String category,
+                   String website, String email, String contact, String security,
+                   String paymentType, String version, String colorTheme, String support,
+                   String status, String country, String language, Profile profile) {
+        this.appId = appId;
+        this.appName = appName;
+        this.company = company;
+        this.founder = founder;
+        this.launchYear = launchYear;
+        this.headquarters = headquarters;
+        this.users = users;
+        this.platform = platform;
+        this.category = category;
+        this.website = website;
+        this.email = email;
+        this.contact = contact;
+        this.security = security;
+        this.paymentType = paymentType;
+        this.version = version;
+        this.colorTheme = colorTheme;
+        this.support = support;
+        this.status = status;
+        this.country = country;
+        this.language = language;
+        this.profile = profile;
+    }
 
+    public void getLinkedInDetails() {
         System.out.println("AppId: " + appId);
         System.out.println("AppName: " + appName);
         System.out.println("Company: " + company);
@@ -45,7 +71,8 @@ class LinkedIn {
         System.out.println("Status: " + status);
         System.out.println("Country: " + country);
         System.out.println("Language: " + language);
-
+        System.out.println();
         this.profile.getProfileDetails();
+        System.out.println("=================================================");
     }
 }

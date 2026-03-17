@@ -1,928 +1,228 @@
 class SalonExecutor {
+    public static void main(String[] args) {
+        Service sv1 = new Service(101, "Hair Cut", "Hair", "Grooming", 30, 300, "INR",
+                "Hair Stylist", "Professional Shampoo", "Scissors & Trimmer", "Walk-in",
+                "Daily", "Unisex", "Layer Cut", "4.7", "10%", "Available", "High", "5 Years",
+                "Professional hair styling service");
 
-    public static void main(String[] args){
+        Service sv2 = new Service(102, "Hair Coloring", "Hair", "Coloring", 90, 2500, "INR",
+                "Color Expert", "Lakme Color", "Color Bowls & Brushes", "Appointment",
+                "Daily", "Unisex", "Global Color", "4.8", "15%", "Available", "Very High", "8 Years",
+                "Professional hair coloring service");
 
-        Salon s1 = new Salon();
+        Service sv3 = new Service(103, "Keratin Treatment", "Hair", "Treatment", 120, 4500, "INR",
+                "Keratin Expert", "Keratin Solution", "Hair Straightener", "Appointment",
+                "Mon-Sat", "Unisex", "Brazilian Keratin", "4.9", "20%", "Available", "High", "10 Years",
+                "Hair straightening treatment");
 
-        s1.salonId = 1;
-        s1.salonName = "Green Trends";
-        s1.owner = "Ravi";
-        s1.location = "MG Road";
-        s1.city = "Bangalore";
-        s1.country = "India";
-        s1.establishedYear = 2010;
-        s1.employees = 15;
-        s1.category = "Beauty Salon";
-        s1.website = "greentrends.com";
-        s1.contact = "080123456";
-        s1.email = "info@greentrends.com";
-        s1.openingTime = "9 AM";
-        s1.closingTime = "9 PM";
-        s1.paymentMode = "Cash/UPI/Card";
-        s1.rating = "4.5";
-        s1.colorTheme = "Green";
-        s1.seatingType = "Indoor";
-        s1.status = "Active";
-        s1.description = "Popular beauty salon";
+        Service sv4 = new Service(104, "Facial", "Skin", "Skincare", 60, 1500, "INR",
+                "Skin Therapist", "VLCC Creams", "Steam Machine", "Appointment",
+                "Daily", "Unisex", "Hydra Facial", "4.6", "10%", "Available", "Very High", "12 Years",
+                "Deep cleansing facial treatment");
 
-        Service sv1 = new Service();
+        Service sv5 = new Service(105, "Hair Spa", "Hair", "Treatment", 75, 2000, "INR",
+                "Hair Therapist", "Toni & Guy Products", "Spa Equipment", "Appointment",
+                "Daily", "Unisex", "Scalp Treatment", "4.8", "15%", "Available", "High", "7 Years",
+                "Hair nourishment spa treatment");
 
-        sv1.serviceId = 101;
-        sv1.serviceName = "Hair Cut";
-        sv1.type = "Hair";
-        sv1.category = "Grooming";
-        sv1.duration = 30;
-        sv1.price = 300;
-        sv1.currency = "INR";
-        sv1.specialist = "Hair Stylist";
-        sv1.productUsed = "Professional Shampoo";
-        sv1.equipment = "Scissors & Trimmer";
-        sv1.appointmentType = "Walk-in";
-        sv1.availability = "Daily";
-        sv1.gender = "Unisex";
-        sv1.method = "Layer Cut";
-        sv1.rating = "4.7";
-        sv1.discount = "10%";
-        sv1.status = "Available";
-        sv1.popularity = "High";
-        sv1.experience = "5 Years";
-        sv1.description = "Professional hair styling service";
+        Service sv6 = new Service(106, "Manicure", "Nails", "Nail Care", 45, 500, "INR",
+                "Nail Artist", "OPI Polish", "Nail Tools", "Walk-in",
+                "Daily", "Unisex", "French Manicure", "4.5", "20%", "Available", "Medium", "4 Years",
+                "Professional nail grooming service");
 
-        s1.service = sv1;
+        Service sv7 = new Service(107, "Pedicure", "Nails", "Foot Care", 60, 700, "INR",
+                "Foot Therapist", "Foot Creams", "Foot Spa Basin", "Appointment",
+                "Daily", "Unisex", "Spa Pedicure", "4.4", "15%", "Available", "High", "6 Years",
+                "Complete foot care treatment");
 
-        s1.getSalonDetails();
-		Salon s2 = new Salon();
-		s2.salonId = 2;
-		s2.salonName = "Lakme Salon";
-		s2.owner = "Priya";
-		s2.location = "Brigade Road";
-		s2.city = "Bangalore";
-		s2.country = "India";
-		s2.establishedYear = 2008;
-		s2.employees = 12;
-		s2.category = "Beauty Salon";
-		s2.website = "lakmesalon.in";
-		s2.contact = "080234567";
-		s2.email = "info@lakmesalon.in";
-		s2.openingTime = "10 AM";
-		s2.closingTime = "8 PM";
-		s2.paymentMode = "Cash/UPI/Card";
-		s2.rating = "4.6";
-		s2.colorTheme = "Pink";
-		s2.seatingType = "Indoor";
-		s2.status = "Active";
-		s2.description = "Premium beauty salon chain";
+        Service sv8 = new Service(108, "Bridal Makeup", "Makeup", "Wedding", 180, 25000, "INR",
+                "Bridal Artist", "MAC Cosmetics", "Professional Kit", "Appointment",
+                "Daily", "Women", "Airbrush Makeup", "4.9", "5%", "Available", "Very High", "15 Years",
+                "Premium bridal makeup service");
 
-		Service sv2 = new Service();
-		sv2.serviceId = 102;
-		sv2.serviceName = "Hair Coloring";
-		sv2.type = "Hair";
-		sv2.category = "Coloring";
-		sv2.duration = 90;
-		sv2.price = 2500;
-		sv2.currency = "INR";
-		sv2.specialist = "Color Expert";
-		sv2.productUsed = "Lakme Color";
-		sv2.equipment = "Color Bowls & Brushes";
-		sv2.appointmentType = "Appointment";
-		sv2.availability = "Daily";
-		sv2.gender = "Unisex";
-		sv2.method = "Global Color";
-		sv2.rating = "4.8";
-		sv2.discount = "15%";
-		sv2.status = "Available";
-		sv2.popularity = "Very High";
-		sv2.experience = "8 Years";
-		sv2.description = "Professional hair coloring service";
-		s2.service = sv2;
-		s2.getSalonDetails();
+        Service sv9 = new Service(109, "Threading", "Facial Hair", "Grooming", 15, 100, "INR",
+                "Threading Expert", "Organic Thread", "Cotton Thread", "Walk-in",
+                "Daily", "Women", "Traditional Threading", "4.6", "25%", "Available", "High", "10 Years",
+                "Precision eyebrow threading");
 
-		Salon s3 = new Salon();
-		s3.salonId = 3;
-		s3.salonName = "Jawed Habib";
-		s3.owner = "Jawed Habib";
-		s3.location = "Jayanagar";
-		s3.city = "Bangalore";
-		s3.country = "India";
-		s3.establishedYear = 2005;
-		s3.employees = 20;
-		s3.category = "Hair Salon";
-		s3.website = "jawedhabib.com";
-		s3.contact = "080345678";
-		s3.email = "book@jawedhabib.com";
-		s3.openingTime = "9 AM";
-		s3.closingTime = "10 PM";
-		s3.paymentMode = "Cash/UPI/Card";
-		s3.rating = "4.4";
-		s3.colorTheme = "Black";
-		s3.seatingType = "Indoor";
-		s3.status = "Active";
-		s3.description = "Celebrity hair salon chain";
+        Service sv10 = new Service(110, "Waxing", "Hair Removal", "Grooming", 30, 400, "INR",
+                "Waxing Expert", "Veet Wax", "Heated Wax", "Walk-in",
+                "Daily", "Unisex", "Strip Waxing", "4.2", "30%", "Available", "Medium", "3 Years",
+                "Professional hair removal service");
 
-		Service sv3 = new Service();
-		sv3.serviceId = 103;
-		sv3.serviceName = "Keratin Treatment";
-		sv3.type = "Hair";
-		sv3.category = "Treatment";
-		sv3.duration = 120;
-		sv3.price = 4500;
-		sv3.currency = "INR";
-		sv3.specialist = "Keratin Expert";
-		sv3.productUsed = "Keratin Solution";
-		sv3.equipment = "Hair Straightener";
-		sv3.appointmentType = "Appointment";
-		sv3.availability = "Mon-Sat";
-		sv3.gender = "Unisex";
-		sv3.method = "Brazilian Keratin";
-		sv3.rating = "4.9";
-		sv3.discount = "20%";
-		sv3.status = "Available";
-		sv3.popularity = "High";
-		sv3.experience = "10 Years";
-		sv3.description = "Hair straightening treatment";
-		s3.service = sv3;
-		s3.getSalonDetails();
+        Service sv11 = new Service(111, "Hair Rebonding", "Hair", "Styling", 180, 8000, "INR",
+                "Rebonding Expert", "Rebonding Chemicals", "Straightening Iron", "Appointment",
+                "Mon-Sat", "Unisex", "Japanese Rebonding", "4.8", "10%", "Available", "High", "9 Years",
+                "Permanent hair straightening");
 
-		Salon s4 = new Salon();
-		s4.salonId = 4;
-		s4.salonName = "VLCC";
-		s4.owner = "VLCC Group";
-		s4.location = "Malleshwaram";
-		s4.city = "Bangalore";
-		s4.country = "India";
-		s4.establishedYear = 1996;
-		s4.employees = 25;
-		s4.category = "Wellness Salon";
-		s4.website = "vlccwellness.com";
-		s4.contact = "080456789";
-		s4.email = "care@vlcc.com";
-		s4.openingTime = "8 AM";
-		s4.closingTime = "9 PM";
-		s4.paymentMode = "Cash/UPI/Card";
-		s4.rating = "4.3";
-		s4.colorTheme = "Blue";
-		s4.seatingType = "Indoor";
-		s4.status = "Active";
-		s4.description = "Wellness and beauty center";
+        Service sv12 = new Service(112, "Massage", "Body", "Relaxation", 60, 1200, "INR",
+                "Massage Therapist", "Aroma Oils", "Massage Table", "Appointment",
+                "Daily", "Unisex", "Swedish Massage", "4.6", "20%", "Available", "Medium", "5 Years",
+                "Relaxing body massage therapy");
 
-		Service sv4 = new Service();
-		sv4.serviceId = 104;
-		sv4.serviceName = "Facial";
-		sv4.type = "Skin";
-		sv4.category = "Skincare";
-		sv4.duration = 60;
-		sv4.price = 1500;
-		sv4.currency = "INR";
-		sv4.specialist = "Skin Therapist";
-		sv4.productUsed = "VLCC Creams";
-		sv4.equipment = "Steam Machine";
-		sv4.appointmentType = "Appointment";
-		sv4.availability = "Daily";
-		sv4.gender = "Unisex";
-		sv4.method = "Hydra Facial";
-		sv4.rating = "4.6";
-		sv4.discount = "10%";
-		sv4.status = "Available";
-		sv4.popularity = "Very High";
-		sv4.experience = "12 Years";
-		sv4.description = "Deep cleansing facial treatment";
-		s4.service = sv4;
-		s4.getSalonDetails();
+        Service sv13 = new Service(113, "Smoothening", "Hair", "Treatment", 120, 3500, "INR",
+                "Smoothening Expert", "Kerastase", "Hair Dryer", "Appointment",
+                "Mon-Sat", "Unisex", "Cezanne Smoothening", "4.5", "15%", "Available", "High", "6 Years",
+                "Frizz-free hair treatment");
 
-		Salon s5 = new Salon();
-		s5.salonId = 5;
-		s5.salonName = "Toni & Guy";
-		s5.owner = "Toni & Guy";
-		s5.location = "Indiranagar";
-		s5.city = "Bangalore";
-		s5.country = "India";
-		s5.establishedYear = 2012;
-		s5.employees = 18;
-		s5.category = "Premium Salon";
-		s5.website = "toniandguy.in";
-		s5.contact = "080567890";
-		s5.email = "bangalore@toniandguy.in";
-		s5.openingTime = "10 AM";
-		s5.closingTime = "8 PM";
-		s5.paymentMode = "Card/UPI";
-		s5.rating = "4.7";
-		s5.colorTheme = "Red";
-		s5.seatingType = "Luxury Indoor";
-		s5.status = "Active";
-		s5.description = "International premium salon";
+        Service sv14 = new Service(114, "Party Makeup", "Makeup", "Event", 90, 3000, "INR",
+                "Makeup Artist", "Bobbi Brown", "Makeup Brushes", "Appointment",
+                "Daily", "Women", "Smokey Eye", "4.7", "10%", "Available", "High", "8 Years",
+                "Event makeup styling");
 
-		Service sv5 = new Service();
-		sv5.serviceId = 105;
-		sv5.serviceName = "Hair Spa";
-		sv5.type = "Hair";
-		sv5.category = "Treatment";
-		sv5.duration = 75;
-		sv5.price = 2000;
-		sv5.currency = "INR";
-		sv5.specialist = "Hair Therapist";
-		sv5.productUsed = "Toni & Guy Products";
-		sv5.equipment = "Spa Equipment";
-		sv5.appointmentType = "Appointment";
-		sv5.availability = "Daily";
-		sv5.gender = "Unisex";
-		sv5.method = "Scalp Treatment";
-		sv5.rating = "4.8";
-		sv5.discount = "15%";
-		sv5.status = "Available";
-		sv5.popularity = "High";
-		sv5.experience = "7 Years";
-		sv5.description = "Hair nourishment spa treatment";
-		s5.service = sv5;
-		s5.getSalonDetails();
+        Service sv15 = new Service(115, "Beard Trim", "Beard", "Grooming", 20, 200, "INR",
+                "Barber", "Beard Oil", "Trimmer", "Walk-in",
+                "Daily", "Men", "Fade Trim", "4.4", "20%", "Available", "High", "4 Years",
+                "Professional beard styling");
 
-		Salon s6 = new Salon();
-		s6.salonId = 6;
-		s6.salonName = "Matrix Salon";
-		s6.owner = "Anita";
-		s6.location = "Koramangala";
-		s6.city = "Bangalore";
-		s6.country = "India";
-		s6.establishedYear = 2015;
-		s6.employees = 10;
-		s6.category = "Unisex Salon";
-		s6.website = "matrixsalon.in";
-		s6.contact = "080678901";
-		s6.email = "matrix@salon.in";
-		s6.openingTime = "9 AM";
-		s6.closingTime = "9 PM";
-		s6.paymentMode = "Cash/UPI/Card";
-		s6.rating = "4.2";
-		s6.colorTheme = "Purple";
-		s6.seatingType = "Indoor";
-		s6.status = "Active";
-		s6.description = "Trendy unisex salon";
+        Service sv16 = new Service(116, "Microblading", "Eyebrows", "Permanent Makeup", 120, 12000, "INR",
+                "Microblading Artist", "Organic Pigments", "Microblading Pen", "Appointment",
+                "Tue-Sun", "Women", "6D Microblading", "4.9", "5%", "Available", "Medium", "7 Years",
+                "Semi-permanent eyebrow tattoo");
 
-		Service sv6 = new Service();
-		sv6.serviceId = 106;
-		sv6.serviceName = "Manicure";
-		sv6.type = "Nails";
-		sv6.category = "Nail Care";
-		sv6.duration = 45;
-		sv6.price = 500;
-		sv6.currency = "INR";
-		sv6.specialist = "Nail Artist";
-		sv6.productUsed = "OPI Polish";
-		sv6.equipment = "Nail Tools";
-		sv6.appointmentType = "Walk-in";
-		sv6.availability = "Daily";
-		sv6.gender = "Unisex";
-		sv6.method = "French Manicure";
-		sv6.rating = "4.5";
-		sv6.discount = "20%";
-		sv6.status = "Available";
-		sv6.popularity = "Medium";
-		sv6.experience = "4 Years";
-		sv6.description = "Professional nail grooming service";
-		s6.service = sv6;
-		s6.getSalonDetails();
+        Service sv17 = new Service(117, "Scalp Treatment", "Scalp", "Hair Care", 45, 800, "INR",
+                "Scalp Specialist", "Medicated Oils", "Massage Tools", "Appointment",
+                "Daily", "Unisex", "Derma Roller", "4.5", "25%", "Available", "Medium", "5 Years",
+                "Hair growth scalp treatment");
 
-		Salon s7 = new Salon();
-		s7.salonId = 7;
-		s7.salonName = "Looks Salon";
-		s7.owner = "Suresh";
-		s7.location = "Whitefield";
-		s7.city = "Bangalore";
-		s7.country = "India";
-		s7.establishedYear = 2011;
-		s7.employees = 14;
-		s7.category = "Beauty Salon";
-		s7.website = "looksalon.in";
-		s7.contact = "080789012";
-		s7.email = "whitefield@looksalon.in";
-		s7.openingTime = "9:30 AM";
-		s7.closingTime = "8:30 PM";
-		s7.paymentMode = "Cash/UPI/Card";
-		s7.rating = "4.1";
-		s7.colorTheme = "Orange";
-		s7.seatingType = "Indoor";
-		s7.status = "Active";
-		s7.description = "Affordable beauty salon";
+        Service sv18 = new Service(118, "Lash Extension", "Eyelashes", "Eye Enhancement", 120, 4000, "INR",
+                "Lash Technician", "Mink Lashes", "Eyelash Curler", "Appointment",
+                "Mon-Sat", "Women", "Volume Lashes", "4.8", "15%", "Available", "High", "6 Years",
+                "Eyelash extension service");
 
-		Service sv7 = new Service();
-		sv7.serviceId = 107;
-		sv7.serviceName = "Pedicure";
-		sv7.type = "Nails";
-		sv7.category = "Foot Care";
-		sv7.duration = 60;
-		sv7.price = 700;
-		sv7.currency = "INR";
-		sv7.specialist = "Foot Therapist";
-		sv7.productUsed = "Foot Creams";
-		sv7.equipment = "Foot Spa Basin";
-		sv7.appointmentType = "Appointment";
-		sv7.availability = "Daily";
-		sv7.gender = "Unisex";
-		sv7.method = "Spa Pedicure";
-		sv7.rating = "4.4";
-		sv7.discount = "15%";
-		sv7.status = "Available";
-		sv7.popularity = "High";
-		sv7.experience = "6 Years";
-		sv7.description = "Complete foot care treatment";
-		s7.service = sv7;
-		s7.getSalonDetails();
+        Service sv19 = new Service(119, "At Home Haircut", "Hair", "Grooming", 45, 500, "INR",
+                "Mobile Stylist", "Travel Kit", "Portable Tools", "App Booking",
+                "24/7", "Unisex", "Express Cut", "4.4", "10%", "Available", "Very High", "3 Years",
+                "Home service haircut");
 
-		Salon s8 = new Salon();
-		s8.salonId = 8;
-		s8.salonName = "Jean-Claude Biguine";
-		s8.owner = "Jean-Claude Biguine";
-		s8.location = "UB City";
-		s8.city = "Bangalore";
-		s8.country = "India";
-		s8.establishedYear = 2014;
-		s8.employees = 22;
-		s8.category = "Luxury Salon";
-		s8.website = "biguine.com";
-		s8.contact = "080890123";
-		s8.email = "ubcity@biguine.com";
-		s8.openingTime = "11 AM";
-		s8.closingTime = "9 PM";
-		s8.paymentMode = "Card/UPI";
-		s8.rating = "4.8";
-		s8.colorTheme = "Gold";
-		s8.seatingType = "Luxury Indoor";
-		s8.status = "Active";
-		s8.description = "French luxury salon";
+        Service sv20 = new Service(120, "Rainbow Highlights", "Hair", "Coloring", 150, 5000, "INR",
+                "Color Specialist", "Wella Color", "Balayage Tools", "Appointment",
+                "Fri-Sun", "Unisex", "Balayage Highlights", "4.9", "20%", "Available", "High", "4 Years",
+                "Trendy colored highlights");
 
-		Service sv8 = new Service();
-		sv8.serviceId = 108;
-		sv8.serviceName = "Bridal Makeup";
-		sv8.type = "Makeup";
-		sv8.category = "Wedding";
-		sv8.duration = 180;
-		sv8.price = 25000;
-		sv8.currency = "INR";
-		sv8.specialist = "Bridal Artist";
-		sv8.productUsed = "MAC Cosmetics";
-		sv8.equipment = "Professional Kit";
-		sv8.appointmentType = "Appointment";
-		sv8.availability = "Daily";
-		sv8.gender = "Women";
-		sv8.method = "Airbrush Makeup";
-		sv8.rating = "4.9";
-		sv8.discount = "5%";
-		sv8.status = "Available";
-		sv8.popularity = "Very High";
-		sv8.experience = "15 Years";
-		sv8.description = "Premium bridal makeup service";
-		s8.service = sv8;
-		s8.getSalonDetails();
+        Salon s1 = new Salon(1, "Green Trends", "Ravi", "MG Road", "Bangalore", "India",
+                2010, 15, "Beauty Salon", "greentrends.com", "080123456", "info@greentrends.com",
+                "9 AM", "9 PM", "Cash/UPI/Card", "4.5", "Green", "Indoor", "Active",
+                "Popular beauty salon", sv1);
 
-		Salon s9 = new Salon();
-		s9.salonId = 9;
-		s9.salonName = "Geetanjali Salon";
-		s9.owner = "Geetanjali";
-		s9.location = "HSR Layout";
-		s9.city = "Bangalore";
-		s9.country = "India";
-		s9.establishedYear = 2009;
-		s9.employees = 16;
-		s9.category = "Beauty Salon";
-		s9.website = "geetanjalisalon.com";
-		s9.contact = "080901234";
-		s9.email = "hsr@geetanjali.com";
-		s9.openingTime = "9 AM";
-		s9.closingTime = "9 PM";
-		s9.paymentMode = "Cash/UPI/Card";
-		s9.rating = "4.3";
-		s9.colorTheme = "White";
-		s9.seatingType = "Indoor";
-		s9.status = "Active";
-		s9.description = "Family beauty salon";
+        Salon s2 = new Salon(2, "Lakme Salon", "Priya", "Brigade Road", "Bangalore", "India",
+                2008, 12, "Beauty Salon", "lakmesalon.in", "080234567", "info@lakmesalon.in",
+                "10 AM", "8 PM", "Cash/UPI/Card", "4.6", "Pink", "Indoor", "Active",
+                "Premium beauty salon chain", sv2);
 
-		Service sv9 = new Service();
-		sv9.serviceId = 109;
-		sv9.serviceName = "Threading";
-		sv9.type = "Facial Hair";
-		sv9.category = "Grooming";
-		sv9.duration = 15;
-		sv9.price = 100;
-		sv9.currency = "INR";
-		sv9.specialist = "Threading Expert";
-		sv9.productUsed = "Organic Thread";
-		sv9.equipment = "Cotton Thread";
-		sv9.appointmentType = "Walk-in";
-		sv9.availability = "Daily";
-		sv9.gender = "Women";
-		sv9.method = "Traditional Threading";
-		sv9.rating = "4.6";
-		sv9.discount = "25%";
-		sv9.status = "Available";
-		sv9.popularity = "High";
-		sv9.experience = "10 Years";
-		sv9.description = "Precision eyebrow threading";
-		s9.service = sv9;
-		s9.getSalonDetails();
+        Salon s3 = new Salon(3, "Jawed Habib", "Jawed Habib", "Jayanagar", "Bangalore", "India",
+                2005, 20, "Hair Salon", "jawedhabib.com", "080345678", "book@jawedhabib.com",
+                "9 AM", "10 PM", "Cash/UPI/Card", "4.4", "Black", "Indoor", "Active",
+                "Celebrity hair salon chain", sv3);
 
-		Salon s10 = new Salon();
-		s10.salonId = 10;
-		s10.salonName = "Rass beauty";
-		s10.owner = "Rass";
-		s10.location = "Electronic City";
-		s10.city = "Bangalore";
-		s10.country = "India";
-		s10.establishedYear = 2016;
-		s10.employees = 8;
-		s10.category = "Unisex Salon";
-		s10.website = "rassbeauty.com";
-		s10.contact = "080012345";
-		s10.email = "eclty@rass.com";
-		s10.openingTime = "8 AM";
-		s10.closingTime = "10 PM";
-		s10.paymentMode = "Cash/UPI";
-		s10.rating = "4.0";
-		s10.colorTheme = "Blue";
-		s10.seatingType = "Indoor";
-		s10.status = "Active";
-		s10.description = "Budget friendly salon";
+        Salon s4 = new Salon(4, "VLCC", "VLCC Group", "Malleshwaram", "Bangalore", "India",
+                1996, 25, "Wellness Salon", "vlccwellness.com", "080456789", "care@vlcc.com",
+                "8 AM", "9 PM", "Cash/UPI/Card", "4.3", "Blue", "Indoor", "Active",
+                "Wellness and beauty center", sv4);
 
-		Service sv10 = new Service();
-		sv10.serviceId = 110;
-		sv10.serviceName = "Waxing";
-		sv10.type = "Hair Removal";
-		sv10.category = "Grooming";
-		sv10.duration = 30;
-		sv10.price = 400;
-		sv10.currency = "INR";
-		sv10.specialist = "Waxing Expert";
-		sv10.productUsed = "Veet Wax";
-		sv10.equipment = "Heated Wax";
-		sv10.appointmentType = "Walk-in";
-		sv10.availability = "Daily";
-		sv10.gender = "Unisex";
-		sv10.method = "Strip Waxing";
-		sv10.rating = "4.2";
-		sv10.discount = "30%";
-		sv10.status = "Available";
-		sv10.popularity = "Medium";
-		sv10.experience = "3 Years";
-		sv10.description = "Professional hair removal service";
-		s10.service = sv10;
-		s10.getSalonDetails();
+        Salon s5 = new Salon(5, "Toni & Guy", "Toni & Guy", "Indiranagar", "Bangalore", "India",
+                2012, 18, "Premium Salon", "toniandguy.in", "080567890", "bangalore@toniandguy.in",
+                "10 AM", "8 PM", "Card/UPI", "4.7", "Red", "Luxury Indoor", "Active",
+                "International premium salon", sv5);
 
-		Salon s11 = new Salon();
-		s11.salonId = 11;
-		s11.salonName = "BBlunt";
-		s11.owner = "BBlunt";
-		s11.location = "Phoenix Marketcity";
-		s11.city = "Bangalore";
-		s11.country = "India";
-		s11.establishedYear = 2013;
-		s11.employees = 19;
-		s11.category = "Premium Salon";
-		s11.website = "bblunt.com";
-		s11.contact = "0801234567";
-		s11.email = "phoenix@bblunt.com";
-		s11.openingTime = "10 AM";
-		s11.closingTime = "10 PM";
-		s11.paymentMode = "Card/UPI";
-		s11.rating = "4.7";
-		s11.colorTheme = "Black";
-		s11.seatingType = "Luxury";
-		s11.status = "Active";
-		s11.description = "High-end salon experience";
+        Salon s6 = new Salon(6, "Matrix Salon", "Anita", "Koramangala", "Bangalore", "India",
+                2015, 10, "Unisex Salon", "matrixsalon.in", "080678901", "matrix@salon.in",
+                "9 AM", "9 PM", "Cash/UPI/Card", "4.2", "Purple", "Indoor", "Active",
+                "Trendy unisex salon", sv6);
 
-		Service sv11 = new Service();
-		sv11.serviceId = 111;
-		sv11.serviceName = "Hair Rebonding";
-		sv11.type = "Hair";
-		sv11.category = "Styling";
-		sv11.duration = 180;
-		sv11.price = 8000;
-		sv11.currency = "INR";
-		sv11.specialist = "Rebonding Expert";
-		sv11.productUsed = "Rebonding Chemicals";
-		sv11.equipment = "Straightening Iron";
-		sv11.appointmentType = "Appointment";
-		sv11.availability = "Mon-Sat";
-		sv11.gender = "Unisex";
-		sv11.method = "Japanese Rebonding";
-		sv11.rating = "4.8";
-		sv11.discount = "10%";
-		sv11.status = "Available";
-		sv11.popularity = "High";
-		sv11.experience = "9 Years";
-		sv11.description = "Permanent hair straightening";
-		s11.service = sv11;
-		s11.getSalonDetails();
+        Salon s7 = new Salon(7, "Looks Salon", "Suresh", "Whitefield", "Bangalore", "India",
+                2011, 14, "Beauty Salon", "looksalon.in", "080789012", "whitefield@looksalon.in",
+                "9:30 AM", "8:30 PM", "Cash/UPI/Card", "4.1", "Orange", "Indoor", "Active",
+                "Affordable beauty salon", sv7);
 
-		Salon s12 = new Salon();
-		s12.salonId = 12;
-		s12.salonName = "Envy Salon";
-		s12.owner = "Kavya";
-		s12.location = "Marathahalli";
-		s12.city = "Bangalore";
-		s12.country = "India";
-		s12.establishedYear = 2017;
-		s12.employees = 11;
-		s12.category = "Beauty Salon";
-		s12.website = "envysalon.in";
-		s12.contact = "0802345678";
-		s12.email = "marathahalli@envy.in";
-		s12.openingTime = "9 AM";
-		s12.closingTime = "9 PM";
-		s12.paymentMode = "Cash/UPI/Card";
-		s12.rating = "4.4";
-		s12.colorTheme = "Pink";
-		s12.seatingType = "Indoor";
-		s12.status = "Active";
-		s12.description = "Modern beauty salon";
+        Salon s8 = new Salon(8, "Jean-Claude Biguine", "Jean-Claude Biguine", "UB City", "Bangalore", "India",
+                2014, 22, "Luxury Salon", "biguine.com", "080890123", "ubcity@biguine.com",
+                "11 AM", "9 PM", "Card/UPI", "4.8", "Gold", "Luxury Indoor", "Active",
+                "French luxury salon", sv8);
 
-		Service sv12 = new Service();
-		sv12.serviceId = 112;
-		sv12.serviceName = "Massage";
-		sv12.type = "Body";
-		sv12.category = "Relaxation";
-		sv12.duration = 60;
-		sv12.price = 1200;
-		sv12.currency = "INR";
-		sv12.specialist = "Massage Therapist";
-		sv12.productUsed = "Aroma Oils";
-		sv12.equipment = "Massage Table";
-		sv12.appointmentType = "Appointment";
-		sv12.availability = "Daily";
-		sv12.gender = "Unisex";
-		sv12.method = "Swedish Massage";
-		sv12.rating = "4.6";
-		sv12.discount = "20%";
-		sv12.status = "Available";
-		sv12.popularity = "Medium";
-		sv12.experience = "5 Years";
-		sv12.description = "Relaxing body massage therapy";
-		s12.service = sv12;
-		s12.getSalonDetails();
+        Salon s9 = new Salon(9, "Geetanjali Salon", "Geetanjali", "HSR Layout", "Bangalore", "India",
+                2009, 16, "Beauty Salon", "geetanjalisalon.com", "080901234", "hsr@geetanjali.com",
+                "9 AM", "9 PM", "Cash/UPI/Card", "4.3", "White", "Indoor", "Active",
+                "Family beauty salon", sv9);
 
-		Salon s13 = new Salon();
-		s13.salonId = 13;
-		s13.salonName = "Hair Studio";
-		s13.owner = "Ramesh";
-		s13.location = "BTM Layout";
-		s13.city = "Bangalore";
-		s13.country = "India";
-		s13.establishedYear = 2014;
-		s13.employees = 9;
-		s13.category = "Hair Salon";
-		s13.website = "hairstudiobangalore.com";
-		s13.contact = "0803456789";
-		s13.email = "btm@hairstudio.com";
-		s13.openingTime = "8:30 AM";
-		s13.closingTime = "8:30 PM";
-		s13.paymentMode = "Cash/UPI";
-		s13.rating = "4.1";
-		s13.colorTheme = "Green";
-		s13.seatingType = "Indoor";
-		s13.status = "Active";
-		s13.description = "Specialized hair salon";
+        Salon s10 = new Salon(10, "Rass beauty", "Rass", "Electronic City", "Bangalore", "India",
+                2016, 8, "Unisex Salon", "rassbeauty.com", "080012345", "eclty@rass.com",
+                "8 AM", "10 PM", "Cash/UPI", "4.0", "Blue", "Indoor", "Active",
+                "Budget friendly salon", sv10);
 
-		Service sv13 = new Service();
-		sv13.serviceId = 113;
-		sv13.serviceName = "Smoothening";
-		sv13.type = "Hair";
-		sv13.category = "Treatment";
-		sv13.duration = 120;
-		sv13.price = 3500;
-		sv13.currency = "INR";
-		sv13.specialist = "Smoothening Expert";
-		sv13.productUsed = "Kerastase";
-		sv13.equipment = "Hair Dryer";
-		sv13.appointmentType = "Appointment";
-		sv13.availability = "Mon-Sat";
-		sv13.gender = "Unisex";
-		sv13.method = "Cezanne Smoothening";
-		sv13.rating = "4.5";
-		sv13.discount = "15%";
-		sv13.status = "Available";
-		sv13.popularity = "High";
-		sv13.experience = "6 Years";
-		sv13.description = "Frizz-free hair treatment";
-		s13.service = sv13;
-		s13.getSalonDetails();
+        Salon s11 = new Salon(11, "BBlunt", "BBlunt", "Phoenix Marketcity", "Bangalore", "India",
+                2013, 19, "Premium Salon", "bblunt.com", "0801234567", "phoenix@bblunt.com",
+                "10 AM", "10 PM", "Card/UPI", "4.7", "Black", "Luxury", "Active",
+                "High-end salon experience", sv11);
 
-		Salon s14 = new Salon();
-		s14.salonId = 14;
-		s14.salonName = "Glamour Beauty";
-		s14.owner = "Neha";
-		s14.location = "JP Nagar";
-		s14.city = "Bangalore";
-		s14.country = "India";
-		s14.establishedYear = 2018;
-		s14.employees = 13;
-		s14.category = "Beauty Salon";
-		s14.website = "glamourbeauty.in";
-		s14.contact = "0804567890";
-		s14.email = "jpnagar@glamour.in";
-		s14.openingTime = "10 AM";
-		s14.closingTime = "8 PM";
-		s14.paymentMode = "Cash/UPI/Card";
-		s14.rating = "4.3";
-		s14.colorTheme = "Silver";
-		s14.seatingType = "Indoor";
-		s14.status = "Active";
-		s14.description = "Glamorous beauty services";
+        Salon s12 = new Salon(12, "Envy Salon", "Kavya", "Marathahalli", "Bangalore", "India",
+                2017, 11, "Beauty Salon", "envysalon.in", "0802345678", "marathahalli@envy.in",
+                "9 AM", "9 PM", "Cash/UPI/Card", "4.4", "Pink", "Indoor", "Active",
+                "Modern beauty salon", sv12);
 
-		Service sv14 = new Service();
-		sv14.serviceId = 114;
-		sv14.serviceName = "Party Makeup";
-		sv14.type = "Makeup";
-		sv14.category = "Event";
-		sv14.duration = 90;
-		sv14.price = 3000;
-		sv14.currency = "INR";
-		sv14.specialist = "Makeup Artist";
-		sv14.productUsed = "Bobbi Brown";
-		sv14.equipment = "Makeup Brushes";
-		sv14.appointmentType = "Appointment";
-		sv14.availability = "Daily";
-		sv14.gender = "Women";
-		sv14.method = "Smokey Eye";
-		sv14.rating = "4.7";
-		sv14.discount = "10%";
-		sv14.status = "Available";
-		sv14.popularity = "High";
-		sv14.experience = "8 Years";
-		sv14.description = "Event makeup styling";
-		s14.service = sv14;
-		s14.getSalonDetails();
+        Salon s13 = new Salon(13, "Hair Studio", "Ramesh", "BTM Layout", "Bangalore", "India",
+                2014, 9, "Hair Salon", "hairstudiobangalore.com", "0803456789", "btm@hairstudio.com",
+                "8:30 AM", "8:30 PM", "Cash/UPI", "4.1", "Green", "Indoor", "Active",
+                "Specialized hair salon", sv13);
 
-		Salon s15 = new Salon();
-		s15.salonId = 15;
-		s15.salonName = "Style N Scissors";
-		s15.owner = "Vijay";
-		s15.location = "Yelahanka";
-		s15.city = "Bangalore";
-		s15.country = "India";
-		s15.establishedYear = 2012;
-		s15.employees = 10;
-		s15.category = "Unisex Salon";
-		s15.website = "stylenscissors.com";
-		s15.contact = "0805678901";
-		s15.email = "yelahanka@style.com";
-		s15.openingTime = "9 AM";
-		s15.closingTime = "9 PM";
-		s15.paymentMode = "Cash/UPI/Card";
-		s15.rating = "4.2";
-		s15.colorTheme = "Yellow";
-		s15.seatingType = "Indoor";
-		s15.status = "Active";
-		s15.description = "Trendy unisex salon";
+        Salon s14 = new Salon(14, "Glamour Beauty", "Neha", "JP Nagar", "Bangalore", "India",
+                2018, 13, "Beauty Salon", "glamourbeauty.in", "0804567890", "jpnagar@glamour.in",
+                "10 AM", "8 PM", "Cash/UPI/Card", "4.3", "Silver", "Indoor", "Active",
+                "Glamorous beauty services", sv14);
 
-		Service sv15 = new Service();
-		sv15.serviceId = 115;
-		sv15.serviceName = "Beard Trim";
-		sv15.type = "Beard";
-		sv15.category = "Grooming";
-		sv15.duration = 20;
-		sv15.price = 200;
-		sv15.currency = "INR";
-		sv15.specialist = "Barber";
-		sv15.productUsed = "Beard Oil";
-		sv15.equipment = "Trimmer";
-		sv15.appointmentType = "Walk-in";
-		sv15.availability = "Daily";
-		sv15.gender = "Men";
-		sv15.method = "Fade Trim";
-		sv15.rating = "4.4";
-		sv15.discount = "20%";
-		sv15.status = "Available";
-		sv15.popularity = "High";
-		sv15.experience = "4 Years";
-		sv15.description = "Professional beard styling";
-		s15.service = sv15;
-		s15.getSalonDetails();
+        Salon s15 = new Salon(15, "Style N Scissors", "Vijay", "Yelahanka", "Bangalore", "India",
+                2012, 10, "Unisex Salon", "stylenscissors.com", "0805678901", "yelahanka@style.com",
+                "9 AM", "9 PM", "Cash/UPI/Card", "4.2", "Yellow", "Indoor", "Active",
+                "Trendy unisex salon", sv15);
 
-		Salon s16 = new Salon();
-		s16.salonId = 16;
-		s16.salonName = "Amore Beauty";
-		s16.owner = "Divya";
-		s16.location = "Rajajinagar";
-		s16.city = "Bangalore";
-		s16.country = "India";
-		s16.establishedYear = 2010;
-		s16.employees = 17;
-		s16.category = "Beauty Salon";
-		s16.website = "amorebeauty.in";
-		s16.contact = "0806789012";
-		s16.email = "rajaji@amore.in";
-		s16.openingTime = "9:30 AM";
-		s16.closingTime = "8 PM";
-		s16.paymentMode = "Cash/Card";
-		s16.rating = "4.5";
-		s16.colorTheme = "Rose";
-		s16.seatingType = "Indoor";
-		s16.status = "Active";
-		s16.description = "Elegant beauty salon";
+        Salon s16 = new Salon(16, "Amore Beauty", "Divya", "Rajajinagar", "Bangalore", "India",
+                2010, 17, "Beauty Salon", "amorebeauty.in", "0806789012", "rajaji@amore.in",
+                "9:30 AM", "8 PM", "Cash/Card", "4.5", "Rose", "Indoor", "Active",
+                "Elegant beauty salon", sv16);
 
-		Service sv16 = new Service();
-		sv16.serviceId = 116;
-		sv16.serviceName = "Microblading";
-		sv16.type = "Eyebrows";
-		sv16.category = "Permanent Makeup";
-		sv16.duration = 120;
-		sv16.price = 12000;
-		sv16.currency = "INR";
-		sv16.specialist = "Microblading Artist";
-		sv16.productUsed = "Organic Pigments";
-		sv16.equipment = "Microblading Pen";
-		sv16.appointmentType = "Appointment";
-		sv16.availability = "Tue-Sun";
-		sv16.gender = "Women";
-		sv16.method = "6D Microblading";
-		sv16.rating = "4.9";
-		sv16.discount = "5%";
-		sv16.status = "Available";
-		sv16.popularity = "Medium";
-		sv16.experience = "7 Years";
-		sv16.description = "Semi-permanent eyebrow tattoo";
-		s16.service = sv16;
-		s16.getSalonDetails();
+        Salon s17 = new Salon(17, "Nova Salon", "Arjun", "Kammanahalli", "Bangalore", "India",
+                2019, 12, "Unisex Salon", "novasalon.in", "0807890123", "kamma@nova.in",
+                "10 AM", "10 PM", "UPI/Card", "4.3", "Teal", "Indoor", "Active",
+                "Contemporary salon", sv17);
 
-		Salon s17 = new Salon();
-		s17.salonId = 17;
-		s17.salonName = "Nova Salon";
-		s17.owner = "Arjun";
-		s17.location = "Kammanahalli";
-		s17.city = "Bangalore";
-		s17.country = "India";
-		s17.establishedYear = 2019;
-		s17.employees = 12;
-		s17.category = "Unisex Salon";
-		s17.website = "novasalon.in";
-		s17.contact = "0807890123";
-		s17.email = "kamma@nova.in";
-		s17.openingTime = "10 AM";
-		s17.closingTime = "10 PM";
-		s17.paymentMode = "UPI/Card";
-		s17.rating = "4.3";
-		s17.colorTheme = "Teal";
-		s17.seatingType = "Indoor";
-		s17.status = "Active";
-		s17.description = "Contemporary salon";
+        Salon s18 = new Salon(18, "Elite Looks", "Sangeeta", "Frazer Town", "Bangalore", "India",
+                2007, 15, "Premium Beauty", "elitelooks.in", "0808901234", "frazer@elite.in",
+                "9 AM", "9 PM", "Cash/UPI/Card", "4.6", "Maroon", "Indoor", "Active",
+                "Elite beauty services", sv18);
 
-		Service sv17 = new Service();
-		sv17.serviceId = 117;
-		sv17.serviceName = "Scalp Treatment";
-		sv17.type = "Scalp";
-		sv17.category = "Hair Care";
-		sv17.duration = 45;
-		sv17.price = 800;
-		sv17.currency = "INR";
-		sv17.specialist = "Scalp Specialist";
-		sv17.productUsed = "Medicated Oils";
-		sv17.equipment = "Massage Tools";
-		sv17.appointmentType = "Appointment";
-		sv17.availability = "Daily";
-		sv17.gender = "Unisex";
-		sv17.method = "Derma Roller";
-		sv17.rating = "4.5";
-		sv17.discount = "25%";
-		sv17.status = "Available";
-		sv17.popularity = "Medium";
-		sv17.experience = "5 Years";
-		sv17.description = "Hair growth scalp treatment";
-		s17.service = sv17;
-		s17.getSalonDetails();
+        Salon s19 = new Salon(19, "Urban Company Salon", "Urban Company", "Multiple Locations", "Bangalore", "India",
+                2015, 50, "On-demand Salon", "urbancompany.com", "0809012345", "support@urban.com",
+                "6 AM", "11 PM", "UPI/App", "4.5", "Orange", "At Home", "Active",
+                "On-demand beauty services", sv19);
 
-		Salon s18 = new Salon();
-		s18.salonId = 18;
-		s18.salonName = "Elite Looks";
-		s18.owner = "Sangeeta";
-		s18.location = "Frazer Town";
-		s18.city = "Bangalore";
-		s18.country = "India";
-		s18.establishedYear = 2007;
-		s18.employees = 15;
-		s18.category = "Premium Beauty";
-		s18.website = "elitelooks.in";
-		s18.contact = "0808901234";
-		s18.email = "frazer@elite.in";
-		s18.openingTime = "9 AM";
-		s18.closingTime = "9 PM";
-		s18.paymentMode = "Cash/UPI/Card";
-		s18.rating = "4.6";
-		s18.colorTheme = "Maroon";
-		s18.seatingType = "Indoor";
-		s18.status = "Active";
-		s18.description = "Elite beauty services";
+        Salon s20 = new Salon(20, "Vibes Salon", "Kiran", "Sarjapur Road", "Bangalore", "India",
+                2020, 7, "Trendy Salon", "vibessalon.in", "0800123456", "sarjapur@vibes.in",
+                "11 AM", "10 PM", "Cash/UPI/Card", "4.4", "Neon", "Indoor", "Active",
+                "Youth-focused trendy salon", sv20);
 
-		Service sv18 = new Service();
-		sv18.serviceId = 118;
-		sv18.serviceName = "Lash Extension";
-		sv18.type = "Eyelashes";
-		sv18.category = "Eye Enhancement";
-		sv18.duration = 120;
-		sv18.price = 4000;
-		sv18.currency = "INR";
-		sv18.specialist = "Lash Technician";
-		sv18.productUsed = "Mink Lashes";
-		sv18.equipment = "Eyelash Curler";
-		sv18.appointmentType = "Appointment";
-		sv18.availability = "Mon-Sat";
-		sv18.gender = "Women";
-		sv18.method = "Volume Lashes";
-		sv18.rating = "4.8";
-		sv18.discount = "15%";
-		sv18.status = "Available";
-		sv18.popularity = "High";
-		sv18.experience = "6 Years";
-		sv18.description = "Eyelash extension service";
-		s18.service = sv18;
-		s18.getSalonDetails();
+        System.out.println("BANGALORE SALON EXPERIENCE 2026 - 20 PREMIUM SALONS\n");
+        
+        s1.displayDetails();
+        s2.displayDetails();
+        s3.displayDetails();
+        s4.displayDetails();
+        s5.displayDetails();
+        s6.displayDetails();
+        s7.displayDetails();
+        s8.displayDetails();
+        s9.displayDetails();
+        s10.displayDetails();
+        s11.displayDetails();
+        s12.displayDetails();
+        s13.displayDetails();
+        s14.displayDetails();
+        s15.displayDetails();
+        s16.displayDetails();
+        s17.displayDetails();
+        s18.displayDetails();
+        s19.displayDetails();
+        s20.displayDetails();
 
-		Salon s19 = new Salon();
-		s19.salonId = 19;
-		s19.salonName = "Urban Company Salon";
-		s19.owner = "Urban Company";
-		s19.location = "Multiple Locations";
-		s19.city = "Bangalore";
-		s19.country = "India";
-		s19.establishedYear = 2015;
-		s19.employees = 50;
-		s19.category = "On-demand Salon";
-		s19.website = "urbancompany.com";
-		s19.contact = "0809012345";
-		s19.email = "support@urban.com";
-		s19.openingTime = "6 AM";
-		s19.closingTime = "11 PM";
-		s19.paymentMode = "UPI/App";
-		s19.rating = "4.5";
-		s19.colorTheme = "Orange";
-		s19.seatingType = "At Home";
-		s19.status = "Active";
-		s19.description = "On-demand beauty services";
-
-		Service sv19 = new Service();
-		sv19.serviceId = 119;
-		sv19.serviceName = "At Home Haircut";
-		sv19.type = "Hair";
-		sv19.category = "Grooming";
-		sv19.duration = 45;
-		sv19.price = 500;
-		sv19.currency = "INR";
-		sv19.specialist = "Mobile Stylist";
-		sv19.productUsed = "Travel Kit";
-		sv19.equipment = "Portable Tools";
-		sv19.appointmentType = "App Booking";
-		sv19.availability = "24/7";
-		sv19.gender = "Unisex";
-		sv19.method = "Express Cut";
-		sv19.rating = "4.4";
-		sv19.discount = "10%";
-		sv19.status = "Available";
-		sv19.popularity = "Very High";
-		sv19.experience = "3 Years";
-		sv19.description = "Home service haircut";
-		s19.service = sv19;
-		s19.getSalonDetails();
-
-		Salon s20 = new Salon();
-		s20.salonId = 20;
-		s20.salonName = "Vibes Salon";
-		s20.owner = "Kiran";
-		s20.location = "Sarjapur Road";
-		s20.city = "Bangalore";
-		s20.country = "India";
-		s20.establishedYear = 2020;
-		s20.employees = 7;
-		s20.category = "Trendy Salon";
-		s20.website = "vibessalon.in";
-		s20.contact = "0800123456";
-		s20.email = "sarjapur@vibes.in";
-		s20.openingTime = "11 AM";
-		s20.closingTime = "10 PM";
-		s20.paymentMode = "Cash/UPI/Card";
-		s20.rating = "4.4";
-		s20.colorTheme = "Neon";
-		s20.seatingType = "Indoor";
-		s20.status = "Active";
-		s20.description = "Youth-focused trendy salon";
-
-		Service sv20 = new Service();
-		sv20.serviceId = 120;
-		sv20.serviceName = "Rainbow Highlights";
-		sv20.type = "Hair";
-		sv20.category = "Coloring";
-		sv20.duration = 150;
-		sv20.price = 5000;
-		sv20.currency = "INR";
-		sv20.specialist = "Color Specialist";
-		sv20.productUsed = "Wella Color";
-		sv20.equipment = "Balayage Tools";
-		sv20.appointmentType = "Appointment";
-		sv20.availability = "Fri-Sun";
-		sv20.gender = "Unisex";
-		sv20.method = "Balayage Highlights";
-		sv20.rating = "4.9";
-		sv20.discount = "20%";
-		sv20.status = "Available";
-		sv20.popularity = "High";
-		sv20.experience = "4 Years";
-		sv20.description = "Trendy colored highlights";
-		s20.service = sv20;
-		s20.getSalonDetails();
+        System.out.println("\nBangalore's premier salons offer world-class beauty services.");
     }
 }

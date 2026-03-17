@@ -1,5 +1,4 @@
 class MusicInstrument {
-
     int instrumentId;
     String instrumentName;
     String type;
@@ -21,8 +20,34 @@ class MusicInstrument {
     String status;
     String priceRange;
 
-    public void getMusicInstrumentDetails(){
+    public MusicInstrument(int instrumentId, String instrumentName, String type, String material,
+                          String originCountry, int strings, int weight, String color, String brand,
+                          int year, String soundType, String tuning, String category, String playerType,
+                          String size, String maintenance, String usage, String manufacturer,
+                          String status, String priceRange) {
+        this.instrumentId = instrumentId;
+        this.instrumentName = instrumentName;
+        this.type = type;
+        this.material = material;
+        this.originCountry = originCountry;
+        this.strings = strings;
+        this.weight = weight;
+        this.color = color;
+        this.brand = brand;
+        this.year = year;
+        this.soundType = soundType;
+        this.tuning = tuning;
+        this.category = category;
+        this.playerType = playerType;
+        this.size = size;
+        this.maintenance = maintenance;
+        this.usage = usage;
+        this.manufacturer = manufacturer;
+        this.status = status;
+        this.priceRange = priceRange;
+    }
 
+    public void getMusicInstrumentDetails() {
         System.out.println("InstrumentId: " + instrumentId);
         System.out.println("InstrumentName: " + instrumentName);
         System.out.println("Type: " + type);

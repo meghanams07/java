@@ -1,931 +1,229 @@
 class TourismExecutor {
+    public static void main(String[] args) {
 
-    public static void main(String[] args){
+        Package p1 = new Package(101, "Goa Holiday", "Goa", 5, 4, "Flight", "3 Star", "Breakfast",
+                "Available", "May 10", "May 15", "25000", "INR", "Beach", "Water Sports",
+                "Summer", "Included", "Available", "10%", "Goa beach vacation package");
 
-        TourismAngadi t1 = new TourismAngadi();
+        Package p2 = new Package(102, "Kerala Backwaters", "Kerala", 7, 6, "Flight + Bus", "4 Star",
+                "MAP (Breakfast+Dinner)", "Local Guide", "April 20", "April 27", "35000", "INR",
+                "Nature", "Houseboat, Ayurveda", "Summer", "Included", "Available", "15%",
+                "Luxury Kerala backwaters and Ayurveda package");
 
-        t1.agencyId = 1;
-        t1.agencyName = "Tourism Angadi";
-        t1.location = "MG Road";
-        t1.city = "Bangalore";
-        t1.country = "India";
-        t1.owner = "Ramesh";
-        t1.establishedYear = 2015;
-        t1.employees = 50;
-        t1.website = "tourismangadi.com";
-        t1.contact = "080123456";
-        t1.email = "info@tourismangadi.com";
-        t1.category = "Travel Agency";
-        t1.services = "Tour Packages";
-        t1.license = "Gov Approved";
-        t1.rating = "4.5";
-        t1.support = "24/7";
-        t1.colorTheme = "Blue";
-        t1.paymentMode = "Online/Offline";
-        t1.status = "Active";
-        t1.branch = "Bangalore";
+        Package p3 = new Package(103, "Mysore Palace Special", "Mysore", 3, 2, "AC Coach", "3 Star",
+                "Breakfast", "Included", "Every Friday", "Sunday", "8000", "INR", "Heritage",
+                "Palace, Zoo, Brindavan", "All Seasons", "Included", "Available", "5%",
+                "Weekend heritage tour to Mysore");
 
-        Package p1 = new Package();
+        Package p4 = new Package(104, "Europe Highlights", "Paris, Amsterdam, Brussels", 10, 9, "Flight",
+                "4 Star", "Breakfast", "Multilingual", "June 5", "June 15", "165000", "INR",
+                "International", "Eiffel Tower, Canal Cruise", "Summer", "Included", "Limited Seats",
+                "Early Bird 10%", "10-day Europe group tour from Bangalore");
 
-        p1.packageId = 101;
-        p1.packageName = "Goa Holiday";
-        p1.destination = "Goa";
-        p1.days = 5;
-        p1.nights = 4;
-        p1.transport = "Flight";
-        p1.hotelType = "3 Star";
-        p1.foodType = "Breakfast";
-        p1.guide = "Available";
-        p1.startDate = "May 10";
-        p1.endDate = "May 15";
-        p1.price = "25000";
-        p1.currency = "INR";
-        p1.category = "Beach";
-        p1.activities = "Water Sports";
-        p1.season = "Summer";
-        p1.insurance = "Included";
-        p1.status = "Available";
-        p1.discount = "10%";
-        p1.description = "Goa beach vacation package";
+        Package p5 = new Package(105, "Maldives Honeymoon", "Maldives", 6, 5, "Flight", "Water Villa",
+                "All Inclusive", "On Request", "All Year", "+5 Days", "95000", "INR", "Honeymoon",
+                "Snorkeling, Spa", "All Seasons", "Included", "Available", "20% Couple",
+                "Luxury Maldives honeymoon from Bangalore");
 
-        t1.pkg = p1;
+        Package p6 = new Package(106, "Dubai Shopping Festival", "Dubai", 5, 4, "Flight", "5 Star",
+                "Breakfast", "City Tour", "January 1", "January 6", "55000", "INR", "Shopping",
+                "Burj Khalifa, Mall Tours", "Winter", "Included", "Available", "Group 12%",
+                "Dubai shopping festival with luxury stay");
 
-        t1.getTourismDetails();
-		TourismAngadi t2 = new TourismAngadi();
-t2.agencyId = 2;
-t2.agencyName = "GT Holidays";
-t2.location = "MG Road";
-t2.city = "Bangalore";
-t2.country = "India";
-t2.owner = "GT Management";
-t2.establishedYear = 1995;
-t2.employees = 120;
-t2.website = "gtholidays.in";
-t2.contact = "080223456";
-t2.email = "info@gtholidays.in";
-t2.category = "Travel Agency";
-t2.services = "International Tours";
-t2.license = "Gov Approved";
-t2.rating = "4.7";
-t2.support = "24/7";
-t2.colorTheme = "Green";
-t2.paymentMode = "Online/Offline";
-t2.status = "Active";
-t2.branch = "Bangalore Main";
+        Package p7 = new Package(107, "Kashi Vaishno Devi", "Varanasi, Katra", 8, 7, "Flight + Train",
+                "3 Star", "Breakfast + Dinner", "Religious Guide", "Monthly", "+7 Days", "28000", "INR",
+                "Pilgrimage", "Ganga Aarti, Vaishno Devi", "All Seasons", "Included", "Available",
+                "Group Discount", "Spiritual tour to Kashi and Vaishno Devi");
 
-Package p2 = new Package();
-p2.packageId = 102;
-p2.packageName = "Kerala Backwaters";
-p2.destination = "Kerala";
-p2.days = 7;
-p2.nights = 6;
-p2.transport = "Flight + Bus";
-p2.hotelType = "4 Star";
-p2.foodType = "MAP (Breakfast+Dinner)";
-p2.guide = "Local Guide";
-p2.startDate = "April 20";
-p2.endDate = "April 27";
-p2.price = "35000";
-p2.currency = "INR";
-p2.category = "Nature";
-p2.activities = "Houseboat, Ayurveda";
-p2.season = "Summer";
-p2.insurance = "Included";
-p2.status = "Available";
-p2.discount = "15%";
-p2.description = "Luxury Kerala backwaters and Ayurveda package";
-t2.pkg = p2;
-t2.getTourismDetails();
+        Package p8 = new Package(108, "Heritage Karnataka", "Hampi, Badami, Aihole", 6, 5, "AC Bus",
+                "Heritage Hotels", "Breakfast", "Archaeologist", "Every Saturday", "Thursday", "22000", "INR",
+                "Heritage", "UNESCO Sites, Temple Tours", "Winter", "Included", "Available", "Student 20%",
+                "Karnataka UNESCO heritage circuit");
 
-TourismAngadi t3 = new TourismAngadi();
-t3.agencyId = 3;
-t3.agencyName = "Nirmala Travels";
-t3.location = "Church Street";
-t3.city = "Bangalore";
-t3.country = "India";
-t3.owner = "Nirmala Family";
-t3.establishedYear = 1971;
-t3.employees = 80;
-t3.website = "nirmalatravels.com";
-t3.contact = "080323456";
-t3.email = "book@nirmalatravels.com";
-t3.category = "Coach Tours";
-t3.services = "Group Tours";
-t3.license = "Gov Approved";
-t3.rating = "4.4";
-t3.support = "Office Hours";
-t3.colorTheme = "Orange";
-t3.paymentMode = "Cash/Card";
-t3.status = "Active";
-t3.branch = "Bangalore";
+        Package p9 = new Package(109, "Coorg Hill Station", "Coorg", 4, 3, "Bus", "Resort",
+                "All Meals", "Local", "Daily", "+3 Days", "15000", "INR", "Hill Station",
+                "Coffee Plantation, Waterfalls", "Monsoon", "Included", "High Demand", "Member 25%",
+                "Coorg resort stay with all meals");
 
-Package p3 = new Package();
-p3.packageId = 103;
-p3.packageName = "Mysore Palace Special";
-p3.destination = "Mysore";
-p3.days = 3;
-p3.nights = 2;
-p3.transport = "AC Coach";
-p3.hotelType = "3 Star";
-p3.foodType = "Breakfast";
-p3.guide = "Included";
-p3.startDate = "Every Friday";
-p3.endDate = "Sunday";
-p3.price = "8000";
-p3.currency = "INR";
-p3.category = "Heritage";
-p3.activities = "Palace, Zoo, Brindavan";
-p3.season = "All Seasons";
-p3.insurance = "Included";
-p3.status = "Available";
-p3.discount = "5%";
-p3.description = "Weekend heritage tour to Mysore";
-t3.pkg = p3;
-t3.getTourismDetails();
+        Package p10 = new Package(110, "Andaman Islands", "Port Blair, Havelock", 7, 6, "Flight",
+                "Beach Resort", "Breakfast + Dinner", "Island Expert", "Weekly", "+6 Days", "42000", "INR",
+                "Island", "Scuba Diving, Coral Reef", "Winter", "Included", "Few Seats", "Online 10%",
+                "Andaman island adventure package");
 
-TourismAngadi t4 = new TourismAngadi();
-t4.agencyId = 4;
-t4.agencyName = "Veena World Bangalore";
-t4.location = "Indiranagar";
-t4.city = "Bangalore";
-t4.country = "India";
-t4.owner = "Veena Patil";
-t4.establishedYear = 1997;
-t4.employees = 200;
-t4.website = "veenaworld.com";
-t4.contact = "080423456";
-t4.email = "bangalore@veenaworld.com";
-t4.category = "International Tours";
-t4.services = "Europe Tours";
-t4.license = "Gov Approved";
-t4.rating = "4.8";
-t4.support = "24/7";
-t4.colorTheme = "Purple";
-t4.paymentMode = "Online/EMI";
-t4.status = "Active";
-t4.branch = "Bangalore Branch";
+        Package p11 = new Package(111, "Singapore Business", "Singapore", 4, 3, "Flight", "5 Star Business",
+                "Breakfast", "On Request", "Monthly", "+3 Days", "75000", "INR", "Business",
+                "Marina Bay, Business Meetings", "All Seasons", "Included", "Available", "Corporate 15%",
+                "Singapore business travel package");
 
-Package p4 = new Package();
-p4.packageId = 104;
-p4.packageName = "Europe Highlights";
-p4.destination = "Paris, Amsterdam, Brussels";
-p4.days = 10;
-p4.nights = 9;
-p4.transport = "Flight";
-p4.hotelType = "4 Star";
-p4.foodType = "Breakfast";
-p4.guide = "Multilingual";
-p4.startDate = "June 5";
-p4.endDate = "June 15";
-p4.price = "165000";
-p4.currency = "INR";
-p4.category = "International";
-p4.activities = "Eiffel Tower, Canal Cruise";
-p4.season = "Summer";
-p4.insurance = "Included";
-p4.status = "Limited Seats";
-p4.discount = "Early Bird 10%";
-p4.description = "10-day Europe group tour from Bangalore";
-t4.pkg = p4;
-t4.getTourismDetails();
+        Package p12 = new Package(112, "Switzerland Alps", "Zurich, Lucerne, Interlaken", 12, 11, "Flight",
+                "5 Star", "Breakfast + Dinner", "English Speaking", "July 10", "July 22", "245000", "INR",
+                "Luxury", "Jungfrau, Lake Cruises", "Summer", "Premium", "Limited Seats", "Early Bird 10%",
+                "Luxury Switzerland alpine tour");
 
-TourismAngadi t5 = new TourismAngadi();
-t5.agencyId = 5;
-t5.agencyName = "Skyway International";
-t5.location = "Koramangala";
-t5.city = "Bangalore";
-t5.country = "India";
-t5.owner = "Skyway Group";
-t5.establishedYear = 2005;
-t5.employees = 65;
-t5.website = "skywaytour.com";
-t5.contact = "080523456";
-t5.email = "reservations@skywaytour.com";
-t5.category = "Custom Tours";
-t5.services = "Honeymoon Packages";
-t5.license = "Gov Approved";
-t5.rating = "4.6";
-t5.support = "24/7";
-t5.colorTheme = "Pink";
-t5.paymentMode = "Online/Offline";
-t5.status = "Active";
-t5.branch = "Bangalore";
+        Package p13 = new Package(113, "Australia Discovery", "Sydney, Melbourne, Gold Coast", 14, 13, "Flight",
+                "4 Star", "Breakfast", "Local Expert", "September 1", "September 15", "185000", "INR",
+                "International", "Opera House, Great Barrier Reef", "Spring", "Included", "Available", "Group 12%",
+                "Complete Australia east coast tour");
 
-Package p5 = new Package();
-p5.packageId = 105;
-p5.packageName = "Maldives Honeymoon";
-p5.destination = "Maldives";
-p5.days = 6;
-p5.nights = 5;
-p5.transport = "Flight";
-p5.hotelType = "Water Villa";
-p5.foodType = "All Inclusive";
-p5.guide = "On Request";
-p5.startDate = "All Year";
-p5.endDate = "+5 Days";
-p5.price = "95000";
-p5.currency = "INR";
-p5.category = "Honeymoon";
-p5.activities = "Snorkeling, Spa";
-p5.season = "All Seasons";
-p5.insurance = "Included";
-p5.status = "Available";
-p5.discount = "20% Couple";
-p5.description = "Luxury Maldives honeymoon from Bangalore";
-t5.pkg = p5;
-t5.getTourismDetails();
+        Package p14 = new Package(114, "Himalaya Trekking", "Manali, Rohtang Pass", 8, 7, "Flight + 4x4",
+                "Mountain Lodge", "All Meals", "Trekking Expert", "October 15", "October 23", "45000", "INR",
+                "Adventure", "Trekking, Camping, River Rafting", "Autumn", "Adventure Cover", "Limited Seats", "Group 15%",
+                "Himalayan adventure trekking expedition");
 
-TourismAngadi t6 = new TourismAngadi();
-t6.agencyId = 6;
-t6.agencyName = "Thomas Cook Bangalore";
-t6.location = "Residency Road";
-t6.city = "Bangalore";
-t6.country = "India";
-t6.owner = "Thomas Cook India";
-t6.establishedYear = 1881;
-t6.employees = 300;
-t6.website = "thomascook.in";
-t6.contact = "080623456";
-t6.email = "bangalore@thomascook.in";
-t6.category = "Full Service";
-t6.services = "Visa + Tours";
-t6.license = "Gov Approved";
-t6.rating = "4.9";
-t6.support = "24/7";
-t6.colorTheme = "Red";
-t6.paymentMode = "All Modes";
-t6.status = "Active";
-t6.branch = "Bangalore Central";
+        Package p15 = new Package(115, "Karnataka Complete", "Coorg, Mysore, Chikmagalur", 9, 8, "AC Innova",
+                "Homestay", "Karnataka Cuisine", "Local Expert", "Every Monday", "+8 Days", "32000", "INR",
+                "State Tour", "Coffee Plantation, Temples", "All Seasons", "Included", "High Demand", "Family 10%",
+                "Complete Karnataka culture and nature tour");
 
-Package p6 = new Package();
-p6.packageId = 106;
-p6.packageName = "Dubai Shopping Festival";
-p6.destination = "Dubai";
-p6.days = 5;
-p6.nights = 4;
-p6.transport = "Flight";
-p6.hotelType = "5 Star";
-p6.foodType = "Breakfast";
-p6.guide = "City Tour";
-p6.startDate = "January 1";
-p6.endDate = "January 6";
-p6.price = "55000";
-p6.currency = "INR";
-p6.category = "Shopping";
-p6.activities = "Burj Khalifa, Mall Tours";
-p6.season = "Winter";
-p6.insurance = "Included";
-p6.status = "Available";
-p6.discount = "Group 12%";
-p6.description = "Dubai shopping festival with luxury stay";
-t6.pkg = p6;
-t6.getTourismDetails();
+        Package p16 = new Package(116, "USA East Coast", "New York, Washington DC, Niagara", 11, 10, "Flight",
+                "4 Star", "Breakfast", "Multilingual", "August 5", "August 16", "220000", "INR",
+                "International", "Statue of Liberty, Niagara Falls", "Summer", "Comprehensive", "Few Seats", "Visa Package 8%",
+                "USA East Coast with visa assistance");
 
-TourismAngadi t7 = new TourismAngadi();
-t7.agencyId = 7;
-t7.agencyName = "SOTC Travel Bangalore";
-t7.location = "Brigade Road";
-t7.city = "Bangalore";
-t7.country = "India";
-t7.owner = "Kuwait Airways";
-t7.establishedYear = 1949;
-t7.employees = 150;
-t7.website = "sotc.in";
-t7.contact = "080723456";
-t7.email = "sotc.bangalore@sotc.in";
-t7.category = "Group Tours";
-t7.services = "Pilgrimage Tours";
-t7.license = "Gov Approved";
-t7.rating = "4.5";
-t7.support = "24/7";
-t7.colorTheme = "Gold";
-t7.paymentMode = "Online/Offline";
-t7.status = "Active";
-t7.branch = "Bangalore";
+        Package p17 = new Package(117, "Rajasthan Royals", "Jaipur, Udaipur, Jodhpur", 7, 6, "AC Bus",
+                "Heritage Hotel", "Breakfast + Dinner", "History Expert", "Every Wednesday", "+6 Days", "28000", "INR",
+                "Heritage", "Forts, Palaces, Camel Safari", "Winter", "Included", "Available", "Group 20%",
+                "Budget Rajasthan royal heritage tour");
 
-Package p7 = new Package();
-p7.packageId = 107;
-p7.packageName = "Kashi Vaishno Devi";
-p7.destination = "Varanasi, Katra";
-p7.days = 8;
-p7.nights = 7;
-p7.transport = "Flight + Train";
-p7.hotelType = "3 Star";
-p7.foodType = "Breakfast + Dinner";
-p7.guide = "Religious Guide";
-p7.startDate = "Monthly";
-p7.endDate = "+7 Days";
-p7.price = "28000";
-p7.currency = "INR";
-p7.category = "Pilgrimage";
-p7.activities = "Ganga Aarti, Vaishno Devi";
-p7.season = "All Seasons";
-p7.insurance = "Included";
-p7.status = "Available";
-p7.discount = "Group Discount";
-p7.description = "Spiritual tour to Kashi and Vaishno Devi";
-t7.pkg = p7;
-t7.getTourismDetails();
+        Package p18 = new Package(118, "Tamil Nadu Temples", "Madurai, Rameshwaram, Thanjavur", 6, 5, "AC Coach",
+                "3 Star", "South Indian Meals", "Temple Expert", "Every Thursday", "+5 Days", "21000", "INR",
+                "Spiritual", "Temple Darshan, Rituals", "All Seasons", "Included", "High Demand", "Family 10%",
+                "South Indian temple pilgrimage tour");
 
-TourismAngadi t8 = new TourismAngadi();
-t8.agencyId = 8;
-t8.agencyName = "Karnataka Tourism";
-t8.location = "Badami House";
-t8.city = "Bangalore";
-t8.country = "India";
-t8.owner = "Govt of Karnataka";
-t8.establishedYear = 1960;
-t8.employees = 200;
-t8.website = "karnatakatourism.org";
-t8.contact = "080823456";
-t8.email = "info@karnatakatourism.org";
-t8.category = "Government";
-t8.services = "Heritage Tours";
-t8.license = "Government";
-t8.rating = "4.3";
-t8.support = "Office Hours";
-t8.colorTheme = "Green White";
-t8.paymentMode = "Online";
-t8.status = "Active";
-t8.branch = "Head Office";
+        Package p19 = new Package(119, "Ooty Weekend", "Ooty, Coonoor", 3, 2, "AC Bus", "Resort",
+                "Breakfast + Dinner", "Local", "Every Friday", "Sunday", "12500", "INR", "Weekend",
+                "Boat Ride, Tea Plantation", "All Seasons", "Included", "Very High Demand", "Couple 15%",
+                "Nilgiri hills weekend getaway from Bangalore");
 
-Package p8 = new Package();
-p8.packageId = 108;
-p8.packageName = "Heritage Karnataka";
-p8.destination = "Hampi, Badami, Aihole";
-p8.days = 6;
-p8.nights = 5;
-p8.transport = "AC Bus";
-p8.hotelType = "Heritage Hotels";
-p8.foodType = "Breakfast";
-p8.guide = "Archaeologist";
-p8.startDate = "Every Saturday";
-p8.endDate = "Thursday";
-p8.price = "22000";
-p8.currency = "INR";
-p8.category = "Heritage";
-p8.activities = "UNESCO Sites, Temple Tours";
-p8.season = "Winter";
-p8.insurance = "Included";
-p8.status = "Available";
-p8.discount = "Student 20%";
-p8.description = "Karnataka UNESCO heritage circuit";
-t8.pkg = p8;
-t8.getTourismDetails();
+        Package p20 = new Package(120, "Educational Singapore", "Singapore", 5, 4, "Flight", "3 Star",
+                "Breakfast", "Educational", "School Holidays", "+4 Days", "65000", "INR", "Educational",
+                "Science Centre, Gardens by the Bay", "Summer Vacation", "Student Cover", "Group Bookings", "Student 25%",
+                "Educational tour for college students");
 
-TourismAngadi t9 = new TourismAngadi();
-t9.agencyId = 9;
-t9.agencyName = "Club Mahindra Bangalore";
-t9.location = "Jayanagar";
-t9.city = "Bangalore";
-t9.country = "India";
-t9.owner = "Mahindra Holidays";
-t9.establishedYear = 1996;
-t9.employees = 100;
-t9.website = "clubmahindra.com";
-t9.contact = "080923456";
-t9.email = "bangalore@clubmahindra.com";
-t9.category = "Resort Membership";
-t9.services = "Timeshare";
-t9.license = "Gov Approved";
-t9.rating = "4.6";
-t9.support = "24/7";
-t9.colorTheme = "Brown";
-t9.paymentMode = "Membership";
-t9.status = "Active";
-t9.branch = "Bangalore";
+        TourismAngadi t1 = new TourismAngadi(1, "Tourism Angadi", "MG Road", "Bangalore", "India",
+                "Ramesh", 2015, 50, "tourismangadi.com", "080123456", "info@tourismangadi.com",
+                "Travel Agency", "Tour Packages", "Gov Approved", "4.5", "24/7", "Blue",
+                "Online/Offline", "Active", "Bangalore", p1);
 
-Package p9 = new Package();
-p9.packageId = 109;
-p9.packageName = "Coorg Hill Station";
-p9.destination = "Coorg";
-p9.days = 4;
-p4.packageId = 109;
-p9.packageName = "Coorg Hill Station";
-p9.destination = "Coorg";
-p9.days = 4;
-p9.nights = 3;
-p9.transport = "Bus";
-p9.hotelType = "Resort";
-p9.foodType = "All Meals";
-p9.guide = "Local";
-p9.startDate = "Daily";
-p9.endDate = "+3 Days";
-p9.price = "15000";
-p9.currency = "INR";
-p9.category = "Hill Station";
-p9.activities = "Coffee Plantation, Waterfalls";
-p9.season = "Monsoon";
-p9.insurance = "Included";
-p9.status = "High Demand";
-p9.discount = "Member 25%";
-p9.description = "Coorg resort stay with all meals";
-t9.pkg = p9;
-t9.getTourismDetails();
+        TourismAngadi t2 = new TourismAngadi(2, "GT Holidays", "MG Road", "Bangalore", "India",
+                "GT Management", 1995, 120, "gtholidays.in", "080223456", "info@gtholidays.in",
+                "Travel Agency", "International Tours", "Gov Approved", "4.7", "24/7", "Green",
+                "Online/Offline", "Active", "Bangalore Main", p2);
 
-TourismAngadi t10 = new TourismAngadi();
-t10.agencyId = 10;
-t10.agencyName = "MakeMyTrip Local";
-t10.location = "Whitefield";
-t10.city = "Bangalore";
-t10.country = "India";
-t10.owner = "MakeMyTrip Ltd";
-t10.establishedYear = 2000;
-t10.employees = 75;
-t10.website = "makemytrip.com";
-t10.contact = "0801023456";
-t10.email = "local.blr@makemytrip.com";
-t10.category = "OTA Branch";
-t10.services = "Custom Packages";
-t10.license = "Gov Approved";
-t10.rating = "4.2";
-t10.support = "24/7";
-t10.colorTheme = "Yellow";
-t10.paymentMode = "Online Only";
-t10.status = "Active";
-t10.branch = "Whitefield";
+        TourismAngadi t3 = new TourismAngadi(3, "Nirmala Travels", "Church Street", "Bangalore", "India",
+                "Nirmala Family", 1971, 80, "nirmalatravels.com", "080323456", "book@nirmalatravels.com",
+                "Coach Tours", "Group Tours", "Gov Approved", "4.4", "Office Hours", "Orange",
+                "Cash/Card", "Active", "Bangalore", p3);
 
-Package p10 = new Package();
-p10.packageId = 110;
-p10.packageName = "Andaman Islands";
-p10.destination = "Port Blair, Havelock";
-p10.days = 7;
-p10.nights = 6;
-p10.transport = "Flight";
-p10.hotelType = "Beach Resort";
-p10.foodType = "Breakfast + Dinner";
-p10.guide = "Island Expert";
-p10.startDate = "Weekly";
-p10.endDate = "+6 Days";
-p10.price = "42000";
-p10.currency = "INR";
-p10.category = "Island";
-p10.activities = "Scuba Diving, Coral Reef";
-p10.season = "Winter";
-p10.insurance = "Included";
-p10.status = "Few Seats";
-p10.discount = "Online 10%";
-p10.description = "Andaman island adventure package";
-t10.pkg = p10;
-t10.getTourismDetails();
-TourismAngadi t11 = new TourismAngadi();
-t11.agencyId = 11;
-t11.agencyName = "Intercontinental Travels";
-t11.location = "Infantry Road";
-t11.city = "Bangalore";
-t11.country = "India";
-t11.owner = "Intercontinental Group";
-t11.establishedYear = 1985;
-t11.employees = 45;
-t11.website = "intercontinentaltravels.com";
-t11.contact = "0801123456";
-t11.email = "info@intercontinentaltravels.com";
-t11.category = "Corporate Travel";
-t11.services = "Business Tours";
-t11.license = "Gov Approved";
-t11.rating = "4.4";
-t11.support = "Business Hours";
-t11.colorTheme = "Silver";
-t11.paymentMode = "Corporate Billing";
-t11.status = "Active";
-t11.branch = "Bangalore Central";
+        TourismAngadi t4 = new TourismAngadi(4, "Veena World Bangalore", "Indiranagar", "Bangalore", "India",
+                "Veena Patil", 1997, 200, "veenaworld.com", "080423456", "bangalore@veenaworld.com",
+                "International Tours", "Europe Tours", "Gov Approved", "4.8", "24/7", "Purple",
+                "Online/EMI", "Active", "Bangalore Branch", p4);
 
-Package p11 = new Package();
-p11.packageId = 111;
-p11.packageName = "Singapore Business";
-p11.destination = "Singapore";
-p11.days = 4;
-p11.nights = 3;
-p11.transport = "Flight";
-p11.hotelType = "5 Star Business";
-p11.foodType = "Breakfast";
-p11.guide = "On Request";
-p11.startDate = "Monthly";
-p11.endDate = "+3 Days";
-p11.price = "75000";
-p11.currency = "INR";
-p11.category = "Business";
-p11.activities = "Marina Bay, Business Meetings";
-p11.season = "All Seasons";
-p11.insurance = "Included";
-p11.status = "Available";
-p11.discount = "Corporate 15%";
-p11.description = "Singapore business travel package";
-t11.pkg = p11;
-t11.getTourismDetails();
+        TourismAngadi t5 = new TourismAngadi(5, "Skyway International", "Koramangala", "Bangalore", "India",
+                "Skyway Group", 2005, 65, "skywaytour.com", "080523456", "reservations@skywaytour.com",
+                "Custom Tours", "Honeymoon Packages", "Gov Approved", "4.6", "24/7", "Pink",
+                "Online/Offline", "Active", "Bangalore", p5);
 
-TourismAngadi t12 = new TourismAngadi();
-t12.agencyId = 12;
-t12.agencyName = "Excelsior Travels";
-t12.location = "Hare Krishna Road";
-t12.city = "Bangalore";
-t12.country = "India";
-t12.owner = "Excelsior Family";
-t12.establishedYear = 1990;
-t12.employees = 30;
-t12.website = "excelsiortravels.com";
-t12.contact = "0801223456";
-t12.email = "book@excelsiortravels.com";
-t12.category = "Luxury Travel";
-t12.services = "Premium Tours";
-t12.license = "Gov Approved";
-t12.rating = "4.7";
-t12.support = "24/7";
-t12.colorTheme = "Gold";
-t12.paymentMode = "Premium Cards";
-t12.status = "Active";
-t12.branch = "Bangalore";
+        TourismAngadi t6 = new TourismAngadi(6, "Thomas Cook Bangalore", "Residency Road", "Bangalore", "India",
+                "Thomas Cook India", 1881, 300, "thomascook.in", "080623456", "bangalore@thomascook.in",
+                "Full Service", "Visa + Tours", "Gov Approved", "4.9", "24/7", "Red",
+                "All Modes", "Active", "Bangalore Central", p6);
 
-Package p12 = new Package();
-p12.packageId = 112;
-p12.packageName = "Switzerland Alps";
-p12.destination = "Zurich, Lucerne, Interlaken";
-p12.days = 12;
-p12.nights = 11;
-p12.transport = "Flight";
-p12.hotelType = "5 Star";
-p12.foodType = "Breakfast + Dinner";
-p12.guide = "English Speaking";
-p12.startDate = "July 10";
-p12.endDate = "July 22";
-p12.price = "245000";
-p12.currency = "INR";
-p12.category = "Luxury";
-p12.activities = "Jungfrau, Lake Cruises";
-p12.season = "Summer";
-p12.insurance = "Premium";
-p12.status = "Limited Seats";
-p12.discount = "Early Bird 10%";
-p12.description = "Luxury Switzerland alpine tour";
-t12.pkg = p12;
-t12.getTourismDetails();
+        TourismAngadi t7 = new TourismAngadi(7, "SOTC Travel Bangalore", "Brigade Road", "Bangalore", "India",
+                "Kuwait Airways", 1949, 150, "sotc.in", "080723456", "sotc.bangalore@sotc.in",
+                "Group Tours", "Pilgrimage Tours", "Gov Approved", "4.5", "24/7", "Gold",
+                "Online/Offline", "Active", "Bangalore", p7);
 
-TourismAngadi t13 = new TourismAngadi();
-t13.agencyId = 13;
-t13.agencyName = "Uniglobe Travel";
-t13.location = "Indiranagar 2nd Stage";
-t13.city = "Bangalore";
-t13.country = "India";
-t13.owner = "Uniglobe Network";
-t13.establishedYear = 2000;
-t13.employees = 60;
-t13.website = "thetravelcom.com";
-t13.contact = "0801323456";
-t13.email = "bangalore@uniglobe.com";
-t13.category = "Global Network";
-t13.services = "Worldwide Tours";
-t13.license = "IATA Approved";
-t13.rating = "4.6";
-t13.support = "24/7";
-t13.colorTheme = "Blue White";
-t13.paymentMode = "All Modes";
-t13.status = "Active";
-t13.branch = "Indiranagar";
+        TourismAngadi t8 = new TourismAngadi(8, "Karnataka Tourism", "Badami House", "Bangalore", "India",
+                "Govt of Karnataka", 1960, 200, "karnatakatourism.org", "080823456", "info@karnatakatourism.org",
+                "Government", "Heritage Tours", "Government", "4.3", "Office Hours", "Green White",
+                "Online", "Active", "Head Office", p8);
 
-Package p13 = new Package();
-p13.packageId = 113;
-p13.packageName = "Australia Discovery";
-p13.destination = "Sydney, Melbourne, Gold Coast";
-p13.days = 14;
-p13.nights = 13;
-p13.transport = "Flight";
-p13.hotelType = "4 Star";
-p13.foodType = "Breakfast";
-p13.guide = "Local Expert";
-p13.startDate = "September 1";
-p13.endDate = "September 15";
-p13.price = "185000";
-p13.currency = "INR";
-p13.category = "International";
-p13.activities = "Opera House, Great Barrier Reef";
-p13.season = "Spring";
-p13.insurance = "Included";
-p13.status = "Available";
-p13.discount = "Group 12%";
-p13.description = "Complete Australia east coast tour";
-t13.pkg = p13;
-t13.getTourismDetails();
+        TourismAngadi t9 = new TourismAngadi(9, "Club Mahindra Bangalore", "Jayanagar", "Bangalore", "India",
+                "Mahindra Holidays", 1996, 100, "clubmahindra.com", "080923456", "bangalore@clubmahindra.com",
+                "Resort Membership", "Timeshare", "Gov Approved", "4.6", "24/7", "Brown",
+                "Membership", "Active", "Bangalore", p9);
 
-TourismAngadi t14 = new TourismAngadi();
-t14.agencyId = 14;
-t14.agencyName = "Durga World Travel";
-t14.location = "Kamaraj Road";
-t14.city = "Bangalore";
-t14.country = "India";
-t14.owner = "Durga Group";
-t14.establishedYear = 1988;
-t14.employees = 35;
-t14.website = "durgaworldtravel.com";
-t14.contact = "0801423456";
-t14.email = "info@durgaworldtravel.com";
-t14.category = "Adventure Tours";
-t14.services = "Trekking Tours";
-t14.license = "Gov Approved";
-t14.rating = "4.5";
-t14.support = "24/7";
-t14.colorTheme = "Green";
-t14.paymentMode = "Online/Offline";
-t14.status = "Active";
-t14.branch = "Bangalore";
+        TourismAngadi t10 = new TourismAngadi(10, "MakeMyTrip Local", "Whitefield", "Bangalore", "India",
+                "MakeMyTrip Ltd", 2000, 75, "makemytrip.com", "0801023456", "local.blr@makemytrip.com",
+                "OTA Branch", "Custom Packages", "Gov Approved", "4.2", "24/7", "Yellow",
+                "Online Only", "Active", "Whitefield", p10);
 
-Package p14 = new Package();
-p14.packageId = 114;
-p14.packageName = "Himalaya Trekking";
-p14.destination = "Manali, Rohtang Pass";
-p14.days = 8;
-p14.nights = 7;
-p14.transport = "Flight + 4x4";
-p14.hotelType = "Mountain Lodge";
-p14.foodType = "All Meals";
-p14.guide = "Trekking Expert";
-p14.startDate = "October 15";
-p14.endDate = "October 23";
-p14.price = "45000";
-p14.currency = "INR";
-p14.category = "Adventure";
-p14.activities = "Trekking, Camping, River Rafting";
-p14.season = "Autumn";
-p14.insurance = "Adventure Cover";
-p14.status = "Limited Seats";
-p14.discount = "Group 15%";
-p14.description = "Himalayan adventure trekking expedition";
-t14.pkg = p14;
-t14.getTourismDetails();
+        TourismAngadi t11 = new TourismAngadi(11, "Intercontinental Travels", "Infantry Road", "Bangalore", "India",
+                "Intercontinental Group", 1985, 45, "intercontinentaltravels.com", "0801123456", "info@intercontinentaltravels.com",
+                "Corporate Travel", "Business Tours", "Gov Approved", "4.4", "Business Hours", "Silver",
+                "Corporate Billing", "Active", "Bangalore Central", p11);
 
-TourismAngadi t15 = new TourismAngadi();
-t15.agencyId = 15;
-t15.agencyName = "Karnataka Holidays";
-t15.location = "Jayanagar 40th Cross";
-t15.city = "Bangalore";
-t15.country = "India";
-t15.owner = "Karnataka Holidays";
-t15.establishedYear = 2010;
-t15.employees = 25;
-t15.website = "karnataka-holidays.com";
-t15.contact = "0801523456";
-t15.email = "info@karnataka-holidays.com";
-t15.category = "State Specialist";
-t15.services = "Karnataka Tours";
-t15.license = "Gov Approved";
-t15.rating = "4.3";
-t15.support = "Office Hours";
-t15.colorTheme = "Karnataka Green";
-t15.paymentMode = "Online/Cash";
-t15.status = "Active";
-t15.branch = "Jayanagar";
+        TourismAngadi t12 = new TourismAngadi(12, "Excelsior Travels", "Hare Krishna Road", "Bangalore", "India",
+                "Excelsior Family", 1990, 30, "excelsiortravels.com", "0801223456", "book@excelsiortravels.com",
+                "Luxury Travel", "Premium Tours", "Gov Approved", "4.7", "24/7", "Gold",
+                "Premium Cards", "Active", "Bangalore", p12);
 
-Package p15 = new Package();
-p15.packageId = 115;
-p15.packageName = "Karnataka Complete";
-p15.destination = "Coorg, Mysore, Chikmagalur";
-p15.days = 9;
-p15.nights = 8;
-p15.transport = "AC Innova";
-p15.hotelType = "Homestay";
-p15.foodType = "Karnataka Cuisine";
-p15.guide = "Local Expert";
-p15.startDate = "Every Monday";
-p15.endDate = "+8 Days";
-p15.price = "32000";
-p15.currency = "INR";
-p15.category = "State Tour";
-p15.activities = "Coffee Plantation, Temples";
-p15.season = "All Seasons";
-p15.insurance = "Included";
-p15.status = "High Demand";
-p15.discount = "Family 10%";
-p15.description = "Complete Karnataka culture and nature tour";
-t15.pkg = p15;
-t15.getTourismDetails();
+        TourismAngadi t13 = new TourismAngadi(13, "Uniglobe Travel", "Indiranagar 2nd Stage", "Bangalore", "India",
+                "Uniglobe Network", 2000, 60, "thetravelcom.com", "0801323456", "bangalore@uniglobe.com",
+                "Global Network", "Worldwide Tours", "IATA Approved", "4.6", "24/7", "Blue White",
+                "All Modes", "Active", "Indiranagar", p13);
 
-TourismAngadi t16 = new TourismAngadi();
-t16.agencyId = 16;
-t16.agencyName = "Skyway International";
-t16.location = "St Marks Road";
-t16.city = "Bangalore";
-t16.country = "India";
-t16.owner = "Skyway Group";
-t16.establishedYear = 2002;
-t16.employees = 40;
-t16.website = "skywayinternational.com";
-t16.contact = "0801623456";
-t16.email = "reservations@skywayint.com";
-t16.category = "Visa Specialist";
-t16.services = "Visa + Tours";
-t16.license = "Gov Approved";
-t16.rating = "4.6";
-t16.support = "24/7";
-t16.colorTheme = "Sky Blue";
-t16.paymentMode = "Online/Offline";
-t16.status = "Active";
-t16.branch = "MG Road";
+        TourismAngadi t14 = new TourismAngadi(14, "Durga World Travel", "Kamaraj Road", "Bangalore", "India",
+                "Durga Group", 1988, 35, "durgaworldtravel.com", "0801423456", "info@durgaworldtravel.com",
+                "Adventure Tours", "Trekking Tours", "Gov Approved", "4.5", "24/7", "Green",
+                "Online/Offline", "Active", "Bangalore", p14);
 
-Package p16 = new Package();
-p16.packageId = 116;
-p16.packageName = "USA East Coast";
-p16.destination = "New York, Washington DC, Niagara";
-p16.days = 11;
-p16.nights = 10;
-p16.transport = "Flight";
-p16.hotelType = "4 Star";
-p16.foodType = "Breakfast";
-p16.guide = "Multilingual";
-p16.startDate = "August 5";
-p16.endDate = "August 16";
-p16.price = "220000";
-p16.currency = "INR";
-p16.category = "International";
-p16.activities = "Statue of Liberty, Niagara Falls";
-p16.season = "Summer";
-p16.insurance = "Comprehensive";
-p16.status = "Few Seats";
-p16.discount = "Visa Package 8%";
-p16.description = "USA East Coast with visa assistance";
-t16.pkg = p16;
-t16.getTourismDetails();
+        TourismAngadi t15 = new TourismAngadi(15, "Karnataka Holidays", "Jayanagar 40th Cross", "Bangalore", "India",
+                "Karnataka Holidays", 2010, 25, "karnataka-holidays.com", "0801523456", "info@karnataka-holidays.com",
+                "State Specialist", "Karnataka Tours", "Gov Approved", "4.3", "Office Hours", "Karnataka Green",
+                "Online/Cash", "Active", "Jayanagar", p15);
 
-TourismAngadi t17 = new TourismAngadi();
-t17.agencyId = 17;
-t17.agencyName = "Big Travels";
-t17.location = "Jayanagar 5th Block";
-t17.city = "Bangalore";
-t17.country = "India";
-t17.owner = "Big Travel Group";
-t17.establishedYear = 2012;
-t17.employees = 20;
-t17.website = "bigtravels.in";
-t17.contact = "0801723456";
-t17.email = "info@bigtravels.in";
-t17.category = "Budget Tours";
-t17.services = "Group Packages";
-t17.license = "Gov Approved";
-t17.rating = "4.2";
-t17.support = "Office Hours";
-t17.colorTheme = "Red";
-t17.paymentMode = "Cash/Online";
-t17.status = "Active";
-t17.branch = "Jayanagar";
+        TourismAngadi t16 = new TourismAngadi(16, "Skyway International", "St Marks Road", "Bangalore", "India",
+                "Skyway Group", 2002, 40, "skywayinternational.com", "0801623456", "reservations@skywayint.com",
+                "Visa Specialist", "Visa + Tours", "Gov Approved", "4.6", "24/7", "Sky Blue",
+                "Online/Offline", "Active", "MG Road", p16);
 
-Package p17 = new Package();
-p17.packageId = 117;
-p17.packageName = "Rajasthan Royals";
-p17.destination = "Jaipur, Udaipur, Jodhpur";
-p17.days = 7;
-p17.nights = 6;
-p17.transport = "AC Bus";
-p17.hotelType = "Heritage Hotel";
-p17.foodType = "Breakfast + Dinner";
-p17.guide = "History Expert";
-p17.startDate = "Every Wednesday";
-p17.endDate = "+6 Days";
-p17.price = "28000";
-p17.currency = "INR";
-p17.category = "Heritage";
-p17.activities = "Forts, Palaces, Camel Safari";
-p17.season = "Winter";
-p17.insurance = "Included";
-p17.status = "Available";
-p17.discount = "Group 20%";
-p17.description = "Budget Rajasthan royal heritage tour";
-t17.pkg = p17;
-t17.getTourismDetails();
+        TourismAngadi t17 = new TourismAngadi(17, "Big Travels", "Jayanagar 5th Block", "Bangalore", "India",
+                "Big Travel Group", 2012, 20, "bigtravels.in", "0801723456", "info@bigtravels.in",
+                "Budget Tours", "Group Packages", "Gov Approved", "4.2", "Office Hours", "Red",
+                "Cash/Online", "Active", "Jayanagar", p17);
 
-TourismAngadi t18 = new TourismAngadi();
-t18.agencyId = 18;
-t18.agencyName = "Pushpaka Vimana";
-t18.location = "Vijayanagar";
-t18.city = "Bangalore";
-t18.country = "India";
-t18.owner = "Pushpaka Group";
-t18.establishedYear = 2015;
-t18.employees = 28;
-t18.website = "pushpakavimana.com";
-t18.contact = "0801823456";
-t18.email = "book@pushpakavimana.com";
-t18.category = "South India Tours";
-t18.services = "Temple Tours";
-t18.license = "Gov Approved";
-t18.rating = "4.4";
-t18.support = "24/7";
-t18.colorTheme = "Saffron";
-t18.paymentMode = "Online/Cash";
-t18.status = "Active";
-t18.branch = "Vijayanagar";
+        TourismAngadi t18 = new TourismAngadi(18, "Pushpaka Vimana", "Vijayanagar", "Bangalore", "India",
+                "Pushpaka Group", 2015, 28, "pushpakavimana.com", "0801823456", "book@pushpakavimana.com",
+                "South India Tours", "Temple Tours", "Gov Approved", "4.4", "24/7", "Saffron",
+                "Online/Cash", "Active", "Vijayanagar", p18);
 
-Package p18 = new Package();
-p18.packageId = 118;
-p18.packageName = "Tamil Nadu Temples";
-p18.destination = "Madurai, Rameshwaram, Thanjavur";
-p18.days = 6;
-p18.nights = 5;
-p18.transport = "AC Coach";
-p18.hotelType = "3 Star";
-p18.foodType = "South Indian Meals";
-p18.guide = "Temple Expert";
-p18.startDate = "Every Thursday";
-p18.endDate = "+5 Days";
-p18.price = "21000";
-p18.currency = "INR";
-p18.category = "Spiritual";
-p18.activities = "Temple Darshan, Rituals";
-p18.season = "All Seasons";
-p18.insurance = "Included";
-p18.status = "High Demand";
-p18.discount = "Family 10%";
-p18.description = "South Indian temple pilgrimage tour";
-t18.pkg = p18;
-t18.getTourismDetails();
+        TourismAngadi t19 = new TourismAngadi(19, "Torana Enterprises", "BSK 2nd Stage", "Bangalore", "India",
+                "Torana Group", 2008, 22, "toranaenterprises.com", "0801923456", "info@torana.in",
+                "Weekend Getaways", "Short Trips", "Gov Approved", "4.3", "Office Hours", "Orange",
+                "Cash/UPI", "Active", "BSK", p19);
 
-TourismAngadi t19 = new TourismAngadi();
-t19.agencyId = 19;
-t19.agencyName = "Torana Enterprises";
-t19.location = "BSK 2nd Stage";
-t19.city = "Bangalore";
-t19.country = "India";
-t19.owner = "Torana Group";
-t19.establishedYear = 2008;
-t19.employees = 22;
-t19.website = "toranaenterprises.com";
-t19.contact = "0801923456";
-t19.email = "info@torana.in";
-t19.category = "Weekend Getaways";
-t19.services = "Short Trips";
-t19.license = "Gov Approved";
-t19.rating = "4.3";
-t19.support = "Office Hours";
-t19.colorTheme = "Orange";
-t19.paymentMode = "Cash/UPI";
-t19.status = "Active";
-t19.branch = "BSK";
+        TourismAngadi t20 = new TourismAngadi(20, "Marshall Tours", "Mahalakshmipuram", "Bangalore", "India",
+                "Marshall Group", 2011, 18, "marshalltours.in", "0802023456", "book@marshalltours.in",
+                "Student Tours", "Educational Tours", "Gov Approved", "4.5", "24/7", "Blue Green",
+                "Online/Cash", "Active", "Mahalakshmipuram", p20);
 
-Package p19 = new Package();
-p19.packageId = 119;
-p19.packageName = "Ooty Weekend";
-p19.destination = "Ooty, Coonoor";
-p19.days = 3;
-p19.nights = 2;
-p19.transport = "AC Bus";
-p19.hotelType = "Resort";
-p19.foodType = "Breakfast + Dinner";
-p19.guide = "Local";
-p19.startDate = "Every Friday";
-p19.endDate = "Sunday";
-p19.price = "12500";
-p19.currency = "INR";
-p19.category = "Weekend";
-p19.activities = "Boat Ride, Tea Plantation";
-p19.season = "All Seasons";
-p19.insurance = "Included";
-p19.status = "Very High Demand";
-p19.discount = "Couple 15%";
-p19.description = "Nilgiri hills weekend getaway from Bangalore";
-t19.pkg = p19;
-t19.getTourismDetails();
+        System.out.println("🏖️ BANGALORE TOURISM AGENCIES - TOP PACKAGES 2026 🏖️\n");
+        
+        t1.displayDetails();
+        t2.displayDetails();
+        t3.displayDetails();
+        t4.displayDetails();
+        t5.displayDetails();
+        t6.displayDetails();
+        t7.displayDetails();
+        t8.displayDetails();
+        t9.displayDetails();
+        t10.displayDetails();
+        t11.displayDetails();
+        t12.displayDetails();
+        t13.displayDetails();
+        t14.displayDetails();
+        t15.displayDetails();
+        t16.displayDetails();
+        t17.displayDetails();
+        t18.displayDetails();
+        t19.displayDetails();
+        t20.displayDetails();
 
-TourismAngadi t20 = new TourismAngadi();
-t20.agencyId = 20;
-t20.agencyName = "Marshall Tours";
-t20.location = "Mahalakshmipuram";
-t20.city = "Bangalore";
-t20.country = "India";
-t20.owner = "Marshall Group";
-t20.establishedYear = 2011;
-t20.employees = 18;
-t20.website = "marshalltours.in";
-t20.contact = "0802023456";
-t20.email = "book@marshalltours.in";
-t20.category = "Student Tours";
-t20.services = "Educational Tours";
-t20.license = "Gov Approved";
-t20.rating = "4.5";
-t20.support = "24/7";
-t20.colorTheme = "Blue Green";
-t20.paymentMode = "Online/Cash";
-t20.status = "Active";
-t20.branch = "Mahalakshmipuram";
-
-Package p20 = new Package();
-p20.packageId = 120;
-p20.packageName = "Educational Singapore";
-p20.destination = "Singapore";
-p20.days = 5;
-p20.nights = 4;
-p20.transport = "Flight";
-p20.hotelType = "3 Star";
-p20.foodType = "Breakfast";
-p20.guide = "Educational";
-p20.startDate = "School Holidays";
-p20.endDate = "+4 Days";
-p20.price = "65000";
-p20.currency = "INR";
-p20.category = "Educational";
-p20.activities = "Science Centre, Gardens by the Bay";
-p20.season = "Summer Vacation";
-p20.insurance = "Student Cover";
-p20.status = "Group Bookings";
-p20.discount = "Student 25%";
-p20.description = "Educational tour for college students";
-t20.pkg = p20;
-t20.getTourismDetails();
+        System.out.println("\n🌟 BOOK YOUR DREAM VACATION FROM BANGALORE TODAY! 🌟");
+        System.out.println("📞 Contact any agency above for best deals!");
     }
 }

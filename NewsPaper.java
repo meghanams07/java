@@ -1,30 +1,40 @@
 class NewsPaper {
-
-    int paperId;
-    String paperName;
-    String language;
-    String country;
-    String city;
-    String publisher;
-    int establishedYear;
-    int pages;
-    int circulation;
-    String category;
-    String website;
-    String editor;
-    String printingType;
-    String colorTheme;
-    String frequency;
-    String contact;
-    String email;
-    String price;
-    String status;
-    String distribution;
-
+    int paperId, establishedYear, pages, circulation;
+    String paperName, language, country, city, publisher, category, website, 
+           editor, printingType, colorTheme, frequency, contact, email, 
+           price, status, distribution;
     Article article;
 
-    public void getNewsPaperDetails(){
+    public NewsPaper(int paperId, String paperName, String language, String country, 
+                     String city, String publisher, int establishedYear, int pages,
+                     int circulation, String category, String website, String editor,
+                     String printingType, String colorTheme, String frequency,
+                     String contact, String email, String price, String status,
+                     String distribution, Article article) {
+        this.paperId = paperId;
+        this.paperName = paperName;
+        this.language = language;
+        this.country = country;
+        this.city = city;
+        this.publisher = publisher;
+        this.establishedYear = establishedYear;
+        this.pages = pages;
+        this.circulation = circulation;
+        this.category = category;
+        this.website = website;
+        this.editor = editor;
+        this.printingType = printingType;
+        this.colorTheme = colorTheme;
+        this.frequency = frequency;
+        this.contact = contact;
+        this.email = email;
+        this.price = price;
+        this.status = status;
+        this.distribution = distribution;
+        this.article = article;
+    }
 
+    public void displayDetails() {
         System.out.println("PaperId: " + paperId);
         System.out.println("PaperName: " + paperName);
         System.out.println("Language: " + language);
@@ -45,7 +55,7 @@ class NewsPaper {
         System.out.println("Price: " + price);
         System.out.println("Status: " + status);
         System.out.println("Distribution: " + distribution);
-
-        this.article.getArticleDetails();
+        System.out.println("\nFeatured Article Details:");
+        this.article.displayDetails();
     }
 }

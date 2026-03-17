@@ -1,927 +1,229 @@
 class GovernmentExecutor {
+    public static void main(String[] args) {
+	
+        Policy p1 = new Policy(101, "Digital India", "IT Ministry", "Technology", "2015", "Citizens",
+                "Digital Transformation", "Online Services", "All Citizens", "Nationwide",
+                "Government Program", "₹1 Lakh Crore", "10 Years", "Ongoing", "digitalindia.gov.in",
+                "1800-111-555", "English", "Cabinet", "Improved Digital Access", "Promotes digital infrastructure");
 
-    public static void main(String[] args){
+        Policy p2 = new Policy(102, "Affordable Care Act", "Health Department", "Healthcare", "2010", "Citizens",
+                "Healthcare Access", "Insurance Coverage", "All Citizens", "Nationwide", "Legislation",
+                "$1 Trillion", "Ongoing", "Active", "healthcare.gov", "1-800-318-2596", "English",
+                "Congress", "Universal Healthcare", "Healthcare reform program");
 
-        Government g1 = new Government();
+        Policy p3 = new Policy(103, "NHS", "Health Department", "Healthcare", "1948", "Residents",
+                "Free Healthcare", "Universal Treatment", "All Residents", "Nationwide", "Public Service",
+                "£180 Billion", "Ongoing", "Active", "nhs.uk", "111", "English", "Parliament",
+                "Free Healthcare", "National Health Service");
 
-        g1.governmentId = 1;
-        g1.governmentName = "Government of India";
-        g1.country = "India";
-        g1.capital = "New Delhi";
-        g1.leader = "Prime Minister";
-        g1.establishedYear = 1947;
-        g1.population = 1400000000;
-        g1.currency = "Indian Rupee";
-        g1.constitutionType = "Democratic";
-        g1.officialLanguage = "Hindi & English";
-        g1.parliamentType = "Bicameral";
-        g1.states = 28;
-        g1.ministries = 50;
-        g1.website = "india.gov.in";
-        g1.contact = "011123456";
-        g1.category = "Central Government";
-        g1.securityLevel = "High";
-        g1.administration = "Public Administration";
-        g1.status = "Active";
-        g1.description = "Governing body of India";
+        Policy p4 = new Policy(104, "Energiewende", "Energy Ministry", "Energy", "2010", "Citizens",
+                "Renewable Energy", "Clean Energy", "All Citizens", "Nationwide", "Energy Policy",
+                "€500 Billion", "Ongoing", "Active", "bundesregierung.de", "030-4000", "German",
+                "Bundestag", "Green Energy", "Energy transition program");
 
-        Policy p1 = new Policy();
+        Policy p5 = new Policy(105, "Macron Plan", "Economy Ministry", "Economy", "2017", "Businesses",
+                "Economic Reform", "Tax Cuts", "Companies", "Nationwide", "Reform Package",
+                "€75 Billion", "5 Years", "Ongoing", "economie.gouv.fr", "01-53-18-40-00", "French",
+                "Parliament", "Business Growth", "Economic transformation plan");
 
-        p1.policyId = 101;
-        p1.policyName = "Digital India";
-        p1.department = "IT Ministry";
-        p1.category = "Technology";
-        p1.launchDate = "2015";
-        p1.targetGroup = "Citizens";
-        p1.objective = "Digital Transformation";
-        p1.benefits = "Online Services";
-        p1.eligibility = "All Citizens";
-        p1.coverage = "Nationwide";
-        p1.implementationType = "Government Program";
-        p1.budget = "₹1 Lakh Crore";
-        p1.duration = "10 Years";
-        p1.status = "Ongoing";
-        p1.website = "digitalindia.gov.in";
-        p1.contact = "1800-111-555";
-        p1.language = "English";
-        p1.approvalAuthority = "Cabinet";
-        p1.impact = "Improved Digital Access";
-        p1.description = "Promotes digital infrastructure";
+        Policy p6 = new Policy(106, "Society 5.0", "Cabinet Office", "Technology", "2016", "Citizens",
+                "Digital Society", "Smart Cities", "All Citizens", "Nationwide", "National Strategy",
+                "¥100 Trillion", "10 Years", "Ongoing", "japan.go.jp", "03-3581-1100", "Japanese",
+                "Cabinet", "Digital Transformation", "Super smart society initiative");
 
-        g1.policy = p1;
+        Policy p7 = new Policy(107, "Canada Child Benefit", "Finance Ministry", "Social Welfare", "2016", "Families",
+                "Child Support", "Monthly Payments", "Parents", "Nationwide", "Benefit Program",
+                "$24 Billion", "Ongoing", "Active", "canada.ca", "1-800-387-1193", "English & French",
+                "Parliament", "Family Support", "Child benefit program");
 
-        g1.getGovernmentDetails();
-		Government g2 = new Government();
-		g2.governmentId = 2;
-		g2.governmentName = "Government of USA";
-		g2.country = "United States";
-		g2.capital = "Washington D.C.";
-		g2.leader = "President";
-		g2.establishedYear = 1776;
-		g2.population = 331000000;
-		g2.currency = "US Dollar";
-		g2.constitutionType = "Federal Republic";
-		g2.officialLanguage = "English";
-		g2.parliamentType = "Bicameral";
-		g2.states = 50;
-		g2.ministries = 15;
-		g2.website = "usa.gov";
-		g2.contact = "202-456-1111";
-		g2.category = "Federal Government";
-		g2.securityLevel = "High";
-		g2.administration = "Executive";
-		g2.status = "Active";
-		g2.description = "Federal government of USA";
+        Policy p8 = new Policy(108, "NDIS", "Social Services", "Disability", "2013", "Disabled",
+                "Disability Support", "Personalized Care", "Disabled Citizens", "Nationwide", "Insurance Scheme",
+                "$40 Billion", "Ongoing", "Active", "ndis.gov.au", "1800-800-110", "English",
+                "Parliament", "Disability Rights", "National Disability Insurance");
 
-		Policy p2 = new Policy();
-		p2.policyId = 102;
-		p2.policyName = "Affordable Care Act";
-		p2.department = "Health Department";
-		p2.category = "Healthcare";
-		p2.launchDate = "2010";
-		p2.targetGroup = "Citizens";
-		p2.objective = "Healthcare Access";
-		p2.benefits = "Insurance Coverage";
-		p2.eligibility = "All Citizens";
-		p2.coverage = "Nationwide";
-		p2.implementationType = "Legislation";
-		p2.budget = "$1 Trillion";
-		p2.duration = "Ongoing";
-		p2.status = "Active";
-		p2.website = "healthcare.gov";
-		p2.contact = "1-800-318-2596";
-		p2.language = "English";
-		p2.approvalAuthority = "Congress";
-		p2.impact = "Universal Healthcare";
-		p2.description = "Healthcare reform program";
-		g2.policy = p2;
-		g2.getGovernmentDetails();
+        Policy p9 = new Policy(109, "Bolsa Família", "Social Development", "Social Welfare", "2003", "Poor Families",
+                "Poverty Reduction", "Cash Transfers", "Low Income", "Nationwide", "Conditional Cash",
+                "R$150 Billion", "Ongoing", "Active", "gov.br", "121", "Portuguese", "Congress",
+                "Poverty Alleviation", "Family grant program");
 
-		Government g3 = new Government();
-		g3.governmentId = 3;
-		g3.governmentName = "Government of UK";
-		g3.country = "United Kingdom";
-		g3.capital = "London";
-		g3.leader = "Prime Minister";
-		g3.establishedYear = 1707;
-		g3.population = 67800000;
-		g3.currency = "Pound Sterling";
-		g3.constitutionType = "Parliamentary";
-		g3.officialLanguage = "English";
-		g3.parliamentType = "Bicameral";
-		g3.states = 4;
-		g3.ministries = 22;
-		g3.website = "gov.uk";
-		g3.contact = "0370-000-2288";
-		g3.category = "Central Government";
-		g3.securityLevel = "Medium";
-		g3.administration = "Parliamentary";
-		g3.status = "Active";
-		g3.description = "Government of United Kingdom";
+        Policy p10 = new Policy(110, "National Projects", "Presidential Administration", "Development", "2018", "Citizens",
+                "National Development", "Infrastructure", "All Citizens", "Nationwide", "Mega Projects",
+                "25 Trillion Rubles", "6 Years", "Ongoing", "nationalprojects.ru", "8-800-200-23-02", "Russian",
+                "President", "Modernization", "12 national development projects");
 
-		Policy p3 = new Policy();
-		p3.policyId = 103;
-		p3.policyName = "NHS";
-		p3.department = "Health Department";
-		p3.category = "Healthcare";
-		p3.launchDate = "1948";
-		p3.targetGroup = "Residents";
-		p3.objective = "Free Healthcare";
-		p3.benefits = "Universal Treatment";
-		p3.eligibility = "All Residents";
-		p3.coverage = "Nationwide";
-		p3.implementationType = "Public Service";
-		p3.budget = "£180 Billion";
-		p3.duration = "Ongoing";
-		p3.status = "Active";
-		p3.website = "nhs.uk";
-		p3.contact = "111";
-		p3.language = "English";
-		p3.approvalAuthority = "Parliament";
-		p3.impact = "Free Healthcare";
-		p3.description = "National Health Service";
-		g3.policy = p3;
-		g3.getGovernmentDetails();
+        Policy p11 = new Policy(111, "Belt and Road", "State Council", "Infrastructure", "2013", "Global Partners",
+                "Trade Connectivity", "Infrastructure Projects", "Partner Countries", "Global", "International Initiative",
+                "$1 Trillion", "Ongoing", "Active", "beltandroad.gov.cn", "010-12345678", "Mandarin",
+                "State Council", "Global Trade", "Global infrastructure initiative");
 
-		Government g4 = new Government();
-		g4.governmentId = 4;
-		g4.governmentName = "Government of Germany";
-		g4.country = "Germany";
-		g4.capital = "Berlin";
-		g4.leader = "Chancellor";
-		g4.establishedYear = 1949;
-		g4.population = 83000000;
-		g4.currency = "Euro";
-		g4.constitutionType = "Federal Republic";
-		g4.officialLanguage = "German";
-		g4.parliamentType = "Bicameral";
-		g4.states = 16;
-		g4.ministries = 14;
-		g4.website = "bundesregierung.de";
-		g4.contact = "030-4000";
-		g4.category = "Federal Government";
-		g4.securityLevel = "High";
-		g4.administration = "Federal";
-		g4.status = "Active";
-		g4.description = "Federal government of Germany";
+        Policy p12 = new Policy(112, "Superbonus", "Economy Ministry", "Construction", "2020", "Homeowners",
+                "Building Renovation", "110% Tax Credit", "Property Owners", "Nationwide", "Tax Incentive",
+                "€200 Billion", "5 Years", "Ongoing", "governo.it", "06-67791", "Italian",
+                "Parliament", "Green Buildings", "Building renovation incentive");
 
-		Policy p4 = new Policy();
-		p4.policyId = 104;
-		p4.policyName = "Energiewende";
-		p4.department = "Energy Ministry";
-		p4.category = "Energy";
-		p4.launchDate = "2010";
-		p4.targetGroup = "Citizens";
-		p4.objective = "Renewable Energy";
-		p4.benefits = "Clean Energy";
-		p4.eligibility = "All Citizens";
-		p4.coverage = "Nationwide";
-		p4.implementationType = "Energy Policy";
-		p4.budget = "€500 Billion";
-		p4.duration = "Ongoing";
-		p4.status = "Active";
-		p4.website = "bundesregierung.de";
-		p4.contact = "030-4000";
-		p4.language = "German";
-		p4.approvalAuthority = "Bundestag";
-		p4.impact = "Green Energy";
-		p4.description = "Energy transition program";
-		g4.policy = p4;
-		g4.getGovernmentDetails();
-		Government g5 = new Government();
-		g5.governmentId = 5;
-		g5.governmentName = "Government of France";
-		g5.country = "France";
-		g5.capital = "Paris";
-		g5.leader = "President";
-		g5.establishedYear = 1958;
-		g5.population = 67000000;
-		g5.currency = "Euro";
-		g5.constitutionType = "Semi-Presidential";
-		g5.officialLanguage = "French";
-		g5.parliamentType = "Bicameral";
-		g5.states = 18;
-		g5.ministries = 16;
-		g5.website = "gouvernement.fr";
-		g5.contact = "01-42-75-80-01";
-		g5.category = "Central Government";
-		g5.securityLevel = "High";
-		g5.administration = "Executive";
-		g5.status = "Active";
-		g5.description = "Government of France";
+        Policy p13 = new Policy(113, "Next Generation EU", "Economy Ministry", "Recovery", "2021", "Businesses",
+                "Economic Recovery", "Digital & Green", "Companies", "Nationwide", "Recovery Fund",
+                "€140 Billion", "6 Years", "Ongoing", "lamoncloa.gob.es", "91-335-43-00", "Spanish",
+                "EU Commission", "Post-COVID Recovery", "EU recovery and resilience plan");
 
-		Policy p5 = new Policy();
-		p5.policyId = 105;
-		p5.policyName = "Macron Plan";
-		p5.department = "Economy Ministry";
-		p5.category = "Economy";
-		p5.launchDate = "2017";
-		p5.targetGroup = "Businesses";
-		p5.objective = "Economic Reform";
-		p5.benefits = "Tax Cuts";
-		p5.eligibility = "Companies";
-		p5.coverage = "Nationwide";
-		p5.implementationType = "Reform Package";
-		p5.budget = "€75 Billion";
-		p5.duration = "5 Years";
-		p5.status = "Ongoing";
-		p5.website = "economie.gouv.fr";
-		p5.contact = "01-53-18-40-00";
-		p5.language = "French";
-		p5.approvalAuthority = "Parliament";
-		p5.impact = "Business Growth";
-		p5.description = "Economic transformation plan";
-		g5.policy = p5;
-		g5.getGovernmentDetails();
+        Policy p14 = new Policy(114, "Digital New Deal", "Science Ministry", "Digital Economy", "2019", "Citizens",
+                "Digital Transformation", "AI & Data Economy", "All Citizens", "Nationwide", "National Strategy",
+                "58 Trillion Won", "5 Years", "Ongoing", "korea.go.kr", "02-738-5114", "Korean",
+                "President", "Digital Leadership", "Digital economy transformation");
 
-		Government g6 = new Government();
-		g6.governmentId = 6;
-		g6.governmentName = "Government of Japan";
-		g6.country = "Japan";
-		g6.capital = "Tokyo";
-		g6.leader = "Prime Minister";
-		g6.establishedYear = 1947;
-		g6.population = 125000000;
-		g6.currency = "Yen";
-		g6.constitutionType = "Parliamentary";
-		g6.officialLanguage = "Japanese";
-		g6.parliamentType = "Bicameral";
-		g6.states = 47;
-		g6.ministries = 12;
-		g6.website = "japan.go.jp";
-		g6.contact = "03-3581-1100";
-		g6.category = "Central Government";
-		g6.securityLevel = "High";
-		g6.administration = "Cabinet";
-		g6.status = "Active";
-		g6.description = "Government of Japan";
+        Policy p15 = new Policy(115, "Climate Agreement", "Infrastructure Ministry", "Climate", "2019", "Citizens",
+                "Carbon Neutral", "Climate Action", "All Sectors", "Nationwide", "Climate Pact",
+                "€35 Billion", "10 Years", "Ongoing", "klimaatakkoord.nl", "070-426-42-64", "Dutch",
+                "Parliament", "Climate Goals", "National climate agreement");
 
-		Policy p6 = new Policy();
-		p6.policyId = 106;
-		p6.policyName = "Society 5.0";
-		p6.department = "Cabinet Office";
-		p6.category = "Technology";
-		p6.launchDate = "2016";
-		p6.targetGroup = "Citizens";
-		p6.objective = "Digital Society";
-		p6.benefits = "Smart Cities";
-		p6.eligibility = "All Citizens";
-		p6.coverage = "Nationwide";
-		p6.implementationType = "National Strategy";
-		p6.budget = "¥100 Trillion";
-		p6.duration = "10 Years";
-		p6.status = "Ongoing";
-		p6.website = "japan.go.jp";
-		p6.contact = "03-3581-1100";
-		p6.language = "Japanese";
-		p6.approvalAuthority = "Cabinet";
-		p6.impact = "Digital Transformation";
-		p6.description = "Super smart society initiative";
-		g6.policy = p6;
-		g6.getGovernmentDetails();
+        Policy p16 = new Policy(116, "Fossil Free Sweden", "Environment Ministry", "Environment", "2009", "Society",
+                "Fossil Free", "Sustainable Energy", "All Sectors", "Nationwide", "Energy Policy",
+                "SEK 100 Billion", "2050 Target", "Ongoing", "fossilfrittsverige.se", "08-405-10-00", "Swedish",
+                "Government", "Green Transition", "Fossil fuel independence initiative");
 
-		Government g7 = new Government();
-		g7.governmentId = 7;
-		g7.governmentName = "Government of Canada";
-		g7.country = "Canada";
-		g7.capital = "Ottawa";
-		g7.leader = "Prime Minister";
-		g7.establishedYear = 1867;
-		g7.population = 38000000;
-		g7.currency = "Canadian Dollar";
-		g7.constitutionType = "Parliamentary";
-		g7.officialLanguage = "English & French";
-		g7.parliamentType = "Bicameral";
-		g7.states = 10;
-		g7.ministries = 37;
-		g7.website = "canada.ca";
-		g7.contact = "1-800-622-6232";
-		g7.category = "Federal Government";
-		g7.securityLevel = "Medium";
-		g7.administration = "Federal";
-		g7.status = "Active";
-		g7.description = "Federal government of Canada";
+        Policy p17 = new Policy(117, "Energy Strategy 2050", "Environment Office", "Energy", "2017", "Energy Sector",
+                "Energy Security", "Renewable Energy", "Energy Companies", "Nationwide", "Energy Policy",
+                "CHF 1 Billion", "2050", "Ongoing", "admin.ch", "058-462-11-11", "German, French, Italian",
+                "Parliament", "Energy Independence", "Long-term energy strategy");
 
-		Policy p7 = new Policy();
-		p7.policyId = 107;
-		p7.policyName = "Canada Child Benefit";
-		p7.department = "Finance Ministry";
-		p7.category = "Social Welfare";
-		p7.launchDate = "2016";
-		p7.targetGroup = "Families";
-		p7.objective = "Child Support";
-		p7.benefits = "Monthly Payments";
-		p7.eligibility = "Parents";
-		p7.coverage = "Nationwide";
-		p7.implementationType = "Benefit Program";
-		p7.budget = "$24 Billion";
-		p7.duration = "Ongoing";
-		p7.status = "Active";
-		p7.website = "canada.ca";
-		p7.contact = "1-800-387-1193";
-		p7.language = "English & French";
-		p7.approvalAuthority = "Parliament";
-		p7.impact = "Family Support";
-		p7.description = "Child benefit program";
-		g7.policy = p7;
-		g7.getGovernmentDetails();
+        Policy p18 = new Policy(118, "500+ Program", "Family Ministry", "Social Welfare", "2016", "Families",
+                "Child Support", "Monthly Child Benefit", "Parents", "Nationwide", "Cash Benefit",
+                "PLN 40 Billion", "Ongoing", "Active", "gov.pl", "22-694-20-00", "Polish",
+                "Parliament", "Birth Rate Increase", "Child benefit program");
 
-		Government g8 = new Government();
-		g8.governmentId = 8;
-		g8.governmentName = "Government of Australia";
-		g8.country = "Australia";
-		g8.capital = "Canberra";
-		g8.leader = "Prime Minister";
-		g8.establishedYear = 1901;
-		g8.population = 26000000;
-		g8.currency = "Australian Dollar";
-		g8.constitutionType = "Parliamentary";
-		g8.officialLanguage = "English";
-		g8.parliamentType = "Bicameral";
-		g8.states = 6;
-		g8.ministries = 20;
-		g8.website = "australia.gov.au";
-		g8.contact = "13-22-81";
-		g8.category = "Federal Government";
-		g8.securityLevel = "Medium";
-		g8.administration = "Federal";
-		g8.status = "Active";
-		g8.description = "Federal government of Australia";
+        Policy p19 = new Policy(119, "Green Deal", "Environment Ministry", "Climate", "2021", "Citizens",
+                "Climate Neutral", "Sustainable Development", "All Sectors", "Nationwide", "Climate Plan",
+                "€10 Billion", "2050", "Ongoing", "belgium.be", "02-513-44-11", "Dutch, French",
+                "Government", "Green Economy", "Federal climate strategy");
 
-		Policy p8 = new Policy();
-		p8.policyId = 108;
-		p8.policyName = "NDIS";
-		p8.department = "Social Services";
-		p8.category = "Disability";
-		p8.launchDate = "2013";
-		p8.targetGroup = "Disabled";
-		p8.objective = "Disability Support";
-		p8.benefits = "Personalized Care";
-		p8.eligibility = "Disabled Citizens";
-		p8.coverage = "Nationwide";
-		p8.implementationType = "Insurance Scheme";
-		p8.budget = "$40 Billion";
-		p8.duration = "Ongoing";
-		p8.status = "Active";
-		p8.website = "ndis.gov.au";
-		p8.contact = "1800-800-110";
-		p8.language = "English";
-		p8.approvalAuthority = "Parliament";
-		p8.impact = "Disability Rights";
-		p8.description = "National Disability Insurance";
-		g8.policy = p8;
-		g8.getGovernmentDetails();
+        Policy p20 = new Policy(120, "Vision 2023", "Presidency", "Development", "2011", "Citizens",
+                "Top 10 Economy", "Infrastructure Development", "All Citizens", "Nationwide", "Vision Plan",
+                "1 Trillion USD", "2023", "Completed", "turkiye.gov.tr", "184", "Turkish",
+                "President", "Economic Growth", "Long-term development vision");
 
-		Government g9 = new Government();
-		g9.governmentId = 9;
-		g9.governmentName = "Government of Brazil";
-		g9.country = "Brazil";
-		g9.capital = "Brasília";
-		g9.leader = "President";
-		g9.establishedYear = 1988;
-		g9.population = 214000000;
-		g9.currency = "Brazilian Real";
-		g9.constitutionType = "Federal Republic";
-		g9.officialLanguage = "Portuguese";
-		g9.parliamentType = "Bicameral";
-		g9.states = 26;
-		g9.ministries = 23;
-		g9.website = "gov.br";
-		g9.contact = "0800-978-9000";
-		g9.category = "Federal Government";
-		g9.securityLevel = "Medium";
-		g9.administration = "Federal";
-		g9.status = "Active";
-		g9.description = "Federal government of Brazil";
+        Government g1 = new Government(1, "Government of India", "India", "New Delhi", "Prime Minister",
+                1947, 1400000000, "Indian Rupee", "Democratic", "Hindi & English", "Bicameral",
+                28, 50, "india.gov.in", "011123456", "Central Government", "High",
+                "Public Administration", "Active", "Governing body of India", p1);
 
-		Policy p9 = new Policy();
-		p9.policyId = 109;
-		p9.policyName = "Bolsa Família";
-		p9.department = "Social Development";
-		p9.category = "Social Welfare";
-		p9.launchDate = "2003";
-		p9.targetGroup = "Poor Families";
-		p9.objective = "Poverty Reduction";
-		p9.benefits = "Cash Transfers";
-		p9.eligibility = "Low Income";
-		p9.coverage = "Nationwide";
-		p9.implementationType = "Conditional Cash";
-		p9.budget = "R$150 Billion";
-		p9.duration = "Ongoing";
-		p9.status = "Active";
-		p9.website = "gov.br";
-		p9.contact = "121";
-		p9.language = "Portuguese";
-		p9.approvalAuthority = "Congress";
-		p9.impact = "Poverty Alleviation";
-		p9.description = "Family grant program";
-		g9.policy = p9;
-		g9.getGovernmentDetails();
+        Government g2 = new Government(2, "Government of USA", "United States", "Washington D.C.", "President",
+                1776, 331000000, "US Dollar", "Federal Republic", "English", "Bicameral",
+                50, 15, "usa.gov", "202-456-1111", "Federal Government", "High", "Executive",
+                "Active", "Federal government of USA", p2);
 
-		Government g10 = new Government();
-		g10.governmentId = 10;
-		g10.governmentName = "Government of Russia";
-		g10.country = "Russia";
-		g10.capital = "Moscow";
-		g10.leader = "President";
-		g10.establishedYear = 1993;
-		g10.population = 146000000;
-		g10.currency = "Russian Ruble";
-		g10.constitutionType = "Federal Republic";
-		g10.officialLanguage = "Russian";
-		g10.parliamentType = "Bicameral";
-		g10.states = 85;
-		g10.ministries = 18;
-		g10.website = "government.ru";
-		g10.contact = "8-800-200-23-02";
-		g10.category = "Federal Government";
-		g10.securityLevel = "High";
-		g10.administration = "Federal";
-		g10.status = "Active";
-		g10.description = "Federal government of Russia";
+        Government g3 = new Government(3, "Government of UK", "United Kingdom", "London", "Prime Minister",
+                1707, 67800000, "Pound Sterling", "Parliamentary", "English", "Bicameral",
+                4, 22, "gov.uk", "0370-000-2288", "Central Government", "Medium", "Parliamentary",
+                "Active", "Government of United Kingdom", p3);
 
-		Policy p10 = new Policy();
-		p10.policyId = 110;
-		p10.policyName = "National Projects";
-		p10.department = "Presidential Administration";
-		p10.category = "Development";
-		p10.launchDate = "2018";
-		p10.targetGroup = "Citizens";
-		p10.objective = "National Development";
-		p10.benefits = "Infrastructure";
-		p10.eligibility = "All Citizens";
-		p10.coverage = "Nationwide";
-		p10.implementationType = "Mega Projects";
-		p10.budget = "25 Trillion Rubles";
-		p10.duration = "6 Years";
-		p10.status = "Ongoing";
-		p10.website = "nationalprojects.ru";
-		p10.contact = "8-800-200-23-02";
-		p10.language = "Russian";
-		p10.approvalAuthority = "President";
-		p10.impact = "Modernization";
-		p10.description = "12 national development projects";
-		g10.policy = p10;
-		g10.getGovernmentDetails();
+        Government g4 = new Government(4, "Government of Germany", "Germany", "Berlin", "Chancellor",
+                1949, 83000000, "Euro", "Federal Republic", "German", "Bicameral",
+                16, 14, "bundesregierung.de", "030-4000", "Federal Government", "High", "Federal",
+                "Active", "Federal government of Germany", p4);
 
-		Government g11 = new Government();
-		g11.governmentId = 11;
-		g11.governmentName = "Government of China";
-		g11.country = "China";
-		g11.capital = "Beijing";
-		g11.leader = "Premier";
-		g11.establishedYear = 1949;
-		g11.population = 1410000000;
-		g11.currency = "Renminbi";
-		g11.constitutionType = "Socialist Republic";
-		g11.officialLanguage = "Mandarin";
-		g11.parliamentType = "Unicameral";
-		g11.states = 34;
-		g11.ministries = 26;
-		g11.website = "gov.cn";
-		g11.contact = "010-12345678";
-		g11.category = "Central Government";
-		g11.securityLevel = "Very High";
-		g11.administration = "Centralized";
-		g11.status = "Active";
-		g11.description = "Central government of China";
+        Government g5 = new Government(5, "Government of France", "France", "Paris", "President",
+                1958, 67000000, "Euro", "Semi-Presidential", "French", "Bicameral",
+                18, 16, "gouvernement.fr", "01-42-75-80-01", "Central Government", "High", "Executive",
+                "Active", "Government of France", p5);
 
-		Policy p11 = new Policy();
-		p11.policyId = 111;
-		p11.policyName = "Belt and Road";
-		p11.department = "State Council";
-		p11.category = "Infrastructure";
-		p11.launchDate = "2013";
-		p11.targetGroup = "Global Partners";
-		p11.objective = "Trade Connectivity";
-		p11.benefits = "Infrastructure Projects";
-		p11.eligibility = "Partner Countries";
-		p11.coverage = "Global";
-		p11.implementationType = "International Initiative";
-		p11.budget = "$1 Trillion";
-		p11.duration = "Ongoing";
-		p11.status = "Active";
-		p11.website = "beltandroad.gov.cn";
-		p11.contact = "010-12345678";
-		p11.language = "Mandarin";
-		p11.approvalAuthority = "State Council";
-		p11.impact = "Global Trade";
-		p11.description = "Global infrastructure initiative";
-		g11.policy = p11;
-		g11.getGovernmentDetails();
+        Government g6 = new Government(6, "Government of Japan", "Japan", "Tokyo", "Prime Minister",
+                1947, 125000000, "Yen", "Parliamentary", "Japanese", "Bicameral",
+                47, 12, "japan.go.jp", "03-3581-1100", "Central Government", "High", "Cabinet",
+                "Active", "Government of Japan", p6);
 
-		Government g12 = new Government();
-		g12.governmentId = 12;
-		g12.governmentName = "Government of Italy";
-		g12.country = "Italy";
-		g12.capital = "Rome";
-		g12.leader = "Prime Minister";
-		g12.establishedYear = 1948;
-		g12.population = 60000000;
-		g12.currency = "Euro";
-		g12.constitutionType = "Parliamentary Republic";
-		g12.officialLanguage = "Italian";
-		g12.parliamentType = "Bicameral";
-		g12.states = 20;
-		g12.ministries = 15;
-		g12.website = "governo.it";
-		g12.contact = "06-67791";
-		g12.category = "Central Government";
-		g12.securityLevel = "Medium";
-		g12.administration = "Parliamentary";
-		g12.status = "Active";
-		g12.description = "Government of Italy";
+        Government g7 = new Government(7, "Government of Canada", "Canada", "Ottawa", "Prime Minister",
+                1867, 38000000, "Canadian Dollar", "Parliamentary", "English & French", "Bicameral",
+                10, 37, "canada.ca", "1-800-622-6232", "Federal Government", "Medium", "Federal",
+                "Active", "Federal government of Canada", p7);
 
-		Policy p12 = new Policy();
-		p12.policyId = 112;
-		p12.policyName = "Superbonus";
-		p12.department = "Economy Ministry";
-		p12.category = "Construction";
-		p12.launchDate = "2020";
-		p12.targetGroup = "Homeowners";
-		p12.objective = "Building Renovation";
-		p12.benefits = "110% Tax Credit";
-		p12.eligibility = "Property Owners";
-		p12.coverage = "Nationwide";
-		p12.implementationType = "Tax Incentive";
-		p12.budget = "€200 Billion";
-		p12.duration = "5 Years";
-		p12.status = "Ongoing";
-		p12.website = "governo.it";
-		p12.contact = "06-67791";
-		p12.language = "Italian";
-		p12.approvalAuthority = "Parliament";
-		p12.impact = "Green Buildings";
-		p12.description = "Building renovation incentive";
-		g12.policy = p12;
-		g12.getGovernmentDetails();
+        Government g8 = new Government(8, "Government of Australia", "Australia", "Canberra", "Prime Minister",
+                1901, 26000000, "Australian Dollar", "Parliamentary", "English", "Bicameral",
+                6, 20, "australia.gov.au", "13-22-81", "Federal Government", "Medium", "Federal",
+                "Active", "Federal government of Australia", p8);
 
-		Government g13 = new Government();
-		g13.governmentId = 13;
-		g13.governmentName = "Government of Spain";
-		g13.country = "Spain";
-		g13.capital = "Madrid";
-		g13.leader = "Prime Minister";
-		g13.establishedYear = 1978;
-		g13.population = 47000000;
-		g13.currency = "Euro";
-		g13.constitutionType = "Parliamentary";
-		g13.officialLanguage = "Spanish";
-		g13.parliamentType = "Bicameral";
-		g13.states = 17;
-		g13.ministries = 22;
-		g13.website = "lamoncloa.gob.es";
-		g13.contact = "91-335-43-00";
-		g13.category = "Central Government";
-		g13.securityLevel = "Medium";
-		g13.administration = "Parliamentary";
-		g13.status = "Active";
-		g13.description = "Government of Spain";
+        Government g9 = new Government(9, "Government of Brazil", "Brazil", "Brasília", "President",
+                1988, 214000000, "Brazilian Real", "Federal Republic", "Portuguese", "Bicameral",
+                26, 23, "gov.br", "0800-978-9000", "Federal Government", "Medium", "Federal",
+                "Active", "Federal government of Brazil", p9);
 
-		Policy p13 = new Policy();
-		p13.policyId = 113;
-		p13.policyName = "Next Generation EU";
-		p13.department = "Economy Ministry";
-		p13.category = "Recovery";
-		p13.launchDate = "2021";
-		p13.targetGroup = "Businesses";
-		p13.objective = "Economic Recovery";
-		p13.benefits = "Digital & Green";
-		p13.eligibility = "Companies";
-		p13.coverage = "Nationwide";
-		p13.implementationType = "Recovery Fund";
-		p13.budget = "€140 Billion";
-		p13.duration = "6 Years";
-		p13.status = "Ongoing";
-		p13.website = "lamoncloa.gob.es";
-		p13.contact = "91-335-43-00";
-		p13.language = "Spanish";
-		p13.approvalAuthority = "EU Commission";
-		p13.impact = "Post-COVID Recovery";
-		p13.description = "EU recovery and resilience plan";
-		g13.policy = p13;
-		g13.getGovernmentDetails();
+        Government g10 = new Government(10, "Government of Russia", "Russia", "Moscow", "President",
+                1993, 146000000, "Russian Ruble", "Federal Republic", "Russian", "Bicameral",
+                85, 18, "government.ru", "8-800-200-23-02", "Federal Government", "High", "Federal",
+                "Active", "Federal government of Russia", p10);
 
-		Government g14 = new Government();
-		g14.governmentId = 14;
-		g14.governmentName = "Government of South Korea";
-		g14.country = "South Korea";
-		g14.capital = "Seoul";
-		g14.leader = "President";
-		g14.establishedYear = 1948;
-		g14.population = 52000000;
-		g14.currency = "Won";
-		g14.constitutionType = "Presidential Republic";
-		g14.officialLanguage = "Korean";
-		g14.parliamentType = "Unicameral";
-		g14.states = 17;
-		g14.ministries = 18;
-		g14.website = "korea.go.kr";
-		g14.contact = "02-738-5114";
-		g14.category = "Central Government";
-		g14.securityLevel = "High";
-		g14.administration = "Executive";
-		g14.status = "Active";
-		g14.description = "Government of South Korea";
+        Government g11 = new Government(11, "Government of China", "China", "Beijing", "Premier",
+                1949, 1410000000, "Renminbi", "Socialist Republic", "Mandarin", "Unicameral",
+                34, 26, "gov.cn", "010-12345678", "Central Government", "Very High", "Centralized",
+                "Active", "Central government of China", p11);
 
-		Policy p14 = new Policy();
-		p14.policyId = 114;
-		p14.policyName = "Digital New Deal";
-		p14.department = "Science Ministry";
-		p14.category = "Digital Economy";
-		p14.launchDate = "2019";
-		p14.targetGroup = "Citizens";
-		p14.objective = "Digital Transformation";
-		p14.benefits = "AI & Data Economy";
-		p14.eligibility = "All Citizens";
-		p14.coverage = "Nationwide";
-		p14.implementationType = "National Strategy";
-		p14.budget = "58 Trillion Won";
-		p14.duration = "5 Years";
-		p14.status = "Ongoing";
-		p14.website = "korea.go.kr";
-		p14.contact = "02-738-5114";
-		p14.language = "Korean";
-		p14.approvalAuthority = "President";
-		p14.impact = "Digital Leadership";
-		p14.description = "Digital economy transformation";
-		g14.policy = p14;
-		g14.getGovernmentDetails();
+        Government g12 = new Government(12, "Government of Italy", "Italy", "Rome", "Prime Minister",
+                1948, 60000000, "Euro", "Parliamentary Republic", "Italian", "Bicameral",
+                20, 15, "governo.it", "06-67791", "Central Government", "Medium", "Parliamentary",
+                "Active", "Government of Italy", p12);
 
-		Government g15 = new Government();
-		g15.governmentId = 15;
-		g15.governmentName = "Government of Netherlands";
-		g15.country = "Netherlands";
-		g15.capital = "Amsterdam";
-		g15.leader = "Prime Minister";
-		g15.establishedYear = 1848;
-		g15.population = 17500000;
-		g15.currency = "Euro";
-		g15.constitutionType = "Parliamentary";
-		g15.officialLanguage = "Dutch";
-		g15.parliamentType = "Bicameral";
-		g15.states = 12;
-		g15.ministries = 13;
-		g15.website = "government.nl";
-		g15.contact = "070-426-42-64";
-		g15.category = "Central Government";
-		g15.securityLevel = "Medium";
-		g15.administration = "Parliamentary";
-		g15.status = "Active";
-		g15.description = "Government of Netherlands";
+        Government g13 = new Government(13, "Government of Spain", "Spain", "Madrid", "Prime Minister",
+                1978, 47000000, "Euro", "Parliamentary", "Spanish", "Bicameral",
+                17, 22, "lamoncloa.gob.es", "91-335-43-00", "Central Government", "Medium", "Parliamentary",
+                "Active", "Government of Spain", p13);
 
-		Policy p15 = new Policy();
-		p15.policyId = 115;
-		p15.policyName = "Climate Agreement";
-		p15.department = "Infrastructure Ministry";
-		p15.category = "Climate";
-		p15.launchDate = "2019";
-		p15.targetGroup = "Citizens";
-		p15.objective = "Carbon Neutral";
-		p15.benefits = "Climate Action";
-		p15.eligibility = "All Sectors";
-		p15.coverage = "Nationwide";
-		p15.implementationType = "Climate Pact";
-		p15.budget = "€35 Billion";
-		p15.duration = "10 Years";
-		p15.status = "Ongoing";
-		p15.website = "klimaatakkoord.nl";
-		p15.contact = "070-426-42-64";
-		p15.language = "Dutch";
-		p15.approvalAuthority = "Parliament";
-		p15.impact = "Climate Goals";
-		p15.description = "National climate agreement";
-		g15.policy = p15;
-		g15.getGovernmentDetails();
+        Government g14 = new Government(14, "Government of South Korea", "South Korea", "Seoul", "President",
+                1948, 52000000, "Won", "Presidential Republic", "Korean", "Unicameral",
+                17, 18, "korea.go.kr", "02-738-5114", "Central Government", "High", "Executive",
+                "Active", "Government of South Korea", p14);
 
-		Government g16 = new Government();
-		g16.governmentId = 16;
-		g16.governmentName = "Government of Sweden";
-		g16.country = "Sweden";
-		g16.capital = "Stockholm";
-		g16.leader = "Prime Minister";
-		g16.establishedYear = 1809;
-		g16.population = 10400000;
-		g16.currency = "Swedish Krona";
-		g16.constitutionType = "Parliamentary";
-		g16.officialLanguage = "Swedish";
-		g16.parliamentType = "Unicameral";
-		g16.states = 21;
-		g16.ministries = 11;
-		g16.website = "regeringen.se";
-		g16.contact = "08-405-10-00";
-		g16.category = "Central Government";
-		g16.securityLevel = "Medium";
-		g16.administration = "Parliamentary";
-		g16.status = "Active";
-		g16.description = "Government of Sweden";
+        Government g15 = new Government(15, "Government of Netherlands", "Netherlands", "Amsterdam", "Prime Minister",
+                1848, 17500000, "Euro", "Parliamentary", "Dutch", "Bicameral",
+                12, 13, "government.nl", "070-426-42-64", "Central Government", "Medium", "Parliamentary",
+                "Active", "Government of Netherlands", p15);
 
-		Policy p16 = new Policy();
-		p16.policyId = 116;
-		p16.policyName = "Fossil Free Sweden";
-		p16.department = "Environment Ministry";
-		p16.category = "Environment";
-		p16.launchDate = "2009";
-		p16.targetGroup = "Society";
-		p16.objective = "Fossil Free";
-		p16.benefits = "Sustainable Energy";
-		p16.eligibility = "All Sectors";
-		p16.coverage = "Nationwide";
-		p16.implementationType = "Energy Policy";
-		p16.budget = "SEK 100 Billion";
-		p16.duration = "2050 Target";
-		p16.status = "Ongoing";
-		p16.website = "fossilfrittsverige.se";
-		p16.contact = "08-405-10-00";
-		p16.language = "Swedish";
-		p16.approvalAuthority = "Government";
-		p16.impact = "Green Transition";
-		p16.description = "Fossil fuel independence initiative";
-		g16.policy = p16;
-		g16.getGovernmentDetails();
+        Government g16 = new Government(16, "Government of Sweden", "Sweden", "Stockholm", "Prime Minister",
+                1809, 10400000, "Swedish Krona", "Parliamentary", "Swedish", "Unicameral",
+                21, 11, "regeringen.se", "08-405-10-00", "Central Government", "Medium", "Parliamentary",
+                "Active", "Government of Sweden", p16);
 
-		Government g17 = new Government();
-		g17.governmentId = 17;
-		g17.governmentName = "Government of Switzerland";
-		g17.country = "Switzerland";
-		g17.capital = "Bern";
-		g17.leader = "Federal Council";
-		g17.establishedYear = 1848;
-		g17.population = 8700000;
-		g17.currency = "Swiss Franc";
-		g17.constitutionType = "Federal Republic";
-		g17.officialLanguage = "German, French, Italian";
-		g17.parliamentType = "Bicameral";
-		g17.states = 26;
-		g17.ministries = 7;
-		g17.website = "admin.ch";
-		g17.contact = "058-462-11-11";
-		g17.category = "Federal Government";
-		g17.securityLevel = "High";
-		g17.administration = "Federal";
-		g17.status = "Active";
-		g17.description = "Federal government of Switzerland";
+        Government g17 = new Government(17, "Government of Switzerland", "Switzerland", "Bern", "Federal Council",
+                1848, 8700000, "Swiss Franc", "Federal Republic", "German, French, Italian", "Bicameral",
+                26, 7, "admin.ch", "058-462-11-11", "Federal Government", "High", "Federal",
+                "Active", "Federal government of Switzerland", p17);
 
-		Policy p17 = new Policy();
-		p17.policyId = 117;
-		p17.policyName = "Energy Strategy 2050";
-		p17.department = "Environment Office";
-		p17.category = "Energy";
-		p17.launchDate = "2017";
-		p17.targetGroup = "Energy Sector";
-		p17.objective = "Energy Security";
-		p17.benefits = "Renewable Energy";
-		p17.eligibility = "Energy Companies";
-		p17.coverage = "Nationwide";
-		p17.implementationType = "Energy Policy";
-		p17.budget = "CHF 1 Billion";
-		p17.duration = "2050";
-		p17.status = "Ongoing";
-		p17.website = "admin.ch";
-		p17.contact = "058-462-11-11";
-		p17.language = "German, French, Italian";
-		p17.approvalAuthority = "Parliament";
-		p17.impact = "Energy Independence";
-		p17.description = "Long-term energy strategy";
-		g17.policy = p17;
-		g17.getGovernmentDetails();
+        Government g18 = new Government(18, "Government of Poland", "Poland", "Warsaw", "Prime Minister",
+                1997, 38000000, "Zloty", "Parliamentary Republic", "Polish", "Bicameral",
+                16, 20, "gov.pl", "22-694-20-00", "Central Government", "Medium", "Parliamentary",
+                "Active", "Government of Poland", p18);
 
-		Government g18 = new Government();
-		g18.governmentId = 18;
-		g18.governmentName = "Government of Poland";
-		g18.country = "Poland";
-		g18.capital = "Warsaw";
-		g18.leader = "Prime Minister";
-		g18.establishedYear = 1997;
-		g18.population = 38000000;
-		g18.currency = "Zloty";
-		g18.constitutionType = "Parliamentary Republic";
-		g18.officialLanguage = "Polish";
-		g18.parliamentType = "Bicameral";
-		g18.states = 16;
-		g18.ministries = 20;
-		g18.website = "gov.pl";
-		g18.contact = "22-694-20-00";
-		g18.category = "Central Government";
-		g18.securityLevel = "Medium";
-		g18.administration = "Parliamentary";
-		g18.status = "Active";
-		g18.description = "Government of Poland";
+        Government g19 = new Government(19, "Government of Belgium", "Belgium", "Brussels", "Prime Minister",
+                1831, 11600000, "Euro", "Federal Parliamentary", "Dutch, French, German", "Bicameral",
+                3, 15, "belgium.be", "02-513-44-11", "Federal Government", "Medium", "Federal",
+                "Active", "Federal government of Belgium", p19);
 
-		Policy p18 = new Policy();
-		p18.policyId = 118;
-		p18.policyName = "500+ Program";
-		p18.department = "Family Ministry";
-		p18.category = "Social Welfare";
-		p18.launchDate = "2016";
-		p18.targetGroup = "Families";
-		p18.objective = "Child Support";
-		p18.benefits = "Monthly Child Benefit";
-		p18.eligibility = "Parents";
-		p18.coverage = "Nationwide";
-		p18.implementationType = "Cash Benefit";
-		p18.budget = "PLN 40 Billion";
-		p18.duration = "Ongoing";
-		p18.status = "Active";
-		p18.website = "gov.pl";
-		p18.contact = "22-694-20-00";
-		p18.language = "Polish";
-		p18.approvalAuthority = "Parliament";
-		p18.impact = "Birth Rate Increase";
-		p18.description = "Child benefit program";
-		g18.policy = p18;
-		g18.getGovernmentDetails();
+        Government g20 = new Government(20, "Government of Turkey", "Turkey", "Ankara", "President",
+                1923, 85000000, "Turkish Lira", "Presidential Republic", "Turkish", "Unicameral",
+                81, 17, "turkiye.gov.tr", "184", "Central Government", "High", "Presidential",
+                "Active", "Government of Turkey", p20);
 
-		Government g19 = new Government();
-		g19.governmentId = 19;
-		g19.governmentName = "Government of Belgium";
-		g19.country = "Belgium";
-		g19.capital = "Brussels";
-		g19.leader = "Prime Minister";
-		g19.establishedYear = 1831;
-		g19.population = 11600000;
-		g19.currency = "Euro";
-		g19.constitutionType = "Federal Parliamentary";
-		g19.officialLanguage = "Dutch, French, German";
-		g19.parliamentType = "Bicameral";
-		g19.states = 3;
-		g19.ministries = 15;
-		g19.website = "belgium.be";
-		g19.contact = "02-513-44-11";
-		g19.category = "Federal Government";
-		g19.securityLevel = "Medium";
-		g19.administration = "Federal";
-		g19.status = "Active";
-		g19.description = "Federal government of Belgium";
+        System.out.println("GLOBAL GOVERNMENTS AND KEY POLICIES - 2026\n");
+        
+        g1.displayDetails();
+        g2.displayDetails();
+        g3.displayDetails();
+        g4.displayDetails();
+        g5.displayDetails();
+        g6.displayDetails();
+        g7.displayDetails();
+        g8.displayDetails();
+        g9.displayDetails();
+        g10.displayDetails();
+        g11.displayDetails();
+        g12.displayDetails();
+        g13.displayDetails();
+        g14.displayDetails();
+        g15.displayDetails();
+        g16.displayDetails();
+        g17.displayDetails();
+        g18.displayDetails();
+        g19.displayDetails();
+        g20.displayDetails();
 
-		Policy p19 = new Policy();
-		p19.policyId = 119;
-		p19.policyName = "Green Deal";
-		p19.department = "Environment Ministry";
-		p19.category = "Climate";
-		p19.launchDate = "2021";
-		p19.targetGroup = "Citizens";
-		p19.objective = "Climate Neutral";
-		p19.benefits = "Sustainable Development";
-		p19.eligibility = "All Sectors";
-		p19.coverage = "Nationwide";
-		p19.implementationType = "Climate Plan";
-		p19.budget = "€10 Billion";
-		p19.duration = "2050";
-		p19.status = "Ongoing";
-		p19.website = "belgium.be";
-		p19.contact = "02-513-44-11";
-		p19.language = "Dutch, French";
-		p19.approvalAuthority = "Government";
-		p19.impact = "Green Economy";
-		p19.description = "Federal climate strategy";
-		g19.policy = p19;
-		g19.getGovernmentDetails();
-
-		Government g20 = new Government();
-		g20.governmentId = 20;
-		g20.governmentName = "Government of Turkey";
-		g20.country = "Turkey";
-		g20.capital = "Ankara";
-		g20.leader = "President";
-		g20.establishedYear = 1923;
-		g20.population = 85000000;
-		g20.currency = "Turkish Lira";
-		g20.constitutionType = "Presidential Republic";
-		g20.officialLanguage = "Turkish";
-		g20.parliamentType = "Unicameral";
-		g20.states = 81;
-		g20.ministries = 17;
-		g20.website = "turkiye.gov.tr";
-		g20.contact = "184";
-		g20.category = "Central Government";
-		g20.securityLevel = "High";
-		g20.administration = "Presidential";
-		g20.status = "Active";
-		g20.description = "Government of Turkey";
-
-		Policy p20 = new Policy();
-		p20.policyId = 120;
-		p20.policyName = "Vision 2023";
-		p20.department = "Presidency";
-		p20.category = "Development";
-		p20.launchDate = "2011";
-		p20.targetGroup = "Citizens";
-		p20.objective = "Top 10 Economy";
-		p20.benefits = "Infrastructure Development";
-		p20.eligibility = "All Citizens";
-		p20.coverage = "Nationwide";
-		p20.implementationType = "Vision Plan";
-		p20.budget = "1 Trillion USD";
-		p20.duration = "2023";
-		p20.status = "Completed";
-		p20.website = "turkiye.gov.tr";
-		p20.contact = "184";
-		p20.language = "Turkish";
-		p20.approvalAuthority = "President";
-		p20.impact = "Economic Growth";
-		p20.description = "Long-term development vision";
-		g20.policy = p20;
-		g20.getGovernmentDetails();
+        System.out.println("\nGovernance shapes nations through strategic policies.");
     }
 }

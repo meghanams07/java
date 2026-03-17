@@ -1,5 +1,4 @@
 class ProductionHouse {
-
     int houseId;
     String houseName;
     String founder;
@@ -23,8 +22,36 @@ class ProductionHouse {
 
     Movie movie;
 
-    public void getProductionHouseDetails(){
+    public ProductionHouse(int houseId, String houseName, String founder, String location,
+                          String city, String country, int establishedYear, int totalMovies,
+                          String ceo, String category, String industry, String website,
+                          String contact, String email, String colorTheme, int employees,
+                          String studioType, String awards, String status, String famousMovie,
+                          Movie movie) {
+        this.houseId = houseId;
+        this.houseName = houseName;
+        this.founder = founder;
+        this.location = location;
+        this.city = city;
+        this.country = country;
+        this.establishedYear = establishedYear;
+        this.totalMovies = totalMovies;
+        this.ceo = ceo;
+        this.category = category;
+        this.industry = industry;
+        this.website = website;
+        this.contact = contact;
+        this.email = email;
+        this.colorTheme = colorTheme;
+        this.employees = employees;
+        this.studioType = studioType;
+        this.awards = awards;
+        this.status = status;
+        this.famousMovie = famousMovie;
+        this.movie = movie;
+    }
 
+    public void getProductionHouseDetails() {
         System.out.println("HouseId: " + houseId);
         System.out.println("HouseName: " + houseName);
         System.out.println("Founder: " + founder);
@@ -45,7 +72,7 @@ class ProductionHouse {
         System.out.println("Awards: " + awards);
         System.out.println("Status: " + status);
         System.out.println("FamousMovie: " + famousMovie);
-
         this.movie.getMovieDetails();
+        System.out.println("----------------------------------------");
     }
 }

@@ -1,969 +1,244 @@
 class ProgrammingLanguageExecutor {
+    public static void main(String[] args) {
+        System.out.println("=== TOP 20 PROGRAMMING LANGUAGES & THEIR SYNTAX ===\n");
 
-    public static void main(String[] args){
+        Syntax s1 = new Syntax(101, "Java", "int a = 10;", "for, while", "if, switch",
+                             "public void method()", "class Example{}", "Example e = new Example();",
+                             "int arr[]", "try-catch", "// or /* */", "Scanner",
+                             "System.out.println", "package com.example;", "import java.util.*;",
+                             "extends", "implements", "public", "{}", ";");
 
-        ProgrammingLanguage p1 = new ProgrammingLanguage();
+        Syntax s2 = new Syntax(102, "C", "int a = 10;", "for, while, do-while", "if, switch",
+                             "int func() { }", "N/A", "N/A", "int arr[10];", "N/A",
+                             "// or /* */", "scanf", "printf", "N/A", "#include <stdio.h>",
+                             "N/A", "N/A", "return", "{}", ";");
 
-        p1.languageId = 1;
-        p1.languageName = "Java";
-        p1.creator = "James Gosling";
-        p1.createdYear = 1995;
-        p1.type = "Object Oriented";
-        p1.paradigm = "OOP";
-        p1.typing = "Strong";
-        p1.platform = "JVM";
-        p1.compiler = "Javac";
-        p1.extension = ".java";
-        p1.category = "Programming";
-        p1.popularity = "High";
-        p1.company = "Oracle";
-        p1.version = "Java 17";
-        p1.colorTheme = "Blue";
-        p1.usage = "Software Development";
-        p1.documentation = "Oracle Docs";
-        p1.website = "oracle.com";
-        p1.status = "Active";
-        p1.field = "Computer Science";
+        Syntax s3 = new Syntax(103, "C++", "int a = 10;", "for, while, do-while, range-for", "if, switch",
+                             "int func() { }", "class Example { };", "Example e;",
+                             "int arr[10];", "try-catch-throw", "// or /* */", "cin",
+                             "cout", "namespace ns { }", "#include <iostream>",
+                             ": public Base", "abstract via virtual", "virtual", "{}", ";");
 
-        Syntax s1 = new Syntax();
+        Syntax s4 = new Syntax(104, "Python", "a = 10", "for, while", "if, elif, else",
+                             "def func():", "class Example:", "e = Example()",
+                             "arr = [1, 2, 3]", "try-except-finally", "#", "input()",
+                             "print()", "__init__.py", "import module", "class Child(Parent):",
+                             "ABC via abc module", "def", "Indentation", "Newline");
 
-        s1.syntaxId = 101;
-        s1.languageName = "Java";
-        s1.variableDeclaration = "int a = 10;";
-        s1.loopType = "for, while";
-        s1.conditionType = "if, switch";
-        s1.functionSyntax = "public void method()";
-        s1.classSyntax = "class Example{}";
-        s1.objectSyntax = "Example e = new Example();";
-        s1.arraySyntax = "int arr[]";
-        s1.exceptionHandling = "try-catch";
-        s1.commentType = "// or /* */";
-        s1.inputMethod = "Scanner";
-        s1.outputMethod = "System.out.println";
-        s1.packageSyntax = "package com.example;";
-        s1.importSyntax = "import java.util.*;";
-        s1.inheritanceSyntax = "extends";
-        s1.interfaceSyntax = "implements";
-        s1.keywordExample = "public";
-        s1.bracketType = "{}";
-        s1.statementEnd = ";";
+        Syntax s5 = new Syntax(105, "JavaScript", "let a = 10;", "for, while, for-of", "if, switch",
+                              "function func() {}", "class Example {}", "let e = new Example();",
+                              "let arr = [];", "try-catch-finally", "// or /* */", "prompt() (browser)",
+                              "console.log()", "npm modules", "import x from 'm';", "extends",
+                              "N/A", "let", "{}", ";");
 
-        p1.syntax = s1;
+        Syntax s6 = new Syntax(106, "C#", "int a = 10;", "for, while, foreach", "if, switch",
+                             "void Method() {}", "class Example {}", "Example e = new Example();",
+                             "int[] arr = new int[5];", "try-catch-finally", "// or /* */",
+                             "Console.ReadLine()", "Console.WriteLine()", "namespace NS {}",
+                             "using System;", ": BaseClass", ": IInterface", "using", "{}", ";");
+
+        Syntax s7 = new Syntax(107, "PHP", "$a = 10;", "for, while, foreach", "if, switch",
+                             "function func() {}", "class Example {}", "$e = new Example();",
+                             "$arr = [];", "try-catch-finally", "// or /* */", "From $_GET/$_POST",
+                             "echo", "Composer packages", "use Namespace\\\\Class;", "extends",
+                             "implements", "echo", "{}", ";");
+
+        Syntax s8 = new Syntax(108, "Ruby", "a = 10", "for, while, each", "if, elsif, unless",
+                            "def func; end", "class Example; end", "e = Example.new",
+                            "arr = []", "begin-rescue-ensure", "#", "gets", "puts",
+                            "gems", "require 'lib'", "< Parent", "Mixins via modules", "end",
+                            "do/end, {}", "Newline");
+
+        Syntax s9 = new Syntax(109, "Kotlin", "var a = 10", "for, while", "if, when",
+                             "fun func() {}", "class Example {}", "val e = Example()",
+                             "val arr = arrayOf(1,2)", "try-catch-finally", "// or /* */",
+                             "readLine()", "println()", "package com.example", "import pkg.Class",
+                             ": Parent()", ": Interface", "fun", "{}", "; (optional)");
+
+        Syntax s10 = new Syntax(110, "Swift", "var a = 10", "for-in, while", "if, switch",
+                              "func funcName() {}", "class Example {}", "let e = Example()",
+                              "var arr: [Int] = []", "do-try-catch", "// or /* */",
+                              "readLine()", "print()", "Swift Package Manager", "import Module",
+                              ": ParentClass", "protocol", "let", "{}", "");
+
+        Syntax s11 = new Syntax(111, "Go", "var a int = 10", "for", "if, switch",
+                              "func f() {}", "struct types", "var x T", "var arr [10]int",
+                              "error return", "// or /* */", "fmt.Scan", "fmt.Println",
+                              "package main", "import \"fmt\"", "composition", "interface{}",
+                              "defer", "{}", "; (optional)");
+
+        Syntax s12 = new Syntax(112, "Rust", "let x: i32 = 10;", "for, while, loop", "if, match",
+                               "fn func() {}", "struct / enum", "let e = Example {};",
+                               "let arr = [1,2,3];", "Result, Option", "// or /* */",
+                               "stdin().read_line", "println!()", "crate, module", "use std::io;",
+                               "traits", "trait", "match", "{}", ";");
+
+        Syntax s13 = new Syntax(113, "Scala", "val a = 10", "for, while", "if, match",
+                              "def func() = {}", "class Example {}", "val e = new Example",
+                              "val arr = Array(1,2)", "try-catch-finally", "// or /* */",
+                              "StdIn.readLine()", "println()", "package example", "import scala.io._",
+                              "extends", "trait", "val", "{}", "");
+
+        Syntax s14 = new Syntax(114, "TypeScript", "let a: number = 10;", "for, while, for-of", "if, switch",
+                               "function f(a: number): void {}", "class Example {}", "let e = new Example();",
+                               "let arr: number[] = [];", "try-catch-finally", "// or /* */",
+                               "prompt() (browser)", "console.log()", "npm modules", "import {X} from 'm';",
+                               "extends", "interface", "interface", "{}", ";");
+
+        Syntax s15 = new Syntax(115, "R", "a <- 10", "for, while, repeat", "if, else",
+                              "func <- function() {}", "S3/S4 classes", "obj <- new(\"Class\")",
+                              "v <- c(1,2,3)", "tryCatch()", "#", "readline()", "print()",
+                              "library()", "library(pkg)", "S4 extends", "N/A", "function", "{}", "");
+
+        Syntax s16 = new Syntax(116, "MATLAB", "a = 10;", "for, while", "if, switch",
+                              "function y = f(x)", "classdef Example", "e = Example();",
+                              "A = [1 2; 3 4];", "try-catch", "%", "input()", "disp()",
+                              "+package folders", "import pkg.*", "< SuperClass", "abstract classes",
+                              "end", "end blocks", "");
+
+        Syntax s17 = new Syntax(117, "Perl", "my $a = 10;", "for, while, foreach", "if, unless, given",
+                              "sub func { }", "packages, Moose", "my $o = Class->new();",
+                              "my @arr = ();", "eval { }", "#", "<STDIN>", "print",
+                              "package X;", "use Module;", "@ISA", "roles", "my", "{}", ";");
+
+        Syntax s18 = new Syntax(118, "Shell Script", "a=10", "for, while, until", "if, case",
+                              "func() { }", "N/A", "N/A", "arr=(1 2 3)", "exit codes",
+                              "#", "read", "echo", "source files", ". file.sh", "N/A",
+                              "N/A", "fi", "{}", "newline");
+
+        Syntax s19 = new Syntax(119, "SQL", "DECLARE @a INT;", "Procedural (PL/SQL/T-SQL)", "CASE, IF (proc)",
+                              "CREATE FUNCTION f()", "N/A", "N/A", "TABLE rows", "TRY-CATCH (T-SQL)",
+                              "-- or /* */", "Client", "SELECT", "Schemas", "N/A", "N/A",
+                              "N/A", "SELECT", "()", ";");
+
+        Syntax s20 = new Syntax(120, "HTML", "N/A", "N/A", "N/A", "N/A", "class=\"...\" (attribute)",
+                              "N/A", "N/A", "N/A", "<!-- comment -->", "<input>",
+                              "Rendered in browser", "<head>, <body>", "<script src='...'>",
+                              "N/A", "N/A", "<div>", "<>", "Tag close");
+
+        ProgrammingLanguage p1 = new ProgrammingLanguage(1, "Java", "James Gosling", 1995, "Object Oriented", "OOP",
+                                                       "Strong", "JVM", "Javac", ".java", "Programming", "High",
+                                                       "Oracle", "Java 17", "Blue", "Software Development",
+                                                       "Oracle Docs", "oracle.com", "Active", "Computer Science", s1);
+
+        ProgrammingLanguage p2 = new ProgrammingLanguage(2, "C", "Dennis Ritchie", 1972, "Procedural", "Procedural",
+                                                       "Static", "Compiled", "GCC", ".c", "Programming", "High",
+                                                       "Bell Labs", "C18", "Dark Blue", "System Programming",
+                                                       "ISO C Standard", "iso.org", "Active", "Computer Science", s2);
+
+        ProgrammingLanguage p3 = new ProgrammingLanguage(3, "C++", "Bjarne Stroustrup", 1985, "Object Oriented", "OOP, Generic",
+                                                       "Static", "Compiled", "G++", ".cpp", "Programming", "High",
+                                                       "ISO", "C++20", "Purple", "System & App Dev",
+                                                       "C++ Reference", "isocpp.org", "Active", "Computer Science", s3);
+
+        ProgrammingLanguage p4 = new ProgrammingLanguage(4, "Python", "Guido van Rossum", 1991, "High Level", "Multi-paradigm",
+                                                       "Dynamic", "Interpreter", "CPython", ".py", "Programming", "Very High",
+                                                       "Python Software Foundation", "Python 3.12", "Yellow", "Scripting, ML, Web",
+                                                       "Python Docs", "python.org", "Active", "Computer Science", s4);
+
+        ProgrammingLanguage p5 = new ProgrammingLanguage(5, "JavaScript", "Brendan Eich", 1995, "Scripting", "Event-driven, Functional",
+                                                       "Dynamic", "Browser/Node.js", "JIT", ".js", "Programming", "Very High",
+                                                       "ECMA", "ES2023", "Yellow", "Web Development",
+                                                       "MDN Docs", "developer.mozilla.org", "Active", "Computer Science", s5);
+
+        ProgrammingLanguage p6 = new ProgrammingLanguage(6, "C#", "Anders Hejlsberg", 2000, "Object Oriented", "OOP",
+                                                       "Static", ".NET CLR", "Roslyn", ".cs", "Programming", "High",
+                                                       "Microsoft", "C# 12", "Violet", "Enterprise, Games",
+                                                       "MSDN", "learn.microsoft.com", "Active", "Computer Science", s6);
+
+        ProgrammingLanguage p7 = new ProgrammingLanguage(7, "PHP", "Rasmus Lerdorf", 1995, "Scripting", "Procedural, OOP",
+                                                       "Dynamic", "Server-side", "Zend Engine", ".php", "Programming", "High",
+                                                       "PHP Group", "PHP 8", "Purple", "Web Backend",
+                                                       "PHP Manual", "php.net", "Active", "Computer Science", s7);
+
+        ProgrammingLanguage p8 = new ProgrammingLanguage(8, "Ruby", "Yukihiro Matsumoto", 1995, "Scripting", "OOP",
+                                                       "Dynamic", "Interpreter", "MRI", ".rb", "Programming", "Medium",
+                                                       "Ruby Community", "Ruby 3.3", "Red", "Web (Rails)",
+                                                       "Ruby Docs", "ruby-lang.org", "Active", "Computer Science", s8);
+
+        ProgrammingLanguage p9 = new ProgrammingLanguage(9, "Kotlin", "JetBrains", 2011, "Object Oriented", "OOP, Functional",
+                                                       "Static", "JVM/Android", "Kotlin Compiler", ".kt", "Programming", "High",
+                                                       "JetBrains", "Kotlin 2.0", "Blue Purple", "Android, Backend",
+                                                       "Kotlin Docs", "kotlinlang.org", "Active", "Computer Science", s9);
+
+        ProgrammingLanguage p10 = new ProgrammingLanguage(10, "Swift", "Apple Inc", 2014, "Compiled", "OOP, Functional",
+                                                        "Static", "iOS/macOS", "Swift Compiler", ".swift", "Programming", "High",
+                                                        "Apple", "Swift 5.9", "Orange", "iOS Apps",
+                                                        "Swift Docs", "swift.org", "Active", "Computer Science", s10);
+
+        ProgrammingLanguage p11 = new ProgrammingLanguage(11, "Go", "Robert Griesemer", 2009, "Compiled", "Concurrent",
+                                                        "Static", "Go Runtime", "Go Compiler", ".go", "Programming", "High",
+                                                        "Google", "Go 1.22", "Cyan", "Backend, Cloud",
+                                                        "Go Docs", "go.dev", "Active", "Computer Science", s11);
+
+        ProgrammingLanguage p12 = new ProgrammingLanguage(12, "Rust", "Graydon Hoare", 2010, "Compiled", "Systems, Functional",
+                                                        "Static", "LLVM", "rustc", ".rs", "Programming", "High",
+                                                        "Mozilla", "Rust 1.75", "Brown", "Systems, WebAssembly",
+                                                        "Rust Book", "rust-lang.org", "Active", "Computer Science", s12);
+
+        ProgrammingLanguage p13 = new ProgrammingLanguage(13, "Scala", "Martin Odersky", 2004, "High Level", "Functional, OOP",
+                                                        "Static", "JVM", "scalac", ".scala", "Programming", "Medium",
+                                                        "Lightbend", "Scala 3", "Red", "Big Data, Backend",
+                                                        "Scala Docs", "scala-lang.org", "Active", "Computer Science", s13);
+
+        ProgrammingLanguage p14 = new ProgrammingLanguage(14, "TypeScript", "Microsoft", 2012, "Superset", "OOP, Functional",
+                                                        "Static (optional)", "Browser/Node", "tsc", ".ts", "Programming", "High",
+                                                        "Microsoft", "TS 5", "Blue", "Web Apps",
+                                                        "TS Docs", "typescriptlang.org", "Active", "Computer Science", s14);
+
+        ProgrammingLanguage p15 = new ProgrammingLanguage(15, "R", "Ross Ihaka", 1993, "Statistical", "Functional",
+                                                        "Dynamic", "Interpreter", "R Engine", ".R", "Programming", "Medium",
+                                                        "R Foundation", "R 4.3", "Light Blue", "Data Science",
+                                                        "R Manuals", "r-project.org", "Active", "Statistics", s15);
+
+        ProgrammingLanguage p16 = new ProgrammingLanguage(16, "MATLAB", "MathWorks", 1984, "Numeric", "Procedural",
+                                                        "Dynamic", "MATLAB Runtime", "MATLAB Engine", ".m", "Programming", "High",
+                                                        "MathWorks", "R2024a", "Orange Blue", "Numerical Computing",
+                                                        "MATLAB Docs", "mathworks.com", "Active", "Engineering", s16);
+
+        ProgrammingLanguage p17 = new ProgrammingLanguage(17, "Perl", "Larry Wall", 1987, "Scripting", "Multi-paradigm",
+                                                        "Dynamic", "Interpreter", "Perl Engine", ".pl", "Programming", "Low",
+                                                        "Perl Foundation", "Perl 5", "Camel", "Text Processing",
+                                                        "perldoc", "perl.org", "Active", "Computer Science", s17);
+
+        ProgrammingLanguage p18 = new ProgrammingLanguage(18, "Shell Script", "Various", 1979, "Scripting", "Procedural",
+                                                        "Dynamic", "Unix Shell", "Shell Interpreter", ".sh", "Scripting", "High",
+                                                        "GNU", "Bash 5", "Green", "Automation",
+                                                        "man bash", "gnu.org", "Active", "System Admin", s18);
+
+        ProgrammingLanguage p19 = new ProgrammingLanguage(19, "SQL", "IBM", 1974, "Query", "Declarative",
+                                                        "Static", "DB Engines", "SQL Engine", ".sql", "Database", "Very High",
+                                                        "ISO/IEC", "SQL:2016", "Teal", "Database Queries",
+                                                        "DB Docs", "iso.org", "Active", "Databases", s19);
+
+        ProgrammingLanguage p20 = new ProgrammingLanguage(20, "HTML", "Tim Berners-Lee", 1991, "Markup", "Declarative",
+                                                        "N/A", "Browser", "HTML Parser", ".html", "Markup", "Very High",
+                                                        "W3C", "HTML5", "Orange", "Web Pages",
+                                                        "MDN/W3C", "w3.org", "Active", "Web", s20);
+
 
         p1.getProgrammingLanguageDetails();
-		ProgrammingLanguage p2 = new ProgrammingLanguage();
-
-p2.languageId = 2;
-p2.languageName = "C";
-p2.creator = "Dennis Ritchie";
-p2.createdYear = 1972;
-p2.type = "Procedural";
-p2.paradigm = "Procedural";
-p2.typing = "Static";
-p2.platform = "Compiled";
-p2.compiler = "GCC";
-p2.extension = ".c";
-p2.category = "Programming";
-p2.popularity = "High";
-p2.company = "Bell Labs";
-p2.version = "C18";
-p2.colorTheme = "Dark Blue";
-p2.usage = "System Programming";
-p2.documentation = "ISO C Standard";
-p2.website = "iso.org";
-p2.status = "Active";
-p2.field = "Computer Science";
-
-Syntax s2 = new Syntax();
-
-s2.syntaxId = 102;
-s2.languageName = "C";
-s2.variableDeclaration = "int a = 10;";
-s2.loopType = "for, while, do-while";
-s2.conditionType = "if, switch";
-s2.functionSyntax = "int func() { }";
-s2.classSyntax = "N/A";
-s2.objectSyntax = "N/A";
-s2.arraySyntax = "int arr[10];";
-s2.exceptionHandling = "N/A";
-s2.commentType = "// or /* */";
-s2.inputMethod = "scanf";
-s2.outputMethod = "printf";
-s2.packageSyntax = "N/A";
-s2.importSyntax = "#include <stdio.h>";
-s2.inheritanceSyntax = "N/A";
-s2.interfaceSyntax = "N/A";
-s2.keywordExample = "return";
-s2.bracketType = "{}";
-s2.statementEnd = ";";
-
-p2.syntax = s2;
-
-p2.getProgrammingLanguageDetails();
-
-ProgrammingLanguage p3 = new ProgrammingLanguage();
-
-p3.languageId = 3;
-p3.languageName = "C++";
-p3.creator = "Bjarne Stroustrup";
-p3.createdYear = 1985;
-p3.type = "Object Oriented";
-p3.paradigm = "OOP, Generic";
-p3.typing = "Static";
-p3.platform = "Compiled";
-p3.compiler = "G++";
-p3.extension = ".cpp";
-p3.category = "Programming";
-p3.popularity = "High";
-p3.company = "ISO";
-p3.version = "C++20";
-p3.colorTheme = "Purple";
-p3.usage = "System & App Dev";
-p3.documentation = "C++ Reference";
-p3.website = "isocpp.org";
-p3.status = "Active";
-p3.field = "Computer Science";
-
-Syntax s3 = new Syntax();
-
-s3.syntaxId = 103;
-s3.languageName = "C++";
-s3.variableDeclaration = "int a = 10;";
-s3.loopType = "for, while, do-while, range-for";
-s3.conditionType = "if, switch";
-s3.functionSyntax = "int func() { }";
-s3.classSyntax = "class Example { };";
-s3.objectSyntax = "Example e;";
-s3.arraySyntax = "int arr[10];";
-s3.exceptionHandling = "try-catch-throw";
-s3.commentType = "// or /* */";
-s3.inputMethod = "cin";
-s3.outputMethod = "cout";
-s3.packageSyntax = "namespace ns { }";
-s3.importSyntax = "#include <iostream>";
-s3.inheritanceSyntax = ": public Base";
-s3.interfaceSyntax = "abstract via virtual";
-s3.keywordExample = "virtual";
-s3.bracketType = "{}";
-s3.statementEnd = ";";
-
-p3.syntax = s3;
-
-p3.getProgrammingLanguageDetails();
-
-ProgrammingLanguage p4 = new ProgrammingLanguage();
-
-p4.languageId = 4;
-p4.languageName = "Python";
-p4.creator = "Guido van Rossum";
-p4.createdYear = 1991;
-p4.type = "High Level";
-p4.paradigm = "Multi-paradigm";
-p4.typing = "Dynamic";
-p4.platform = "Interpreter";
-p4.compiler = "CPython";
-p4.extension = ".py";
-p4.category = "Programming";
-p4.popularity = "Very High";
-p4.company = "Python Software Foundation";
-p4.version = "Python 3.12";
-p4.colorTheme = "Yellow";
-p4.usage = "Scripting, ML, Web";
-p4.documentation = "Python Docs";
-p4.website = "python.org";
-p4.status = "Active";
-p4.field = "Computer Science";
-
-Syntax s4 = new Syntax();
-
-s4.syntaxId = 104;
-s4.languageName = "Python";
-s4.variableDeclaration = "a = 10";
-s4.loopType = "for, while";
-s4.conditionType = "if, elif, else";
-s4.functionSyntax = "def func():";
-s4.classSyntax = "class Example:";
-s4.objectSyntax = "e = Example()";
-s4.arraySyntax = "arr = [1, 2, 3]";
-s4.exceptionHandling = "try-except-finally";
-s4.commentType = "#";
-s4.inputMethod = "input()";
-s4.outputMethod = "print()";
-s4.packageSyntax = "__init__.py";
-s4.importSyntax = "import module";
-s4.inheritanceSyntax = "class Child(Parent):";
-s4.interfaceSyntax = "ABC via abc module";
-s4.keywordExample = "def";
-s4.bracketType = "Indentation";
-s4.statementEnd = "Newline";
-
-p4.syntax = s4;
-
-p4.getProgrammingLanguageDetails();
-
-ProgrammingLanguage p5 = new ProgrammingLanguage();
-
-p5.languageId = 5;
-p5.languageName = "JavaScript";
-p5.creator = "Brendan Eich";
-p5.createdYear = 1995;
-p5.type = "Scripting";
-p5.paradigm = "Event-driven, Functional";
-p5.typing = "Dynamic";
-p5.platform = "Browser/Node.js";
-p5.compiler = "JIT";
-p5.extension = ".js";
-p5.category = "Programming";
-p5.popularity = "Very High";
-p5.company = "ECMA";
-p5.version = "ES2023";
-p5.colorTheme = "Yellow";
-p5.usage = "Web Development";
-p5.documentation = "MDN Docs";
-p5.website = "developer.mozilla.org";
-p5.status = "Active";
-p5.field = "Computer Science";
-
-Syntax s5 = new Syntax();
-
-s5.syntaxId = 105;
-s5.languageName = "JavaScript";
-s5.variableDeclaration = "let a = 10;";
-s5.loopType = "for, while, for-of";
-s5.conditionType = "if, switch";
-s5.functionSyntax = "function func() {}";
-s5.classSyntax = "class Example {}";
-s5.objectSyntax = "let e = new Example();";
-s5.arraySyntax = "let arr = [];";
-s5.exceptionHandling = "try-catch-finally";
-s5.commentType = "// or /* */";
-s5.inputMethod = "prompt() (browser)";
-s5.outputMethod = "console.log()";
-s5.packageSyntax = "npm modules";
-s5.importSyntax = "import x from 'm';";
-s5.inheritanceSyntax = "extends";
-s5.interfaceSyntax = "N/A";
-s5.keywordExample = "let";
-s5.bracketType = "{}";
-s5.statementEnd = ";";
-
-p5.syntax = s5;
-
-p5.getProgrammingLanguageDetails();
-
-ProgrammingLanguage p6 = new ProgrammingLanguage();
-
-p6.languageId = 6;
-p6.languageName = "C#";
-p6.creator = "Anders Hejlsberg";
-p6.createdYear = 2000;
-p6.type = "Object Oriented";
-p6.paradigm = "OOP";
-p6.typing = "Static";
-p6.platform = ".NET CLR";
-p6.compiler = "Roslyn";
-p6.extension = ".cs";
-p6.category = "Programming";
-p6.popularity = "High";
-p6.company = "Microsoft";
-p6.version = "C# 12";
-p6.colorTheme = "Violet";
-p6.usage = "Enterprise, Games";
-p6.documentation = "MSDN";
-p6.website = "learn.microsoft.com";
-p6.status = "Active";
-p6.field = "Computer Science";
-
-Syntax s6 = new Syntax();
-
-s6.syntaxId = 106;
-s6.languageName = "C#";
-s6.variableDeclaration = "int a = 10;";
-s6.loopType = "for, while, foreach";
-s6.conditionType = "if, switch";
-s6.functionSyntax = "void Method() {}";
-s6.classSyntax = "class Example {}";
-s6.objectSyntax = "Example e = new Example();";
-s6.arraySyntax = "int[] arr = new int[5];";
-s6.exceptionHandling = "try-catch-finally";
-s6.commentType = "// or /* */";
-s6.inputMethod = "Console.ReadLine()";
-s6.outputMethod = "Console.WriteLine()";
-s6.packageSyntax = "namespace NS {}";
-s6.importSyntax = "using System;";
-s6.inheritanceSyntax = ": BaseClass";
-s6.interfaceSyntax = ": IInterface";
-s6.keywordExample = "using";
-s6.bracketType = "{}";
-s6.statementEnd = ";";
-
-p6.syntax = s6;
-
-p6.getProgrammingLanguageDetails();
-
-ProgrammingLanguage p7 = new ProgrammingLanguage();
-
-p7.languageId = 7;
-p7.languageName = "PHP";
-p7.creator = "Rasmus Lerdorf";
-p7.createdYear = 1995;
-p7.type = "Scripting";
-p7.paradigm = "Procedural, OOP";
-p7.typing = "Dynamic";
-p7.platform = "Server-side";
-p7.compiler = "Zend Engine";
-p7.extension = ".php";
-p7.category = "Programming";
-p7.popularity = "High";
-p7.company = "PHP Group";
-p7.version = "PHP 8";
-p7.colorTheme = "Purple";
-p7.usage = "Web Backend";
-p7.documentation = "PHP Manual";
-p7.website = "php.net";
-p7.status = "Active";
-p7.field = "Computer Science";
-
-Syntax s7 = new Syntax();
-
-s7.syntaxId = 107;
-s7.languageName = "PHP";
-s7.variableDeclaration = "$a = 10;";
-s7.loopType = "for, while, foreach";
-s7.conditionType = "if, switch";
-s7.functionSyntax = "function func() {}";
-s7.classSyntax = "class Example {}";
-s7.objectSyntax = "$e = new Example();";
-s7.arraySyntax = "$arr = [];";
-s7.exceptionHandling = "try-catch-finally";
-s7.commentType = "// or /* */";
-s7.inputMethod = "From $_GET/$_POST";
-s7.outputMethod = "echo";
-s7.packageSyntax = "Composer packages";
-s7.importSyntax = "use Namespace\\Class;";
-s7.inheritanceSyntax = "extends";
-s7.interfaceSyntax = "implements";
-s7.keywordExample = "echo";
-s7.bracketType = "{}";
-s7.statementEnd = ";";
-
-p7.syntax = s7;
-
-p7.getProgrammingLanguageDetails();
-
-ProgrammingLanguage p8 = new ProgrammingLanguage();
-
-p8.languageId = 8;
-p8.languageName = "Ruby";
-p8.creator = "Yukihiro Matsumoto";
-p8.createdYear = 1995;
-p8.type = "Scripting";
-p8.paradigm = "OOP";
-p8.typing = "Dynamic";
-p8.platform = "Interpreter";
-p8.compiler = "MRI";
-p8.extension = ".rb";
-p8.category = "Programming";
-p8.popularity = "Medium";
-p8.company = "Ruby Community";
-p8.version = "Ruby 3.3";
-p8.colorTheme = "Red";
-p8.usage = "Web (Rails)";
-p8.documentation = "Ruby Docs";
-p8.website = "ruby-lang.org";
-p8.status = "Active";
-p8.field = "Computer Science";
-
-Syntax s8 = new Syntax();
-
-s8.syntaxId = 108;
-s8.languageName = "Ruby";
-s8.variableDeclaration = "a = 10";
-s8.loopType = "for, while, each";
-s8.conditionType = "if, elsif, unless";
-s8.functionSyntax = "def func; end";
-s8.classSyntax = "class Example; end";
-s8.objectSyntax = "e = Example.new";
-s8.arraySyntax = "arr = []";
-s8.exceptionHandling = "begin-rescue-ensure";
-s8.commentType = "#";
-s8.inputMethod = "gets";
-s8.outputMethod = "puts";
-s8.packageSyntax = "gems";
-s8.importSyntax = "require 'lib'";
-s8.inheritanceSyntax = "< Parent";
-s8.interfaceSyntax = "Mixins via modules";
-s8.keywordExample = "end";
-s8.bracketType = "do/end, {}";
-s8.statementEnd = "Newline";
-
-p8.syntax = s8;
-
-p8.getProgrammingLanguageDetails();
-
-ProgrammingLanguage p9 = new ProgrammingLanguage();
-
-p9.languageId = 9;
-p9.languageName = "Kotlin";
-p9.creator = "JetBrains";
-p9.createdYear = 2011;
-p9.type = "Object Oriented";
-p9.paradigm = "OOP, Functional";
-p9.typing = "Static";
-p9.platform = "JVM/Android";
-p9.compiler = "Kotlin Compiler";
-p9.extension = ".kt";
-p9.category = "Programming";
-p9.popularity = "High";
-p9.company = "JetBrains";
-p9.version = "Kotlin 2.0";
-p9.colorTheme = "Blue Purple";
-p9.usage = "Android, Backend";
-p9.documentation = "Kotlin Docs";
-p9.website = "kotlinlang.org";
-p9.status = "Active";
-p9.field = "Computer Science";
-
-Syntax s9 = new Syntax();
-
-s9.syntaxId = 109;
-s9.languageName = "Kotlin";
-s9.variableDeclaration = "var a = 10";
-s9.loopType = "for, while";
-s9.conditionType = "if, when";
-s9.functionSyntax = "fun func() {}";
-s9.classSyntax = "class Example {}";
-s9.objectSyntax = "val e = Example()";
-s9.arraySyntax = "val arr = arrayOf(1,2)";
-s9.exceptionHandling = "try-catch-finally";
-s9.commentType = "// or /* */";
-s9.inputMethod = "readLine()";
-s9.outputMethod = "println()";
-s9.packageSyntax = "package com.example";
-s9.importSyntax = "import pkg.Class";
-s9.inheritanceSyntax = ": Parent()";
-s9.interfaceSyntax = ": Interface";
-s9.keywordExample = "fun";
-s9.bracketType = "{}";
-s9.statementEnd = "; (optional)";
-
-p9.syntax = s9;
-
-p9.getProgrammingLanguageDetails();
-
-ProgrammingLanguage p10 = new ProgrammingLanguage();
-
-p10.languageId = 10;
-p10.languageName = "Swift";
-p10.creator = "Apple Inc";
-p10.createdYear = 2014;
-p10.type = "Compiled";
-p10.paradigm = "OOP, Functional";
-p10.typing = "Static";
-p10.platform = "iOS/macOS";
-p10.compiler = "Swift Compiler";
-p10.extension = ".swift";
-p10.category = "Programming";
-p10.popularity = "High";
-p10.company = "Apple";
-p10.version = "Swift 5.9";
-p10.colorTheme = "Orange";
-p10.usage = "iOS Apps";
-p10.documentation = "Swift Docs";
-p10.website = "swift.org";
-p10.status = "Active";
-p10.field = "Computer Science";
-
-Syntax s10 = new Syntax();
-
-s10.syntaxId = 110;
-s10.languageName = "Swift";
-s10.variableDeclaration = "var a = 10";
-s10.loopType = "for-in, while";
-s10.conditionType = "if, switch";
-s10.functionSyntax = "func funcName() {}";
-s10.classSyntax = "class Example {}";
-s10.objectSyntax = "let e = Example()";
-s10.arraySyntax = "var arr: [Int] = []";
-s10.exceptionHandling = "do-try-catch";
-s10.commentType = "// or /* */";
-s10.inputMethod = "readLine()";
-s10.outputMethod = "print()";
-s10.packageSyntax = "Swift Package Manager";
-s10.importSyntax = "import Module";
-s10.inheritanceSyntax = ": ParentClass";
-s10.interfaceSyntax = "protocol";
-s10.keywordExample = "let";
-s10.bracketType = "{}";
-s10.statementEnd = "";
-
-p10.syntax = s10;
-
-p10.getProgrammingLanguageDetails();
-
-// 11–20 (shorter but same pattern)
-
-ProgrammingLanguage p11 = new ProgrammingLanguage();
-p11.languageId = 11;
-p11.languageName = "Go";
-p11.creator = "Robert Griesemer";
-p11.createdYear = 2009;
-p11.type = "Compiled";
-p11.paradigm = "Concurrent";
-p11.typing = "Static";
-p11.platform = "Go Runtime";
-p11.compiler = "Go Compiler";
-p11.extension = ".go";
-p11.category = "Programming";
-p11.popularity = "High";
-p11.company = "Google";
-p11.version = "Go 1.22";
-p11.colorTheme = "Cyan";
-p11.usage = "Backend, Cloud";
-p11.documentation = "Go Docs";
-p11.website = "go.dev";
-p11.status = "Active";
-p11.field = "Computer Science";
-
-Syntax s11 = new Syntax();
-s11.syntaxId = 111;
-s11.languageName = "Go";
-s11.variableDeclaration = "var a int = 10";
-s11.loopType = "for";
-s11.conditionType = "if, switch";
-s11.functionSyntax = "func f() {}";
-s11.classSyntax = "struct types";
-s11.objectSyntax = "var x T";
-s11.arraySyntax = "var arr [10]int";
-s11.exceptionHandling = "error return";
-s11.commentType = "// or /* */";
-s11.inputMethod = "fmt.Scan";
-s11.outputMethod = "fmt.Println";
-s11.packageSyntax = "package main";
-s11.importSyntax = "import \"fmt\"";
-s11.inheritanceSyntax = "composition";
-s11.interfaceSyntax = "interface{}";
-s11.keywordExample = "defer";
-s11.bracketType = "{}";
-s11.statementEnd = "; (optional)";
-p11.syntax = s11;
-p11.getProgrammingLanguageDetails();
-
-ProgrammingLanguage p12 = new ProgrammingLanguage();
-p12.languageId = 12;
-p12.languageName = "Rust";
-p12.creator = "Graydon Hoare";
-p12.createdYear = 2010;
-p12.type = "Compiled";
-p12.paradigm = "Systems, Functional";
-p12.typing = "Static";
-p12.platform = "LLVM";
-p12.compiler = "rustc";
-p12.extension = ".rs";
-p12.category = "Programming";
-p12.popularity = "High";
-p12.company = "Mozilla";
-p12.version = "Rust 1.75";
-p12.colorTheme = "Brown";
-p12.usage = "Systems, WebAssembly";
-p12.documentation = "Rust Book";
-p12.website = "rust-lang.org";
-p12.status = "Active";
-p12.field = "Computer Science";
-
-Syntax s12 = new Syntax();
-s12.syntaxId = 112;
-s12.languageName = "Rust";
-s12.variableDeclaration = "let x: i32 = 10;";
-s12.loopType = "for, while, loop";
-s12.conditionType = "if, match";
-s12.functionSyntax = "fn func() {}";
-s12.classSyntax = "struct / enum";
-s12.objectSyntax = "let e = Example {};";
-s12.arraySyntax = "let arr = [1,2,3];";
-s12.exceptionHandling = "Result, Option";
-s12.commentType = "// or /* */";
-s12.inputMethod = "stdin().read_line";
-s12.outputMethod = "println!()";
-s12.packageSyntax = "crate, module";
-s12.importSyntax = "use std::io;";
-s12.inheritanceSyntax = "traits";
-s12.interfaceSyntax = "trait";
-s12.keywordExample = "match";
-s12.bracketType = "{}";
-s12.statementEnd = ";";
-p12.syntax = s12;
-p12.getProgrammingLanguageDetails();
-
-ProgrammingLanguage p13 = new ProgrammingLanguage();
-p13.languageId = 13;
-p13.languageName = "Scala";
-p13.creator = "Martin Odersky";
-p13.createdYear = 2004;
-p13.type = "High Level";
-p13.paradigm = "Functional, OOP";
-p13.typing = "Static";
-p13.platform = "JVM";
-p13.compiler = "scalac";
-p13.extension = ".scala";
-p13.category = "Programming";
-p13.popularity = "Medium";
-p13.company = "Lightbend";
-p13.version = "Scala 3";
-p13.colorTheme = "Red";
-p13.usage = "Big Data, Backend";
-p13.documentation = "Scala Docs";
-p13.website = "scala-lang.org";
-p13.status = "Active";
-p13.field = "Computer Science";
-
-Syntax s13 = new Syntax();
-s13.syntaxId = 113;
-s13.languageName = "Scala";
-s13.variableDeclaration = "val a = 10";
-s13.loopType = "for, while";
-s13.conditionType = "if, match";
-s13.functionSyntax = "def func() = {}";
-s13.classSyntax = "class Example {}";
-s13.objectSyntax = "val e = new Example";
-s13.arraySyntax = "val arr = Array(1,2)";
-s13.exceptionHandling = "try-catch-finally";
-s13.commentType = "// or /* */";
-s13.inputMethod = "StdIn.readLine()";
-s13.outputMethod = "println()";
-s13.packageSyntax = "package example";
-s13.importSyntax = "import scala.io._";
-s13.inheritanceSyntax = "extends";
-s13.interfaceSyntax = "trait";
-s13.keywordExample = "val";
-s13.bracketType = "{}";
-s13.statementEnd = "";
-p13.syntax = s13;
-p13.getProgrammingLanguageDetails();
-
-ProgrammingLanguage p14 = new ProgrammingLanguage();
-p14.languageId = 14;
-p14.languageName = "TypeScript";
-p14.creator = "Microsoft";
-p14.createdYear = 2012;
-p14.type = "Superset";
-p14.paradigm = "OOP, Functional";
-p14.typing = "Static (optional)";
-p14.platform = "Browser/Node";
-p14.compiler = "tsc";
-p14.extension = ".ts";
-p14.category = "Programming";
-p14.popularity = "High";
-p14.company = "Microsoft";
-p14.version = "TS 5";
-p14.colorTheme = "Blue";
-p14.usage = "Web Apps";
-p14.documentation = "TS Docs";
-p14.website = "typescriptlang.org";
-p14.status = "Active";
-p14.field = "Computer Science";
-
-Syntax s14 = new Syntax();
-s14.syntaxId = 114;
-s14.languageName = "TypeScript";
-s14.variableDeclaration = "let a: number = 10;";
-s14.loopType = "for, while, for-of";
-s14.conditionType = "if, switch";
-s14.functionSyntax = "function f(a: number): void {}";
-s14.classSyntax = "class Example {}";
-s14.objectSyntax = "let e = new Example();";
-s14.arraySyntax = "let arr: number[] = [];";
-s14.exceptionHandling = "try-catch-finally";
-s14.commentType = "// or /* */";
-s14.inputMethod = "prompt() (browser)";
-s14.outputMethod = "console.log()";
-s14.packageSyntax = "npm modules";
-s14.importSyntax = "import {X} from 'm';";
-s14.inheritanceSyntax = "extends";
-s14.interfaceSyntax = "interface";
-s14.keywordExample = "interface";
-s14.bracketType = "{}";
-s14.statementEnd = ";";
-p14.syntax = s14;
-p14.getProgrammingLanguageDetails();
-
-ProgrammingLanguage p15 = new ProgrammingLanguage();
-p15.languageId = 15;
-p15.languageName = "R";
-p15.creator = "Ross Ihaka";
-p15.createdYear = 1993;
-p15.type = "Statistical";
-p15.paradigm = "Functional";
-p15.typing = "Dynamic";
-p15.platform = "Interpreter";
-p15.compiler = "R Engine";
-p15.extension = ".R";
-p15.category = "Programming";
-p15.popularity = "Medium";
-p15.company = "R Foundation";
-p15.version = "R 4.3";
-p15.colorTheme = "Light Blue";
-p15.usage = "Data Science";
-p15.documentation = "R Manuals";
-p15.website = "r-project.org";
-p15.status = "Active";
-p15.field = "Statistics";
-
-Syntax s15 = new Syntax();
-s15.syntaxId = 115;
-s15.languageName = "R";
-s15.variableDeclaration = "a <- 10";
-s15.loopType = "for, while, repeat";
-s15.conditionType = "if, else";
-s15.functionSyntax = "func <- function() {}";
-s15.classSyntax = "S3/S4 classes";
-s15.objectSyntax = "obj <- new(\"Class\")";
-s15.arraySyntax = "v <- c(1,2,3)";
-s15.exceptionHandling = "tryCatch()";
-s15.commentType = "#";
-s15.inputMethod = "readline()";
-s15.outputMethod = "print()";
-s15.packageSyntax = "library()";
-s15.importSyntax = "library(pkg)";
-s15.inheritanceSyntax = "S4 extends";
-s15.interfaceSyntax = "N/A";
-s15.keywordExample = "function";
-s15.bracketType = "{}";
-s15.statementEnd = "";
-p15.syntax = s15;
-p15.getProgrammingLanguageDetails();
-
-ProgrammingLanguage p16 = new ProgrammingLanguage();
-p16.languageId = 16;
-p16.languageName = "MATLAB";
-p16.creator = "MathWorks";
-p16.createdYear = 1984;
-p16.type = "Numeric";
-p16.paradigm = "Procedural";
-p16.typing = "Dynamic";
-p16.platform = "MATLAB Runtime";
-p16.compiler = "MATLAB Engine";
-p16.extension = ".m";
-p16.category = "Programming";
-p16.popularity = "High";
-p16.company = "MathWorks";
-p16.version = "R2024a";
-p16.colorTheme = "Orange Blue";
-p16.usage = "Numerical Computing";
-p16.documentation = "MATLAB Docs";
-p16.website = "mathworks.com";
-p16.status = "Active";
-p16.field = "Engineering";
-
-Syntax s16 = new Syntax();
-s16.syntaxId = 116;
-s16.languageName = "MATLAB";
-s16.variableDeclaration = "a = 10;";
-s16.loopType = "for, while";
-s16.conditionType = "if, switch";
-s16.functionSyntax = "function y = f(x)";
-s16.classSyntax = "classdef Example";
-s16.objectSyntax = "e = Example();";
-s16.arraySyntax = "A = [1 2; 3 4];";
-s16.exceptionHandling = "try-catch";
-s16.commentType = "%";
-s16.inputMethod = "input()";
-s16.outputMethod = "disp()";
-s16.packageSyntax = "+package folders";
-s16.importSyntax = "import pkg.*";
-s16.inheritanceSyntax = "< SuperClass";
-s16.interfaceSyntax = "abstract classes";
-s16.keywordExample = "end";
-s16.bracketType = "end blocks";
-s16.statementEnd = "";
-p16.syntax = s16;
-p16.getProgrammingLanguageDetails();
-
-ProgrammingLanguage p17 = new ProgrammingLanguage();
-p17.languageId = 17;
-p17.languageName = "Perl";
-p17.creator = "Larry Wall";
-p17.createdYear = 1987;
-p17.type = "Scripting";
-p17.paradigm = "Multi-paradigm";
-p17.typing = "Dynamic";
-p17.platform = "Interpreter";
-p17.compiler = "Perl Engine";
-p17.extension = ".pl";
-p17.category = "Programming";
-p17.popularity = "Low";
-p17.company = "Perl Foundation";
-p17.version = "Perl 5";
-p17.colorTheme = "Camel";
-p17.usage = "Text Processing";
-p17.documentation = "perldoc";
-p17.website = "perl.org";
-p17.status = "Active";
-p17.field = "Computer Science";
-
-Syntax s17 = new Syntax();
-s17.syntaxId = 117;
-s17.languageName = "Perl";
-s17.variableDeclaration = "my $a = 10;";
-s17.loopType = "for, while, foreach";
-s17.conditionType = "if, unless, given";
-s17.functionSyntax = "sub func { }";
-s17.classSyntax = "packages, Moose";
-s17.objectSyntax = "my $o = Class->new();";
-s17.arraySyntax = "my @arr = ();";
-s17.exceptionHandling = "eval { }";
-s17.commentType = "#";
-s17.inputMethod = "<STDIN>";
-s17.outputMethod = "print";
-s17.packageSyntax = "package X;";
-s17.importSyntax = "use Module;";
-s17.inheritanceSyntax = "@ISA";
-s17.interfaceSyntax = "roles";
-s17.keywordExample = "my";
-s17.bracketType = "{}";
-s17.statementEnd = ";";
-p17.syntax = s17;
-p17.getProgrammingLanguageDetails();
-
-ProgrammingLanguage p18 = new ProgrammingLanguage();
-p18.languageId = 18;
-p18.languageName = "Shell Script";
-p18.creator = "Various";
-p18.createdYear = 1979;
-p18.type = "Scripting";
-p18.paradigm = "Procedural";
-p18.typing = "Dynamic";
-p18.platform = "Unix Shell";
-p18.compiler = "Shell Interpreter";
-p18.extension = ".sh";
-p18.category = "Scripting";
-p18.popularity = "High";
-p18.company = "GNU";
-p18.version = "Bash 5";
-p18.colorTheme = "Green";
-p18.usage = "Automation";
-p18.documentation = "man bash";
-p18.website = "gnu.org";
-p18.status = "Active";
-p18.field = "System Admin";
-
-Syntax s18 = new Syntax();
-s18.syntaxId = 118;
-s18.languageName = "Shell Script";
-s18.variableDeclaration = "a=10";
-s18.loopType = "for, while, until";
-s18.conditionType = "if, case";
-s18.functionSyntax = "func() { }";
-s18.classSyntax = "N/A";
-s18.objectSyntax = "N/A";
-s18.arraySyntax = "arr=(1 2 3)";
-s18.exceptionHandling = "exit codes";
-s18.commentType = "#";
-s18.inputMethod = "read";
-s18.outputMethod = "echo";
-s18.packageSyntax = "source files";
-s18.importSyntax = ". file.sh";
-s18.inheritanceSyntax = "N/A";
-s18.interfaceSyntax = "N/A";
-s18.keywordExample = "fi";
-s18.bracketType = "{}";
-s18.statementEnd = "newline";
-p18.syntax = s18;
-p18.getProgrammingLanguageDetails();
-
-ProgrammingLanguage p19 = new ProgrammingLanguage();
-p19.languageId = 19;
-p19.languageName = "SQL";
-p19.creator = "IBM";
-p19.createdYear = 1974;
-p19.type = "Query";
-p19.paradigm = "Declarative";
-p19.typing = "Static";
-p19.platform = "DB Engines";
-p19.compiler = "SQL Engine";
-p19.extension = ".sql";
-p19.category = "Database";
-p19.popularity = "Very High";
-p19.company = "ISO/IEC";
-p19.version = "SQL:2016";
-p19.colorTheme = "Teal";
-p19.usage = "Database Queries";
-p19.documentation = "DB Docs";
-p19.website = "iso.org";
-p19.status = "Active";
-p19.field = "Databases";
-
-Syntax s19 = new Syntax();
-s19.syntaxId = 119;
-s19.languageName = "SQL";
-s19.variableDeclaration = "DECLARE @a INT;";
-s19.loopType = "Procedural (PL/SQL/T-SQL)";
-s19.conditionType = "CASE, IF (proc)";
-s19.functionSyntax = "CREATE FUNCTION f()";
-s19.classSyntax = "N/A";
-s19.objectSyntax = "N/A";
-s19.arraySyntax = "TABLE rows";
-s19.exceptionHandling = "TRY-CATCH (T-SQL)";
-s19.commentType = "-- or /* */";
-s19.inputMethod = "Client";
-s19.outputMethod = "SELECT";
-s19.packageSyntax = "Schemas";
-s19.importSyntax = "N/A";
-s19.inheritanceSyntax = "N/A";
-s19.interfaceSyntax = "N/A";
-s19.keywordExample = "SELECT";
-s19.bracketType = "()";
-s19.statementEnd = ";";
-p19.syntax = s19;
-p19.getProgrammingLanguageDetails();
-
-ProgrammingLanguage p20 = new ProgrammingLanguage();
-p20.languageId = 20;
-p20.languageName = "HTML";
-p20.creator = "Tim Berners-Lee";
-p20.createdYear = 1991;
-p20.type = "Markup";
-p20.paradigm = "Declarative";
-p20.typing = "N/A";
-p20.platform = "Browser";
-p20.compiler = "HTML Parser";
-p20.extension = ".html";
-p20.category = "Markup";
-p20.popularity = "Very High";
-p20.company = "W3C";
-p20.version = "HTML5";
-p20.colorTheme = "Orange";
-p20.usage = "Web Pages";
-p20.documentation = "MDN/W3C";
-p20.website = "w3.org";
-p20.status = "Active";
-p20.field = "Web";
-
-Syntax s20 = new Syntax();
-s20.syntaxId = 120;
-s20.languageName = "HTML";
-s20.variableDeclaration = "N/A";
-s20.loopType = "N/A";
-s20.conditionType = "N/A";
-s20.functionSyntax = "N/A";
-s20.classSyntax = "class=\"...\" (attribute)";
-s20.objectSyntax = "N/A";
-s20.arraySyntax = "N/A";
-s20.exceptionHandling = "N/A";
-s20.commentType = "<!-- comment -->";
-s20.inputMethod = "<input>";
-s20.outputMethod = "Rendered in browser";
-s20.packageSyntax = "<head>, <body>";
-s20.importSyntax = "<script src='...'>";
-s20.inheritanceSyntax = "N/A";
-s20.interfaceSyntax = "N/A";
-s20.keywordExample = "<div>";
-s20.bracketType = "<>";
-s20.statementEnd = "Tag close";
-
-p20.syntax = s20;
-
-p20.getProgrammingLanguageDetails();
-
+        p2.getProgrammingLanguageDetails();
+        p3.getProgrammingLanguageDetails();
+        p4.getProgrammingLanguageDetails();
+        p5.getProgrammingLanguageDetails();
+        p6.getProgrammingLanguageDetails();
+        p7.getProgrammingLanguageDetails();
+        p8.getProgrammingLanguageDetails();
+        p9.getProgrammingLanguageDetails();
+        p10.getProgrammingLanguageDetails();
+        p11.getProgrammingLanguageDetails();
+        p12.getProgrammingLanguageDetails();
+        p13.getProgrammingLanguageDetails();
+        p14.getProgrammingLanguageDetails();
+        p15.getProgrammingLanguageDetails();
+        p16.getProgrammingLanguageDetails();
+        p17.getProgrammingLanguageDetails();
+        p18.getProgrammingLanguageDetails();
+        p19.getProgrammingLanguageDetails();
+        p20.getProgrammingLanguageDetails();
+
+        System.out.println("\n=== END OF PROGRAMMING LANGUAGES ANALYSIS ===");
+        System.out.println("Total Languages: 20 | Total Syntax Profiles: 20");
     }
 }
