@@ -1,26 +1,38 @@
 class TravelAgencyExecutor {
     public static void main(String[] args) {
 
-        TravelAgencyManager manager = new TravelAgencyManager();
+        TravelAgency agency = new TravelAgency();
 
-        manager.addPlace("Goa");
-        manager.addPlace("Ooty");
-        manager.addPlace("Manali");
-        manager.addPlace("Kashmir");
-        manager.addPlace("Mysore");
-        manager.addPlace("Coorg");
-        manager.addPlace("Kerala");
-        manager.addPlace("Andaman");
-        manager.addPlace("Jaipur");
-        manager.addPlace("Udaipur");
-        manager.addPlace("Delhi");
-        manager.addPlace("Agra");
-        manager.addPlace("Ladakh");
-        manager.addPlace("Shimla");
-        manager.addPlace("Darjeeling");
-        manager.addPlace("Rishikesh");
-        manager.addPlace("Varanasi");
+        agency.addPlace("Goa");
+        agency.addPlace("Manali");
+        agency.addPlace("Ooty");
+        agency.addPlace("Mysore");
+        agency.addPlace("Coorg");
+        agency.addPlace("Kodaikanal");
+        agency.addPlace("Kerala");
+        agency.addPlace("Jaipur");
+        agency.addPlace("Udaipur");
+        agency.addPlace("Delhi");
+        agency.addPlace("Agra");
+        agency.addPlace("Varanasi");
+        agency.addPlace("Shimla");
+        agency.addPlace("Darjeeling");
+        agency.addPlace("Andaman");
+        agency.addPlace("Ladakh");
+        agency.addPlace("Rishikesh");
 
-        manager.getPlaces();
+        agency.getPlaces();
+
+        System.out.println();
+
+        int index = 4;
+        String place = agency.getPlaceByIndex(index);
+        if (place != null) {
+            System.out.println("The place at index " + index + " is " + place);
+        }
+
+        String placeName = "Goa";
+        int i = agency.getIndexByPlaceName(placeName);
+        System.out.println("The place " + placeName + " is at index " + i);
     }
 }

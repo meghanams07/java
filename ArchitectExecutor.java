@@ -1,20 +1,32 @@
 class ArchitectExecutor {
     public static void main(String[] args) {
 
-        ArchitectManager manager = new ArchitectManager();
+        Architect architect = new Architect();
 
-        manager.addDesign("Modern Design");
-        manager.addDesign("Contemporary Design");
-        manager.addDesign("Minimalist Design");
-        manager.addDesign("Industrial Design");
-        manager.addDesign("Scandinavian Design");
-        manager.addDesign("Traditional Design");
-        manager.addDesign("Bohemian Design");
-        manager.addDesign("Rustic Design");
-        manager.addDesign("Art Deco Design");
-        manager.addDesign("Mid-Century Modern");
-        manager.addDesign("Eclectic Design");
+        architect.addInteriorDesign("Modern Design");
+        architect.addInteriorDesign("Minimalist Design");
+        architect.addInteriorDesign("Contemporary Design");
+        architect.addInteriorDesign("Industrial Design");
+        architect.addInteriorDesign("Traditional Design");
+        architect.addInteriorDesign("Bohemian Design");
+        architect.addInteriorDesign("Scandinavian Design");
+        architect.addInteriorDesign("Rustic Design");
+        architect.addInteriorDesign("Art Deco");
+        architect.addInteriorDesign("Vintage Design");
+        architect.addInteriorDesign("Eclectic Design");
 
-        manager.getDesigns();
+        architect.getInteriorDesigns();
+
+        System.out.println();
+
+        int index = 4;
+        String design = architect.getInteriorDesignByIndex(index);
+        if (design != null) {
+            System.out.println("The design at index " + index + " is " + design);
+        }
+
+        String designName = "Modern Design";
+        int i = architect.getIndexByInteriorDesignName(designName);
+        System.out.println("The design " + designName + " is at index " + i);
     }
 }

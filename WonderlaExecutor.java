@@ -1,34 +1,41 @@
 class WonderlaExecutor {
     public static void main(String[] args) {
 
-        WonderlaManager manager = new WonderlaManager();
+        Wonderla wonderla = new Wonderla();
 
-        manager.addWaterGame("Wave Pool");
-        manager.addWaterGame("Lazy River");
-        manager.addWaterGame("Rain Disco");
-        manager.addWaterGame("Fun Racers");
-        manager.addWaterGame("Boomerang");
-        manager.addWaterGame("Drop Loop");
-        manager.addWaterGame("Harpies");
-        manager.addWaterGame("Water Pendulum");
-        manager.addWaterGame("Rapid River");
-        manager.addWaterGame("Kiddies Pool");
-        manager.addWaterGame("Splash Pool");
-        manager.addWaterGame("Cyclone Ride");
-        manager.addWaterGame("Super Jumper");
-        manager.addWaterGame("Vertical Fall");
-        manager.addWaterGame("Family Slide");
-        manager.addWaterGame("Aqua Loop");
-        manager.addWaterGame("Tornado Ride");
-        manager.addWaterGame("Wave Rider");
-        manager.addWaterGame("Crazy River");
-        manager.addWaterGame("Multi-Lane Slide");
-        manager.addWaterGame("Aqua Funnel");
-        manager.addWaterGame("Water Coaster");
-        manager.addWaterGame("Twister Slides");
-        manager.addWaterGame("Splash Landing");
-        manager.addWaterGame("Kids Water Play Area");
+        wonderla.addWaterGame("Wave Pool");
+        wonderla.addWaterGame("Lazy River");
+        wonderla.addWaterGame("Rain Disco");
+        wonderla.addWaterGame("Water Slides");
+        wonderla.addWaterGame("Boomerang");
+        wonderla.addWaterGame("Twister");
+        wonderla.addWaterGame("Cyclone");
+        wonderla.addWaterGame("Splash Pool");
+        wonderla.addWaterGame("Kids Pool");
+        wonderla.addWaterGame("Aqua Loop");
+        wonderla.addWaterGame("Vertical Fall");
+        wonderla.addWaterGame("Harakiri");
+        wonderla.addWaterGame("Drop Loop");
+        wonderla.addWaterGame("Super Jumper");
+        wonderla.addWaterGame("Fun Racers");
+        wonderla.addWaterGame("Wave Rider");
+        wonderla.addWaterGame("Crazy River");
+        wonderla.addWaterGame("Water Coaster");
+        wonderla.addWaterGame("Rapid River");
+        wonderla.addWaterGame("Family Slide");
 
-        manager.getWaterGames();
+        wonderla.getWaterGames();
+
+        System.out.println();
+
+        int index = 2;
+        String game = wonderla.getWaterGameByIndex(index);
+        if (game != null) {
+            System.out.println("The water game at index " + index + " is " + game);
+        }
+
+        String gameName = "Wave Pool";
+        int i = wonderla.getIndexByWaterGameName(gameName);
+        System.out.println("The water game " + gameName + " is at index " + i);
     }
 }

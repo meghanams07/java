@@ -1,25 +1,37 @@
 class MuseumExecutor {
     public static void main(String[] args) {
 
-        MuseumManager manager = new MuseumManager();
+        Museum museum = new Museum();
 
-        manager.addMonument("Taj Mahal");
-        manager.addMonument("Red Fort");
-        manager.addMonument("Qutub Minar");
-        manager.addMonument("Hampi Ruins");
-        manager.addMonument("Mysore Palace");
-        manager.addMonument("Gateway of India");
-        manager.addMonument("Charminar");
-        manager.addMonument("Konark Sun Temple");
-        manager.addMonument("Ajanta Caves");
-        manager.addMonument("Ellora Caves");
-        manager.addMonument("India Gate");
-        manager.addMonument("Gol Gumbaz");
-        manager.addMonument("Meenakshi Temple");
-        manager.addMonument("Victoria Memorial");
-        manager.addMonument("Fatehpur Sikri");
-        manager.addMonument("Sanchi Stupa");
+        museum.addMonument("Taj Mahal");
+        museum.addMonument("Qutub Minar");
+        museum.addMonument("Red Fort");
+        museum.addMonument("India Gate");
+        museum.addMonument("Mysore Palace");
+        museum.addMonument("Hampi Ruins");
+        museum.addMonument("Charminar");
+        museum.addMonument("Gateway of India");
+        museum.addMonument("Golden Temple");
+        museum.addMonument("Ajanta Caves");
+        museum.addMonument("Ellora Caves");
+        museum.addMonument("Konark Sun Temple");
+        museum.addMonument("Meenakshi Temple");
+        museum.addMonument("Sanchi Stupa");
+        museum.addMonument("Victoria Memorial");
+        museum.addMonument("Lotus Temple");
 
-        manager.getMonuments();
+        museum.getMonuments();
+
+        System.out.println();
+
+        int index = 5;
+        String monument = museum.getMonumentByIndex(index);
+        if (monument != null) {
+            System.out.println("The monument at index " + index + " is " + monument);
+        }
+
+        String monumentName = "Taj Mahal";
+        int i = museum.getIndexByMonumentName(monumentName);
+        System.out.println("The monument " + monumentName + " is at index " + i);
     }
 }

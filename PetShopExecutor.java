@@ -1,29 +1,41 @@
 class PetShopExecutor {
     public static void main(String[] args) {
 
-        PetShopManager manager = new PetShopManager();
+        PetShop shop = new PetShop();
 
-        manager.addAccessory("Dog Collar");
-        manager.addAccessory("Leash");
-        manager.addAccessory("Pet Food Bowl");
-        manager.addAccessory("Water Dispenser");
-        manager.addAccessory("Pet Bed");
-        manager.addAccessory("Pet Shampoo");
-        manager.addAccessory("Grooming Brush");
-        manager.addAccessory("Nail Clipper");
-        manager.addAccessory("Pet Toys");
-        manager.addAccessory("Cat Litter Box");
-        manager.addAccessory("Scratching Post");
-        manager.addAccessory("Fish Tank");
-        manager.addAccessory("Bird Cage");
-        manager.addAccessory("Pet Carrier");
-        manager.addAccessory("Training Pads");
-        manager.addAccessory("Pet Clothes");
-        manager.addAccessory("Dental Chew");
-        manager.addAccessory("Pet Harness");
-        manager.addAccessory("Tick Remover");
-        manager.addAccessory("Pet Blanket");
+        shop.addAccessory("Dog Collar");
+        shop.addAccessory("Leash");
+        shop.addAccessory("Pet Food Bowl");
+        shop.addAccessory("Water Dispenser");
+        shop.addAccessory("Pet Bed");
+        shop.addAccessory("Dog Shampoo");
+        shop.addAccessory("Cat Litter Box");
+        shop.addAccessory("Scratching Post");
+        shop.addAccessory("Pet Carrier");
+        shop.addAccessory("Fish Tank");
+        shop.addAccessory("Aquarium Filter");
+        shop.addAccessory("Bird Cage");
+        shop.addAccessory("Chew Toys");
+        shop.addAccessory("Pet Blanket");
+        shop.addAccessory("Nail Clipper");
+        shop.addAccessory("Pet Comb");
+        shop.addAccessory("Training Pads");
+        shop.addAccessory("Pet Jacket");
+        shop.addAccessory("GPS Tracker");
+        shop.addAccessory("Pet Harness");
 
-        manager.getAccessories();
+        shop.getAccessories();
+
+        System.out.println();
+
+        int index = 3;
+        String accessory = shop.getAccessoryByIndex(index);
+        if (accessory != null) {
+            System.out.println("The accessory at index " + index + " is " + accessory);
+        }
+
+        String accessoryName = "Leash";
+        int i = shop.getIndexByAccessoryName(accessoryName);
+        System.out.println("The accessory " + accessoryName + " is at index " + i);
     }
 }

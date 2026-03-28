@@ -1,18 +1,30 @@
 class GovernmentExecutor {
     public static void main(String[] args) {
 
-        GovernmentExamManager manager = new GovernmentExamManager();
+        Government govt = new Government();
 
-        manager.addExam("UPSC Civil Services");
-        manager.addExam("SSC CGL");
-        manager.addExam("SSC CHSL");
-        manager.addExam("IBPS PO");
-        manager.addExam("IBPS Clerk");
-        manager.addExam("RRB NTPC");
-        manager.addExam("RRB Group D");
-        manager.addExam("State PSC");
-        manager.addExam("Defence Exams");
+        govt.addExam("UPSC");
+        govt.addExam("SSC");
+        govt.addExam("Bank PO");
+        govt.addExam("Railway Exams");
+        govt.addExam("TNPSC");
+        govt.addExam("KPSC");
+        govt.addExam("Defence Exams");
+        govt.addExam("NDA");
+        govt.addExam("CDS");
 
-        manager.getExams();
+        govt.getExams();
+
+        System.out.println();
+
+        int index = 2;
+        String exam = govt.getExamByIndex(index);
+        if (exam != null) {
+            System.out.println("The exam at index " + index + " is " + exam);
+        }
+
+        String examName = "UPSC";
+        int i = govt.getIndexByExamName(examName);
+        System.out.println("The exam " + examName + " is at index " + i);
     }
 }

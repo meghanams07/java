@@ -1,28 +1,40 @@
 class GoaExecutor {
     public static void main(String[] args) {
 
-        GoaManager manager = new GoaManager();
+        Goa goa = new Goa();
 
-        manager.addBeach("Baga Beach");
-        manager.addBeach("Calangute Beach");
-        manager.addBeach("Anjuna Beach");
-        manager.addBeach("Vagator Beach");
-        manager.addBeach("Candolim Beach");
-        manager.addBeach("Colva Beach");
-        manager.addBeach("Palolem Beach");
-        manager.addBeach("Arambol Beach");
-        manager.addBeach("Morjim Beach");
-        manager.addBeach("Ashwem Beach");
-        manager.addBeach("Mandrem Beach");
-        manager.addBeach("Sinquerim Beach");
-        manager.addBeach("Miramar Beach");
-        manager.addBeach("Dona Paula Beach");
-        manager.addBeach("Majorda Beach");
-        manager.addBeach("Benaulim Beach");
-        manager.addBeach("Varca Beach");
-        manager.addBeach("Cavelossim Beach");
-        manager.addBeach("Agonda Beach");
+        goa.addBeach("Baga Beach");
+        goa.addBeach("Calangute Beach");
+        goa.addBeach("Anjuna Beach");
+        goa.addBeach("Vagator Beach");
+        goa.addBeach("Colva Beach");
+        goa.addBeach("Palolem Beach");
+        goa.addBeach("Candolim Beach");
+        goa.addBeach("Morjim Beach");
+        goa.addBeach("Arambol Beach");
+        goa.addBeach("Miramar Beach");
+        goa.addBeach("Dona Paula Beach");
+        goa.addBeach("Agonda Beach");
+        goa.addBeach("Majorda Beach");
+        goa.addBeach("Betalbatim Beach");
+        goa.addBeach("Sinquerim Beach");
+        goa.addBeach("Benaulim Beach");
+        goa.addBeach("Cavelossim Beach");
+        goa.addBeach("Butterfly Beach");
+        goa.addBeach("Ashwem Beach");
 
-        manager.getBeaches();
+        goa.getBeaches();
+
+        System.out.println();
+
+        int index = 3;
+        String beach = goa.getBeachByIndex(index);
+        if (beach != null) {
+            System.out.println("The beach at index " + index + " is " + beach);
+        }
+
+        String beachName = "Baga Beach";
+        int i = goa.getIndexByBeachName(beachName);
+        System.out.println("The beach " + beachName + " is at index " + i);
     }
 }

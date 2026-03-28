@@ -1,35 +1,47 @@
 class ECommerceExecutor {
     public static void main(String[] args) {
 
-        ECommerceManager manager = new ECommerceManager();
+        ECommerce ecommerce = new ECommerce();
 
-        manager.addProduct("Laptop");
-        manager.addProduct("Smartphone");
-        manager.addProduct("Tablet");
-        manager.addProduct("Smartwatch");
-        manager.addProduct("Headphones");
-        manager.addProduct("Bluetooth Speaker");
-        manager.addProduct("Camera");
-        manager.addProduct("Power Bank");
-        manager.addProduct("Keyboard");
-        manager.addProduct("Mouse");
-        manager.addProduct("Monitor");
-        manager.addProduct("Printer");
-        manager.addProduct("Router");
-        manager.addProduct("External Hard Disk");
-        manager.addProduct("USB Drive");
-        manager.addProduct("Gaming Console");
-        manager.addProduct("Television");
-        manager.addProduct("Refrigerator");
-        manager.addProduct("Washing Machine");
-        manager.addProduct("Microwave Oven");
-        manager.addProduct("Air Conditioner");
-        manager.addProduct("Electric Kettle");
-        manager.addProduct("Mixer Grinder");
-        manager.addProduct("Vacuum Cleaner");
-        manager.addProduct("Iron Box");
-        manager.addProduct("Water Purifier");
+        ecommerce.addProduct("Smartphone");
+        ecommerce.addProduct("Laptop");
+        ecommerce.addProduct("Headphones");
+        ecommerce.addProduct("Wireless Mouse");
+        ecommerce.addProduct("Keyboard");
+        ecommerce.addProduct("Monitor");
+        ecommerce.addProduct("Webcam");
+        ecommerce.addProduct("Router");
+        ecommerce.addProduct("Smartwatch");
+        ecommerce.addProduct("Bluetooth Speaker");
+        ecommerce.addProduct("Power Bank");
+        ecommerce.addProduct("USB Cable");
+        ecommerce.addProduct("Mouse Pad");
+        ecommerce.addProduct("Backpack");
+        ecommerce.addProduct("LED Bulb");
+        ecommerce.addProduct("Extension Board");
+        ecommerce.addProduct("Printer");
+        ecommerce.addProduct("TV");
+        ecommerce.addProduct("Air Cooler");
+        ecommerce.addProduct("Refrigerator");
+        ecommerce.addProduct("Washing Machine");
+        ecommerce.addProduct("Microwave");
+        ecommerce.addProduct("Coffee Maker");
+        ecommerce.addProduct("Electric Kettle");
+        ecommerce.addProduct("Electric Iron");
+        ecommerce.addProduct("Gaming Console");
 
-        manager.getProducts();
+        ecommerce.getProducts();
+
+        System.out.println();
+
+        int index = 10;
+        String product = ecommerce.getProductByIndex(index);
+        if (product != null) {
+            System.out.println("The product at index " + index + " is " + product);
+        }
+
+        String productName = "Laptop";
+        int i = ecommerce.getIndexByProductName(productName);
+        System.out.println("The product " + productName + " is at index " + i);
     }
 }

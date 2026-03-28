@@ -1,26 +1,38 @@
 class UniverseExecutor {
     public static void main(String[] args) {
 
-        UniverseManager manager = new UniverseManager();
+        Universe universe = new Universe();
 
-        manager.addGalaxy("Milky Way");
-        manager.addGalaxy("Andromeda");
-        manager.addGalaxy("Triangulum");
-        manager.addGalaxy("Whirlpool Galaxy");
-        manager.addGalaxy("Sombrero Galaxy");
-        manager.addGalaxy("Pinwheel Galaxy");
-        manager.addGalaxy("Cartwheel Galaxy");
-        manager.addGalaxy("Black Eye Galaxy");
-        manager.addGalaxy("Cigar Galaxy");
-        manager.addGalaxy("Sunflower Galaxy");
-        manager.addGalaxy("Centaurus A");
-        manager.addGalaxy("Messier 87");
-        manager.addGalaxy("NGC 1300");
-        manager.addGalaxy("NGC 4993");
-        manager.addGalaxy("NGC 6744");
-        manager.addGalaxy("NGC 4889");
-        manager.addGalaxy("NGC 5128");
+        universe.addGalaxy("Milky Way");
+        universe.addGalaxy("Andromeda");
+        universe.addGalaxy("Triangulum");
+        universe.addGalaxy("Whirlpool Galaxy");
+        universe.addGalaxy("Sombrero Galaxy");
+        universe.addGalaxy("Pinwheel Galaxy");
+        universe.addGalaxy("Cartwheel Galaxy");
+        universe.addGalaxy("Black Eye Galaxy");
+        universe.addGalaxy("Cigar Galaxy");
+        universe.addGalaxy("Sunflower Galaxy");
+        universe.addGalaxy("Large Magellanic Cloud");
+        universe.addGalaxy("Small Magellanic Cloud");
+        universe.addGalaxy("Centaurus A");
+        universe.addGalaxy("Messier 87");
+        universe.addGalaxy("NGC 1300");
+        universe.addGalaxy("NGC 6744");
+        universe.addGalaxy("NGC 4414");
 
-        manager.getGalaxies();
+        universe.getGalaxies();
+
+        System.out.println();
+
+        int index = 1;
+        String galaxy = universe.getGalaxyByIndex(index);
+        if (galaxy != null) {
+            System.out.println("The galaxy at index " + index + " is " + galaxy);
+        }
+
+        String galaxyName = "Milky Way";
+        int i = universe.getIndexByGalaxyName(galaxyName);
+        System.out.println("The galaxy " + galaxyName + " is at index " + i);
     }
 }
