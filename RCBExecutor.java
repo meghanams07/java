@@ -1,6 +1,5 @@
 class RCBExecutor {
     public static void main(String[] args) {
-
         RCB rcb = new RCB();
 
         rcb.addPlayer("Virat Kohli");
@@ -8,8 +7,8 @@ class RCBExecutor {
         rcb.addPlayer("Glenn Maxwell");
         rcb.addPlayer("Rajat Patidar");
         rcb.addPlayer("Dinesh Karthik");
-        rcb.addPlayer("Anuj Rawat");
         rcb.addPlayer("Mahipal Lomror");
+        rcb.addPlayer("Anuj Rawat");
         rcb.addPlayer("Shahbaz Ahmed");
         rcb.addPlayer("Wanindu Hasaranga");
         rcb.addPlayer("Harshal Patel");
@@ -19,18 +18,20 @@ class RCBExecutor {
         rcb.addPlayer("Karn Sharma");
         rcb.addPlayer("Suyash Prabhudessai");
 
-        rcb.getPlayers();
+        rcb.displayPlayers();
 
-        System.out.println();
+        System.out.println("\nGet Player by Index:");
+        rcb.getString(2);
 
-        int index = 0;
-        String player = rcb.getPlayerByIndex(index);
-        if (player != null) {
-            System.out.println("The player at index " + index + " is " + player);
-        }
+        System.out.println("\nGet Index by Name:");
+        rcb.getIndex("Virat Kohli");
 
-        String playerName = "Virat Kohli";
-        int i = rcb.getIndexByPlayerName(playerName);
-        System.out.println("The player " + playerName + " is at index " + i);
+        System.out.println("\nUpdate Player:");
+        rcb.updatePlayer("Dinesh Karthik", "DK Finisher");
+        rcb.displayPlayers();
+
+        System.out.println("\nDelete Player:");
+        rcb.deletePlayer("Mahipal Lomror");
+        rcb.displayPlayers();
     }
 }

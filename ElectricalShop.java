@@ -2,46 +2,85 @@ class ElectricalShop {
     private String appliances[] = new String[20];
     int index;
 
-    public boolean addAppliance(String appliance) {
-        boolean isAdded = false;
-
-        if (appliance != null && !appliance.isEmpty()) {
-            if (index < appliances.length) {
-                appliances[index++] = appliance;
-                isAdded = true;
+    public boolean addAppliance(String appliance){
+        boolean isValid = false;
+        if(appliance != null && !appliance.isEmpty()){
+            if(index < appliances.length){
+                appliances[index] = appliance;
+                index++;
+                isValid = true;
             } else {
-                System.out.println("array is full");
+                System.out.println("Appliance list is full");
             }
         } else {
-            System.out.println(appliance + " is invalid appliance");
+            System.out.println(appliance + " Not Valid");
         }
-        return isAdded;
+        return isValid;
     }
 
-    public void getAppliances() {
-        for (String app : appliances) {
-            if (app != null) {
-                System.out.println(app);
+    public void displayAppliances(){
+        System.out.println("\n--- Electrical Appliances ---");
+        for(String appliance : appliances){
+            if(appliance != null){
+                System.out.println(appliance);
             }
         }
     }
 
-    public String getApplianceByIndex(int index) {
-        if (index < appliances.length && appliances[index] != null) {
-            return appliances[index];
-        } else {
-            System.out.println("invalid index " + index);
-            return null;
-        }
+    public String getString(int index){
+        String appliance = null;
+        if(index < appliances.length){
+            appliance = appliances[index];
+            System.out.println(appliance);
+            index++;
+        } else System.out.println("Invalid");
+        return appliance;
     }
 
-    public int getIndexByApplianceName(String applianceName) {
-        for (int i = 0; i < appliances.length; i++) {
-            if (appliances[i] != null && appliances[i].equals(applianceName)) {
-                return i;
+    public int getIndex(String appliance){
+        int index = 0;
+        for(String a : appliances){
+            if(a == appliance){
+                System.out.println(index);
+                return index;
+            }
+            index++;
+        }
+        System.out.println("Invalid");
+        return 0;
+    }
+
+    public boolean updateAppliance(String existingAppliance, String updatedAppliance){
+        boolean isUpdated = false;
+        for(int index = 0; index < appliances.length; index++){
+            if(appliances[index] == existingAppliance){
+                appliances[index] = updatedAppliance;
+                isUpdated = true;
             }
         }
-        System.out.println("invalid appliance " + applianceName);
-        return -1;
+        if(isUpdated == false){
+            System.out.println("Appliance Not Found");
+        }
+        return isUpdated;
+    }
+
+    public boolean deleteAppliance(String appliance){
+        boolean isFound = false;
+        int i = 0;
+        for(int index = 0; index < appliances.length; index++){
+            if(appliances[index].equals(appliance)){
+                i = index;
+                System.out.println(i);
+                isFound = true;
+                break;
+            }
+        }
+        if(isFound == true){
+            for(int j = i; j < appliances.length - 1; j++){
+                appliances[j] = appliances[j + 1];
+            }
+            appliances[appliances.length - 1] = null;
+        }
+        return isFound;
     }
 }

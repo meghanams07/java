@@ -1,38 +1,39 @@
 class TelevisionExecutor {
     public static void main(String[] args) {
-
         Television tv = new Television();
 
         tv.addChannel("Star Plus");
         tv.addChannel("Zee TV");
-        tv.addChannel("Sony TV");
         tv.addChannel("Colors TV");
+        tv.addChannel("Sony TV");
         tv.addChannel("Sun TV");
-        tv.addChannel("Vijay TV");
-        tv.addChannel("Zee Tamil");
-        tv.addChannel("Sun Music");
-        tv.addChannel("Star Vijay Music");
+        tv.addChannel("Udaya TV");
+        tv.addChannel("Asianet");
+        tv.addChannel("Star Vijay");
+        tv.addChannel("ETV Telugu");
+        tv.addChannel("Gemini TV");
+        tv.addChannel("Star Sports");
+        tv.addChannel("Sony Sports");
+        tv.addChannel("Discovery Channel");
+        tv.addChannel("National Geographic");
         tv.addChannel("Cartoon Network");
         tv.addChannel("Pogo");
-        tv.addChannel("Discovery");
-        tv.addChannel("National Geographic");
-        tv.addChannel("Animal Planet");
-        tv.addChannel("History TV18");
         tv.addChannel("Nickelodeon");
-        tv.addChannel("DD National");
 
-        tv.getChannels();
+        tv.displayChannels();
 
-        System.out.println();
+        System.out.println("\nGet Channel by Index:");
+        tv.getString(5);
 
-        int index = 6;
-        String channel = tv.getChannelByIndex(index);
-        if (channel != null) {
-            System.out.println("The channel at index " + index + " is " + channel);
-        }
+        System.out.println("\nGet Index by Name:");
+        tv.getIndex("Sun TV");
 
-        String channelName = "Sun TV";
-        int i = tv.getIndexByChannelName(channelName);
-        System.out.println("The channel " + channelName + " is at index " + i);
+        System.out.println("\nUpdate Channel:");
+        tv.updateChannel("Pogo", "Pogo Kids");
+        tv.displayChannels();
+
+        System.out.println("\nDelete Channel:");
+        tv.deleteChannel("Nickelodeon");
+        tv.displayChannels();
     }
 }

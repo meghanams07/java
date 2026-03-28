@@ -1,30 +1,31 @@
 class GovernmentExecutor {
     public static void main(String[] args) {
+        Government gov = new Government();
 
-        Government govt = new Government();
+        gov.addExam("UPSC");
+        gov.addExam("KPSC");
+        gov.addExam("SSC");
+        gov.addExam("Banking");
+        gov.addExam("Railway");
+        gov.addExam("NEET");
+        gov.addExam("JEE");
+        gov.addExam("CDS");
+        gov.addExam("NDA");
 
-        govt.addExam("UPSC");
-        govt.addExam("SSC");
-        govt.addExam("Bank PO");
-        govt.addExam("Railway Exams");
-        govt.addExam("TNPSC");
-        govt.addExam("KPSC");
-        govt.addExam("Defence Exams");
-        govt.addExam("NDA");
-        govt.addExam("CDS");
+        gov.displayExams();
 
-        govt.getExams();
+        System.out.println("\nGet Exam by Index:");
+        gov.getString(2);
 
-        System.out.println();
+        System.out.println("\nGet Index by Name:");
+        gov.getIndex("KPSC");
 
-        int index = 2;
-        String exam = govt.getExamByIndex(index);
-        if (exam != null) {
-            System.out.println("The exam at index " + index + " is " + exam);
-        }
+        System.out.println("\nUpdate Exam:");
+        gov.updateExam("SSC", "SSC-CGL");
+        gov.displayExams();
 
-        String examName = "UPSC";
-        int i = govt.getIndexByExamName(examName);
-        System.out.println("The exam " + examName + " is at index " + i);
+        System.out.println("\nDelete Exam:");
+        gov.deleteExam("Banking");
+        gov.displayExams();
     }
 }

@@ -1,29 +1,30 @@
 class CricBuzExecutor {
     public static void main(String[] args) {
-
         CricBuz cric = new CricBuz();
 
         cric.addTeam("India");
         cric.addTeam("Australia");
         cric.addTeam("England");
-        cric.addTeam("Pakistan");
         cric.addTeam("South Africa");
         cric.addTeam("New Zealand");
+        cric.addTeam("Pakistan");
         cric.addTeam("Sri Lanka");
-        cric.addTeam("Bangladesh");
+        cric.addTeam("West Indies");
 
-        cric.getTeams();
+        cric.displayTeams();
 
-        System.out.println();
+        System.out.println("\nGet Team by Index:");
+        cric.getString(2);
 
-        int index = 2;
-        String team = cric.getTeamByIndex(index);
-        if (team != null) {
-            System.out.println("The team at index " + index + " is " + team);
-        }
+        System.out.println("\nGet Index by Name:");
+        cric.getIndex("India");
 
-        String teamName = "India";
-        int i = cric.getIndexByTeamName(teamName);
-        System.out.println("The team " + teamName + " is at index " + i);
+        System.out.println("\nUpdate Team:");
+        cric.updateTeam("Pakistan", "Pakistan XI");
+        cric.displayTeams();
+
+        System.out.println("\nDelete Team:");
+        cric.deleteTeam("Sri Lanka");
+        cric.displayTeams();
     }
 }

@@ -1,6 +1,5 @@
 class GymExecutor {
     public static void main(String[] args) {
-
         Gym gym = new Gym();
 
         gym.addEquipment("Treadmill");
@@ -10,28 +9,30 @@ class GymExecutor {
         gym.addEquipment("Pull-up Bar");
         gym.addEquipment("Leg Press");
         gym.addEquipment("Elliptical");
-        gym.addEquipment("Exercise Bike");
+        gym.addEquipment("Stationary Bike");
         gym.addEquipment("Kettlebell");
-        gym.addEquipment("Rowing Machine");
         gym.addEquipment("Cable Machine");
         gym.addEquipment("Smith Machine");
-        gym.addEquipment("Ab Roller");
-        gym.addEquipment("Resistance Bands");
-        gym.addEquipment("Skipping Rope");
-        gym.addEquipment("Medicine Ball");
+        gym.addEquipment("Rowing Machine");
+        gym.addEquipment("Stepper");
+        gym.addEquipment("Chest Press Machine");
+        gym.addEquipment("Lat Pulldown Machine");
+        gym.addEquipment("Ab Crunch Machine");
 
-        gym.getEquipments();
+        gym.displayEquipment();
 
-        System.out.println();
+        System.out.println("\nGet Equipment by Index:");
+        gym.getString(3);
 
-        int index = 4;
-        String equipment = gym.getEquipmentByIndex(index);
-        if (equipment != null) {
-            System.out.println("The equipment at index " + index + " is " + equipment);
-        }
+        System.out.println("\nGet Index by Name:");
+        gym.getIndex("Kettlebell");
 
-        String equipmentName = "Dumbbells";
-        int i = gym.getIndexByEquipmentName(equipmentName);
-        System.out.println("The equipment " + equipmentName + " is at index " + i);
+        System.out.println("\nUpdate Equipment:");
+        gym.updateEquipment("Dumbbells", "Adjustable Dumbbells");
+        gym.displayEquipment();
+
+        System.out.println("\nDelete Equipment:");
+        gym.deleteEquipment("Stepper");
+        gym.displayEquipment();
     }
 }

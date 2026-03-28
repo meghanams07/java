@@ -1,12 +1,12 @@
-class ECommerce {
-    private String productNames[] = new String[26];
+class Petroleum {
+    private String petroleumProducts[] = new String[10];
     int index;
 
     public boolean addProduct(String product){
         boolean isValid = false;
         if(product != null && !product.isEmpty()){
-            if(index < productNames.length){
-                productNames[index] = product;
+            if(index < petroleumProducts.length){
+                petroleumProducts[index] = product;
                 index++;
                 isValid = true;
             } else {
@@ -19,8 +19,8 @@ class ECommerce {
     }
 
     public void displayProducts(){
-        System.out.println("\n--- ECommerce Products ---");
-        for(String product : productNames){
+        System.out.println("\n--- Petroleum Products ---");
+        for(String product : petroleumProducts){
             if(product != null){
                 System.out.println(product);
             }
@@ -29,8 +29,8 @@ class ECommerce {
 
     public String getString(int index){
         String product = null;
-        if(index < productNames.length){
-            product = productNames[index];
+        if(index < petroleumProducts.length){
+            product = petroleumProducts[index];
             System.out.println(product);
             index++;
         } else System.out.println("Invalid");
@@ -39,7 +39,7 @@ class ECommerce {
 
     public int getIndex(String product){
         int index = 0;
-        for(String p : productNames){
+        for(String p : petroleumProducts){
             if(p == product){
                 System.out.println(index);
                 return index;
@@ -52,9 +52,9 @@ class ECommerce {
 
     public boolean updateProduct(String existingProduct, String updatedProduct){
         boolean isUpdated = false;
-        for(int index = 0; index < productNames.length; index++){
-            if(productNames[index] == existingProduct){
-                productNames[index] = updatedProduct;
+        for(int index = 0; index < petroleumProducts.length; index++){
+            if(petroleumProducts[index] == existingProduct){
+                petroleumProducts[index] = updatedProduct;
                 isUpdated = true;
             }
         }
@@ -67,8 +67,8 @@ class ECommerce {
     public boolean deleteProduct(String product){
         boolean isFound = false;
         int i = 0;
-        for(int index = 0; index < productNames.length; index++){
-            if(productNames[index].equals(product)){
+        for(int index = 0; index < petroleumProducts.length; index++){
+            if(petroleumProducts[index].equals(product)){
                 i = index;
                 System.out.println(i);
                 isFound = true;
@@ -76,10 +76,10 @@ class ECommerce {
             }
         }
         if(isFound == true){
-            for(int j = i; j < productNames.length - 1; j++){
-                productNames[j] = productNames[j + 1];
+            for(int j = i; j < petroleumProducts.length - 1; j++){
+                petroleumProducts[j] = petroleumProducts[j + 1];
             }
-            productNames[productNames.length - 1] = null;
+            petroleumProducts[petroleumProducts.length - 1] = null;
         }
         return isFound;
     }

@@ -2,46 +2,85 @@ class AirAsia {
     private String passengers[] = new String[30];
     int index;
 
-    public boolean addPassenger(String passenger) {
-        boolean isAdded = false;
-
-        if (passenger != null && !passenger.isEmpty()) {
-            if (index < passengers.length) {
-                passengers[index++] = passenger;
-                isAdded = true;
+    public boolean addPassenger(String passenger){
+        boolean isValid = false;
+        if(passenger != null && !passenger.isEmpty()){
+            if(index < passengers.length){
+                passengers[index] = passenger;
+                index++;
+                isValid = true;
             } else {
-                System.out.println("array is full");
+                System.out.println("Passenger list is full");
             }
         } else {
-            System.out.println(passenger + " is invalid passenger");
+            System.out.println(passenger + " Not Valid");
         }
-        return isAdded;
+        return isValid;
     }
 
-    public void getPassengers() {
-        for (String p : passengers) {
-            if (p != null) {
-                System.out.println(p);
+    public void displayPassengers(){
+        System.out.println("\n--- AirAsia Passengers ---");
+        for(String passenger : passengers){
+            if(passenger != null){
+                System.out.println(passenger);
             }
         }
     }
 
-    public String getPassengerByIndex(int index) {
-        if (index < passengers.length && passengers[index] != null) {
-            return passengers[index];
-        } else {
-            System.out.println("invalid index " + index);
-            return null;
-        }
+    public String getString(int index){
+        String passenger = null;
+        if(index < passengers.length){
+            passenger = passengers[index];
+            System.out.println(passenger);
+            index++;
+        } else System.out.println("Invalid");
+        return passenger;
     }
 
-    public int getIndexByPassengerName(String passengerName) {
-        for (int i = 0; i < passengers.length; i++) {
-            if (passengers[i] != null && passengers[i].equals(passengerName)) {
-                return i;
+    public int getIndex(String passenger){
+        int index = 0;
+        for(String p : passengers){
+            if(p == passenger){
+                System.out.println(index);
+                return index;
+            }
+            index++;
+        }
+        System.out.println("Invalid");
+        return 0;
+    }
+
+    public boolean updatePassenger(String existingPassenger, String updatedPassenger){
+        boolean isUpdated = false;
+        for(int index = 0; index < passengers.length; index++){
+            if(passengers[index] == existingPassenger){
+                passengers[index] = updatedPassenger;
+                isUpdated = true;
             }
         }
-        System.out.println("invalid passenger " + passengerName);
-        return -1;
+        if(isUpdated == false){
+            System.out.println("Passenger Not Found");
+        }
+        return isUpdated;
+    }
+
+    public boolean deletePassenger(String passenger){
+        boolean isFound = false;
+        int i = 0;
+        for(int index = 0; index < passengers.length; index++){
+            if(passengers[index].equals(passenger)){
+                i = index;
+                System.out.println(i);
+                isFound = true;
+                break;
+            }
+        }
+        if(isFound == true){
+            for(int j = i; j < passengers.length - 1; j++){
+                passengers[j] = passengers[j + 1];
+            }
+            passengers[passengers.length - 1] = null;
+        }
+        return isFound;
     }
 }

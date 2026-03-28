@@ -1,38 +1,39 @@
 class TravelAgencyExecutor {
     public static void main(String[] args) {
+        TravelAgency travel = new TravelAgency();
 
-        TravelAgency agency = new TravelAgency();
+        travel.addPlace("Paris");
+        travel.addPlace("London");
+        travel.addPlace("New York");
+        travel.addPlace("Dubai");
+        travel.addPlace("Singapore");
+        travel.addPlace("Maldives");
+        travel.addPlace("Bali");
+        travel.addPlace("Goa");
+        travel.addPlace("Kerala");
+        travel.addPlace("Manali");
+        travel.addPlace("Ooty");
+        travel.addPlace("Mysore");
+        travel.addPlace("Jaipur");
+        travel.addPlace("Agra");
+        travel.addPlace("Varanasi");
+        travel.addPlace("Shimla");
+        travel.addPlace("Darjeeling");
 
-        agency.addPlace("Goa");
-        agency.addPlace("Manali");
-        agency.addPlace("Ooty");
-        agency.addPlace("Mysore");
-        agency.addPlace("Coorg");
-        agency.addPlace("Kodaikanal");
-        agency.addPlace("Kerala");
-        agency.addPlace("Jaipur");
-        agency.addPlace("Udaipur");
-        agency.addPlace("Delhi");
-        agency.addPlace("Agra");
-        agency.addPlace("Varanasi");
-        agency.addPlace("Shimla");
-        agency.addPlace("Darjeeling");
-        agency.addPlace("Andaman");
-        agency.addPlace("Ladakh");
-        agency.addPlace("Rishikesh");
+        travel.displayPlaces();
 
-        agency.getPlaces();
+        System.out.println("\nGet Place by Index:");
+        travel.getString(4);
 
-        System.out.println();
+        System.out.println("\nGet Index by Name:");
+        travel.getIndex("Goa");
 
-        int index = 4;
-        String place = agency.getPlaceByIndex(index);
-        if (place != null) {
-            System.out.println("The place at index " + index + " is " + place);
-        }
+        System.out.println("\nUpdate Place:");
+        travel.updatePlace("Ooty", "Ooty Hills");
+        travel.displayPlaces();
 
-        String placeName = "Goa";
-        int i = agency.getIndexByPlaceName(placeName);
-        System.out.println("The place " + placeName + " is at index " + i);
+        System.out.println("\nDelete Place:");
+        travel.deletePlace("Dubai");
+        travel.displayPlaces();
     }
 }

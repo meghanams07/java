@@ -1,47 +1,48 @@
 class ECommerceExecutor {
     public static void main(String[] args) {
-
         ECommerce ecommerce = new ECommerce();
 
-        ecommerce.addProduct("Smartphone");
         ecommerce.addProduct("Laptop");
-        ecommerce.addProduct("Headphones");
-        ecommerce.addProduct("Wireless Mouse");
-        ecommerce.addProduct("Keyboard");
-        ecommerce.addProduct("Monitor");
-        ecommerce.addProduct("Webcam");
-        ecommerce.addProduct("Router");
+        ecommerce.addProduct("Smartphone");
+        ecommerce.addProduct("Tablet");
         ecommerce.addProduct("Smartwatch");
+        ecommerce.addProduct("Headphones");
         ecommerce.addProduct("Bluetooth Speaker");
-        ecommerce.addProduct("Power Bank");
-        ecommerce.addProduct("USB Cable");
-        ecommerce.addProduct("Mouse Pad");
-        ecommerce.addProduct("Backpack");
-        ecommerce.addProduct("LED Bulb");
-        ecommerce.addProduct("Extension Board");
+        ecommerce.addProduct("Camera");
         ecommerce.addProduct("Printer");
+        ecommerce.addProduct("Monitor");
+        ecommerce.addProduct("Keyboard");
+        ecommerce.addProduct("Mouse");
+        ecommerce.addProduct("Power Bank");
+        ecommerce.addProduct("Charger");
+        ecommerce.addProduct("USB Cable");
+        ecommerce.addProduct("External Hard Drive");
+        ecommerce.addProduct("Pen Drive");
+        ecommerce.addProduct("Router");
+        ecommerce.addProduct("Modem");
+        ecommerce.addProduct("Gaming Console");
         ecommerce.addProduct("TV");
-        ecommerce.addProduct("Air Cooler");
         ecommerce.addProduct("Refrigerator");
         ecommerce.addProduct("Washing Machine");
-        ecommerce.addProduct("Microwave");
-        ecommerce.addProduct("Coffee Maker");
+        ecommerce.addProduct("Air Conditioner");
+        ecommerce.addProduct("Microwave Oven");
         ecommerce.addProduct("Electric Kettle");
-        ecommerce.addProduct("Electric Iron");
-        ecommerce.addProduct("Gaming Console");
+        ecommerce.addProduct("Induction Stove");
 
-        ecommerce.getProducts();
+        ecommerce.displayProducts();
 
-        System.out.println();
+        System.out.println("\nGet Product by Index:");
+        ecommerce.getString(6);
 
-        int index = 10;
-        String product = ecommerce.getProductByIndex(index);
-        if (product != null) {
-            System.out.println("The product at index " + index + " is " + product);
-        }
+        System.out.println("\nGet Index by Name:");
+        ecommerce.getIndex("Camera");
 
-        String productName = "Laptop";
-        int i = ecommerce.getIndexByProductName(productName);
-        System.out.println("The product " + productName + " is at index " + i);
+        System.out.println("\nUpdate Product:");
+        ecommerce.updateProduct("Laptop", "Gaming Laptop");
+        ecommerce.displayProducts();
+
+        System.out.println("\nDelete Product:");
+        ecommerce.deleteProduct("Tablet");
+        ecommerce.displayProducts();
     }
 }

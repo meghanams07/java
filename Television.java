@@ -2,46 +2,85 @@ class Television {
     private String channelNames[] = new String[17];
     int index;
 
-    public boolean addChannel(String channel) {
-        boolean isAdded = false;
-
-        if (channel != null && !channel.isEmpty()) {
-            if (index < channelNames.length) {
-                channelNames[index++] = channel;
-                isAdded = true;
+    public boolean addChannel(String channel){
+        boolean isValid = false;
+        if(channel != null && !channel.isEmpty()){
+            if(index < channelNames.length){
+                channelNames[index] = channel;
+                index++;
+                isValid = true;
             } else {
-                System.out.println("array is full");
+                System.out.println("Channel list is full");
             }
         } else {
-            System.out.println(channel + " is invalid channel");
+            System.out.println(channel + " Not Valid");
         }
-        return isAdded;
+        return isValid;
     }
 
-    public void getChannels() {
-        for (String channel : channelNames) {
-            if (channel != null) {
+    public void displayChannels(){
+        System.out.println("\n--- Television Channels ---");
+        for(String channel : channelNames){
+            if(channel != null){
                 System.out.println(channel);
             }
         }
     }
 
-    public String getChannelByIndex(int index) {
-        if (index < channelNames.length && channelNames[index] != null) {
-            return channelNames[index];
-        } else {
-            System.out.println("invalid index " + index);
-            return null;
-        }
+    public String getString(int index){
+        String channel = null;
+        if(index < channelNames.length){
+            channel = channelNames[index];
+            System.out.println(channel);
+            index++;
+        } else System.out.println("Invalid");
+        return channel;
     }
 
-    public int getIndexByChannelName(String channelName) {
-        for (int i = 0; i < channelNames.length; i++) {
-            if (channelNames[i] != null && channelNames[i].equals(channelName)) {
-                return i;
+    public int getIndex(String channel){
+        int index = 0;
+        for(String c : channelNames){
+            if(c == channel){
+                System.out.println(index);
+                return index;
+            }
+            index++;
+        }
+        System.out.println("Invalid");
+        return 0;
+    }
+
+    public boolean updateChannel(String existingChannel, String updatedChannel){
+        boolean isUpdated = false;
+        for(int index = 0; index < channelNames.length; index++){
+            if(channelNames[index] == existingChannel){
+                channelNames[index] = updatedChannel;
+                isUpdated = true;
             }
         }
-        System.out.println("invalid channel " + channelName);
-        return -1;
+        if(isUpdated == false){
+            System.out.println("Channel Not Found");
+        }
+        return isUpdated;
+    }
+
+    public boolean deleteChannel(String channel){
+        boolean isFound = false;
+        int i = 0;
+        for(int index = 0; index < channelNames.length; index++){
+            if(channelNames[index].equals(channel)){
+                i = index;
+                System.out.println(i);
+                isFound = true;
+                break;
+            }
+        }
+        if(isFound == true){
+            for(int j = i; j < channelNames.length - 1; j++){
+                channelNames[j] = channelNames[j + 1];
+            }
+            channelNames[channelNames.length - 1] = null;
+        }
+        return isFound;
     }
 }

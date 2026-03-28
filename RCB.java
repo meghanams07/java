@@ -2,46 +2,85 @@ class RCB {
     private String playerNames[] = new String[15];
     int index;
 
-    public boolean addPlayer(String player) {
-        boolean isAdded = false;
-
-        if (player != null && !player.isEmpty()) {
-            if (index < playerNames.length) {
-                playerNames[index++] = player;
-                isAdded = true;
+    public boolean addPlayer(String player){
+        boolean isValid = false;
+        if(player != null && !player.isEmpty()){
+            if(index < playerNames.length){
+                playerNames[index] = player;
+                index++;
+                isValid = true;
             } else {
-                System.out.println("array is full");
+                System.out.println("Player list is full");
             }
         } else {
-            System.out.println(player + " is invalid player");
+            System.out.println(player + " Not Valid");
         }
-        return isAdded;
+        return isValid;
     }
 
-    public void getPlayers() {
-        for (String p : playerNames) {
-            if (p != null) {
-                System.out.println(p);
+    public void displayPlayers(){
+        System.out.println("\n--- RCB Players ---");
+        for(String player : playerNames){
+            if(player != null){
+                System.out.println(player);
             }
         }
     }
 
-    public String getPlayerByIndex(int index) {
-        if (index < playerNames.length && playerNames[index] != null) {
-            return playerNames[index];
-        } else {
-            System.out.println("invalid index " + index);
-            return null;
-        }
+    public String getString(int index){
+        String player = null;
+        if(index < playerNames.length){
+            player = playerNames[index];
+            System.out.println(player);
+            index++;
+        } else System.out.println("Invalid");
+        return player;
     }
 
-    public int getIndexByPlayerName(String playerName) {
-        for (int i = 0; i < playerNames.length; i++) {
-            if (playerNames[i] != null && playerNames[i].equals(playerName)) {
-                return i;
+    public int getIndex(String player){
+        int index = 0;
+        for(String p : playerNames){
+            if(p == player){
+                System.out.println(index);
+                return index;
+            }
+            index++;
+        }
+        System.out.println("Invalid");
+        return 0;
+    }
+
+    public boolean updatePlayer(String existingPlayer, String updatedPlayer){
+        boolean isUpdated = false;
+        for(int index = 0; index < playerNames.length; index++){
+            if(playerNames[index] == existingPlayer){
+                playerNames[index] = updatedPlayer;
+                isUpdated = true;
             }
         }
-        System.out.println("invalid player " + playerName);
-        return -1;
+        if(isUpdated == false){
+            System.out.println("Player Not Found");
+        }
+        return isUpdated;
+    }
+
+    public boolean deletePlayer(String player){
+        boolean isFound = false;
+        int i = 0;
+        for(int index = 0; index < playerNames.length; index++){
+            if(playerNames[index].equals(player)){
+                i = index;
+                System.out.println(i);
+                isFound = true;
+                break;
+            }
+        }
+        if(isFound == true){
+            for(int j = i; j < playerNames.length - 1; j++){
+                playerNames[j] = playerNames[j + 1];
+            }
+            playerNames[playerNames.length - 1] = null;
+        }
+        return isFound;
     }
 }

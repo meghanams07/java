@@ -2,46 +2,85 @@ class CricBuz {
     private String teamNames[] = new String[8];
     int index;
 
-    public boolean addTeam(String team) {
-        boolean isAdded = false;
-
-        if (team != null && !team.isEmpty()) {
-            if (index < teamNames.length) {
-                teamNames[index++] = team;
-                isAdded = true;
+    public boolean addTeam(String team){
+        boolean isValid = false;
+        if(team != null && !team.isEmpty()){
+            if(index < teamNames.length){
+                teamNames[index] = team;
+                index++;
+                isValid = true;
             } else {
-                System.out.println("array is full");
+                System.out.println("Team list is full");
             }
         } else {
-            System.out.println(team + " is invalid team");
+            System.out.println(team + " Not Valid");
         }
-        return isAdded;
+        return isValid;
     }
 
-    public void getTeams() {
-        for (String team : teamNames) {
-            if (team != null) {
+    public void displayTeams(){
+        System.out.println("\n--- CricBuz Teams ---");
+        for(String team : teamNames){
+            if(team != null){
                 System.out.println(team);
             }
         }
     }
 
-    public String getTeamByIndex(int index) {
-        if (index < teamNames.length && teamNames[index] != null) {
-            return teamNames[index];
-        } else {
-            System.out.println("invalid index " + index);
-            return null;
-        }
+    public String getString(int index){
+        String team = null;
+        if(index < teamNames.length){
+            team = teamNames[index];
+            System.out.println(team);
+            index++;
+        } else System.out.println("Invalid");
+        return team;
     }
 
-    public int getIndexByTeamName(String teamName) {
-        for (int i = 0; i < teamNames.length; i++) {
-            if (teamNames[i] != null && teamNames[i].equals(teamName)) {
-                return i;
+    public int getIndex(String team){
+        int index = 0;
+        for(String t : teamNames){
+            if(t == team){
+                System.out.println(index);
+                return index;
+            }
+            index++;
+        }
+        System.out.println("Invalid");
+        return 0;
+    }
+
+    public boolean updateTeam(String existingTeam, String updatedTeam){
+        boolean isUpdated = false;
+        for(int index = 0; index < teamNames.length; index++){
+            if(teamNames[index] == existingTeam){
+                teamNames[index] = updatedTeam;
+                isUpdated = true;
             }
         }
-        System.out.println("invalid team " + teamName);
-        return -1;
+        if(isUpdated == false){
+            System.out.println("Team Not Found");
+        }
+        return isUpdated;
+    }
+
+    public boolean deleteTeam(String team){
+        boolean isFound = false;
+        int i = 0;
+        for(int index = 0; index < teamNames.length; index++){
+            if(teamNames[index].equals(team)){
+                i = index;
+                System.out.println(i);
+                isFound = true;
+                break;
+            }
+        }
+        if(isFound == true){
+            for(int j = i; j < teamNames.length - 1; j++){
+                teamNames[j] = teamNames[j + 1];
+            }
+            teamNames[teamNames.length - 1] = null;
+        }
+        return isFound;
     }
 }

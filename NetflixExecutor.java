@@ -1,39 +1,26 @@
 class NetflixExecutor {
     public static void main(String[] args) {
-
         Netflix netflix = new Netflix();
 
-        netflix.addWebSeries("Stranger Things");
-        netflix.addWebSeries("Money Heist");
-        netflix.addWebSeries("Dark");
-        netflix.addWebSeries("Squid Game");
-        netflix.addWebSeries("The Witcher");
-        netflix.addWebSeries("Breaking Bad");
-        netflix.addWebSeries("Lucifer");
-        netflix.addWebSeries("Narcos");
-        netflix.addWebSeries("The Crown");
-        netflix.addWebSeries("You");
-        netflix.addWebSeries("Wednesday");
-        netflix.addWebSeries("Ozark");
-        netflix.addWebSeries("Peaky Blinders");
-        netflix.addWebSeries("Black Mirror");
-        netflix.addWebSeries("Elite");
-        netflix.addWebSeries("The Boys");
-        netflix.addWebSeries("Vikings");
-        netflix.addWebSeries("Friends");
+        netflix.addSeries("Money Heist");
+        netflix.addSeries("Stranger Things");
+        netflix.addSeries("Dark");
+        netflix.addSeries("Squid Game");
 
-        netflix.getWebSeries();
+        netflix.displaySeries();
 
-        System.out.println();
+        System.out.println("\nGet Series by Index:");
+        netflix.getString(2);
 
-        int index = 3;
-        String series = netflix.getWebSeriesByIndex(index);
-        if (series != null) {
-            System.out.println("The web series at index " + index + " is " + series);
-        }
+        System.out.println("\nGet Index by Name:");
+        netflix.getIndex("Dark");
 
-        String seriesName = "Dark";
-        int i = netflix.getIndexByWebSeriesName(seriesName);
-        System.out.println("The web series " + seriesName + " is at index " + i);
+        System.out.println("\nUpdate Series:");
+        netflix.updateSeries("Dark", "Dark Season 1");
+        netflix.displaySeries();
+
+        System.out.println("\nDelete Series:");
+        netflix.deleteSeries("Squid Game");
+        netflix.displaySeries();
     }
 }

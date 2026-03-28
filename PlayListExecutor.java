@@ -1,6 +1,5 @@
 class PlayListExecutor {
     public static void main(String[] args) {
-
         PlayList playlist = new PlayList();
 
         playlist.addSong("Why This Kolaveri Di");
@@ -8,29 +7,31 @@ class PlayListExecutor {
         playlist.addSong("Vaathi Coming");
         playlist.addSong("Rowdy Baby");
         playlist.addSong("Enjoy Enjaami");
-        playlist.addSong("Kutty Story");
-        playlist.addSong("Naatu Naatu");
-        playlist.addSong("Butta Bomma");
-        playlist.addSong("Samajavaragamana");
         playlist.addSong("Tum Hi Ho");
         playlist.addSong("Kesariya");
-        playlist.addSong("Ranjha");
-        playlist.addSong("Malare");
-        playlist.addSong("Anbil Avan");
-        playlist.addSong("Munbe Vaa");
+        playlist.addSong("Butta Bomma");
+        playlist.addSong("Samajavaragamana");
+        playlist.addSong("Shape of You");
+        playlist.addSong("Believer");
+        playlist.addSong("Faded");
+        playlist.addSong("Perfect");
+        playlist.addSong("Levitating");
+        playlist.addSong("Blinding Lights");
 
-        playlist.getSongs();
+        playlist.displaySongs();
 
-        System.out.println();
+        System.out.println("\nGet Song by Index:");
+        playlist.getString(3);
 
-        int index = 5;
-        String song = playlist.getSongByIndex(index);
-        if (song != null) {
-            System.out.println("The song at index " + index + " is " + song);
-        }
+        System.out.println("\nGet Index by Name:");
+        playlist.getIndex("Faded");
 
-        String songName = "Malare";
-        int i = playlist.getIndexBySongName(songName);
-        System.out.println("The song " + songName + " is at index " + i);
+        System.out.println("\nUpdate Song:");
+        playlist.updateSong("Rowdy Baby", "Rowdy Baby Remix");
+        playlist.displaySongs();
+
+        System.out.println("\nDelete Song:");
+        playlist.deleteSong("Kesariya");
+        playlist.displaySongs();
     }
 }

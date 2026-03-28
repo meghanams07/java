@@ -1,41 +1,42 @@
 class WonderlaExecutor {
     public static void main(String[] args) {
-
         Wonderla wonderla = new Wonderla();
 
         wonderla.addWaterGame("Wave Pool");
         wonderla.addWaterGame("Lazy River");
         wonderla.addWaterGame("Rain Disco");
         wonderla.addWaterGame("Water Slides");
+        wonderla.addWaterGame("Cyclone Ride");
         wonderla.addWaterGame("Boomerang");
-        wonderla.addWaterGame("Twister");
-        wonderla.addWaterGame("Cyclone");
-        wonderla.addWaterGame("Splash Pool");
-        wonderla.addWaterGame("Kids Pool");
         wonderla.addWaterGame("Aqua Loop");
-        wonderla.addWaterGame("Vertical Fall");
-        wonderla.addWaterGame("Harakiri");
-        wonderla.addWaterGame("Drop Loop");
-        wonderla.addWaterGame("Super Jumper");
-        wonderla.addWaterGame("Fun Racers");
-        wonderla.addWaterGame("Wave Rider");
-        wonderla.addWaterGame("Crazy River");
-        wonderla.addWaterGame("Water Coaster");
-        wonderla.addWaterGame("Rapid River");
+        wonderla.addWaterGame("Splash Pool");
+        wonderla.addWaterGame("Kids Play Pool");
         wonderla.addWaterGame("Family Slide");
+        wonderla.addWaterGame("Drop Slide");
+        wonderla.addWaterGame("High Thrill Slide");
+        wonderla.addWaterGame("Rapid River");
+        wonderla.addWaterGame("Twister Ride");
+        wonderla.addWaterGame("Tunnel Slide");
+        wonderla.addWaterGame("Multi Lane Racer");
+        wonderla.addWaterGame("Body Slide");
+        wonderla.addWaterGame("Float Ride");
+        wonderla.addWaterGame("Wave Rider");
+        wonderla.addWaterGame("Water Coaster");
 
-        wonderla.getWaterGames();
+        wonderla.displayWaterGames();
 
-        System.out.println();
+        System.out.println("\nGet Game by Index:");
+        wonderla.getString(4);
 
-        int index = 2;
-        String game = wonderla.getWaterGameByIndex(index);
-        if (game != null) {
-            System.out.println("The water game at index " + index + " is " + game);
-        }
+        System.out.println("\nGet Index by Name:");
+        wonderla.getIndex("Rain Disco");
 
-        String gameName = "Wave Pool";
-        int i = wonderla.getIndexByWaterGameName(gameName);
-        System.out.println("The water game " + gameName + " is at index " + i);
+        System.out.println("\nUpdate Game:");
+        wonderla.updateWaterGame("Lazy River", "Lazy River Deluxe");
+        wonderla.displayWaterGames();
+
+        System.out.println("\nDelete Game:");
+        wonderla.deleteWaterGame("Splash Pool");
+        wonderla.displayWaterGames();
     }
 }

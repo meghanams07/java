@@ -1,41 +1,42 @@
 class ElectricalShopExecutor {
     public static void main(String[] args) {
-
         ElectricalShop shop = new ElectricalShop();
 
         shop.addAppliance("Fan");
+        shop.addAppliance("Light Bulb");
         shop.addAppliance("Tube Light");
-        shop.addAppliance("LED Bulb");
         shop.addAppliance("Mixer Grinder");
         shop.addAppliance("Iron Box");
+        shop.addAppliance("Electric Kettle");
+        shop.addAppliance("Toaster");
+        shop.addAppliance("Induction Stove");
+        shop.addAppliance("Microwave Oven");
         shop.addAppliance("Refrigerator");
         shop.addAppliance("Washing Machine");
         shop.addAppliance("Air Conditioner");
         shop.addAppliance("Water Heater");
-        shop.addAppliance("Electric Kettle");
-        shop.addAppliance("Microwave Oven");
-        shop.addAppliance("Induction Stove");
-        shop.addAppliance("Toaster");
-        shop.addAppliance("Coffee Maker");
-        shop.addAppliance("Juicer");
-        shop.addAppliance("Vacuum Cleaner");
-        shop.addAppliance("Room Heater");
-        shop.addAppliance("Hair Dryer");
-        shop.addAppliance("Water Purifier");
+        shop.addAppliance("Ceiling Fan");
+        shop.addAppliance("Table Fan");
+        shop.addAppliance("Exhaust Fan");
+        shop.addAppliance("Inverter");
+        shop.addAppliance("Stabilizer");
+        shop.addAppliance("Electric Chimney");
         shop.addAppliance("Dishwasher");
 
-        shop.getAppliances();
+        shop.displayAppliances();
 
-        System.out.println();
+        System.out.println("\nGet Appliance by Index:");
+        shop.getString(4);
 
-        int index = 7;
-        String appliance = shop.getApplianceByIndex(index);
-        if (appliance != null) {
-            System.out.println("The appliance at index " + index + " is " + appliance);
-        }
+        System.out.println("\nGet Index by Name:");
+        shop.getIndex("Microwave Oven");
 
-        String applianceName = "Fan";
-        int i = shop.getIndexByApplianceName(applianceName);
-        System.out.println("The appliance " + applianceName + " is at index " + i);
+        System.out.println("\nUpdate Appliance:");
+        shop.updateAppliance("Fan", "Smart Fan");
+        shop.displayAppliances();
+
+        System.out.println("\nDelete Appliance:");
+        shop.deleteAppliance("Toaster");
+        shop.displayAppliances();
     }
 }

@@ -2,46 +2,85 @@ class State {
     private String highwayNames[] = new String[9];
     int index;
 
-    public boolean addHighway(String highway) {
-        boolean isAdded = false;
-
-        if (highway != null && !highway.isEmpty()) {
-            if (index < highwayNames.length) {
-                highwayNames[index++] = highway;
-                isAdded = true;
+    public boolean addHighway(String highway){
+        boolean isValid = false;
+        if(highway != null && !highway.isEmpty()){
+            if(index < highwayNames.length){
+                highwayNames[index] = highway;
+                index++;
+                isValid = true;
             } else {
-                System.out.println("array is full");
+                System.out.println("Highway list is full");
             }
         } else {
-            System.out.println(highway + " is invalid highway");
+            System.out.println(highway + " Not Valid");
         }
-        return isAdded;
+        return isValid;
     }
 
-    public void getHighways() {
-        for (String hw : highwayNames) {
-            if (hw != null) {
-                System.out.println(hw);
+    public void displayHighways(){
+        System.out.println("\n--- State Highways ---");
+        for(String highway : highwayNames){
+            if(highway != null){
+                System.out.println(highway);
             }
         }
     }
 
-    public String getHighwayByIndex(int index) {
-        if (index < highwayNames.length && highwayNames[index] != null) {
-            return highwayNames[index];
-        } else {
-            System.out.println("invalid index " + index);
-            return null;
-        }
+    public String getString(int index){
+        String highway = null;
+        if(index < highwayNames.length){
+            highway = highwayNames[index];
+            System.out.println(highway);
+            index++;
+        } else System.out.println("Invalid");
+        return highway;
     }
 
-    public int getIndexByHighwayName(String highwayName) {
-        for (int i = 0; i < highwayNames.length; i++) {
-            if (highwayNames[i] != null && highwayNames[i].equals(highwayName)) {
-                return i;
+    public int getIndex(String highway){
+        int index = 0;
+        for(String h : highwayNames){
+            if(h == highway){
+                System.out.println(index);
+                return index;
+            }
+            index++;
+        }
+        System.out.println("Invalid");
+        return 0;
+    }
+
+    public boolean updateHighway(String existingHighway, String updatedHighway){
+        boolean isUpdated = false;
+        for(int index = 0; index < highwayNames.length; index++){
+            if(highwayNames[index] == existingHighway){
+                highwayNames[index] = updatedHighway;
+                isUpdated = true;
             }
         }
-        System.out.println("invalid highway " + highwayName);
-        return -1;
+        if(isUpdated == false){
+            System.out.println("Highway Not Found");
+        }
+        return isUpdated;
+    }
+
+    public boolean deleteHighway(String highway){
+        boolean isFound = false;
+        int i = 0;
+        for(int index = 0; index < highwayNames.length; index++){
+            if(highwayNames[index].equals(highway)){
+                i = index;
+                System.out.println(i);
+                isFound = true;
+                break;
+            }
+        }
+        if(isFound == true){
+            for(int j = i; j < highwayNames.length - 1; j++){
+                highwayNames[j] = highwayNames[j + 1];
+            }
+            highwayNames[highwayNames.length - 1] = null;
+        }
+        return isFound;
     }
 }

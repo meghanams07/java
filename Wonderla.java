@@ -1,47 +1,86 @@
 class Wonderla {
-    private String waterGames[] = new String[25];
+    private String waterGames[] = new String[20];
     int index;
 
-    public boolean addWaterGame(String game) {
-        boolean isAdded = false;
-
-        if (game != null && !game.isEmpty()) {
-            if (index < waterGames.length) {
-                waterGames[index++] = game;
-                isAdded = true;
+    public boolean addWaterGame(String game){
+        boolean isValid = false;
+        if(game != null && !game.isEmpty()){
+            if(index < waterGames.length){
+                waterGames[index] = game;
+                index++;
+                isValid = true;
             } else {
-                System.out.println("array is full");
+                System.out.println("Water games list is full");
             }
         } else {
-            System.out.println(game + " is invalid water game");
+            System.out.println(game + " Not Valid");
         }
-        return isAdded;
+        return isValid;
     }
 
-    public void getWaterGames() {
-        for (String game : waterGames) {
-            if (game != null) {
+    public void displayWaterGames(){
+        System.out.println("\n--- Wonderla Water Games ---");
+        for(String game : waterGames){
+            if(game != null){
                 System.out.println(game);
             }
         }
     }
 
-    public String getWaterGameByIndex(int index) {
-        if (index < waterGames.length && waterGames[index] != null) {
-            return waterGames[index];
-        } else {
-            System.out.println("invalid index " + index);
-            return null;
-        }
+    public String getString(int index){
+        String game = null;
+        if(index < waterGames.length){
+            game = waterGames[index];
+            System.out.println(game);
+            index++;
+        } else System.out.println("Invalid");
+        return game;
     }
 
-    public int getIndexByWaterGameName(String gameName) {
-        for (int i = 0; i < waterGames.length; i++) {
-            if (waterGames[i] != null && waterGames[i].equals(gameName)) {
-                return i;
+    public int getIndex(String game){
+        int index = 0;
+        for(String g : waterGames){
+            if(g == game){
+                System.out.println(index);
+                return index;
+            }
+            index++;
+        }
+        System.out.println("Invalid");
+        return 0;
+    }
+
+    public boolean updateWaterGame(String existingGame, String updatedGame){
+        boolean isUpdated = false;
+        for(int index = 0; index < waterGames.length; index++){
+            if(waterGames[index] == existingGame){
+                waterGames[index] = updatedGame;
+                isUpdated = true;
             }
         }
-        System.out.println("invalid water game " + gameName);
-        return -1;
+        if(isUpdated == false){
+            System.out.println("Game Not Found");
+        }
+        return isUpdated;
+    }
+
+    public boolean deleteWaterGame(String game){
+        boolean isFound = false;
+        int i = 0;
+        for(int index = 0; index < waterGames.length; index++){
+            if(waterGames[index].equals(game)){
+                i = index;
+                System.out.println(i);
+                isFound = true;
+                break;
+            }
+        }
+        if(isFound == true){
+            for(int j = i; j < waterGames.length - 1; j++){
+                waterGames[j] = waterGames[j + 1];
+            }
+            waterGames[waterGames.length - 1] = null;
+        }
+        return isFound;
     }
 }

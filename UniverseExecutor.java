@@ -1,6 +1,5 @@
 class UniverseExecutor {
     public static void main(String[] args) {
-
         Universe universe = new Universe();
 
         universe.addGalaxy("Milky Way");
@@ -11,28 +10,30 @@ class UniverseExecutor {
         universe.addGalaxy("Pinwheel Galaxy");
         universe.addGalaxy("Cartwheel Galaxy");
         universe.addGalaxy("Black Eye Galaxy");
-        universe.addGalaxy("Cigar Galaxy");
         universe.addGalaxy("Sunflower Galaxy");
+        universe.addGalaxy("Cigar Galaxy");
+        universe.addGalaxy("Tadpole Galaxy");
+        universe.addGalaxy("Hoag's Object");
         universe.addGalaxy("Large Magellanic Cloud");
         universe.addGalaxy("Small Magellanic Cloud");
         universe.addGalaxy("Centaurus A");
+        universe.addGalaxy("Messier 81");
         universe.addGalaxy("Messier 87");
-        universe.addGalaxy("NGC 1300");
-        universe.addGalaxy("NGC 6744");
-        universe.addGalaxy("NGC 4414");
 
-        universe.getGalaxies();
+        universe.displayGalaxies();
 
-        System.out.println();
+        System.out.println("\nGet Galaxy by Index:");
+        universe.getString(5);
 
-        int index = 1;
-        String galaxy = universe.getGalaxyByIndex(index);
-        if (galaxy != null) {
-            System.out.println("The galaxy at index " + index + " is " + galaxy);
-        }
+        System.out.println("\nGet Index by Name:");
+        universe.getIndex("Andromeda");
 
-        String galaxyName = "Milky Way";
-        int i = universe.getIndexByGalaxyName(galaxyName);
-        System.out.println("The galaxy " + galaxyName + " is at index " + i);
+        System.out.println("\nUpdate Galaxy:");
+        universe.updateGalaxy("Milky Way", "Milky Way Galaxy");
+        universe.displayGalaxies();
+
+        System.out.println("\nDelete Galaxy:");
+        universe.deleteGalaxy("Triangulum");
+        universe.displayGalaxies();
     }
 }
