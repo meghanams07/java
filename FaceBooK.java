@@ -1,40 +1,45 @@
-class FaceBooK{
-	UserAccount userAccount;
+class Facebook{
+	UserAccount userAccounts[] = new UserAccount[5]; 
+	int index;
 	
 	public boolean createAccount(UserAccount userAccount){
+	
 		boolean isAccountCreated = false;
-		boolean isUserId = false;
-		boolean isUserName = false;
-		boolean isEmail = false;
+		boolean isIdValid = false;
+		boolean isNameValid = false;
+		boolean isEmailValid = false;
 		
 		int uId = userAccount.getUserId();
 		if(uId > 0){
-			isUserId = true;
+			isIdValid = true;
 		}
 		
-	    String uName = userAccount.getUserName();
-		if(uName != null && !uName.isEmpty()){
-			isUserName = true;
+		String uName = userAccount.getUserName();
+		if(uName!= null && !uName.isEmpty()){  
+			isNameValid = true;
 		}
 		
 		String uEmail = userAccount.getEmail();
-		if(uEmail != null && !uEmail.isEmpty()){
-			isEmail = true ;
+		if(uEmail!=null && !uEmail.isEmpty()){
+			isEmailValid = true;   
 		}
 		
-		if(isUserId && isUserName && isEmail){
-			this.userAccount = userAccount;
-			isAccountCreated = true;
+		if(isIdValid && isNameValid && isEmailValid){
+			if(index < userAccounts.length){   
+				this.userAccounts[index++] = userAccount;
+				isAccountCreated = true;
+			}else{
+				System.out.println("Storage Full ");
+			}
 		}
-	return isAccountCreated;
-}
-
-public void getDetails(){
-	if(userAccount != null){
-		System.out.println("UserId is:"+userId);
-		System.out.println("UserName is:"+userName);
-		System.out.println("Email is:"+email);
-	}else{
-		System.out.println("No user Account created");
-}
+		return isAccountCreated; 
+	}
+	
+	public void getDetails(){
+		for(UserAccount s:userAccounts){  
+			if(s != null){
+				System.out.println(s.getUserId()+" "+s.getUserName()+" "+s.getEmail());
+			}
+		}
+	}
 }

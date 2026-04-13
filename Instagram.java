@@ -1,41 +1,46 @@
-class Instagram {
-
-    InstagramAccount account;
-
-    public boolean createAccount(InstagramAccount account) {
-
-        boolean isCreated = false;
-        boolean isIdValid = false;
-        boolean isUsernameValid = false;
-        boolean isEmailValid = false;
-
-        if (account.getId() > 0) {
-            isIdValid = true;
-        }
-
-        if (account.getUsername() != null && !account.getUsername().isEmpty()) {
-            isUsernameValid = true;
-        }
-
-        if (account.getEmail() != null && !account.getEmail().isEmpty()) {
-            isEmailValid = true;
-        }
-
-        if (isIdValid && isUsernameValid && isEmailValid) {
-            this.account = account;
-            isCreated = true;
-        }
-
-        return isCreated;
-    }
-
-    public void getDetails() {
-        if (account != null) {
-            System.out.println("Id: " + account.getId());
-            System.out.println("Username: " + account.getUsername());
-            System.out.println("Email: " + account.getEmail());
-        } else {
-            System.out.println("No account created");
-        }
-    }
+class Instagram{
+	Post posts[] = new Post[5];
+	int index;
+	
+	public boolean addPost(Post post){
+		
+		boolean isAdded = false;
+		boolean isIdValid = false;
+		boolean isCaptionValid = false;
+		boolean isUserValid = false;
+		
+		int id = post.getPostId();
+		if(id > 0){
+			isIdValid = true;
+		}
+		
+		String caption = post.getCaption();
+		if(caption != null && !caption.isEmpty()){
+			isCaptionValid = true;
+		}
+		
+		String user = post.getUsername();
+		if(user != null && !user.isEmpty()){
+			isUserValid = true;
+		}
+		
+		if(isIdValid && isCaptionValid && isUserValid){
+			if(index < posts.length){
+				this.posts[index++] = post;
+				isAdded = true;
+			}else{
+				System.out.println("Instagram Full ");
+			}
+		}
+		
+		return isAdded;
+	}
+	
+	public void getDetails(){
+		for(Post p : posts){
+			if(p != null){
+				System.out.println(p.getPostId()+" "+p.getCaption()+" "+p.getUsername());
+			}
+		}
+	}
 }

@@ -1,25 +1,29 @@
-class Student {
-    private int id;
-    private String name;
-    private String course;
-
-    public void setId(int id) { 
-	this.id = id;
+class Student{
+	private int studentId;
+	private String studentName;
+	private String course;
+	
+	public void setStudentId(int studentId){
+		this.studentId = studentId;
 	}
-    public void setName(String name) { 
-	this.name = name; 
+	
+	public void setStudentName(String studentName){
+		this.studentName = studentName;
 	}
-    public void setCourse(String course) {
-	this.course = course;
+	
+	public void setCourse(String course){
+		this.course = course;
 	}
-
-    public int getId() { 
-	return id; 
+	
+	public int getStudentId(){
+		return studentId;
 	}
-    public String getName() { 
-	return name; 
+	
+	public String getStudentName(){
+		return studentName;
 	}
-    public String getCourse() { 
-	return course; 
+	
+	public String getCourse(){
+		return course;
 	}
 }

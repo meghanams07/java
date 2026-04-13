@@ -1,25 +1,29 @@
-class Order {
-    private int orderId;
-    private String item;
-    private double price;
-
-    public void setOrderId(int orderId) {
-	this.orderId = orderId; 
+class Order{
+	private int orderId;
+	private String productName;
+	private double amount;
+	
+	public void setOrderId(int orderId){
+		this.orderId = orderId;
 	}
-    public void setItem(String item) { 
-	this.item = item;
+	
+	public void setProductName(String productName){
+		this.productName = productName;
 	}
-    public void setPrice(double price) { 
-	this.price = price; 
+	
+	public void setAmount(double amount){
+		this.amount = amount;
 	}
-
-    public int getOrderId() { 
-	return orderId; 
+	
+	public int getOrderId(){
+		return orderId;
 	}
-    public String getItem() {
-	return item; 
+	
+	public String getProductName(){
+		return productName;
 	}
-    public double getPrice() { 
-	return price; 
+	
+	public double getAmount(){
+		return amount;
 	}
 }

@@ -1,24 +1,46 @@
-class Railway {
-
-    TrainTicket ticket;
-
-    public boolean bookTicket(TrainTicket ticket) {
-
-        if (ticket.getTicketId() > 0 && ticket.getPassengerName() != null && !ticket.getPassengerName().isEmpty() &&
-            ticket.getSource() != null && !ticket.getSource().isEmpty()) {
-
-            this.ticket = ticket;
-            return true;
-        }
-
-        return false;
-    }
-
-    public void getDetails() {
-        if (ticket != null) {
-            System.out.println(ticket.getTicketId());
-            System.out.println(ticket.getPassengerName());
-            System.out.println(ticket.getSource());
-        }
-    }
+class Railway{
+	Train trains[] = new Train[5];
+	int index;
+	
+	public boolean addTrain(Train train){
+		
+		boolean isAdded = false;
+		boolean isIdValid = false;
+		boolean isNameValid = false;
+		boolean isDestValid = false;
+		
+		int id = train.getTrainId();
+		if(id > 0){
+			isIdValid = true;
+		}
+		
+		String name = train.getTrainName();
+		if(name != null && !name.isEmpty()){
+			isNameValid = true;
+		}
+		
+		String dest = train.getDestination();
+		if(dest != null && !dest.isEmpty()){
+			isDestValid = true;
+		}
+		
+		if(isIdValid && isNameValid && isDestValid){
+			if(index < trains.length){
+				this.trains[index++] = train;
+				isAdded = true;
+			}else{
+				System.out.println("Railway Full ");
+			}
+		}
+		
+		return isAdded;
+	}
+	
+	public void getDetails(){
+		for(Train t : trains){
+			if(t != null){
+				System.out.println(t.getTrainId()+" "+t.getTrainName()+" "+t.getDestination());
+			}
+		}
+	}
 }

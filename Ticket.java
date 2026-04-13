@@ -1,25 +1,29 @@
-class Ticket {
-    private int id;
-    private String movie;
-    private int seats;
-
-    public void setId(int id) { 
-	this.id = id;
+class Ticket{
+	private int ticketId;
+	private String passengerName;
+	private String source;
+	
+	public void setTicketId(int ticketId){
+		this.ticketId = ticketId;
 	}
-    public void setMovie(String movie) { 
-	this.movie = movie;
+	
+	public void setPassengerName(String passengerName){
+		this.passengerName = passengerName;
 	}
-    public void setSeats(int seats) { 
-	this.seats = seats; 
+	
+	public void setSource(String source){
+		this.source = source;
 	}
-
-    public int getId() { 
-	return id; 
+	
+	public int getTicketId(){
+		return ticketId;
 	}
-    public String getMovie() { 
-	return movie;
+	
+	public String getPassengerName(){
+		return passengerName;
 	}
-    public int getSeats() {
-	return seats; 
+	
+	public String getSource(){
+		return source;
 	}
 }

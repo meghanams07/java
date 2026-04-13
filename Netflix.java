@@ -1,22 +1,46 @@
-class Netflix {
-    Subscription sub;
-
-    public boolean createSubscription(Subscription sub) {
-        if (sub.getId() > 0 &&
-            sub.getPlan() != null && !sub.getPlan().isEmpty() &&
-            sub.getDuration() > 0) {
-
-            this.sub = sub;
-            return true;
-        }
-        return false;
-    }
-
-    public void getDetails() {
-        if (sub != null) {
-            System.out.println(sub.getId());
-            System.out.println(sub.getPlan());
-            System.out.println(sub.getDuration());
-        }
-    }
+class Netflix{
+	Movie movies[] = new Movie[5];
+	int index;
+	
+	public boolean addMovie(Movie movie){
+		
+		boolean isAdded = false;
+		boolean isIdValid = false;
+		boolean isNameValid = false;
+		boolean isGenreValid = false;
+		
+		int id = movie.getMovieId();
+		if(id > 0){
+			isIdValid = true;
+		}
+		
+		String name = movie.getMovieName();
+		if(name != null && !name.isEmpty()){
+			isNameValid = true;
+		}
+		
+		String genre = movie.getGenre();
+		if(genre != null && !genre.isEmpty()){
+			isGenreValid = true;
+		}
+		
+		if(isIdValid && isNameValid && isGenreValid){
+			if(index < movies.length){
+				this.movies[index++] = movie;
+				isAdded = true;
+			}else{
+				System.out.println("Netflix Full ");
+			}
+		}
+		
+		return isAdded;
+	}
+	
+	public void getDetails(){
+		for(Movie m : movies){
+			if(m != null){
+				System.out.println(m.getMovieId()+" "+m.getMovieName()+" "+m.getGenre());
+			}
+		}
+	}
 }
