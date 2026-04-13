@@ -1,7 +1,7 @@
-class Aadhaar {
+class SnapchatAccount {
     private int id;
     private String name;
-    private String address;
+    private String snapId;
 
     public void setId(int id) { 
 	this.id = id; 
@@ -9,17 +9,17 @@ class Aadhaar {
     public void setName(String name) {
 	this.name = name;
 	}
-    public void setAddress(String address) { 
-	this.address = address; 
+    public void setSnapId(String snapId) {
+	this.snapId = snapId;
 	}
 
     public int getId() { 
 	return id; 
 	}
     public String getName() { 
-	return name; 
+	return name;
 	}
-    public String getAddress() { 
-	return address; 
+    public String getSnapId() { 
+	return snapId; 
 	}
 }

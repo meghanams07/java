@@ -1,4 +1,4 @@
-class Aadhaar {
+class FlipkartAccount {
     private int id;
     private String name;
     private String address;
@@ -9,12 +9,12 @@ class Aadhaar {
     public void setName(String name) {
 	this.name = name;
 	}
-    public void setAddress(String address) { 
-	this.address = address; 
+    public void setAddress(String address) {
+	this.address = address;
 	}
 
     public int getId() { 
-	return id; 
+	return id;
 	}
     public String getName() { 
 	return name; 

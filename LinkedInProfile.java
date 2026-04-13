@@ -1,16 +1,16 @@
-class Aadhaar {
+class LinkedInProfile {
     private int id;
     private String name;
-    private String address;
+    private String skill;
 
     public void setId(int id) { 
-	this.id = id; 
+	this.id = id;
 	}
     public void setName(String name) {
-	this.name = name;
+	this.name = name; 
 	}
-    public void setAddress(String address) { 
-	this.address = address; 
+    public void setSkill(String skill) { 
+	this.skill = skill; 
 	}
 
     public int getId() { 
@@ -19,7 +19,7 @@ class Aadhaar {
     public String getName() { 
 	return name; 
 	}
-    public String getAddress() { 
-	return address; 
+    public String getSkill() { 
+	return skill; 
 	}
 }
